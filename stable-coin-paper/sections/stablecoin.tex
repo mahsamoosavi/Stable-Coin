@@ -3,7 +3,7 @@
 Very quick introduction to blockchain/crypto
 What is stability vs volatility.
 About coin supply and volatility~\cite{sams2015note}.
-
+Short-term stability is important for transactions and long-term stability is important for holding`\cite{forbes}.
 
 
 \section{The current state of the stable coins} % Didem :
@@ -12,7 +12,9 @@ About coin supply and volatility~\cite{sams2015note}.
 
 we can sort stablecoins into three categories: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
-1) Fiat-collateralized stablecoins - These are pegged, generally 1:1, to a fiat currency?they maintain value because every unit of stablecoin is ?backed? by a unit of fiat. So, hypothetically, you can always exchange 1 stablecoin for 1 fiat, and so their values converge. The most popular (though I use this term loosely) fiat-collateralized stablecoin is Tether.
+1) Fiat-collateralized stablecoins - These are pegged, generally 1:1, to a fiat currency they maintain value because every unit of stablecoin is backed by a unit of fiat. So, hypothetically, you can always exchange 1 stablecoin for 1 fiat, and so their values converge. The most popular (though I use this term loosely) fiat-collateralized stablecoin is Tether.
+
+stablecoin projects pegged to national fiat currencies other than the U.S. dollar would also be of value for IBM’s blockchain integration~\cite{cointelegraph}.
 
 Ex: dollar-pegged tokens(Tether and TrueUSD)
 This type of stable coins need to rely on a third party, as the tokens need to be backed up by the money that is kept in a certain account~\cite{techrev}. Centralised cryptocurrencies backed by gold (slow increas in the value). ex: Digix Gold Token
@@ -21,9 +23,15 @@ Discussion about centralization: "Centralised monetary systems can refuse to giv
 
 2) Crypto-collateralized stablecoins - These use smart contracts to ?lock up? other cryptocurrencies in a smart contract, which then backs the stablecoin. While the stablecoin in this case has to be overcollateralized to compensate for other cryptocurrencies? volatility, in theory you can always liquidate your stablecoin for other cryptocurrency. MakerDAO is the most prominent of these stablecoins.
 
+‘Reserve’ that maintains a peg by using a smart contract to lock up other crypto assets, rather than fiat~\cite{cointelegraph}.
+
+stablecoins using this method are over-collateralized~\cite{overview}.
+
 3) Non-collateralized stablecoins - These algorithmically manipulate supply and demand to maintain the price. In essence, it acts as an automated central bank, a rudder that manns itself. Basis is the early leader in this pack.
 
 The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}
+
+The main non-collateralized approach is the seigniorage shares method. The seigniorage shares method uses smart contracts that automatically expand and contract the supply of the non-collateralized stablecoin using algorithms to maintain its value`\cite{overview}.
 
 
 
@@ -73,6 +81,8 @@ Define the properties that are considered during the design of stable coins.
 		 DAI& Crypto-collateralized (ETH)  &  Yes& \\ \hline
 		 BitShares&Crypto-collateralized&Yes&\\ \hline
 		 Basis&Non-collateralized&& \\ \hline
+		 Tether & Fiat-collateralized (USD) & & Yes \\ \hline
+		  &&& \\ \hline
 	\end{tabular}
 \end{table}
 
