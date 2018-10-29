@@ -9,34 +9,29 @@ Short-term stability is important for transactions and long-term stability is im
 \section{The current state of the stable coins} % Didem :
 
 %different ways and issues with each.
+Stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
-we can sort stablecoins into three categories: fiat-collateralized, crypto-collateralized, and non-collateralized.
+~\textbf{1) Fiat-collateralized stablecoins:} These type of stable coins are backed by fiat currency and backing by USD is one of the most common types. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. USD being one of the most common choices for the fiat currecncy to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for IBM's blockchain integration~\cite{cointelegraph}.
 
-1) Fiat-collateralized stablecoins - These are pegged, generally 1:1, to a fiat currency they maintain value because every unit of stablecoin is backed by a unit of fiat. So, hypothetically, you can always exchange 1 stablecoin for 1 fiat, and so their values converge. The most popular (though I use this term loosely) fiat-collateralized stablecoin is Tether.
+Tether and TrueUSD are USD are prominent examples of USD pegged tokens. Some projects like Digix Gold Token prefer to use gold to back their stablecoin, as gold has a relatively slow increase in its value compared to fiat currencies. %Reference??
 
-stablecoin projects pegged to national fiat currencies other than the U.S. dollar would also be of value for IBM’s blockchain integration~\cite{cointelegraph}.
+~\textit{Discussion about centralization:} Backing up with fiat currency means that there is a need for third party. The amount of money to back the stablecoin up should be held in an account~\cite{techrev}. The involvement of a third party causes controversy in the community, as the third party can just deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
 
-Ex: dollar-pegged tokens(Tether and TrueUSD)
-This type of stable coins need to rely on a third party, as the tokens need to be backed up by the money that is kept in a certain account~\cite{techrev}. Centralised cryptocurrencies backed by gold (slow increas in the value). ex: Digix Gold Token
+\begin{quote}
+"Redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis."
+\end{quote}
 
-Discussion about centralization: "Centralised monetary systems can refuse to give you your money. Tether: "redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis." Globcoin: less reliance on US dollars but still centralized.~\cite{cryptoinsider}
+%Globcoin: less reliance on US dollars but still centralized.~\cite{cryptoinsider}
 
-2) Crypto-collateralized stablecoins - These use smart contracts to ?lock up? other cryptocurrencies in a smart contract, which then backs the stablecoin. While the stablecoin in this case has to be overcollateralized to compensate for other cryptocurrencies? volatility, in theory you can always liquidate your stablecoin for other cryptocurrency. MakerDAO is the most prominent of these stablecoins.
+~\textbf{2) Crypto-collateralized stablecoins:} These type of stablecoins uses other cryptocurrencies as a back up value rather than a fiat currency. Overcollateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach. Reserve utilizes a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
 
-‘Reserve’ that maintains a peg by using a smart contract to lock up other crypto assets, rather than fiat~\cite{cointelegraph}.
+~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types of stable coins, these aren't back by fiat currencies of another cryptocurrency. The stability is achieved algorithmically~\cite{linkedin}. Basis is one of the first projects that use this approach.
 
-stablecoins using this method are over-collateralized~\cite{overview}.
+Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value.
 
-3) Non-collateralized stablecoins - These algorithmically manipulate supply and demand to maintain the price. In essence, it acts as an automated central bank, a rudder that manns itself. Basis is the early leader in this pack.
+%The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}  DAI Havven crypto collat?
 
-The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}
-
-The main non-collateralized approach is the seigniorage shares method. The seigniorage shares method uses smart contracts that automatically expand and contract the supply of the non-collateralized stablecoin using algorithms to maintain its value`\cite{overview}.
-
-
-
-
-
+Another approach is the seigniorage shares method\cite{overview}. Here, the smart contract automatically adjusts the supply based on the algorithm to achieve stability in the value.
 \section{Problems that stable coin addresses} %Mahsa:
 % + their alternative solutions:
 \subsection{Government Surveillance}
