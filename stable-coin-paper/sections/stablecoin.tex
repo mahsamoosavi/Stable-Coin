@@ -36,7 +36,7 @@ Tether and TrueUSD are USD are prominent examples of USD pegged tokens. Some pro
 ~\textit{Discussion about centralization:} Backing up with fiat currency means that there is a need for third party. The amount of money to back the stablecoin up should be held in an account~\cite{techrev}. The involvement of a third party causes controversy in the community, as the third party can just deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
 
 \begin{quote}
-"Redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis."
+``Redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis."
 \end{quote}
 
 %Globcoin: less reliance on US dollars but still centralized.~\cite{cryptoinsider}
@@ -50,21 +50,21 @@ In this case the loss-exposure would even be amplified for the stablecoin owners
 
 ~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types of stable coins, these aren't back by fiat currencies of another cryptocurrency. The stability is achieved algorithmically~\cite{linkedin}. This provides better scalability~\cite{report}. Basis is one of the first projects that use this approach.
 
-Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value.
+Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value. If the value of Basis increases (an increase over \$1), more Basis tokens are produced to increase the supply which will lead to a decrease in the price and if there is a decrease in the price, a bond that is worth a Basis token is issued and some Basis tokens are bought to decrease the supply.~\cite{euromoney}
+
+%If the price falls below \$1, the code will issue bonds worth one basis token each, use the proceeds to buy existing Basis tokens to reduce supply and so bid the price back up, later repaying bondholders when Basis tokens trade above par.  It is a complicated, seigniorage based system.
 
 %The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}  DAI Havven crypto collat?
 
 Another approach is the seigniorage shares method\cite{overview}. Here, the smart contract automatically adjusts the supply based on the algorithm to achieve stability in the value.
 
-Basis is intended to peg at roughly one-to-one against the dollar. If it gains acceptance as a popular medium of exchange in the crypto world and increases in value to, say, \$1.10, the system will print more Basis tokens to increase supply and so reduce the price.  If the price falls below \$1, the code will issue bonds worth one basis token each, use the proceeds to buy existing Basis tokens to reduce supply and so bid the price back up, later repaying bondholders when Basis tokens trade above par.  It is a complicated, seigniorage based system.
-https://www.euromoney.com/article/b1bbk5rb8gp227/forget-bitcoin-stablecoins-will-change-how-money-works?copyrightInfo=true
 
 
 \section{Problems that stable coin addresses}
 As mentioned in the ..., currencies can serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. In order to serves as a unit of account and store of value, currencies have to denote a minimum level of value stability. In this regard, stable coins are proposed to provide store of value and unit of account functionalities, due to their non-fluctuating value in terms of fiat currencies or any other alternative. In addition, they purport to solve a group of critical issues that were introduced when using cryptocurrencies introduce. In this section, we discuss these issues.
 
 
-\subsection{Cryptocurrencies as Medium of Exchange} 
+\subsection{Cryptocurrencies as Medium of Exchange}
 Despite the fast growing of the cryptocurrencies and decentral applications, there is still little deployment of these digital assets in the daily payment procedures of the companies and businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers, \ie it is impossible for a company employers to provide the employees incomes in a volatile cryptocurrency \eg BTC with which there is a high level of future value and price uncertainty. On the other hand, having an stable price over the time, stable coins can serve greatly as a medium of exchange while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies. ~\textblue{Taken from the blockchain report but in my own words.}
 
 \subsection{Cryptocurrencies as Unit of Account}
@@ -203,8 +203,8 @@ Define the properties that are considered during the design of stable coins.
 		 \\ \hline
 		BitShares (BitUSD) &  Crypto-collateralized &  No & &\\ \hline
 		BitBay & Non-collateralized & & & \\ \hline
-		 DAI& Crypto-collateralized (ETH)  &  Yes& No & Target Price, Target rate,\\ 
-		 &&&&Sensitivity Parameter,\\ 
+		 DAI& Crypto-collateralized (ETH)  &  Yes& No & Target Price, Target rate,\\
+		 &&&&Sensitivity Parameter,\\
 		 &&&&Global Settlement \\ \hline
 		 BitShares&Crypto-collateralized&Yes&&\\ \hline
 		 Basis&Non-collateralized&& &\\ \hline
