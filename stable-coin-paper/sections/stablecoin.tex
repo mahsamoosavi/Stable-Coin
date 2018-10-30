@@ -16,6 +16,10 @@ currencies are judged by their ability to serve three functions???as a medium of
 \section{The current state of the stable coins} % Didem :
 
 %different ways and issues with each.
+Today, stablecoins together represent just 1.5 percent of the total market value of all crypto-assets, according to researchers at the digital wallet company, Blockchain.
+https://www.euromoney.com/article/b1bbk5rb8gp227/forget-bitcoin-stablecoins-will-change-how-money-works?copyrightInfo=true
+
+
 Stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
 
@@ -34,21 +38,26 @@ Tether and TrueUSD are USD are prominent examples of USD pegged tokens. Some pro
 
 ~\textbf{2) Crypto-collateralized stablecoins:} These type of stablecoins uses other cryptocurrencies as a back up value rather than a fiat currency. Overcollateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach. Reserve utilizes a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
 
+However, in case of a black swan event, where the underlying asset becomes completely worthless, the stablecoin would collapse too. In this case the loss-exposure would even be amplified for the stablecoin owners because of the over-collateralization. This is also why some experts are strongly discouraging this approach.
+https://medium.com/@argongroup/stablecoins-explained-206466da5e61
+
 ~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types of stable coins, these aren't back by fiat currencies of another cryptocurrency. The stability is achieved algorithmically~\cite{linkedin}. Basis is one of the first projects that use this approach.
 
 Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value.
 
 %The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}  DAI Havven crypto collat?
 
-
-
 Another approach is the seigniorage shares method\cite{overview}. Here, the smart contract automatically adjusts the supply based on the algorithm to achieve stability in the value.
 
-\section{Problems that stable coin addresses}
-As mentioned in the ..., currencies can serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. In order to serves as a unit of account and store of value, currencies have to denote a minimum level of value stability. In this regard, stable coins are proposed to provide store of value and unit of account functionalities, due to their non-fluctuating value in terms of fiat currencies or any other alternative. In addition, they purport to solve a group of critical issues that were introduced when using cryptocurrencies introduce. In this section, we discuss these issues. 
+Basis is intended to peg at roughly one-to-one against the dollar. If it gains acceptance as a popular medium of exchange in the crypto world and increases in value to, say, \$1.10, the system will print more Basis tokens to increase supply and so reduce the price.  If the price falls below \$1, the code will issue bonds worth one basis token each, use the proceeds to buy existing Basis tokens to reduce supply and so bid the price back up, later repaying bondholders when Basis tokens trade above par.  It is a complicated, seigniorage based system.
+https://www.euromoney.com/article/b1bbk5rb8gp227/forget-bitcoin-stablecoins-will-change-how-money-works?copyrightInfo=true
 
-\subsection{Lending with Cryptocurrencies} 
-Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending. One of the main challenges with the lending that makes it difficult to be deployed on the blockchains is the monetary instability observed in the the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the existing cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their value is being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies cause serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In the contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time. 
+
+\section{Problems that stable coin addresses}
+As mentioned in the ..., currencies can serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. In order to serves as a unit of account and store of value, currencies have to denote a minimum level of value stability. In this regard, stable coins are proposed to provide store of value and unit of account functionalities, due to their non-fluctuating value in terms of fiat currencies or any other alternative. In addition, they purport to solve a group of critical issues that were introduced when using cryptocurrencies introduce. In this section, we discuss these issues.
+
+\subsection{Lending with Cryptocurrencies}
+Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending. One of the main challenges with the lending that makes it difficult to be deployed on the blockchains is the monetary instability observed in the the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the existing cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their value is being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies cause serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In the contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
 
 \subsection{Government Surveillance}
 
@@ -56,11 +65,11 @@ Governments have recently started examining  the idea of issuing a central bank-
 
 
 
-% nation issued digital assets can be 
+% nation issued digital assets can be
 %
 %After all, fiat currencies are not backed by any tangible assets. You can?t return the currency to the government in exchange for a bar of gold or silver, a can of beans, a pack of cigarettes, or any other items that might have value to you. Fiat currencies are backed by the full faith and credit of the government that issued them and nothing more. If you want gold, silver, beans, or smokes you need to exchange your fiat currency with a person or entity that possesses the item that you want.
 %
-%Read more: Why Governments Are Afraid of Bitcoin | Investopedia https://www.investopedia.com/articles/forex/042015/why-governments-are-afraid-bitcoin.asp#ixzz5VLsy6DKS 
+%Read more: Why Governments Are Afraid of Bitcoin | Investopedia https://www.investopedia.com/articles/forex/042015/why-governments-are-afraid-bitcoin.asp#ixzz5VLsy6DKS
 %Follow us: Investopedia on Facebook
 %
 %
@@ -80,7 +89,7 @@ Governments have recently started examining  the idea of issuing a central bank-
 %Stablecoins carry several advantages over govtcoins. For one, since stablecoins are not ?issued? by nation states, users do not have to worry about government surveillance. In countries helmed by oppressive governments, decentralized stablecoins could still be popular for this reason.
 %
 %
-% Additionally, it?s reasonable to project that if governments can program their currencies, taxes will be built into the govtcoin. If people or entities wish to avoid taxes, they could choose to stash their capital in decentralized stablecoins over currency havens or other govtcoins (though this is obviously not recommended - ?always pay your doctor and the IRS?). 
+% Additionally, it?s reasonable to project that if governments can program their currencies, taxes will be built into the govtcoin. If people or entities wish to avoid taxes, they could choose to stash their capital in decentralized stablecoins over currency havens or other govtcoins (though this is obviously not recommended - ?always pay your doctor and the IRS?).
 %
 %
 %Finally, stablecoins also offer potentially easier access as governments might attempt to restrict ownership of their cryptocurrencies to own-country citizens.
@@ -92,10 +101,18 @@ Governments have recently started examining  the idea of issuing a central bank-
 
 
 \subsection{Promoting Trust in the Crypto Space}
+Discussion on Paxos, Gemini vs Tether. How having monthly attestations increase the reliability of Paxos and Gemini?
+
+For a stablecoin to consistently trade at par, its issuer must, in effect, convince a wide a community of future tokenholders of its future solvency. And that degree of trust can be hard to maintain, as it involves the psychology of the market, which can shift significantly over time.
+Consider Tether's predicament. Whether it has the funds it says it has isn't the only question. The other, perhaps even more important, is whether the market believes those commitments will hold up against a wider environment of waning confidence.
+
+For reserves-backed stablecoins, this includes practices such as: naming the banking relationship so that users can properly assess the underlying counterparty risk; committing to independent security audits of the underlying code to show that tokens are destroyed when funds are redeemed; holding regular attestations of the firms' balances by trusted third-party auditors. (Note: this does not mean a full "audit" per se. Calls for an audit of Tether were misleading; there is no way that a crypto system's past transactions can be audited in the traditional sense. Instead, proofs rely on attestations as to the accuracy of the firm's claims about its balances at a point in time.)
+
+(https://www.coindesk.com/the-delicate-psychology-of-stablecoins/)
 
 %to be completed >> @Mahsa
 
-%their value is designed not to fluctuate 
+%their value is designed not to fluctuate
 %
 %
 %
@@ -137,7 +154,7 @@ Define the properties that are considered during the design of stable coins.
 		& Collateralization (+ the value of the collateral) & Price Oracle & Centralization  \\ \hline
 		BitShares (BitUSD) &  Crypto-collateralized &  No & \\ \hline
 		BitBay & Non-collateralized & &  \\ \hline
-		 DAI& Crypto-collateralized (ETH)  &  Yes& \\ \hline
+		 DAI& Crypto-collateralized (ETH)  &  Yes& No \\ \hline
 		 BitShares&Crypto-collateralized&Yes&\\ \hline
 		 Basis&Non-collateralized&& \\ \hline
 		 Tether & Fiat-collateralized (USD) & & Yes \\ \hline
@@ -156,7 +173,8 @@ DAI and Bitshares~\cite{cryptoinsider}
 
 --Stable coins generally require us to trust a central third party. Each stable coin has its own way around being overly centralized, but there generally needs to be some way to manage these assets to ensure their stability (even though they tend to be blockchain based). Anything centralized requires the trust of a third party to some extent. Requiring the trust of a third party in crypto goes against the concept of crypto somewhat. This isn?t a problem per-say, but it is worth noting. With that said, most exchanges aren?t decentralized and thus using a stable coin as a currency on an already centralized exchange is hardly the a reason not to use stable coins (or exchanges).
 
-
+-Discussion about collateralization: The second type of stable coin is partly collateralized. In this case, the platform holds dollars equal to, say 50\%, of the value of the coins in circulation.The problem with this variant will be familiar to any monetary policy maker whose central bank has sought to peg an exchange rate while holding reserves that are only a fraction of its liabilities.
+If some coin owners harbor doubts about the durability of the peg, they will sell their holdings. The platform will have to purchase them using its dollar reserves to keep their price from falling. But, because the stock of dollar reserves is limited, other investors will scramble to get out before the cupboard is bare. The result will be the equivalent of a bank run, leading to the collapse of the peg.
 
 \section{Discussion}
 %%https://gemini.com/wp-content/themes/gemini/assets/img/dollar/gemini-dollar-whitepaper.pdf -> ref
