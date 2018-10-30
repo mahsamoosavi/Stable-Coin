@@ -8,6 +8,16 @@ Short-term stability is important for transactions and long-term stability is im
 
 currencies are judged by their ability to serve three functions???as a medium of exchange, a unit of account, and a store of value. To successfully serve these functions, a currency must be easily and broadly usable (necessary for being a medium of exchange) and demonstrate at least some level of value stability (necessary for acting as a unit of account and store of value).
 
+~\textit{Discussion on how a stablecoin can be adopted by the majority and the comparison between other cryptocurrencies:}
+Rightly or wrongly, volatile cryptocurrencies like bitcoin are not viewed by many central bankers as a serious
+competitive threat to their own national currencies. However, a stablecoin of sufficient size and use may
+be deemed to pose greater direct competition to fiat currencies than bitcoin and may therefore spark a
+competitive response or regulatory backlash from central banks, which in many jurisdictions have largely
+remained on the sidelines of cryptocurrency regulation to date. What is less clear here for cryptocurrencies
+is “how big is too big?” Central bankers have been reluctant to provide specific quantitative levels that would
+trigger concerns (e.g., what percentage of payments made with a cryptocurrency would be deemed to pose
+a threat to a central bank’s ability to conduct monetary policy?)~\cite{report}.
+
 %For the paper let's have a section under preliminaries and talk about what is money?where does it come from?
 %useful articles for this topic:
 %https://www.imf.org/external/pubs/ft/fandd/2012/09/basics.htm
@@ -53,8 +63,11 @@ https://www.euromoney.com/article/b1bbk5rb8gp227/forget-bitcoin-stablecoins-will
 \section{Problems that stable coin addresses}
 As mentioned in the ..., currencies can serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. In order to serves as a unit of account and store of value, currencies have to denote a minimum level of value stability. In this regard, stable coins are proposed to provide store of value and unit of account functionalities, due to their non-fluctuating value in terms of fiat currencies or any other alternative. In addition, they purport to solve a group of critical issues that were introduced when using cryptocurrencies introduce. In this section, we discuss these issues.
 
+
 \subsection{Cryptocurrencies as Medium of Exchange} 
 Despite the fast growing of the cryptocurrencies and decentral applications, there is still little deployment of these digital assets in the daily payment procedures of the companies and businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers, \ie it is impossible for a company to provide the staff incomes in a volatile cryptocurrency \eg BTC with which there is a high level of future value and price uncertainty. On the other hand, having an stable price over the time, stable coins can serve greatly as a medium of exchange while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies. ~\textblue{Taken from the blockchain report but in my own words.}
+
+
 
 
 \subsection{Cryptocurrencies as Unit of Account}
@@ -197,20 +210,30 @@ Define the properties that are considered during the design of stable coins.
 \begin{table}[]
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
-		& Collateralization (+ the value of the collateral) & Price Oracle & Centralization  \\ \hline
-		BitShares (BitUSD) &  Crypto-collateralized &  No & \\ \hline
-		BitBay & Non-collateralized & &  \\ \hline
-		 DAI& Crypto-collateralized (ETH)  &  Yes& No \\ \hline
-		 BitShares&Crypto-collateralized&Yes&\\ \hline
-		 Basis&Non-collateralized&& \\ \hline
-		 Tether & Fiat-collateralized (USD) & & Yes \\ \hline
-		  &&& \\ \hline
+		& Collateralization  & Price Oracle & Centralization & Feedback Mechanism
+		\\ &(+ the value of the collateral)&&&
+		 \\ \hline
+		BitShares (BitUSD) &  Crypto-collateralized &  No & &\\ \hline
+		BitBay & Non-collateralized & & & \\ \hline
+		 DAI& Crypto-collateralized (ETH)  &  Yes& No & Target Price, Target rate,\\ 
+		 &&&&Sensitivity Parameter,\\ 
+		 &&&&Global Settlement \\ \hline
+		 BitShares&Crypto-collateralized&Yes&&\\ \hline
+		 Basis&Non-collateralized&& &\\ \hline
+		 Tether & Fiat-collateralized (USD) & & Yes &\\ \hline
+		  &&&& \\ \hline
 	\end{tabular}
 \end{table}
 
 Decentral price oracle and Schelling point~\cite{cryptoinsider}
 DAI and Bitshares~\cite{cryptoinsider}
+Feedback column from ~\cite{report}
 
+Today, it would appear that prioritization of automation/transparency generally carries with it the trade-off of greater stability complexity (i.e., risk that the peg will be broken). In other words, the more decentralized the stablecoin design, the less likely it is to remain price stable against a peg like the US dollar. The success of Tether offers at least some evidence that so far the market has prioritized stability over
+decentralization (i.e., transparency and automation).Anyone who prioritizes
+decentralization already has the option to own arguably the most decentralized cryptoasset, bitcoin.~\cite{report}
+~\textit{A question to think about: }But does the
+broader world beyond the digital assets ecosystem really need (or want) stablecoins?~\cite{report}
 % Tether, the largest stablecoin in terms of its market value of approximately $2.7 billion USD, illustrates the underlying demand for a stablecoin
 \section{Critical Issues with Stable Coins}
 
