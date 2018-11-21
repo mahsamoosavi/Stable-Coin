@@ -1,30 +1,32 @@
 % !TEX root = ../main.tex
 \section{Introduction}\label{Intro}
 ~\textblue{stable coins is defined as cryptocurrency with the volatility characteristic of the fiat currency, all we want to do is to get the stability of the dollar and combine with with the decentralized distributed ledger aka blockchain.}
-Very quick introduction to blockchain/crypto
-What is stability vs volatility.
-About coin supply and volatility~\cite{sams2015note}.
-Short-term stability is important for transactions and long-term stability is important for holding`\cite{forbes}.
+%Very quick introduction to blockchain/crypto
 
+Currencies are expected to serve as a medium of exchange, a unit of account, and a store of value and how well they fulfill these properties determines the strength and adoption of the currencies. Due to high fluctuations in their prices, majority of the cryptocurrencies are not considered as a reliable store of value~\cite{overview}. The fact that the value of cyptocurrencies can drop in a short period of time causes hesitation about using them as a store of value. 
 
-currencies are judged by their ability to serve three functions???as a medium of exchange, a unit of account, and a store of value. To successfully serve these functions, a currency must be easily and broadly usable (necessary for being a medium of exchange) and demonstrate at least some level of value stability (necessary for acting as a unit of account and store of value).
+High volatility of cryptocurrencies like Ether or Bitcoin is the reason behind the design of stablecoins that aim to achieve price stability. Stability ensures that the fluctuations in the value of the currency is low. While short-term stability affects the transactions, long-term stability is desired for holding ~\cite{forbes}. Figure~\ref{fig:Comparison} illustrates the volatility of Bitcoin's value, when compared to fiat currencies. Figure~\ref{fig:graph1} and Figure~\ref{fig:graph2} shows the change of values of EUR, GBP, CAD and BTC in terms of USD over time. Figure~\ref{fig:graph1} shows the monthly values between January 2016 and November 2018. While the fiat currencies show stable behavior, Bitcoin's value changes drastically over time.
 
-More on these functions in https://hackernoon.com/overview-of-stablecoins-2e4ffef82a73
+ ~\textblue{Graph2 explanation and the x-axis values!!}
 
-~\textit{Discussion on how a stablecoin can be adopted by the majority and the comparison between other cryptocurrencies:}
-Rightly or wrongly, volatile cryptocurrencies like bitcoin are not viewed by many central bankers as a serious
-competitive threat to their own national currencies. However, a stablecoin of sufficient size and use may
-be deemed to pose greater direct competition to fiat currencies than bitcoin and may therefore spark a
-competitive response or regulatory backlash from central banks, which in many jurisdictions have largely
-remained on the sidelines of cryptocurrency regulation to date. What is less clear here for cryptocurrencies
-is “how big is too big?” Central bankers have been reluctant to provide specific quantitative levels that would
-trigger concerns (e.g., what percentage of payments made with a cryptocurrency would be deemed to pose
-a threat to a central bank’s ability to conduct monetary policy?)~\cite{report}.
+\begin{figure}[ht]
+	\centering
+	\subfloat[Graph1]{\includegraphics[width=0.5\textwidth]{graph1.pdf}\label{fig:graph1}}
+	\hfill
+	\subfloat[Graph2]{\includegraphics[width=0.5\textwidth]{graph2.pdf}\label{fig:graph2}}
+	\caption{Comparison}
+	\label{fig:Comparison}
+\end{figure}
+
+%About coin supply and volatility~\cite{sams2015note}.
+
+%~\textit{Discussion on how a stablecoin can be adopted by the majority and the comparison between other cryptocurrencies:}Rightly or wrongly, volatile cryptocurrencies like bitcoin are not viewed by many central bankers as a seriouscompetitive threat to their own national currencies. However, a stablecoin of sufficient size and use maybe deemed to pose greater direct competition to fiat currencies than bitcoin and may therefore spark a competitive response or regulatory backlash from central banks, which in many jurisdictions have largely remained on the sidelines of cryptocurrency regulation to date. What is less clear here for cryptocurrencies is “how big is too big?” Central bankers have been reluctant to provide specific quantitative levels that would trigger concerns (e.g., what percentage of payments made with a cryptocurrency would be deemed to pose a threat to a central bank’s ability to conduct monetary policy?)~\cite{report}.
 
 %For the paper let's have a section under preliminaries and talk about what is money?where does it come from?
 %useful articles for this topic:
 %https://www.imf.org/external/pubs/ft/fandd/2012/09/basics.htm
 %https://www.imf.org/external/pubs/ft/fandd/2010/03/basics.htm
+
 
 \section{The current state of the stable coins} % Didem :
 
@@ -68,9 +70,9 @@ As mentioned in the ..., currencies can serve as a store of value, a unit of acc
 
 
 \subsection{Cryptocurrencies as Medium of Exchange}
-Despite the fast growing of the cryptocurrencies and decentral applications, there is still little deployment of these digital assets in the daily payment procedures of the companies and businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers, \ie it is impossible for a company employers to provide the employees incomes in a volatile cryptocurrency \eg BTC with which there is a high level of future value and price uncertainty. On the other hand, having an stable price over the time, stable coins can serve as a true medium of exchange while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies. 
+Despite the fast growing of the cryptocurrencies and decentral applications, there is still little deployment of these digital assets in the daily payment procedures of the companies and businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers, \ie it is impossible for a company employers to provide the employees incomes in a volatile cryptocurrency \eg BTC with which there is a high level of future value and price uncertainty. On the other hand, having an stable price over the time, stable coins can serve as a true medium of exchange while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies.
 \subsection{Cryptocurrencies as Unit of Account}
-One of the most necessary functions of money is to serve as a unit of account-- the common measure that sets price to goods and services. Fiat currencies, \eg US dollar, Pound \etc serve this functionality correctly so they are used as units of accounts in the US and Europe respectively. Unfortunately, cryptocurrencies such as BTC, which do not have a stable price and value, do not seem to be used as a unit of account hence will not be able to serve as \textit{money} and replace the fiat currencies. However, given the price stability that stable coins offer, they have higher chance to be used as a digital representation of a unit of account and hence replace fiat. 
+One of the most necessary functions of money is to serve as a unit of account-- the common measure that sets price to goods and services. Fiat currencies, \eg US dollar, Pound \etc serve this functionality correctly so they are used as units of accounts in the US and Europe respectively. Unfortunately, cryptocurrencies such as BTC, which do not have a stable price and value, do not seem to be used as a unit of account hence will not be able to serve as \textit{money} and replace the fiat currencies. However, given the price stability that stable coins offer, they have higher chance to be used as a digital representation of a unit of account and hence replace fiat.
 
 \subsection{Cryptocurrencies as Store of Value}
 Any asset, commodity, or money that maintains its value is called a store of value. As mentioned in Section~\ref{Intro}, high volatile crypto-currencies (\ie Bitcoin) cannot fulfill this property of money as they cannot maintain their purchasing value for long-term. In contrast, stable coins can be accepted as a store of value as their price remains stable over the time.
@@ -210,6 +212,22 @@ decentralization already has the option to own arguably the most decentralized c
 ~\textit{A question to think about: }But does the
 broader world beyond the digital assets ecosystem really need (or want) stablecoins?~\cite{report}
 % Tether, the largest stablecoin in terms of its market value of approximately $2.7 billion USD, illustrates the underlying demand for a stablecoin
+
+\section{Discussion about the Gas Value in Ethereum}
+\begin{figure}[ht]
+	\centering
+	\subfloat[EUR]{\includegraphics[width=0.5\textwidth]{eur.pdf}\label{fig:eur}}
+	\hfill
+	\subfloat[GAS]{\includegraphics[width=0.5\textwidth]{gas.pdf}\label{fig:gas}}
+		\hfill
+	\subfloat[ETH]{\includegraphics[width=0.5\textwidth]{eth.pdf}\label{fig:eth}}
+		\hfill
+	\subfloat[Gold]{\includegraphics[width=0.5\textwidth]{gold.pdf}\label{fig:gold}}
+	\caption{Comparison}
+	\label{fig:aboutgas}
+\end{figure}
+
+
 \section{Critical Issues with Stable Coins}
 
 --Most stable coins fail (this is historically true, it doesn?t speak to the current stable coins). When they fail, they may or may not be redeemable for the promised amount. That is the harsh truth. None of the old stable coins are with us today aside from Nubits?. and Nubits has recently been trading for under .50 cents here in late March 2018. TUSD, Tether, and Dia all seem solid in there here and now, and they likely have learned from the mistakes of their formers, but if we are being honest about the history of stable coins, it is as volatile as the history of crypto itself.
