@@ -1,45 +1,28 @@
 % !TEX root = ../main.tex
 \section{Introduction}\label{Intro}
-Cryptocurrencies have gained a wide application after Bitcoin was first introduced in Satoshi Nakamoto’s (pseudonymous) 2008 whitepaper~\cite{nakamoto2008bitcoin}. For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence not able to be adopted as money~\cite{overview}.
+Cryptocurrencies have gained a wide application after Bitcoin was first introduced in Satoshi Nakamoto’s (pseudonymous) 2008 whitepaper~\cite{nakamoto2008bitcoin}. For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence they cannot be adopted as money~\cite{overview}.
 
-Having said that, the volatile nature of cryptocurrencies (\eg Ether, Bitcoin) has raised the interest into what is known as stablecoin. Stablecoins (\ie cryptocurrencies with stable price) ensure that the fluctuation in the value remains low.  Figure~\ref{fig:Comparison} illustrates the volatility of Bitcoin's value, when compared to fiat currencies. Figure~\ref{fig:graph1} shows the change of values of EUR, GBP, CAD and BTC with respect to USD over time. Monthly values between January 2016 and November 2018 are shown. According the figures, while fiat currencies show stable behaviour, Bitcoin's value changes drastically over time, which makes it a non-stable cryptocurrency.
-
-Figure~\ref{fig:Comparison} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing. Therefore, there is a desire to design and achieve stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the underlying technology of cryptocurrencies; blockchain technologies.
-
-
-
-%~\textblue{stable coins is defined as cryptocurrency with the volatility characteristic of the fiat currency, all we want to do is to get the stability of the dollar and combine with with the decentralized distributed ledger aka blockchain.}
-%%Very quick introduction to blockchain/crypto
-%
-%Currencies are expected to serve as a medium of exchange, a unit of account, and a store of value and how well they fulfill these properties determines the strength and adoption of the currencies. Due to high fluctuations in their prices, majority of the cryptocurrencies are not considered as a reliable store of value~\cite{overview}. The fact that the value of cyptocurrencies can drop in a short period of time causes hesitation about using them as a store of value.
-%
-%High volatility of cryptocurrencies like Ether or Bitcoin is the reason behind the design of stablecoins that aim to achieve price stability. Stability ensures that the fluctuations in the value of the currency is low. While short-term stability affects the transactions, long-term stability is desired for holding ~\cite{forbes}. Figure~\ref{fig:Comparison} illustrates the volatility of Bitcoin's value, when compared to fiat currencies. Figure~\ref{fig:graph1} shows the change of values of EUR, GBP, CAD and BTC in terms of USD over time. Monthly values between January 2016 and November 2018 are shown. While the fiat currencies show stable behavior, Bitcoin's value changes drastically over time.
-%
-%Figure~\ref{fig:Comparison} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
-
-%\begin{figure}[ht]
-%	\centering
-%	\subfloat[Graph1]{\includegraphics[width=0.5\textwidth]{figures/graph1.pdf}\label{fig:graph1}}
-%	\hfill
-%	\subfloat[Graph2]{\includegraphics[width=0.5\textwidth]{figures/btc.pdf}\label{fig:graph2}}
-%	\caption{Comparison}
-%	\label{fig:Comparison}
-%\end{figure}
+Having said that, the volatile nature of cryptocurrencies (\eg Ether, Bitcoin) has raised the interest into what is known as stablecoin. Stablecoins (\ie cryptocurrencies with stable price) ensure that the fluctuation in the value remains low. Figure~\ref{fig:btcandfiat} illustrates the volatility of Bitcoin's value, when compared to fiat currencies, and the change of values of EUR, GBP, CAD, and BTC with respect to USD over time. Monthly values between January 2016 and November 2018 are shown. According the figures, while fiat currencies show stable behaviour, Bitcoin's value changes drastically over time, which makes it a non-stable cryptocurrency.
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.65\textwidth]{figures/graph1.pdf}
-	\caption{\label{fig:graph1}Comparison}
+	\includegraphics[width=0.75\textwidth]{figures/graph1.pdf}
+	\caption{\label{fig:btcandfiat}Comparison among fiat currencies and Bitcoin: The values are retrieved on the first day of each month. A fraction of Bitcoin (1/1000 BTC) is plotted.}
 \end{figure}
 
-\begin{figure}[ht]
+Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing. Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time.
+
+\begin{figure}[!htb]
 	\centering
-	\subfloat[BTC]{\includegraphics[width=0.75\textwidth]{figures/btc.pdf}\label{fig:graph1}}
+	\subfloat[Bitcoin's value with respect to USD and Gold]{\includegraphics[width=0.75\textwidth]{figures/btc.pdf}\label{fig:btc}}
 	\hfill
 	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
 	\caption{BTC}
 	\label{fig:Comparison}
 \end{figure}
+
+Considering these facts, there is a desire to design stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the blockchain which is the underlying technology of cryptocurrencies.
+
 
 %\begin{figure}[!htb]
 %	
@@ -60,7 +43,7 @@ Figure~\ref{fig:Comparison} shows the change of value of Bitcoin with respect to
 \section{The current state of the stable coins} % Didem :
 
 %different ways and issues with each. %~\cite{euromoney}
-Stablecoins has a market value of \$3 billion and this corresponds to the 1.5\% of the total market value of the cryptoassets~\cite{report}. Each proposing different properties, stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
+Stablecoins have a market value of \$3 billion and this corresponds to the 1.5\% of the total market value of the cryptoassets~\cite{report}. Each proposing different properties, stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
 ~\textbf{1) Fiat-collateralized stablecoins:} These type of stable coins are backed by fiat currency and backing by USD is one of the most common types. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. USD being one of the most common choices for the fiat currecncy to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for IBM's blockchain integration~\cite{cointelegraph}.
 
@@ -77,7 +60,7 @@ Tether and TrueUSD are USD are prominent examples of USD pegged tokens. Some pro
 
 ~\textbf{2) Crypto-collateralized stablecoins:} These type of stablecoins uses other cryptocurrencies as a back up value rather than a fiat currency. Over-collateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach. Reserve utilizes a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
 
-If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation, hence it is hard to predict.(https://www.investopedia.com/terms/b/blackswan.asp)} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over over-collateralization in crypto-collateralized stablecoins the loss of value will be drastic.
+If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation, hence it is hard to predict~\cite{swan}.} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over over-collateralization in crypto-collateralized stablecoins the loss of value will be drastic.
 
 In this case the loss-exposure would even be amplified for the stablecoin owners because of the over-collateralization. This is also why some experts are strongly discouraging this approach.
 
@@ -93,18 +76,17 @@ Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic
 Another approach is the seigniorage shares method\cite{overview}. Here, the smart contract automatically adjusts the supply based on the algorithm to achieve stability in the value.
 
 
-
-\section{Problems that stable coin addresses}
-As mentioned in the ..., currencies can serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. In order to serve as a unit of account and store of value, currencies have to denote a minimum level of value stability. In this regard, stable coins are proposed to provide store of value and unit of account functionalities, due to their non-fluctuating value in terms of fiat currencies or any other alternative. In addition, they purport to solve a group of critical issues that were introduced when using cryptocurrencies. In this section, we discuss these issues.
-
+\section{Issues that stablecoins address}
+As mentioned in the~\ref{Intro}, currencies have to serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. To do so, they have to denote a minimum level of value stability. In this regard, stablecoins are proposed to fulfill these properties, due to their non-fluctuating value compared to fiat currencies or any other alternative\eg commodity. In addition, they purport to solve a group of critical issues that were introduced by cryptocurrencies. In this section, we discuss these issues.
 
 \subsection{Cryptocurrencies as Medium of Exchange}
-Despite the fast growth of the cryptocurrencies and decentral applications, there is still little deployment of these digital assets in the daily payment procedures of the companies and businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers, \ie it is impossible for a company employer to provide the employees' incomes in a volatile cryptocurrency \eg BTC with which there is a high level of future value and price uncertainty. On the other hand, having a stable price over the time, stable coins can serve as a true medium of exchange, while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies.
+Despite the fast growth of the cryptocurrencies and decentral applications, there is still little deployment of them in the daily payment procedures of businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers \ie it is impossible for a company employer to provide the employees' incomes in a volatile cryptocurrency \eg BTC that has a high level of future value and price uncertainty. On the other hand, having a stable price over the time, stablecoins can serve as a true medium of exchange, while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies.
+
 \subsection{Cryptocurrencies as Unit of Account}
-One of the most necessary functions of money is to serve as a unit of account-- the common measure that sets price to goods and services. Fiat currencies, \eg US dollar, Pound \etc serve this functionality correctly so they are used as units of account in the US and Europe respectively. Unfortunately, cryptocurrencies such as BTC, which do not have a stable price and value, do not seem to be used as a unit of account, hence will not be able to serve as \textit{money} and replace the fiat currencies. However, given the price stability that stable coins offer, they have a higher chance to be used as a digital representation of a unit of account and hence replace fiat.
+Money has to serve also as a unit of account-- the common measure that sets price to goods and services. Fiat currencies \eg USD, EUR \etc serve this functionality correctly, so they are used as units of account in the US and Europe respectively. Unfortunately, cryptocurrencies such as BTC, not having a stable price, do not seem to be used as a unit of account, hence will not be able to serve as money. However, given the price stability that stablecoins offer, they have a higher chance to be used as a digital representation of a unit of account.
 
 \subsection{Cryptocurrencies as Store of Value}
-Any asset, commodity, or money that maintains its value is called a store of value. As mentioned in Section~\ref{Intro}, highly volatile crypto-currencies (\ie Bitcoin) cannot fulfill this property of money, as they cannot maintain their purchasing value for long-term. In contrast, stable coins can be accepted as a store of value as their price remains stable over the time.
+Any asset, commodity, or money that maintains its value is called a store of value. As mentioned in Section~\ref{Intro}, highly volatile cryptocurrencies (\ie Bitcoin) cannot fulfill this property of money, as they cannot maintain their purchasing value for long-term. In contrast, stablecoins can be accepted as a store of value as their price remains stable over the time.
 
 %\subsection{dApps}
 %from the blockchain paper:
@@ -118,7 +100,8 @@ Any asset, commodity, or money that maintains its value is called a store of val
 %Finally, ERC20 stablecoins can be held and transferred by anyone who already has an Ethereum wallet, and nearly half of all stablecoin projects (48\%) are running on Ethereum. Provided that Ethereum is a successful underlying infrastructure protocol for dApps, ERC20 stablecoins should be adopted faster and benefit from the Ethereum vibrant ecosystem.
 
 \subsection{Lending with Cryptocurrencies}
-Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending. One of the main challenges with the lending that makes it difficult to be deployed on the blockchains is the monetary instability observed in the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the existing cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their value is being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies cause serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In the contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
+Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending.
+Lending is difficult to be deployed on the blockchains, bdue to the monetary instability observed in the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their values are being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies causes serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
 
 %\subsection{Government Surveillance}
 %
@@ -126,7 +109,7 @@ Despite quite a few blockchain applications in financial technologies, there has
 
 \subsection{Remittance}
 
-Although cryptocurrencies, specially Bitcoin, play a revolutionary role in financial system, they are yet not easy to transact due to their volatile characteristics. Therefore, having a stable coin one can benefit from the decentralized nature of the token, while there is no price volatility risk as the transaction or the payment is processed cross boarders specially when it comes to remittances. ~\textblue{what is remittance, a definition?}
+Although cryptocurrencies, especially Bitcoin, play a revolutionary role in financial systems, they are yet not easy to transact with due to their volatile characteristics. Therefore with stablecoins, one can benefit from decentralized nature of the token, while there is no price volatility risk. In addition, stablecoins make the cross border payments, remittances, easier.
 
 
 % nation issued digital assets can be
