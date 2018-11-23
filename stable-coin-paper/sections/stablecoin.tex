@@ -3,21 +3,42 @@
 ~\textblue{stable coins is defined as cryptocurrency with the volatility characteristic of the fiat currency, all we want to do is to get the stability of the dollar and combine with with the decentralized distributed ledger aka blockchain.}
 %Very quick introduction to blockchain/crypto
 
-Currencies are expected to serve as a medium of exchange, a unit of account, and a store of value and how well they fulfill these properties determines the strength and adoption of the currencies. Due to high fluctuations in their prices, majority of the cryptocurrencies are not considered as a reliable store of value~\cite{overview}. The fact that the value of cyptocurrencies can drop in a short period of time causes hesitation about using them as a store of value. 
+Currencies are expected to serve as a medium of exchange, a unit of account, and a store of value and how well they fulfill these properties determines the strength and adoption of the currencies. Due to high fluctuations in their prices, majority of the cryptocurrencies are not considered as a reliable store of value~\cite{overview}. The fact that the value of cyptocurrencies can drop in a short period of time causes hesitation about using them as a store of value.
 
-High volatility of cryptocurrencies like Ether or Bitcoin is the reason behind the design of stablecoins that aim to achieve price stability. Stability ensures that the fluctuations in the value of the currency is low. While short-term stability affects the transactions, long-term stability is desired for holding ~\cite{forbes}. Figure~\ref{fig:Comparison} illustrates the volatility of Bitcoin's value, when compared to fiat currencies. Figure~\ref{fig:graph1} and Figure~\ref{fig:graph2} shows the change of values of EUR, GBP, CAD and BTC in terms of USD over time. Figure~\ref{fig:graph1} shows the monthly values between January 2016 and November 2018. While the fiat currencies show stable behavior, Bitcoin's value changes drastically over time.
+High volatility of cryptocurrencies like Ether or Bitcoin is the reason behind the design of stablecoins that aim to achieve price stability. Stability ensures that the fluctuations in the value of the currency is low. While short-term stability affects the transactions, long-term stability is desired for holding ~\cite{forbes}. Figure~\ref{fig:Comparison} illustrates the volatility of Bitcoin's value, when compared to fiat currencies. Figure~\ref{fig:graph1} shows the change of values of EUR, GBP, CAD and BTC in terms of USD over time. Monthly values between January 2016 and November 2018 are shown. While the fiat currencies show stable behavior, Bitcoin's value changes drastically over time.
 
- ~\textblue{Graph2 explanation and the x-axis values!!}
+Figure~\ref{fig:Comparison} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
+
+%\begin{figure}[ht]
+%	\centering
+%	\subfloat[Graph1]{\includegraphics[width=0.5\textwidth]{figures/graph1.pdf}\label{fig:graph1}}
+%	\hfill
+%	\subfloat[Graph2]{\includegraphics[width=0.5\textwidth]{figures/btc.pdf}\label{fig:graph2}}
+%	\caption{Comparison}
+%	\label{fig:Comparison}
+%\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.65\textwidth]{figures/graph1.pdf}
+	\caption{\label{fig:graph1}Comparison}
+\end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\subfloat[Graph1]{\includegraphics[width=0.5\textwidth]{figures/graph1.pdf}\label{fig:graph1}}
+	\subfloat[BTC]{\includegraphics[width=0.75\textwidth]{figures/btc.pdf}\label{fig:graph1}}
 	\hfill
-	\subfloat[Graph2]{\includegraphics[width=0.5\textwidth]{figures/graph2.pdf}\label{fig:graph2}}
-	\caption{Comparison}
+	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
+	\caption{BTC}
 	\label{fig:Comparison}
 \end{figure}
 
+%\begin{figure}[!htb]
+%	
+%	\centering
+%	\includegraphics[width=0.65\textwidth]{figures/btc.pdf}
+%	\caption{\label{fig:graph2}BTC}
+%\end{figure}
 %About coin supply and volatility~\cite{sams2015note}.
 
 %~\textit{Discussion on how a stablecoin can be adopted by the majority and the comparison between other cryptocurrencies:}Rightly or wrongly, volatile cryptocurrencies like bitcoin are not viewed by many central bankers as a seriouscompetitive threat to their own national currencies. However, a stablecoin of sufficient size and use maybe deemed to pose greater direct competition to fiat currencies than bitcoin and may therefore spark a competitive response or regulatory backlash from central banks, which in many jurisdictions have largely remained on the sidelines of cryptocurrency regulation to date. What is less clear here for cryptocurrencies is “how big is too big?” Central bankers have been reluctant to provide specific quantitative levels that would trigger concerns (e.g., what percentage of payments made with a cryptocurrency would be deemed to pose a threat to a central bank’s ability to conduct monetary policy?)~\cite{report}.
@@ -184,22 +205,22 @@ Although cryptocurrencies, specially Bitcoin, play a revolutionary role in finan
 \section{Comparison Framework} % Put the code for the framework
 Define the properties that are considered during the design of stable coins.
 ~\textblue{Collateralization info from ~\cite{bitmex}, decide which projects to choose that exemplify each category best.}
-\begin{table}[]
-	\begin{tabular}{|l|l|l|l|l|}
-		\hline
-		& Collateralization  & Price Oracle & Centralization & Feedback Mechanism
-		\\ &(+ the value of the collateral)&&&
-		 \\ \hline
-		BitShares (BitUSD) &  Crypto-collateralized &  & &\\ \hline
-		BitBay & Non-collateralized & & & \\ \hline
-		 DAI& Crypto-collateralized (ETH)  &  Yes& No & Target Price, Target rate,\\
-		 &&&&Sensitivity Parameter,\\
-		 &&&&Global Settlement \\ \hline
-		 Basis&Non-collateralized&& &\\ \hline
-		 Tether & Fiat-collateralized (USD) & & Yes &\\ \hline
-		  &&&& \\ \hline
-	\end{tabular}
-\end{table}
+%\begin{table}[]
+%	\begin{tabular}{|l|l|l|l|l|}
+%		\hline
+%		& Collateralization  & Price Oracle & Centralization & Feedback Mechanism
+%		\\ &(+ the value of the collateral)&&&
+%		 \\ \hline
+%		BitShares (BitUSD) &  Crypto-collateralized &  & &\\ \hline
+%		BitBay & Non-collateralized & & & \\ \hline
+%		 DAI& Crypto-collateralized (ETH)  &  Yes& No & Target Price, Target rate,\\
+%		 &&&&Sensitivity Parameter,\\
+%		 &&&&Global Settlement \\ \hline
+%		 Basis&Non-collateralized&& &\\ \hline
+%		 Tether & Fiat-collateralized (USD) & & Yes &\\ \hline
+%		  &&&& \\ \hline
+%	\end{tabular}
+%\end{table}
 
 Decentral price oracle and Schelling point~\cite{cryptoinsider}
 DAI and Bitshares~\cite{cryptoinsider}
@@ -213,37 +234,38 @@ decentralization already has the option to own arguably the most decentralized c
 broader world beyond the digital assets ecosystem really need (or want) stablecoins?~\cite{report}
 % Tether, the largest stablecoin in terms of its market value of approximately $2.7 billion USD, illustrates the underlying demand for a stablecoin
 
-\section{Discussion about the Gas Value in Ethereum}
+\section{Investigation of gas volatility in Ethereum}
 \begin{figure}[ht]
 	\centering
 	\subfloat[EUR]{\includegraphics[width=0.5\textwidth]{figures/eur.pdf}\label{fig:eur}}
 	\hfill
-	\subfloat[GAS]{\includegraphics[width=0.5\textwidth]{figures/gas.pdf}\label{fig:gas}}
-		\hfill
 	\subfloat[ETH]{\includegraphics[width=0.5\textwidth]{figures/eth.pdf}\label{fig:eth}}
 		\hfill
-	\subfloat[Gold]{\includegraphics[width=0.5\textwidth]{figures/gold.pdf}\label{fig:gold}}
+	\subfloat[GAS]{\includegraphics[width=0.5\textwidth]{figures/gas.pdf}\label{fig:gas}}
+\hfill
+%\subfloat[Gold]{\includegraphics[width=0.5\textwidth]{figures/gold.pdf}\label{fig:gold}}
 	\caption{Comparison}
 	\label{fig:aboutgas}
 \end{figure}
 
 
 \section{Critical Issues with Stable Coins}
-
---Most stable coins fail (this is historically true, it doesn?t speak to the current stable coins). When they fail, they may or may not be redeemable for the promised amount. That is the harsh truth. None of the old stable coins are with us today aside from Nubits?. and Nubits has recently been trading for under .50 cents here in late March 2018. TUSD, Tether, and Dia all seem solid in there here and now, and they likely have learned from the mistakes of their formers, but if we are being honest about the history of stable coins, it is as volatile as the history of crypto itself.
-
---Some say that stable coins bring stability to the crypto space, but that idea doesn?t seem to be empirically proven. Instead, I?d argue that the perks of stable coins are in the ability for traders to go to a dollar quickly and the ability of exchanges to increase liquidity. Further, I?d argue that stable coins actually add volatility to the crypto space, because they allow for more speculation (which in theory creates stability, but which in practice hasn?t really seemed to do anything of the sort). The bottom line on this point is that the crypto space isn?t a stable place, and no type of cryptocurrency, regulation, or derivative I?ve seen has yet to change that (so here the point is, let us not give credit where it is not due). The term used is ?stable coin? or ?price-stable cryptocurrency,? not because this coin brings stability, but because the token ideally holds a stable value.
-
---Stable coins generally require us to trust a central third party. Each stable coin has its own way around being overly centralized, but there generally needs to be some way to manage these assets to ensure their stability (even though they tend to be blockchain based). Anything centralized requires the trust of a third party to some extent. Requiring the trust of a third party in crypto goes against the concept of crypto somewhat. This isn?t a problem per-say, but it is worth noting. With that said, most exchanges aren?t decentralized and thus using a stable coin as a currency on an already centralized exchange is hardly the a reason not to use stable coins (or exchanges).
-
--Discussion about collateralization: The second type of stable coin is partly collateralized. In this case, the platform holds dollars equal to, say 50\%, of the value of the coins in circulation.The problem with this variant will be familiar to any monetary policy maker whose central bank has sought to peg an exchange rate while holding reserves that are only a fraction of its liabilities.
-If some coin owners harbor doubts about the durability of the peg, they will sell their holdings. The platform will have to purchase them using its dollar reserves to keep their price from falling. But, because the stock of dollar reserves is limited, other investors will scramble to get out before the cupboard is bare. The result will be the equivalent of a bank run, leading to the collapse of the peg.
-
---A discussion about the price comparisons between the stablecoins  https://www.coindesk.com/which-stablecoin-is-the-riskiest-the-crypto-market-is-pricing-that-in/
-
---speculative attacks on pegged exchange rates https://www.marketwatch.com/story/your-crypto-stable-coin-isnt-tethered-to-anything-2018-09-12
-
---Ametrano's paper on currency design (the one that inspired Fragments) argues that we shouldn't peg a stablecoin to the U.S. dollar, as its days of stability may be numbered. Ametrano's preferred benchmark is a basket of commodities. ~\cite{cryptoinsider}
+~\textblue{Combine with conclusion and discussion??}
+%
+%--Most stable coins fail (this is historically true, it doesn?t speak to the current stable coins). When they fail, they may or may not be redeemable for the promised amount. That is the harsh truth. None of the old stable coins are with us today aside from Nubits?. and Nubits has recently been trading for under .50 cents here in late March 2018. TUSD, Tether, and Dia all seem solid in there here and now, and they likely have learned from the mistakes of their formers, but if we are being honest about the history of stable coins, it is as volatile as the history of crypto itself.
+%
+%--Some say that stable coins bring stability to the crypto space, but that idea doesn?t seem to be empirically proven. Instead, I?d argue that the perks of stable coins are in the ability for traders to go to a dollar quickly and the ability of exchanges to increase liquidity. Further, I?d argue that stable coins actually add volatility to the crypto space, because they allow for more speculation (which in theory creates stability, but which in practice hasn?t really seemed to do anything of the sort). The bottom line on this point is that the crypto space isn?t a stable place, and no type of cryptocurrency, regulation, or derivative I?ve seen has yet to change that (so here the point is, let us not give credit where it is not due). The term used is ?stable coin? or ?price-stable cryptocurrency,? not because this coin brings stability, but because the token ideally holds a stable value.
+%
+%--Stable coins generally require us to trust a central third party. Each stable coin has its own way around being overly centralized, but there generally needs to be some way to manage these assets to ensure their stability (even though they tend to be blockchain based). Anything centralized requires the trust of a third party to some extent. Requiring the trust of a third party in crypto goes against the concept of crypto somewhat. This isn?t a problem per-say, but it is worth noting. With that said, most exchanges aren?t decentralized and thus using a stable coin as a currency on an already centralized exchange is hardly the a reason not to use stable coins (or exchanges).
+%
+%-Discussion about collateralization: The second type of stable coin is partly collateralized. In this case, the platform holds dollars equal to, say 50\%, of the value of the coins in circulation.The problem with this variant will be familiar to any monetary policy maker whose central bank has sought to peg an exchange rate while holding reserves that are only a fraction of its liabilities.
+%If some coin owners harbor doubts about the durability of the peg, they will sell their holdings. The platform will have to purchase them using its dollar reserves to keep their price from falling. But, because the stock of dollar reserves is limited, other investors will scramble to get out before the cupboard is bare. The result will be the equivalent of a bank run, leading to the collapse of the peg.
+%
+%--A discussion about the price comparisons between the stablecoins  https://www.coindesk.com/which-stablecoin-is-the-riskiest-the-crypto-market-is-pricing-that-in/
+%
+%--speculative attacks on pegged exchange rates https://www.marketwatch.com/story/your-crypto-stable-coin-isnt-tethered-to-anything-2018-09-12
+%
+%--Ametrano's paper on currency design (the one that inspired Fragments) argues that we shouldn't peg a stablecoin to the U.S. dollar, as its days of stability may be numbered. Ametrano's preferred benchmark is a basket of commodities. ~\cite{cryptoinsider}
 
 \section{Discussion}
 %%https://gemini.com/wp-content/themes/gemini/assets/img/dollar/gemini-dollar-whitepaper.pdf -> ref
