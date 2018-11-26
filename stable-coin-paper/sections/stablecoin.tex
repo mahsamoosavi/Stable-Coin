@@ -45,12 +45,11 @@ Considering these facts, there is a desire to design stablecoins with the stable
 %different ways and issues with each. %~\cite{euromoney}
 Stablecoins have a market value of \$3 billion and this corresponds to the 1.5\% of the total market value of the cryptoassets~\cite{report}. Each proposing different properties, stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
-~\textbf{1) Fiat-collateralized stablecoins:} These type of stable coins are backed by fiat currency and backing by USD is one of the most common types. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. USD being one of the most common choices for the fiat currecncy to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for IBM's blockchain integration~\cite{cointelegraph}.
+~\textbf{1) Fiat-collateralized stablecoins:} These type of stablecoins are backed by fiat currency and backing by USD is one of the most common types. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. USD being one of the most common choices for the fiat currency to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for IBM's blockchain integration~\cite{cointelegraph}.
 
+Tether and TrueUSD are prominent examples of USD pegged tokens. Some projects like Digix Gold Token prefer to use gold to back their stablecoin, as gold has a relatively slow increase in its value compared to fiat currencies. %Reference??
 
-Tether and TrueUSD are USD are prominent examples of USD pegged tokens. Some projects like Digix Gold Token prefer to use gold to back their stablecoin, as gold has a relatively slow increase in its value compared to fiat currencies. %Reference??
-
-~\textit{Discussion about centralization:} Backing up with fiat currency means that there is a need for third party. The amount of money to back the stablecoin up should be held in an account~\cite{techrev}. The involvement of a third party causes controversy in the community, as the third party can just deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
+~\textit{Discussion about centralization:} Backing up with fiat currency means that there is a need for third party. The amount of money to back the stablecoin up should be held in an account~\cite{techrev}. Centralization ensures that the peg can be attained. The involvement of a third party causes controversy, as the third party can just deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
 
 \begin{quote}
 ``Redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis."
@@ -58,12 +57,9 @@ Tether and TrueUSD are USD are prominent examples of USD pegged tokens. Some pro
 
 %Globcoin: less reliance on US dollars but still centralized.~\cite{cryptoinsider}
 
-~\textbf{2) Crypto-collateralized stablecoins:} These type of stablecoins uses other cryptocurrencies as a back up value rather than a fiat currency. Over-collateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach. Reserve utilizes a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
+~\textbf{2) Crypto-collateralized stablecoins:} These type of stablecoins use other cryptocurrencies as a back up value rather than a fiat currency. Over-collateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach. Reserve utilizes a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
 
-If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation, hence it is hard to predict~\cite{swan}.} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over over-collateralization in crypto-collateralized stablecoins the loss of value will be drastic.
-
-In this case the loss-exposure would even be amplified for the stablecoin owners because of the over-collateralization. This is also why some experts are strongly discouraging this approach.
-
+If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation. this type of an event is hard to predict~\cite{swan}.} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over-collateralization in this type of stablecoins the loss of value will be drastic. This is also why some experts are strongly discouraging this approach.
 
 ~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types of stable coins, these aren't back by fiat currencies of another cryptocurrency. The stability is achieved algorithmically~\cite{linkedin}. This provides better scalability~\cite{report}. Basis is one of the first projects that use this approach.
 
@@ -74,7 +70,6 @@ Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic
 %The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}  DAI Havven crypto collat?
 
 Another approach is the seigniorage shares method\cite{overview}. Here, the smart contract automatically adjusts the supply based on the algorithm to achieve stability in the value.
-
 
 \section{Issues that stablecoins address}
 As mentioned in the~\ref{Intro}, currencies have to serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. To do so, they have to denote a minimum level of value stability. In this regard, stablecoins are proposed to fulfill these properties, due to their non-fluctuating value compared to fiat currencies or any other alternative\eg commodity. In addition, they purport to solve a group of critical issues that were introduced by cryptocurrencies. In this section, we discuss these issues.
@@ -193,9 +188,9 @@ Although cryptocurrencies, especially Bitcoin, play a revolutionary role in fina
 %
 %\textit{Other possible solutions to lending:} While stable coin is one of them what can be the other possible solutions?
 
-\section{Comparison Framework} % Put the code for the framework
-Define the properties that are considered during the design of stable coins.
-~\textblue{Collateralization info from ~\cite{bitmex}, decide which projects to choose that exemplify each category best.}
+%\section{Comparison Framework} % Put the code for the framework
+%Define the properties that are considered during the design of stable coins.
+%~\textblue{Collateralization info from ~\cite{bitmex}, decide which projects to choose that exemplify each category best.}
 %\begin{table}[]
 %	\begin{tabular}{|l|l|l|l|l|}
 %		\hline
@@ -213,35 +208,40 @@ Define the properties that are considered during the design of stable coins.
 %	\end{tabular}
 %\end{table}
 
-Decentral price oracle and Schelling point~\cite{cryptoinsider}
-DAI and Bitshares~\cite{cryptoinsider}
-Feedback column from ~\cite{report}
-Bitbay: One of the most unstable stablecoins~\cite{report}.
+%Decentral price oracle and Schelling point~\cite{cryptoinsider}
+%DAI and Bitshares~\cite{cryptoinsider}
+%Feedback column from ~\cite{report}
+%Bitbay: One of the most unstable stablecoins~\cite{report}.
 
-Today, it would appear that prioritization of automation/transparency generally carries with it the trade-off of greater stability complexity (i.e., risk that the peg will be broken). In other words, the more decentralized the stablecoin design, the less likely it is to remain price stable against a peg like the US dollar. The success of Tether offers at least some evidence that so far the market has prioritized stability over
-decentralization (i.e., transparency and automation).Anyone who prioritizes
-decentralization already has the option to own arguably the most decentralized cryptoasset, bitcoin.~\cite{report}
-~\textit{A question to think about: }But does the
-broader world beyond the digital assets ecosystem really need (or want) stablecoins?~\cite{report}
+%Today, it would appear that prioritization of automation/transparency generally carries with it the trade-off of greater stability complexity (i.e., risk that the peg will be broken). In other words, the more decentralized the stablecoin design, the less likely it is to remain price stable against a peg like the US dollar. The success of Tether offers at least some evidence that so far the market has prioritized stability overdecentralization (i.e., transparency and automation).Anyone who prioritizesdecentralization already has the option to own arguably the most decentralized cryptoasset, bitcoin.~\cite{report}
+%~\textit{A question to think about: }But does the broader world beyond the digital assets ecosystem really need (or want) stablecoins?~\cite{report}
 % Tether, the largest stablecoin in terms of its market value of approximately $2.7 billion USD, illustrates the underlying demand for a stablecoin
 
 \section{Investigation of gas volatility in Ethereum}
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\subfloat[EUR]{\includegraphics[width=0.5\textwidth]{figures/eur.pdf}\label{fig:eur}}
 	\hfill
 	\subfloat[ETH]{\includegraphics[width=0.5\textwidth]{figures/eth.pdf}\label{fig:eth}}
-		\hfill
+	\hfill
 	\subfloat[GAS]{\includegraphics[width=0.5\textwidth]{figures/gas.pdf}\label{fig:gas}}
-\hfill
-%\subfloat[Gold]{\includegraphics[width=0.5\textwidth]{figures/gold.pdf}\label{fig:gold}}
-	\caption{Comparison}
+	\hfill
+	%\subfloat[Gold]{\includegraphics[width=0.5\textwidth]{figures/gold.pdf}\label{fig:gold}}
+	\caption{Comparison of change of value in EUR, ETH and Gas with respect to gold and BTC }
 	\label{fig:aboutgas}
 \end{figure}
 
+Figure~\ref{fig:aboutgas} illustrates how the values of EUR, ETH and Gas change with respect to BTC and gold. EUR plot in Figure~\ref{fig:eur} tends to have more movements in the directions 1-5 and 3-7 suggesting that while the value of EUR stays the same according to one axis, it changes according to the other. For instance, between June 2018 and August 2018, the value of EUR increased with respect to BTC, while it stayed the same according to USD. This type of movement suggest that EUR-USD exchange rate is going under less change, whereas BTC-EUR rate is subject to high volatility. On the other hand, in the first half of 2017, while EUR retained its value against BTC, EUR to USD rate went under change.
 
-\section{Critical Issues with Stable Coins}
-~\textblue{Combine with conclusion and discussion??}
+ETH plot in Figure~\ref{fig:eth} illustrates more volatility againts BTC and gold, as there are horizontal, vertical and diagonal changes.
+
+Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes.
+
+\section{Conclusion and Discussion}
+This report analyses the current state of stablecoins and investigates the gas price in Ethereum to understand how gas price behaves. Stablecoins have a high a potential to offer a wide range of applications due to their price stability.
+
+%\section{Critical Issues with Stable Coins}
+%~\textblue{Combine with conclusion and discussion??}
 %
 %--Most stable coins fail (this is historically true, it doesn?t speak to the current stable coins). When they fail, they may or may not be redeemable for the promised amount. That is the harsh truth. None of the old stable coins are with us today aside from Nubits?. and Nubits has recently been trading for under .50 cents here in late March 2018. TUSD, Tether, and Dia all seem solid in there here and now, and they likely have learned from the mistakes of their formers, but if we are being honest about the history of stable coins, it is as volatile as the history of crypto itself.
 %
@@ -258,7 +258,6 @@ broader world beyond the digital assets ecosystem really need (or want) stableco
 %
 %--Ametrano's paper on currency design (the one that inspired Fragments) argues that we shouldn't peg a stablecoin to the U.S. dollar, as its days of stability may be numbered. Ametrano's preferred benchmark is a basket of commodities. ~\cite{cryptoinsider}
 
-\section{Discussion}
 %%https://gemini.com/wp-content/themes/gemini/assets/img/dollar/gemini-dollar-whitepaper.pdf -> ref
 
 %Mahsa:
