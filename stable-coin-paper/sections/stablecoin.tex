@@ -46,11 +46,11 @@ Considering these facts, there is a desire to design stablecoins with the stable
 %different ways and issues with each. %~\cite{euromoney}
 Stablecoins have a market value of \$3 billion and this corresponds to the 1.5\% of the total market value of the cryptoassets~\cite{report}. Each proposing different properties, stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
-~\textbf{1) Fiat-collateralized stablecoins:} These type of stablecoins are backed by fiat currency and backing by USD is one of the most common types. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. USD being one of the most common choices for the fiat currency to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for IBM's blockchain integration~\cite{cointelegraph}.
+~\textbf{1) Fiat-collateralized stablecoins:} These types of stablecoins are backed by fiat currency and backing by USD is one of the most common types. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. USD being one of the most common choices for the fiat currency to back the stablecoin with, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for IBM's blockchain integration~\cite{cointelegraph}.
 
 Tether and TrueUSD are prominent examples of USD pegged tokens. Some projects like Digix Gold Token prefer to use gold to back their stablecoin, as gold has a relatively slow increase in its value compared to fiat currencies. %Reference??
 
-~\textit{Discussion about centralization:} Backing up with fiat currency means that there is a need for third party. The amount of money to back the stablecoin up should be held in an account~\cite{techrev}. Centralization ensures that the peg can be attained. The involvement of a third party causes controversy, as the third party can just deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
+~\textit{Discussion about centralization:} Backing up with fiat currency means that there is a need for third party. The amount of money to back the stablecoin with, should be held in an account~\cite{techrev}. Centralization ensures that the peg can be attained. However, involvement of a third party causes controversy, as the third party can just deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
 
 \begin{quote}
 ``Redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis."
@@ -58,18 +58,18 @@ Tether and TrueUSD are prominent examples of USD pegged tokens. Some projects li
 
 %Globcoin: less reliance on US dollars but still centralized.~\cite{cryptoinsider}
 
-~\textbf{2) Crypto-collateralized stablecoins:} These type of stablecoins use other cryptocurrencies as a back up value rather than a fiat currency. Over-collateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach. Reserve utilizes a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
+~\textbf{2) Crypto-collateralized stablecoins:} These types of stablecoins use other cryptocurrencies as a back up value rather than a fiat currency. Over-collateralization is needed this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach -- utilizing a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
 
-If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation. this type of an event is hard to predict~\cite{swan}.} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over-collateralization in this type of stablecoins the loss of value will be drastic. This is also why some experts are strongly discouraging this approach.
+If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation. this type of an event is hard to predict~\cite{swan}.} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over-collateralization in this type of stablecoins the loss of value will be drastic. This is the reason that a group of experts strongly discourage this approach.
 
-~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types of stable coins, these aren't back by fiat currencies of another cryptocurrency. The stability is achieved algorithmically~\cite{linkedin}. This provides better scalability~\cite{report}. Basis is one of the first projects that use this approach.
+~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types, this group of stablecoins are not backed by fiat currencies or another cryptocurrency. Here the stability is achieved algorithmically~\cite{linkedin} which helps to provide better scalability~\cite{report}. Basis is one of the first projects that use this approach.
 
-Basis and Carbon use the dual-token model~\cite{cryptoinsider}. There is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value. If the value of Basis increases (an increase over \$1), more Basis tokens are produced to increase the supply which will lead to a decrease in the price and if there is a decrease in the price, a bond that is worth a Basis token is issued and some Basis tokens are bought to decrease the supply.~\cite{euromoney}
+Basis and Carbon use the dual-token model~\cite{cryptoinsider}. ~\textblue{Is the following sentence explaining the approach used in Basis or Carbon, if not let's bring them up}There is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value. If the value of Basis increases (an increase over \$1), more Basis tokens are produced to increase the supply which will lead to a decrease in the price and if there is a decrease in the price, a bond that is worth a Basis token is issued and some Basis tokens are bought to decrease the supply.~\cite{euromoney}
 
 %If the price falls below \$1, the code will issue bonds worth one basis token each, use the proceeds to buy existing Basis tokens to reduce supply and so bid the price back up, later repaying bondholders when Basis tokens trade above par.  It is a complicated, seigniorage based system.
 
 %The dual-token model — stablecoins and shares One token is stable, and the other is used to whip it back onto the narrow track. Roughly, the idea is that supply of the stable token is dynamically increased and decreased. ex: Basis, Carbon. Then the dual-token model has two flavours: the kind where the stable token is created by locking up other crypto (e.g. DAI and Havven), and the kind where it is not (e.g. Basis, Carbon). ~\cite{cryptoinsider}  DAI Havven crypto collat?
-
+~\textblue{seigniorage shares method is the one to achieve stablecoin?}
 Another approach is the seigniorage shares method\cite{overview}. Here, the smart contract automatically adjusts the supply based on the algorithm to achieve stability in the value.
 
 \section{Issues that stablecoins address}
@@ -232,13 +232,20 @@ Although cryptocurrencies, especially Bitcoin, play a revolutionary role in fina
 	\label{fig:aboutgas}
 \end{figure}
 
-Figure~\ref{fig:aboutgas} illustrates how the values of EUR, ETH and Gas change with respect to BTC and gold. EUR plot in Figure~\ref{fig:eur} tends to have more movements in the directions 1-5 and 3-7 suggesting that while the value of EUR stays the same according to one axis, it changes according to the other. For instance, between June 2018 and August 2018, the value of EUR increased with respect to BTC, while it stayed the same according to USD. This type of movement suggest that EUR-USD exchange rate is going under less change, whereas BTC-EUR rate is subject to high volatility. On the other hand, in the first half of 2017, while EUR retained its value against BTC, EUR to USD rate went under change.
+Figure~\ref{fig:aboutgas} illustrates how the values of EUR, ETH and Gas change with respect to BTC and gold. EUR plot in Figure~\ref{fig:eur} tends to have more movements in the directions 1-5 and 3-7 suggesting that while the value of EUR stays the same according to one axis, it changes according to the other. For instance, between June 2018 and August 2018, the value of EUR increased with respect to BTC, while it stayed the same according to USD. This type of movement suggests that EUR-USD exchange rate is going under less change, whereas BTC-EUR rate is subject to high volatility. On the other hand, in the first half of 2017, while EUR retained its value against BTC, EUR to USD rate went under change.
 
-ETH plot in Figure~\ref{fig:eth} illustrates more volatility againts BTC and gold, as there are horizontal, vertical and diagonal changes. The fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC, which is also a volatile cryptocurrency, and Gold.
+ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and gold, as there are horizontal, vertical and diagonal changes. The fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC, which is also a volatile cryptocurrency, and Gold.
 
 Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes, spread over a smaller range. There are less number of changes compared to ETH. Except from the changes between May 2018-July 2018 and January 2018-March 2018, the gas price changes in a smaller range. Even though there are fluctuations in the gas price, it can be inferred that gas price is less volatile than ETH.
 
 \section{Conclusion and Discussion}
+In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price/value stability. We also discuss various issues that if the righteousness stablecoins are designed, would address them. According to the charts represented in the paper, we hypothesize there are two options to achieve stablecoin, that is, pegging the stablecoin to a (i) currency (\ie USD) or (ii) commodity (\ie gold). In the first case, 
+
+
+
+
+
+
 This report analyses the current state of stablecoins and investigates the gas price in Ethereum to understand how gas price behaves. Stablecoins have a high a potential to offer a wide range of applications due to their price stability.
 
 %\section{Critical Issues with Stable Coins}
