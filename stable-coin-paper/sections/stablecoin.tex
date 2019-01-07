@@ -46,7 +46,7 @@ Considering these facts, there is a desire to design stablecoins with the stable
 %different ways and issues with each. %~\cite{euromoney}
 Stablecoins have a market value of \$3 billion and this corresponds to the 1.5\% of the total market value of the cryptoassets~\cite{report}. Each proposing different properties, stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
 
-~\textbf{1) Fiat-collateralized stablecoins:} These types of stablecoins are backed by fiat currency. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. While USD is currently the most common choice to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for their blockchain integration~\cite{cointelegraph}. Tether and TrueUSD are prominent examples of USD pegged tokens. 
+~\textbf{1) Fiat-collateralized stablecoins:} These types of stablecoins are backed by fiat currency. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. While USD is currently the most common choice to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for their blockchain integration~\cite{cointelegraph}. Tether and TrueUSD are prominent examples of USD pegged tokens.
 %Some projects like Digix Gold Token prefer to use gold to back their stablecoin, as gold has a relatively slow increase in its value compared to fiat currencies. %Reference??
 
 ~\textit{Discussion about centralization:} In order to back up with stablecoins with fiat, one needs to place trust on a third party. Centralization ensures that the amount of money to back the stablecoin with, is held in an account~\cite{techrev} and the peg is attained. However, involvement of a third party causes controversy, as the third party can deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
@@ -217,7 +217,7 @@ Although cryptocurrencies, especially Bitcoin, play a revolutionary role in fina
 % Tether, the largest stablecoin in terms of its market value of approximately $2.7 billion USD, illustrates the underlying demand for a stablecoin
 
 \section{Investigation of gas volatility in Ethereum}
-Our analysis in Section~\ref{Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies. 
+Our analysis in Section~\ref{Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies.
 
 \begin{figure}[!htb]
 	\centering
@@ -244,8 +244,62 @@ ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and gol
 
 Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes, spread over a smaller range. There are less number of changes compared to ETH. Except from the changes between May 2018-July 2018 and January 2018-March 2018, the gas price changes in a smaller range. Even though there are fluctuations in the gas price, it can be inferred that gas price is less volatile than ETH. Also, it worths mentioning that gas is changing over a small scale in x-axis (USD), when compared to Ether's plot over the same axis in a larger interval.
 
+\subsection{new graphs}
+\begin{figure}[!htb]
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{cad.pdf}
+	\caption{CAD with respect to BTC and USD}\label{fig:cad1}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{eur3.pdf}
+	\caption{EUR with respect to BTC and USD}\label{fig:eur1}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}%
+	\includegraphics[width=\linewidth]{gbp.pdf}
+	\caption{GBP with respect to BTC and USD}\label{fig:gbp1}
+	\endminipage
+\end{figure}
+
+\begin{figure}[!htb]
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{eth3.pdf}
+	\caption{ETH with respect to BTC and USD}\label{fig:cad1}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{xrp.pdf}
+	\caption{XRP with respect to BTC and USD}\label{fig:eur1}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}%
+	\includegraphics[width=\linewidth]{eos.pdf}
+	\caption{EOS with respect to BTC and USD}\label{fig:gbp1}
+	\endminipage
+\end{figure}
+
+\begin{figure}[!htb]
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{gas3.pdf}
+	\caption{Gas with respect to BTC and USD}\label{fig:cad1}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{tether.pdf}
+	\caption{Tether with respect to BTC and USD}\label{fig:eur1}
+	\endminipage\hfill
+\end{figure}
+
+
+\begin{figure}[!htb]
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{withoutlabels.pdf}
+	\caption{no label}\label{fig:cad1}
+	\endminipage\hfill
+	\minipage{0.32\textwidth}
+	\includegraphics[width=\linewidth]{withlabels.pdf}
+	\caption{with label}\label{fig:eur1}
+	\endminipage\hfill
+\end{figure}
+
 \section{Conclusion and Discussion}
-In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behavior. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain. 
+In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behavior. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.
 
 
 %\section{Critical Issues with Stable Coins}
