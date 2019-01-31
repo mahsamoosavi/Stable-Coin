@@ -7,7 +7,7 @@
 
 %==========================================%
 
-\section{what do volatility and stability mean?} %need a better name
+\subsection{Motivation} %need a better name
 \textblue{In this section we talk about volatility and what does stability mean, and we make argument that we're not economist and everything is explained in our own language} 
 Cryptocurrencies have gained a wide application after Bitcoin was first introduced in Satoshi Nakamoto’s (pseudonymous) 2008 whitepaper~\cite{nakamoto2008bitcoin}. For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence they cannot be adopted as money~\cite{overview}.
 
@@ -24,18 +24,6 @@ Having said that, the volatile nature of cryptocurrencies (\eg Ether, Bitcoin) h
 Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. %However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
 Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time. This indicates that the changes in the values of USD and gold are highly correlated.
 
-%========================%
-
-\begin{figure}[!htb]
-	\centering
-	\subfloat[Bitcoin's value with respect to USD and Gold]{\includegraphics[width=0.75\textwidth]{figures/btc.pdf}\label{fig:btc}}
-	\hfill
-	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
-	\caption{BTC}
-	\label{fig:Comparison}
-\end{figure}
-%========================%
-
 Considering these facts, there is a desire to design stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the blockchain which is the underlying technology of cryptocurrencies.
 
 %==========================================%
@@ -43,12 +31,68 @@ Considering these facts, there is a desire to design stablecoins with the stable
 \section{Systemization of stablecoins and Justification}
 \textblue{The main meat of the paper where we place the table and explain it.} \par
 
+\input{setup/table} 
+
+% Jeremy: How do we make a stable coin.
+% Jeremy: Table here
+
+\subsection{Redeemable and Directly-Backed.} 
+% Description of how it works: Desposit in bank, etc
+% Justification that bids will never exceed $1: an arbitrageur will pay $1 to mint 1 XSC and the 1 XSC for the bid
+% Justification that offers will be less than $1: an arbitrageur will purchase the 1 XSC and redeem it for $1
+% Risk: not redeemable -> redemption is not 100%, the coin will be offered at less than $1. E.g., offers of $0.50, says 50% it can't be redeemed. 
+% Examples: Gemini
+
+\subsection{Non-Redeemable and Directly-Backed.} 
+% Description of how it works. Deposit in bank, etc
+% Justification that bids will never exceed $1: 
+% Justification that offers will be less than $1 
+% Examples: Tether
+% Remarks: 
+
+
+\subsection{Non-Redeemable and indirectly-Backed.} 
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1 
+% Examples: 
+
+
+\subsection{Redeemable and indirectly-Backed.} 
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1
+% Examples: 
+
+ \subsection{Currency Board.} 
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1
+% Examples: 
+
+\subsection{Algorithmic with subjective external information} 
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1
+% Examples: 
+
+\subsection{Algorithmic with objective external information} 
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1
+% Examples: 
+
+\subsection{Algorithmic with internal information} 
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1
+% Examples: 
+
 We performed a search query on \texttt{coindesk.com} and found the following projects which are mostly used in every articles published about stablecoins until January 11, 2019. \footnote{https://www.coindesk.com/} Table~\ref{tab:stablecoins} represents these projects and the methods they apply to achieve stability. (we should mention the search term that we used to extract our resources from coindesk)
 
 
 \textbf{Distribution of articles speaking about stablecoin:} 2014: 2, 2017: 4, 2018: 112, 2019 (up to Jan 11): 4.
 
-\input{setup/table} 
 
 %==========================================%
 
@@ -86,7 +130,22 @@ ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and gol
 
 Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes, spread over a smaller range. There are less number of changes compared to ETH. Except from the changes between May 2018-July 2018 and January 2018-March 2018, the gas price changes in a smaller range. Even though there are fluctuations in the gas price, it can be inferred that gas price is less volatile than ETH. Also, it worths mentioning that gas is changing over a small scale in x-axis (USD), when compared to Ether's plot over the same axis in a larger interval.
 
+
+%========================%
+
+\begin{figure}[!htb]
+	\centering
+	\subfloat[Bitcoin's value with respect to USD and Gold]{\includegraphics[width=0.75\textwidth]{figures/btc.pdf}\label{fig:btc}}
+	\hfill
+	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
+	\caption{BTC}
+	\label{fig:Comparison}
+\end{figure}
+%========================%
+
 \subsection{new graphs}
+
+
 %========================%
 
 \begin{figure}[!htb]
