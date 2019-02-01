@@ -5,6 +5,7 @@
 
 \textblue{Give a brief introduction on Bitcoin and crypto-currencies and the state of stablecoins in general.}
 
+
 % It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high. 
 
 % Stablecoins are a topic of recent interest. A lot of blogs and some academic articles have systemized them. We know that the reader of this paper is expecting a chart of coins and what mechanisms they use: we do provide that, but we do not consider that the core contribution of the paper at all. Instead we really dug into finance to deeply understand the core methods and mechanisms that are employed for reducing volatility of a coin. We feel our paper is closer to a tutorial on stablecoins where we try to eliminate all the jargon (which is often misused and imprecisely applied) to explain the concepts, as well as drawing out appropriate foundations from finance. 
@@ -13,6 +14,7 @@
 
 % Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt). 
 
+% Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin 
 %==========================================%
 
 \subsection{Motivation} %need a better name
@@ -41,7 +43,11 @@ Considering these facts, there is a desire to design stablecoins with the stable
 \subsection{Valuation}
 % Every thing has two prices
 
+How do we assign value to something? how do we establish what something is worth? 
+The value is usually given in some units of account (\eg CAD). When we establish a value for something, we do. not really claim what the value and what it worths, instead, we establish a value of its exchange. For example, today Alice is willing to pay 500 CAD for Bob's phone, whereas tomorrow, she will pay 600 CAD. What happened in this case? It could be (i) the value of money (CAD) going down or (ii) the value of good (phone) going up. Thus, in order to establish how much value something has, we should think of it in terms of being an exchange rate (the exchange rate between that asset and some other valuable assets). In other words, if Bob is willing to offer his phone for 1000 CAD, does it mean that it worths 1000 CAD? What we know about is that the value of Bob's phone is somewhere between 500 CAD (which Alice is willing to bid) and 1000 CAD (which Bob is willing to accept/ask). Therefore, the value of an object is not a single value 
+
 \subsection{Exchange}
+
 
 
 %==========================================%
