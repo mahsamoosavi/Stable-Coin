@@ -5,6 +5,14 @@
 
 \textblue{Give a brief introduction on Bitcoin and crypto-currencies and the state of stablecoins in general.}
 
+% It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high. 
+
+% Stablecoins are a topic of recent interest. A lot of blogs and some academic articles have systemized them. We know that the reader of this paper is expecting a chart of coins and what mechanisms they use: we do provide that, but we do not consider that the core contribution of the paper at all. Instead we really dug into finance to deeply understand the core methods and mechanisms that are employed for reducing volatility of a coin. We feel our paper is closer to a tutorial on stablecoins where we try to eliminate all the jargon (which is often misused and imprecisely applied) to explain the concepts, as well as drawing out appropriate foundations from finance. 
+
+% Example: if we described the approach of stable coin in two simple words: ``currency board'' and you need no further explanation (just, perhaps, some details on the parameters), this paper is not for you. If you have heard the term and have a vague sense of how it works, but couldn't really explain it or why it achieves stability, this paper is for you. If you have never heard the term, this paper is also for you.
+
+% Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt). 
+
 %==========================================%
 
 \subsection{Motivation} %need a better name
@@ -28,8 +36,20 @@ Considering these facts, there is a desire to design stablecoins with the stable
 
 %==========================================%
 
+\section{Preliminaries}
+
+\subsection{Valuation}
+% Every thing has two prices
+
+\subsection{Exchange}
+
+
+%==========================================%
+
 \section{Systemization of stablecoins and Justification}
 \textblue{The main meat of the paper where we place the table and explain it.} \par
+
+% Dollar tokenization vs. low volatitility
 
 \input{setup/table} 
 
@@ -42,6 +62,7 @@ Considering these facts, there is a desire to design stablecoins with the stable
 % Justification that offers will be less than $1: an arbitrageur will purchase the 1 XSC and redeem it for $1
 % Risk: not redeemable -> redemption is not 100%, the coin will be offered at less than $1. E.g., offers of $0.50, says 50% it can't be redeemed. 
 % Examples: Gemini
+
 
 \subsection{Non-Redeemable and Directly-Backed.} 
 % Description of how it works. Deposit in bank, etc
@@ -56,6 +77,7 @@ Considering these facts, there is a desire to design stablecoins with the stable
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1 
 % Examples: 
+% Remarks: Oracles
 
 
 \subsection{Redeemable and indirectly-Backed.} 
@@ -70,11 +92,16 @@ Considering these facts, there is a desire to design stablecoins with the stable
 % Justification that offers will be less than $1
 % Examples: 
 
+\subsection{Algorithmic}
+
+% Control system: input (metrics), make a decision, implement the intervention 
+% We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency. 
+
 \subsection{Algorithmic with subjective external information} 
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
-% Examples: 
+% Examples: RSCoin
 
 \subsection{Algorithmic with objective external information} 
 % Description of how it works.
@@ -82,7 +109,7 @@ Considering these facts, there is a desire to design stablecoins with the stable
 % Justification that offers will be less than $1
 % Examples: 
 
-\subsection{Algorithmic with internal information} 
+\subsection{Algorithmic with only internal information} 
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
