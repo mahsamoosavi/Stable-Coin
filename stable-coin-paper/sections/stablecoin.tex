@@ -27,10 +27,24 @@ Having said that, the volatile nature of cryptocurrencies (\eg Ether, Bitcoin) h
 %========================%
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.75\textwidth]{figures/graph1.pdf}
+	\includegraphics[width=0.75\textwidth]{figures/allCurrencies.pdf}
 	\caption{\label{fig:btcandfiat}Comparison among fiat currencies and Bitcoin: The values are retrieved on the first day of each month. A fraction of Bitcoin (1/1000 BTC) is plotted.}
 \end{figure}
 %========================%
+
+
+%========================%
+
+\begin{figure}[!htb]
+	\centering
+	\subfloat[GBP with respect to EUR and USD]{\includegraphics[width=0.75\textwidth]{figures/gbpBrexit.pdf}\label{fig:btc}}
+	\hfill
+	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
+	\caption{BTC}
+	\label{fig:Comparison}
+\end{figure}
+%========================%
+
 
 Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. %However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
 Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time. This indicates that the changes in the values of USD and gold are highly correlated.
@@ -185,77 +199,55 @@ ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and gol
 Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes, spread over a smaller range. There are less number of changes compared to ETH. Except from the changes between May 2018-July 2018 and January 2018-March 2018, the gas price changes in a smaller range. Even though there are fluctuations in the gas price, it can be inferred that gas price is less volatile than ETH. Also, it worths mentioning that gas is changing over a small scale in x-axis (USD), when compared to Ether's plot over the same axis in a larger interval.
 
 
-%========================%
-
-\begin{figure}[!htb]
-	\centering
-	\subfloat[Bitcoin's value with respect to USD and Gold]{\includegraphics[width=0.75\textwidth]{figures/btc.pdf}\label{fig:btc}}
-	\hfill
-	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
-	\caption{BTC}
-	\label{fig:Comparison}
-\end{figure}
-%========================%
-
-\subsection{new graphs}
-
 
 %========================%
 
 \begin{figure}[!htb]
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/cad.pdf}
 	\caption{CAD with respect to BTC and USD}\label{fig:cad}
 	\endminipage\hfill
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/eur.pdf}
 	\caption{EUR with respect to BTC and USD}\label{fig:eur}
 	\endminipage\hfill
-	\minipage{0.32\textwidth}%
-	\includegraphics[width=\linewidth]{figures/gbp.pdf}
-	\caption{GBP with respect to BTC and USD}\label{fig:gbp}
-	\endminipage
 \end{figure}
 %========================%
 
 \begin{figure}[!htb]
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/eth.pdf}
 	\caption{ETH with respect to BTC and USD}\label{fig:eth}
 	\endminipage\hfill
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/xrp.pdf}
 	\caption{XRP with respect to BTC and USD}\label{fig:xrp}
 	\endminipage\hfill
-	\minipage{0.32\textwidth}%
-	\includegraphics[width=\linewidth]{figures/eos.pdf}
-	\caption{EOS with respect to BTC and USD}\label{fig:eos}
-	\endminipage
 \end{figure}
 %========================%
 
 \begin{figure}[!htb]
 
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/tether.pdf}
 	\caption{Tether with respect to BTC and USD}\label{fig:tether}
 	\endminipage\hfill
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/bitusd.pdf}
-	\caption{BitUSD with respect to BTC and US}\label{fig:bitusd}
+	\caption{BitUSD with respect to BTC and USD}\label{fig:bitusd}
 	\endminipage\hfill
 \end{figure}
 
 %========================%
 
 \begin{figure}[!htb]
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/gas.pdf}
 	\caption{Gas with respect to BTC and USD}\label{fig:gas}
 	\endminipage\hfill
-	\minipage{0.32\textwidth}
+	\minipage{0.45\textwidth}
 	\includegraphics[width=\linewidth]{figures/gasElectricity.pdf}
-	\caption{Gas with respect to BTC and USD}\label{fig:gasElectricity}
+	\caption{Gas with respect to ETH and Electricity price}\label{fig:gasElectricity}
 	\endminipage\hfill
 \end{figure}
 %==========================================%
@@ -271,13 +263,6 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 % ETH,EOS,XRP - (BTC and USD): mostly diagonal movements.
 % TETHER: Does it artificially inflate BTC price? Do they issue un-backed tokens to reinforce BTC price, then sell BTC to fully back tokens?
 
-%========================%
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=0.75\textwidth]{figures/gbpEURUSD.pdf}
-	\caption{\label{fig:gbp1}}
-\end{figure}
-%========================%
 \section{Conclusion and Discussion}
 In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behavior. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.
 
