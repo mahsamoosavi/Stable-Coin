@@ -71,7 +71,7 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 % Jeremy: Table here
 
 \subsection{Redeemable and Directly-Backed.}
-% Description of how it works: Desposit in bank, etc
+% Description of how it works: Desposit in bank, etc. Regular audits are needed to ensure that the stablecoin is indeed fully collateralized
 % Justification that bids will never exceed $1: an arbitrageur will pay $1 to mint 1 XSC and the 1 XSC for the bid
 % Justification that offers will be less than $1: an arbitrageur will purchase the 1 XSC and redeem it for $1
 % Risk: not redeemable -> redemption is not 100%, the coin will be offered at less than $1. E.g., offers of $0.50, says 50% it can't be redeemed.
@@ -138,7 +138,15 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 %==========================================%
 
 \section{Investigation of gas volatility}
-\textblue{in this section we have  a discussion about Gas: Gas is not a currency so you cannot buy things with it BUT you can have a smart contract and swap it with other tokens.  Gas is actually stable with respect to others, the reason ir's not obvious is human error and usability stuff. Gas is not pegged to anything. Also it would be nice to have a chart : Ether, Electricity (Global energy index), and Gas} \par
+
+% Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens
+% Gas is not a currency so you cannot buy things with it BUT you can turn it into a currency : having a smart contract and swap it with other tokens
+%  Gas is actually stable with respect to others, the reason it's not obvious is human error and their wrong mental model 
+% Gas is not pegged to anything
+% Gas is free floating but it’s driven (governed) by market forces (auctioning off)
+% there is an upper band and lower band for Gas
+
+\textblue{ it would be nice to have a chart : Ether, Electricity (Global energy index), and Gas} \par
 Our analysis in Section~\ref{Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies.
 
 %========================%
