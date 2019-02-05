@@ -1,0 +1,52 @@
+% !TEX root = ../main.tex
+
+\clearpage
+\section{Appendix}
+\appendix
+
+
+
+\section{The current state of stablecoins (might be needed for the paper)}
+
+%different ways and issues with each. %~\cite{euromoney}
+Stablecoins have a market value of \$3 billion and this corresponds to the 1.5\% of the total market value of the cryptoassets~\cite{report}. Each proposing different properties, stablecoins can be categorized into three groups based on the way they achieve stability: fiat-collateralized, crypto-collateralized, and non-collateralized.
+
+~\textbf{1) Fiat-collateralized stablecoins:} These types of stablecoins are backed by fiat currency. Generally, there is a 1:1 peg between the fiat currency and the stablecoin that indicates a convergence between their values~\cite{linkedin}. While USD is currently the most common choice to back the stablecoin, IBM states that they are also interested in projects that use other national fiat currencies, as they will be helpful for their blockchain integration~\cite{cointelegraph}. Tether and TrueUSD are prominent examples of USD pegged tokens.
+%Some projects like Digix Gold Token prefer to use gold to back their stablecoin, as gold has a relatively slow increase in its value compared to fiat currencies. %Reference??
+
+~\textit{Discussion about centralization:} In order to back up with stablecoins with fiat, one needs to place trust on a third party. Centralization ensures that the amount of money to back the stablecoin with, is held in an account~\cite{techrev} and the peg is attained. However, involvement of a third party causes controversy, as the third party can deny giving money to the users. Tether explains this point as follows~\cite{cryptoinsider}:
+
+\begin{quote}
+``Redemptions will not be unreasonably denied, but we reserve the right to selectively deny redemption and creation of Tethers on a case-by-case basis."
+\end{quote}
+
+%Globcoin: less reliance on US dollars but still centralized.~\cite{cryptoinsider}
+
+~\textbf{2) Crypto-collateralized stablecoins:} These types of stablecoins use other cryptocurrencies as a back up value rather than fiat currency. \\ Over-collateralization is needed in this case as the underlying cryptocurrency is also volatile~\cite{linkedin}. MakerDAO and Reserve use this approach -- utilizing a smart contract to back the stablecoin with another cryptocurrency~\cite{cointelegraph}.
+
+If there is a black swan event~\footnote{A black swan event is characterized as being unexpected, random and having significant effects to the current situation. This type of an event is hard to predict~\cite{swan}.} where the underlying currency loses its value and does not worth anything, the stablecoin also loses its value~\cite{coinsexplained}.  Due to the over-collateralization in this type of stablecoins, the loss of value will be drastic. This is the reason that a group of experts strongly discourage this approach.
+
+~\textbf{3) Non-collateralized stablecoins:} Unlike the previous types, this group of stablecoins are not backed by fiat currencies or another cryptocurrency. Here, the stability is achieved algorithmically which helps to provide better scalability~\cite{report}.
+
+Basis is one of the first projects of this type that achieves price stability using the dual-token model~\cite{cryptoinsider}. In this method, there is dynamic adjustment of the existing supply of the stablecoin. While one token is stable, the other is used to achieve the stability of the value. If the value of Basis increases (an increase over \$1), more Basis tokens are produced to increase the supply which will lead to a decrease in the price and if there is a decrease in the price, a bond that is worth a Basis token is issued and some Basis tokens are bought to decrease the supply~\cite{euromoney}.
+
+
+\section{Issues that stablecoins address}
+As mentioned in Section~\ref{Intro}, currencies have to serve as a store of value, a unit of account, and a medium of exchange~\cite{smithin2002money}. To do so, they have to denote a minimum level of value stability. In this regard, stablecoins are proposed to fulfill these properties, due to their non-fluctuating value compared to fiat currencies or any other alternative\eg commodity. In addition, they purport to solve a group of critical issues that were introduced by cryptocurrencies. In this section, we discuss these issues.
+
+\subsection{Cryptocurrencies as Medium of Exchange}
+Despite the fast growth of the cryptocurrencies and decentral applications, there is still little deployment of them in the daily payment procedures of businesses. The main reason is that these assets are volatile in the price and hence highly risky to be deployed by merchants and retailers \ie it is impossible for a company employer to provide the employees' incomes in a volatile cryptocurrency \eg BTC that has a high level of future value and price uncertainty. On the other hand, having a stable price over the time, stablecoins can serve as a true medium of exchange, while they preserve all the advantages of using cryptocurrencies as opposed to fiat currencies.
+
+\subsection{Cryptocurrencies as Unit of Account}
+Money has to serve also as a unit of account-- the common measure that sets price to goods and services. Fiat currencies \eg USD, EUR \etc serve this functionality correctly, so they are used as units of account in the US and Europe respectively. Unfortunately, cryptocurrencies such as BTC, not having a stable price, do not seem to be used as a unit of account, hence will not be able to serve as money. However, given the price stability that stablecoins offer, they have a higher chance to be used as a digital representation of a unit of account.
+
+\subsection{Cryptocurrencies as Store of Value}
+Any asset, commodity, or money that maintains its value is called a store of value. As mentioned in Section~\ref{Intro}, highly volatile cryptocurrencies (\ie Bitcoin) cannot fulfill this property of money, as they cannot maintain their purchasing value for long-term. In contrast, stablecoins can be accepted as a store of value as their price remains stable over the time.
+
+\subsection{Lending with Cryptocurrencies}
+Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending.
+Lending is difficult to be deployed on the blockchains, bdue to the monetary instability observed in the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their values are being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies causes serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
+
+\subsection{Remittance}
+
+Although cryptocurrencies, especially Bitcoin, play a revolutionary role in financial systems, they are yet not easy to transact with due to their volatile characteristics. Therefore with stablecoins, one can benefit from decentralized nature of the token, while there is no price volatility risk. In addition, stablecoins make the cross border payments, remittances, easier.
