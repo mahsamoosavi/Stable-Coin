@@ -55,13 +55,13 @@ Considering these facts, there is a desire to design stablecoins with the stable
 \subsection{Valuation}
 % Every thing has two prices
 
-%How do we assign value to something? how do we establish what something is worth?  The value is usually given in some units of account (\eg CAD). 
+%How do we assign value to something? how do we establish what something is worth?  The value is usually given in some units of account (\eg CAD).
 
 %===Explaining the crossing===%
 
-%When we establish a value for something, we do not really claim what the value is and what it worths, instead, we establish a value of its exchange. For example, today Alice is willing to pay 500 CAD for Bob's phone, whereas tomorrow, she will pay 600 CAD. What happened in this case? It could be (i) the value of money (CAD) going down or (ii) the value of good (phone) going up. Thus, in order to establish how much value something has, we should think of it in terms of being an exchange rate (the exchange rate between that asset and some other valuable assets). In other words, if Bob is willing to offer his phone for 1000 CAD, does it mean that it worths 1000 CAD? What we know about is that the value of Bob's phone is somewhere between 500 CAD (which Alice is willing to bid) and 1000 CAD (which Bob is willing to accept/ask). Therefore, the value of an object is not a single number and we can think of it as an interval between a least amount somebody wishes to sell for and the most amount somebody wishes to pay for that object, this interval is called bid-ask. If an ask comes below a bid, then the transaction happens and that amount is recorded as the final price, we call this \textit{crossing}. 
+%When we establish a value for something, we do not really claim what the value is and what it worths, instead, we establish a value of its exchange. For example, today Alice is willing to pay 500 CAD for Bob's phone, whereas tomorrow, she will pay 600 CAD. What happened in this case? It could be (i) the value of money (CAD) going down or (ii) the value of good (phone) going up. Thus, in order to establish how much value something has, we should think of it in terms of being an exchange rate (the exchange rate between that asset and some other valuable assets). In other words, if Bob is willing to offer his phone for 1000 CAD, does it mean that it worths 1000 CAD? What we know about is that the value of Bob's phone is somewhere between 500 CAD (which Alice is willing to bid) and 1000 CAD (which Bob is willing to accept/ask). Therefore, the value of an object is not a single number and we can think of it as an interval between a least amount somebody wishes to sell for and the most amount somebody wishes to pay for that object, this interval is called bid-ask. If an ask comes below a bid, then the transaction happens and that amount is recorded as the final price, we call this \textit{crossing}.
 
-%What actually happens when they cross? Assume that they cross in such that Bob wants to pay (bid) 600 CAD for Alice's phone while Alice wants to sell (ask) it for 500 CAD. What happens in the real world is (i) either one party goes first and advertises a bid or an ask and when it crosses with other party's complimentary bid or ask, she accepts it. (ii) both parties advertise and they do not know about each other's price, so when they cross, the market decides (usually they pick the midpoint between the two). 
+%What actually happens when they cross? Assume that they cross in such that Bob wants to pay (bid) 600 CAD for Alice's phone while Alice wants to sell (ask) it for 500 CAD. What happens in the real world is (i) either one party goes first and advertises a bid or an ask and when it crosses with other party's complimentary bid or ask, she accepts it. (ii) both parties advertise and they do not know about each other's price, so when they cross, the market decides (usually they pick the midpoint between the two).
 
 %When there is a cross, you have a price that is used for selling the object, that price is a last transaction price. So three values are actually important: 1) What is the most somebody is willing to pay for the object, 2) What's the least somebody is willing to accept for it, and 3) what was the last price this object is sold out. The value we see in the newspaper is always the last price, although it does not represent how much the object worths. In fact, we cannot actually say that and the best way to say that is when the bid-ask interval is really small. Assume that the interval is only 1 cent difference, in this case we can make sure what is the value and we are sure down to a cent. When the market changes so fast, the last price gives a lot of information on how much something worths, however, the last price that belongs to 30 years ago does not reveal a lot of information.
 
@@ -85,10 +85,10 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 \textbf{Direction} & \textbf{Interpretation}   \\ \hline
 
          1/5                & $Y$ is losing (1) / gaining (5) value \\ \hline
-         2/6                & Plotted asset is gaining (2) / losing (6) value \\ \hline         
+         2/6                & Plotted asset is gaining (2) / losing (6) value \\ \hline
          3/7                & $X$ is losing (3) / gaining (7) value \\ \hline
          4/8                & \multicolumn{1}{p{12cm}|}{Plotted asset is gaining (4) / losing (8) value against $X$, while losing (4) / gaining (8) value against $Y$} \\ \hline
-          
+
 \end{tabular}
 \vspace{1em}
 \caption{\footnotesize{The interpretation of the plots.}\label{tab:plotlegend}}
@@ -112,7 +112,7 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 % issue: the stablecoin is valid as long as the holder trusts the company/person who keeps the reserve, once the trust is gone, the stablecoin worths nothing
 
 \subsection{Redeemable and Directly-Backed.}
-% Description of how it works: Deposit in bank, etc. 
+% Description of how it works: Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized. Although it's redeemable, a few people can redeem it and that itself shows that they have enough reserve, BUT what if nobody wants to redeem it?
 % Justification that bids will never exceed $1: an arbitrageur will pay $1 to mint 1 XSC and the 1 XSC for the bid
 % Justification that offers will be less than $1: an arbitrageur will purchase the 1 XSC and redeem it for $1
@@ -123,13 +123,13 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 
 
 \subsection{Non-Redeemable and Directly-Backed.}
-% Description of how it works. Deposit in bank, etc. 
+% Description of how it works. Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized
 % Justification that bids will never exceed $1:
 % Justification that offers will be less than $1
 % Examples: Tether
 % Remarks:
-% 
+%
 
 \subsection{Non-Redeemable and indirectly-Backed.}
 % Description of how it works.
@@ -151,7 +151,7 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 
 % Control system: input (metrics), make a decision, implement the intervention
 % We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency.
- 
+
 \subsection{Currency Board}
 % Description of how it works.
 % Justification that bids will never exceed $1
@@ -201,7 +201,7 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens
 % Gas is not a currency so you cannot buy things with it BUT you can turn it into a currency : having a smart contract and swap it with other tokens
-% Gas is actually stable with respect to others, the reason it's not obvious is human error and their wrong mental model 
+% Gas is actually stable with respect to others, the reason it's not obvious is human error and their wrong mental model
 % Gas is not pegged to anything
 % Gas is free floating but it’s driven (governed) by market forces (auctioning off)
 % there is an upper band and lower band for Gas
@@ -239,74 +239,53 @@ Figures~\ref{fig:eur}-~\ref{fig:gas} illustrate how the values of EUR, ETH and G
 ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and gold, as there are horizontal, vertical and diagonal changes. The fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC and Gold.
 
 Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes, spread over a smaller range. There are less number of changes compared to ETH. Except from the changes between May 2018-July 2018 and January 2018-March 2018, the gas price changes in a smaller range. Even though there are fluctuations in the gas price, it can be inferred that gas price is less volatile than ETH. Also, it worths mentioning that gas is changing over a small scale in x-axis (USD), when compared to Ether's plot over the same axis in a larger interval.
-
-
-
 %========================%
 
 \begin{figure}[!htb]
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/cad.pdf}
-	\caption{CAD with respect to BTC and USD}\label{fig:cad}
-	\endminipage\hfill
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/eur.pdf}
-	\caption{EUR with respect to BTC and USD}\label{fig:eur}
-	\endminipage\hfill
+	\centering
+	\subfloat[CAD]{\includegraphics[width=0.45\textwidth]{figures/cad.pdf}\label{fig:cad}}
+	\hfill
+	\subfloat[EUR]{\includegraphics[width=0.45\textwidth]{figures/eur.pdf}\label{fig:eur}}
+	\hfill
+	\subfloat[Tether]{\includegraphics[width=0.45\textwidth]{figures/tether.pdf}\label{fig:tether}}
+	\hfill
+	\subfloat[BitUSD]{\includegraphics[width=0.45\textwidth]{figures/bitusd.pdf}\label{fig:bitusd}}
+	\caption{CAPTION}
+	\label{fig:fiatandcrypto}
 \end{figure}
 %========================%
 
-\begin{figure}[!htb]
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/eth.pdf}
-	\caption{ETH with respect to BTC and USD}\label{fig:eth}
-	\endminipage\hfill
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/xrp.pdf}
-	\caption{XRP with respect to BTC and USD}\label{fig:xrp}
-	\endminipage\hfill
-\end{figure}
-%========================%
-
-\begin{figure}[!htb]
-
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/tether.pdf}
-	\caption{Tether with respect to BTC and USD}\label{fig:tether}
-	\endminipage\hfill
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/bitusd.pdf}
-	\caption{BitUSD with respect to BTC and USD}\label{fig:bitusd}
-	\endminipage\hfill
-\end{figure}
 
 %========================%
-
 \begin{figure}[!htb]
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/gas.pdf}
-	\caption{Gas with respect to BTC and USD}\label{fig:gas}
-	\endminipage\hfill
-	\minipage{0.45\textwidth}
-	\includegraphics[width=\linewidth]{figures/gasElectricity.pdf}
-	\caption{Gas with respect to ETH and Electricity price}\label{fig:gasElectricity}
-	\endminipage\hfill
+	\centering
+	\subfloat[ETH]{\includegraphics[width=0.45\textwidth]{figures/eth.pdf}\label{fig:cad}}
+	\hfill
+	\subfloat[XRP]{\includegraphics[width=0.45\textwidth]{figures/xrp.pdf}\label{fig:eur}}
+	\caption{CAPTION}
+	\label{fig:fiatandcrypto}
 \end{figure}
+%========================%
+\begin{figure}[!htb]
+	\centering
+	\subfloat[Gas with respect to BTC and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:cad}}
+	\hfill
+	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.45\textwidth]{figures/gasElectricity.pdf}\label{fig:eur}}
+	\caption{CAPTION}
+	\label{fig:fiatandcrypto}
+\end{figure}
+
 %==========================================%
 %GRAPHS:
-%Horizontal: x-axis value is moving
-%Vertical: y-axis value is moving
-%Diagonal: plot is moving
 %About figure1: EUR,CAD and GBP lines are nearly parallel. GBP and EUR come closer after Brexit. Even such an important economical event didn't cause a high volatility compared to BTC price which is more extreme.
-%EOS prices between 07-2017 and 11-2018.  01-2017 and  06-2017 price is set to zero
-%The rest between 01-2017 and 11-2018
+%All prices between 01-2017 and 11-2018
 %GBP -(EUR and USD) chart "The pound dropped to its lowest level against the euro in 2017 after Mario Draghi, head of the European Central Bank, pushed the eurozone currency higher by saying he could start tightening monetary policy." September 2017 GBP loses value against both USD end EUR
-% CAD,EUR,GBP - (BTC and USD): mostly horizontal movements.
-% ETH,EOS,XRP - (BTC and USD): mostly diagonal movements.
+% ETH,XRP - (BTC and USD): mostly diagonal movements. Do they move with BTC or not?
+%CAD, EUR,Tether, BitUsd: We expect stablecoins to be close to a vertical line. CAD and EUR are central bank issued "stablecoins" and compared to Tether and BitUsd (crypto stableoins), we can conclude that they are also fairly stable. (same x-axis range!)
 % TETHER: Does it artificially inflate BTC price? Do they issue un-backed tokens to reinforce BTC price, then sell BTC to fully back tokens?
-%TETHER ATTACK: On October 15, 2018, tether, the market dominating stablecoin with a market cap of $2 billion, was attacked, breaking tether’s peg to USD, dropping its value by 7 percent but simultaneously driving up bitcoin and the whole crypto market by more than 10 percent. 
-%on October 15, 2018; where the price drastically surged from $6,376 at 12.31 UTC to $7,083 at 14.50 UTC. A downturn in price was seen approximately one hour after that to $6,821, before went stable at around $6,400 — $6,600. It was one of the one of the most unexpected fluctuations after a while. The first ‘stable coin’ tether (USDT) which supposedly pegged 1:1 to the U.S. dollar fell up to 15% at the same time as the price of bitcoin fluctuate wildly. The movement caused a loss of trust among traders, causing them to sell tether and invest in other cryptocurrencies. A massive selloff for tether against bitcoin was seen, resulting in a price rise in bitcoin. 
-%bitcoin and other crypto assets are perfectly negatively correlated with stablecoins. 
+%TETHER ATTACK: On October 15, 2018, tether, the market dominating stablecoin with a market cap of $2 billion, was attacked, breaking tether’s peg to USD, dropping its value by 7 percent but simultaneously driving up bitcoin and the whole crypto market by more than 10 percent.
+%on October 15, 2018; where the price drastically surged from $6,376 at 12.31 UTC to $7,083 at 14.50 UTC. A downturn in price was seen approximately one hour after that to $6,821, before went stable at around $6,400 — $6,600. It was one of the one of the most unexpected fluctuations after a while. The first ‘stable coin’ tether (USDT) which supposedly pegged 1:1 to the U.S. dollar fell up to 15% at the same time as the price of bitcoin fluctuate wildly. The movement caused a loss of trust among traders, causing them to sell tether and invest in other cryptocurrencies. A massive selloff for tether against bitcoin was seen, resulting in a price rise in bitcoin.
+%bitcoin and other crypto assets are perfectly negatively correlated with stablecoins.
 %speculative attack
 
 \section{Conclusion and Discussion}
