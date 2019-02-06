@@ -199,7 +199,8 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 %==========================================%
 
-\section{Investigation of gas volatility}
+\section{Investigation of gas volatility}\label{GasInvs}
+
 
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
 % But we can make Gas redeemable, there is a way in Ethereum to do that,the GasToken that uses this strategy. It allows you to stockpile and trade Ethereum Gas.
@@ -243,20 +244,26 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 % the first spike (Jan 2018) was first Cryptokitties were first introduced and people have to pay more Gas for their txs to go through
 % the other one (August 2018) is when an exchange called Fcoin needed lots of on-chain voting by sending txs that has blocked the network for a little while.
-
-
+The two spikes correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin \footnote{Fcoin website \url{https://www.fcoin.com}} was 	launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.
 %=========GasPlots========%
 \begin{figure}[!htb]
+	
 	\centering
 	\subfloat[Gas with respect to BTC and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
 	\hfill
 	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.45\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
-	\caption [Caption for LOF]
-      {Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties\footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin 					\footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have resulted the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.}
-
+	\caption {Ethereum average GasPrice chart. As mentioned in the Section~\ref{GasInvs}, the two spikes represent specific events happened in certain dates which have increased the Gasprice.}
 	\label{fig:Gas}
+	
 \end{figure}
+
 %========================%
+
+
+ %[Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties was launched for the first time and (ii) the Fcoin was launched and required a lot of on-chain voting. Both these events have 	caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.]%
+%	{Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin 					\footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.}
+
+%Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties \protect \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin 					\protect \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go 			through.}
 
 \textblue{ it would be nice to have a chart : Ether, Electricity (Global energy index), and Gas} \par
 Our analysis in Section~\ref{Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies.
