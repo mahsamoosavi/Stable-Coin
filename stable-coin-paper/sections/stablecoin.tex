@@ -201,13 +201,34 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 \section{Investigation of gas volatility}
 
-% Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens. But in order to make it redeemable, there is a way in Ethereum to do that, here is the GasToken that uses this strategy.
-%since minting new coin burns gas, you can just show up and give your gas token (and burn that) and ask the system to use that gas to mint new tokens. If you burn one gas token for one coin, it's pointless. But they could mint 1.5 coin using that gas token.
-% Gas is not a currency so you cannot buy things with it BUT you can turn it into a currency : having a smart contract and swap it with other tokens
+% Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
+% But we can make Gas redeemable, there is a way in Ethereum to do that,the GasToken that uses this strategy.
+% Gas is not a currency so you cannot buy things with it BUT you can turn it into a currency : having a smart contract and swaps it with other tokens
 % Gas is actually stable with respect to others, the reason it's not obvious is human error and their wrong mental model
 % Gas is not pegged to anything
 % Gas is free floating but it’s driven (governed) by market forces (auctioning off)
 % there is an upper band and lower band for Gas
+
+%=================% 
+% GasToken is a smart contract that for the first time allows Ethereum users to buy and sell gas by tokenizing gas on the network.
+% They allow users to store Gas when it is cheap and use it once its price goes up.
+% Gas price refers to the amount of Ether you’re willing to pay for every unit of gas.
+% When a user stores cheap Gas, he can later spend that Gas to send a tx, that means now he pays for less gas for that tx to go through.
+% GasToken allows a transaction to do the same amount of work and pay for less gas, saving on miner fees and costs and allowing users to bid higher gas prices without paying correspondingly higher fees. 
+
+
+%=================% 
+% Freeing up many storage slots in one transaction can quickly result in the refund counter surpassing half of the full transaction cost. In such a case or in case of self-destructs which can lead to a high refund counter as well we should evaluate how much of the refund can actually be used, as the refund can be at most half of the transaction cost. {The refund that has been accumulated cannot exceed half the gas used up during computation because miners need incentives to correctly execute your txs, and they should not pay Gas for your txs.} Thus freeing up storage slots or deleting contracts can make more sense in combination with other operations if possible (Gas Cost Analysis for Ethereum Smart Contracts: Zurich)
+% Refund balance: It is the amount to be refunded to the sender account post transaction execution. Storage in Ethereum is quite expensive, so there is an SSTORE instruction in Ethereum that is used as a refund counter. The refund counter starts at zero (no refund state) and gets incremented every time the transaction or contract deletes something from the storage. Please note that this refund amount is different and in addition to the unused gas that gets refunded to the sender.
+% In solidity, there are two commands which ensure that you get some gas refund back.
+	% SUICIDE: This basically kills the smart contract. Doing so will get you back 24000 gas.
+	%SSTORE: Storage deletion, which gets you back 15,000.
+%=================% 
+
+
+
+% since minting new coin burns gas, you can just show up and give your gas token (and burn that) and ask the system to use that gas to mint new tokens. If you burn one gas token for one coin, it's pointless. But they could mint 1.5 coin using that gas token.
+
 % Gas is a measure of computation, and the question we have to ask is is the price of computation stable?
 % Hypothesis 1: Gas will look like exactly like Ether (cause it's Ethereum internal things),2 : looks like USD, because it should always cost 5 dollars to looked up an array (because the electricity cost is the same), 3- so it looks like electricity. There is a lot of reasons why things should converge, because of users incorrect mental model. They just can accept whatever their Ethereum client suggests, how this ethereum client gets those numbers? is it a real time or based on statistics? it can be gamed: sth like wash trade to make Gas cheaper (making it expensive is harder). What they could do is never broadcast it to the network so that nobody can put that in their block (causE THEy dont have the original tx to validate). So this way miner can keep those transactions in his private mempool and broad cast the whole block with that tx.
 
