@@ -133,6 +133,14 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 
 \section{Backed}
 % issue: the stablecoin is valid as long as the holder trusts the company/person who keeps the reserve, once the trust is gone, the stablecoin worths nothing
+%adv:
+ 	%easy to implement
+	% value should matched exactly (eg to USD)
+%disadv:
+	% trust 3rd party to hold it
+	% need additional 3rd party to audit
+	% expensive and slow to audit
+
 
 \subsection{Redeemable and Directly-Backed.}
 % Description of how it works: Deposit in bank, etc.
@@ -234,7 +242,24 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 % This shows how when Bitcoin and cryptomarkets crash, capital rapidly flows into stablecoins.
 %==========
 % NuBits sounds very much like Basis: When the price of the Basis token below 1 dollar, they start selling sth called a bond token, and they actually sell this at a price below 1$ with a promise that it can be redeemed for a Basis coin in the future. when the price of Basis token goes above 1$, the Basis algorithm has to increase the money supply, so tehy issue you a 1 to 1 Basis coin for each Basis bond token that you held.
-
+%=================% 
+%Ampleforth:
+% It uses a different method of preserving its dollar-to-unit ration, by transferring volatility from unity price to unit count.
+%According to Trail of Bits, a malicious market maker could play with the stability of Ampleforth. the issue is their oracle services use whitelisted sources (just like Dai)
+%=================% 
+%Havven
+% is mostly like Dai, they also use over collateralization with 1:5 ratio.
+% They use a similar arbitrage as Dai but with different functionalities by locking up Havven tokens or by reverse burning Nomins by reclaiming Havven tokens  to keep the price stable.
+% One key difference between Nomin and Dai is the collateral for Dai is Eth but for Nomin is the actual Havven token itself.
+%=================% 
+%Basecoin (Basis Algorithm)
+% Non-collateralized 
+% Controlled by algorithmic supply 
+% The price  stability of this coin is managed by Basis protocol which is a central bank algorithm that increases or decreases the supply of teh coin based on supply and demand    
+% Still experimental and not yet operational 
+ % The coin supple is entirely done based on the information given by differnt oracles that make the protocol aware of condition of supply and demand
+ % The peg could be anything: fiat, assets, or a basket of assets 
+ 
 %==========================================%
 
 \section{Investigation of gas volatility}\label{sec:GasInvs}
