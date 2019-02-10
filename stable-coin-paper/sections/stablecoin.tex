@@ -2,7 +2,8 @@
 %==========================================%
 
 \section{Introduction}\label{sec:Intro}
-% cite {Trading and Exchanges - Larry Harris [PDF]} volatility chapter.
+
+% \cite{harris2003trading}
 %book value and fundamental value
 %Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
 %Episodic volatility: large price change over a short period of time.
@@ -220,8 +221,6 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 %==========================================%
 
 \section{Investigation of gas volatility}\label{sec:GasInvs}
-
-
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
 % Depending on how much the user wants to pay for ecah unit of Gas, this will determine how expensive the tx is in Ether.
 % Gas is internal to the Ethereum blockchain and users cannot hold it, instead they can have Ethere, BUT the conversion rate between Gas and Ether changes over time and that's why there are huge spikes in the average Gas price plots.
@@ -231,6 +230,7 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 % Gas is not pegged to anything
 % Gas is free floating but it’s driven (governed) by market forces (auctioning off)
 % there is an upper band and lower band for Gas
+% So in this section we look into how to trade Gas and its derivatives?
 
 %=======GasToken details=======% 
 % Operations that modify the global state of the Ethereum blockchain are very expensive \ie writing into a contract storage.
@@ -244,8 +244,8 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 	% If a variable is changed from zero to a non-zero value, there is a gas fee  (writing into the storage is a very very expensive operation because it's altering the global state)
 	% If a variable is changed from a non-zero value to zero, there is a gas refund
 % A user can:
-	% Mint tokens when gasPrice is low: change a variable from a zero value to non-zero.
-	% Burn tokens when gasPrice is high: change a variable from non-zero to zero.
+	% Mint tokens when GasPrice is low: change a variable from a zero value to non-zero.
+	% Burn tokens when GasPrice is high: change a variable from non-zero to zero.
 	
 % As mentioned, the gas refunded from freeing some storage space is less than the initial gas cost of storing the data on-chain in the first place, so why would someone want to do this? Well, you can create these GasTokens (filling an array with ones or creating a bunch of contracts) at a time t with a low gas price (e.g. 2 Gwei) and later consume these GasTokens in a transaction that has a higher gas price. Hence, half of your gas used for the expensive transaction effectively costs you 2 Gwei, while the other half costs 50 Gwei. Even if you don’t get back as much gas as you spent creating these GasTokens, the difference in gas price can make it worth it.
 
@@ -258,17 +258,21 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 	% SUICIDE: This basically kills the smart contract. Doing so will get you back 24000 gas.
 	%SSTORE: Storage deletion, which gets you back 15,000.
 %=================% 
-
-
-
 % since minting new coin burns gas, you can just show up and give your gas token (and burn that) and ask the system to use that gas to mint new tokens. If you burn one gas token for one coin, it's pointless. But they could mint 1.5 coin using that gas token.
 
 % Gas is a measure of computation, and the question we have to ask is is the price of computation stable?
 % Hypothesis 1: Gas will look like exactly like Ether (cause it's Ethereum internal things),2 : looks like USD, because it should always cost 5 dollars to looked up an array (because the electricity cost is the same), 3- so it looks like electricity. There is a lot of reasons why things should converge, because of users incorrect mental model. They just can accept whatever their Ethereum client suggests, how this ethereum client gets those numbers? is it a real time or based on statistics? it can be gamed: sth like wash trade to make Gas cheaper (making it expensive is harder). What they could do is never broadcast it to the network so that nobody can put that in their block (causE THEy dont have the original tx to validate). So this way miner can keep those transactions in his private mempool and broad cast the whole block with that tx.
 
+
+
+%=================IMPORTANT=================% 
+%=====Thoughts on GasToken used by Arbitrage for Font-running=======% 
+% arbitrage on the Ethereum network can use GasToken-like techniques. Arbitrage bots try to run the txs all the time and as soon as they see an opportunity to font-run some exchnage tx and make some money (cite front-running paper) so if they can lower their tx fees even a little bit, it extends the margins they can make (which txs are beneficial for them to front-run).
+
+
 %========GasPrice Plots Explanation:=========% 
 
-The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) when the FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.
+The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) when the FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the GasPrice to go up as Ethereum users had to pay more Gas for their transactions to go through.
 
 % Importnat note: If some companies (for example Fcoin) knows that they're gonna be sending lots of txs to the network that will definitely increase the Gas price in the future, they can store this gastoken ahead of time and benefit from using cheap Gas when the price is up.
 
@@ -280,7 +284,7 @@ The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryp
 	\subfloat[Gas with respect to BTC and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
 	\hfill
 	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.45\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
-	\caption {Ethereum average GasPrice chart. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes represent specific events happened in certain dates which have increased the Gasprice.}
+	\caption {Ethereum average GasPrice chart. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes in the chart represent specific events happened in certain dates which have increased the GasPrice.}
 	\label{fig:Gas}
 	
 \end{figure}
@@ -364,7 +368,7 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 % Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
 
 \section{Conclusion and Discussion}
-In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behavior. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.
+In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behaviour. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.
 
 %==========================================%
 
