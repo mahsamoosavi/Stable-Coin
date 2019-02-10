@@ -1,7 +1,7 @@
 % !TEX root = ../main.tex
 %==========================================%
 
-\section{Introduction}\label{Intro}
+\section{Introduction}\label{sec:Intro}
 % cite {Trading and Exchanges - Larry Harris [PDF]} volatility chapter.
 %book value and fundamental value
 %Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
@@ -219,24 +219,28 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 %==========================================%
 
-\section{Investigation of gas volatility}\label{GasInvs}
+\section{Investigation of gas volatility}\label{sec:GasInvs}
 
 
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
-% But we can make Gas redeemable, there is a way in Ethereum to do that,the GasToken that uses this strategy. It allows you to stockpile and trade Ethereum Gas.
+% Depending on how much the user wants to pay for ecah unit of Gas, this will determine how expensive the tx is in Ether.
+% Gas is internal to the Ethereum blockchain and users cannot hold it, instead they can have Ethere, BUT the conversion rate between Gas and Ether changes over time and that's why there are huge spikes in the average Gas price plots.
+% But we can make Gas redeemable, there is a way in Ethereum to do that, the GasToken that uses this strategy. It allows you to stockpile and trade Ethereum Gas.
 % Gas is not a currency so you cannot buy things with it BUT you can turn it into a currency : having a smart contract and swaps it with other tokens
 % Gas is actually stable with respect to others, the reason it's not obvious is human error and their wrong mental model
 % Gas is not pegged to anything
 % Gas is free floating but it’s driven (governed) by market forces (auctioning off)
 % there is an upper band and lower band for Gas
 
-%=================% 
+%=======GasToken details=======% 
+% Operations that modify the global state of the Ethereum blockchain are very expensive \ie writing into a contract storage.
+% Ethereum motivates the user to free up space on the blockchain by refunding the Gas if they delete their contracts. This is what GasToken does.
 % GasToken is a smart contract that for the first time allows Ethereum users to buy and sell gas by tokenizing gas on the network.
 % They allow users to store Gas when it is cheap and use it once its price goes up.
 % Gas price refers to the amount of Ether you’re willing to pay for every unit of gas.
 % When a user stores cheap Gas, he can later spend that Gas to send a tx, that means now he pays for less gas for that tx to go through.
 % GasToken allows a transaction to do the same amount of work and pay for less gas, saving on miner fees and costs and allowing users to bid higher gas prices without paying correspondingly higher fees. 
-%The gas tokens works on taking advantage of storage refund concept in ethereum, to inspire smart contracts to delete storage variable, ethereum network provides refund when storage variable is deleted upto half of the contract transaction.
+%The gas tokens works on taking advantage of storage refund concept in ethereum, to inspire smart contracts to delete storage variable, ethereum network provides refund when storage variable is deleted up to half of the contract transaction.
 	% If a variable is changed from zero to a non-zero value, there is a gas fee  (writing into the storage is a very very expensive operation because it's altering the global state)
 	% If a variable is changed from a non-zero value to zero, there is a gas refund
 % A user can:
@@ -244,6 +248,8 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 	% Burn tokens when gasPrice is high: change a variable from non-zero to zero.
 	
 % As mentioned, the gas refunded from freeing some storage space is less than the initial gas cost of storing the data on-chain in the first place, so why would someone want to do this? Well, you can create these GasTokens (filling an array with ones or creating a bunch of contracts) at a time t with a low gas price (e.g. 2 Gwei) and later consume these GasTokens in a transaction that has a higher gas price. Hence, half of your gas used for the expensive transaction effectively costs you 2 Gwei, while the other half costs 50 Gwei. Even if you don’t get back as much gas as you spent creating these GasTokens, the difference in gas price can make it worth it.
+
+% IMPORTANT: How is the mechanic? 1) when the Gas price is low, user calls the gastoken contract and asks it to store a bunch of words, this costs a lot of gas but because gas is cheap it will only cost a few cents for the user. 2) later in the future, where the user wants to register a domain and the gas price is so expensive, user will create a tx and within that he does 2 things: (i) register the domain she wants and (ii) ask gastoken contract to remove those words she's stored before.
 
 %=================% 
 % Freeing up many storage slots in one transaction can quickly result in the refund counter surpassing half of the full transaction cost. In such a case or in case of self-destructs which can lead to a high refund counter as well we should evaluate how much of the refund can actually be used, as the refund can be at most half of the transaction cost. {The refund that has been accumulated cannot exceed half the gas used up during computation because miners need incentives to correctly execute your txs, and they should not pay Gas for your txs.} Thus freeing up storage slots or deleting contracts can make more sense in combination with other operations if possible (Gas Cost Analysis for Ethereum Smart Contracts: Zurich)
@@ -262,9 +268,11 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 %========GasPrice Plots Explanation:=========% 
 
-% the first spike (Jan 2018) was first Cryptokitties were first introduced and people have to pay more Gas for their txs to go through
-% the other one (August 2018) is when an exchange called Fcoin needed lots of on-chain voting by sending txs that has blocked the network for a little while.
-The two spikes correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin \footnote{Fcoin website \url{https://www.fcoin.com}} was 	launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.
+The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) when the FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.
+
+% Importnat note: If some companies (for example Fcoin) knows that they're gonna be sending lots of txs to the network that will definitely increase the Gas price in the future, they can store this gastoken ahead of time and benefit from using cheap Gas when the price is up.
+
+
 %=========GasPlots========%
 \begin{figure}[!htb]
 	
@@ -272,7 +280,7 @@ The two spikes correspond to (i) January 2018 when Cryptokitties \footnote{Crypt
 	\subfloat[Gas with respect to BTC and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
 	\hfill
 	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.45\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
-	\caption {Ethereum average GasPrice chart. As mentioned in the Section~\ref{GasInvs}, the two spikes represent specific events happened in certain dates which have increased the Gasprice.}
+	\caption {Ethereum average GasPrice chart. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes represent specific events happened in certain dates which have increased the Gasprice.}
 	\label{fig:Gas}
 	
 \end{figure}
@@ -280,13 +288,10 @@ The two spikes correspond to (i) January 2018 when Cryptokitties \footnote{Crypt
 %========================%
 
 
- %[Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties was launched for the first time and (ii) the Fcoin was launched and required a lot of on-chain voting. Both these events have 	caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.]%
-%	{Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin 					\footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go through.}
 
-%Ethereum average GasPrice chart. The two spikes correspond to (i) January 2018 when Cryptokitties \protect \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) the Fcoin 					\protect \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the Gasprice to go up as Ethereum users had to pay more Gas for their transactions to go 			through.}
 
 \textblue{ it would be nice to have a chart : Ether, Electricity (Global energy index), and Gas} \par
-Our analysis in Section~\ref{Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies.
+Our analysis in Section~\ref{sec:Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies.
 
 %========================%
 
