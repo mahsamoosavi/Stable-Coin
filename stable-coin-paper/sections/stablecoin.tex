@@ -19,6 +19,11 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 
 \paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is actually useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe these concepts rather than enumerating the intricate details of how particular `brands' of stablecoins work---details that could change tomorrow. That said, we do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of  index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates.
 
+
+% Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin
+% Talk about the crypto custodianship somewhere in the paper
+
+
 \section{Related Work}
 
 Other blog posts, whitepapers, etc on systemizing stablecoins.
@@ -105,7 +110,7 @@ To understand why this is relevant to stablecoins, consider an example. Say a st
 
 \subsection{Exchange Rates} 
 
-Consider that several hours after writing the previous section, 1 BTC is now worth \$3566.56 USD. In one sense, the price of BTC decreased by \$32.20. However it is exactly equivalent to say the price of \$1 USD increased by 0.002 mBTC. This raises a natural question: did BTC decrease in price or did USD increase in price? With an exchange rate, it is impossible to tell. We only know that the price of BTC and USD became closer in price over this short period of time.
+Consider that several hours after writing the previous section, 1 BTC is now priced at \$3566.56 USD. In one sense, the price of BTC decreased by \$32.20. However it is exactly equivalent to say the price of \$1 USD increased by 0.002 mBTC. This raises a natural question: did BTC decrease in price or did USD increase in price? With an exchange rate, it is impossible to tell. We only know that the price of BTC and USD became closer in price over this short period of time.
 
 To determine which currency is moving, one might consider a third or forth currencies to try and triangulate if BTC is moving in price, or USD is moving in price, or both. For example, in Figure~\ref{fig:btcandfiat} it certainly appears that BTC is the currency that is moving because the rest of the currencies are stable relative to each other. The only alternative is that USD, EUR, GBP, and CAD are volatile currencies that move together as a cluster relative to the stability of BTC. But it is much simpler to conclude that BTC is moving. 
 
@@ -138,11 +143,24 @@ Lines in a connected scatter plot can move in any direction. Figure~\ref{fig:leg
 
 We will return to these charts later in Section~\ref{sec:stability} where we will use a government currency as one reference (USD on the x-axis) and a cryptocurrency as the other reference (BTC on the y-axis). A stablecoin should exhibit mostly vertical movements along the 1/5 direction. 
 
-\subsection{Valuation, Stability, and Volatility}
+\subsection{Valuation}
+
+Recall that in the previous section, 1 BTC was priced at \$3566.56 USD. This simply means that two people recently swapped some amount of BTC and USD for the stated valuation. Does this mean 1 BTC is worth \$3566.56 USD? Value can mean different things in different contexts. The market value of a currency does present one type of value --- its replacement value, or the cost in USD to replace it. Note that more technically, one should  determine replacement value from the set of best offer prices sufficient to cover the volume of BTC being valued.
+
+But does this mean that BTC is fundamentally worth \$3566.56 USD. This is unlikely because by the time you read this paper, the price of BTC in USD is probably quite different from this quoted value (perhaps humorously so). So what constitutes fundamental value? And why do prices change over time?
+
+Stocks, which represent ownership in a firm, and thus a stake in the firm's equity. Therefore shares (called equities) have a fundamental value called its book value: simplified, it is the firm's capital or equity (the value of its assets minus the value of its liabilities, as reported on its annual audited financial statement) divided by the number of outstanding shares. Working in reverse, the price of a single share multiplied by the number of shares represents the market capitalization of the firm. In theory, these numbers should be the same but often are not. When the market capitalization exceeds the reported capital, the market believes the firm's capital will increase over time. If the market capitalization is less than the reported capital, it demonstrates a lack of confidence in the soundness of the firm's financial statements. Floating currencies like the USD, EUR, GBP, and CAD do not have the equivalent of a book value.
+
+To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
+
+%If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
 
 
+\subsection{Stability and Volatility}
 
-% \cite{harris2003trading}
+When the price of a currency changes over time, it is due to one of two reasons: new information about the currency's fundamental value (even if we cannot concretely say what it is) and transitory volatility due to trading by uninformed traders~\cite{harris2003trading}. For a government issued currencies, national inflation rates, macro-economic policies, changes in trade flows, and changes in capital flows seem predictive of changes in the country's currency~\cite{harris2003trading}. Note that a cryptocurrency, like Bitcoin, has none of these indicators. 
+
+While volatility can be measured mathematically, most stablecoins do not offer a concrete, positive definition of what stability means. They tend to be defined by a negative sentiment of what they do not want (the volatility of Bitcoin) rather than a positive sentiment of what they do want.
 
 %book value and fundamental value
 %Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
@@ -157,7 +175,7 @@ We will return to these charts later in Section~\ref{sec:stability} where we wil
 
 \subsection{Money}
 
-%Cryptocurrencies have gained a wide application after Bitcoin was first introduced in Satoshi Nakamoto’s (pseudonymous) 2008 whitepaper~\cite{nakamoto2008bitcoin}. For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence they cannot be adopted as money~\cite{overview}.
+For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence they cannot be adopted as money~\cite{overview}. Cite Curse of Cash. 
 
 
 \subsection{Lending}
@@ -166,33 +184,6 @@ Despite quite a few blockchain applications in financial technologies, there has
 Lending is difficult to be deployed on the blockchains, bdue to the monetary instability observed in the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their values are being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies causes serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
 
 
-
-%
-%
-
-%
-% Stablecoins are a topic of recent interest. A lot of blogs and some academic articles have systemized them. We know that the reader of this paper is expecting a chart of coins and what mechanisms they use: we do provide that, but we do not consider that the core contribution of the paper at all. Instead we really dug into finance to deeply understand the core methods and mechanisms that are employed for reducing volatility of a coin. We feel our paper is closer to a tutorial on stablecoins where we try to eliminate all the jargon (which is often misused and imprecisely applied) to explain the concepts, as well as drawing out appropriate foundations from finance.
-%
-% Example: if we described the approach of stable coin in two simple words: ``currency board'' and you need no further explanation (just, perhaps, some details on the parameters), this paper is not for you. If you have heard the term and have a vague sense of how it works, but couldn't really explain it or why it achieves stability, this paper is for you. If you have never heard the term, this paper is also for you.
-%
-%
-% Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin
-% Talk about the crypto custodianship somewhere in the paper
-
-
-
-%\subsection{Valuation}
-% Every thing has two priceso
-
-%How do we assign value to something? how do we establish what something is worth?  The value is usually given in some units of account (\eg CAD).
-
-
-
-\subsection{No-Seignorage Theory of Money}
-
-To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
-
-If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
 
 
 
