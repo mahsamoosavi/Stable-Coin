@@ -26,14 +26,50 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 
 \section{Related Work}
 
-Other blog posts, whitepapers, etc on systemizing stablecoins.
+In 1978, F. A. Hayek, the Nobel Prize-winning economist, thoroughly defined the "stable value of money" in his book called "The Denationalization of Money". In addition to stable money definition and the benefits it provides, Hayek argued that money should not be supplied by the governments and instead, it should be market driven \ie based on market's supply and demand~\cite{F. A. Hayek}. In 2016, Ametrano introduced "Hayek Money", a new monetary policy of elastic non-discretionary supply that can be used to achieve a price stable cryptocurrency~\cite{ametrano2016hayek}. Discussions on stablecoins and the mechanisms to achieve price stability still raise interest among the community. Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report from a crypto company called Blockchain provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{report}. 
+
+
+
+
+
+
+%The idea seigniorage shares was first introduced by Robert Sams in 2017, where he proposed a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
+ 
+ 
+ %Bitmex provides a classification for the stablecoins based on the fact whether there is an underlying collateral or not. They focus on the distributed stablecoins. We take centralized projects into consideration too.
+% Bitmax  the two types of stablecoin and provided a comparison in terms of different design decisions they apply~\cite{Bitmex}.
+ %The report from Blockchain provides an extensive classification of 57 stablecoins ~\cite{report}. Besides grouping them according to the mechanism that provides stability, they also provide information about the issues related to governance like legal structure, investors, partners etc.
+
+%-------
+
+
+
+%Consensys also provides a classification base on the same framework.(https://media.consensys.net/the-state-of-stablecoins-2018-79ccb9988e63). They have a discussion decentralization too.
+
+%In~\cite{cryptoinsider}, the chosen projects are analyzed under two broad categories: centralized an decentralized. Centralized ones are further grouped into different categories according to the type of asset that is used to back the stablecoins.
+
+%~\cite{hackernoon},~\cite{comprehensiveOverview},~\cite{linkedin},~\cite{coinsexplained} and ~\cite{overview} categorize the stablecoins under three categories: fiat-collateralized, crypto-collateralized and non-collateralized.
+
+%(http://www.andrew.cmu.edu/user/azj/research/rzj_slides201808.pdf): three categories: 100\% USD Reserve backed coins, Protocol coins without redemption, Protocol coins with redemption in floating-rate crypto-currencies
+
+%(https://icosbull.com/whitepapers/2265/USDX_Protocol_whitepaper.pdf) three generations of stablecoins: Collateral-backed IOU, Collateral-backed on blockchain, Elastic monetary supply based. (This is a whitepaper for a protocol but it has a different classification)
+
+%Compared to  works that provide a systemization of the stablecoins, we provide a different framework to classify the existing mechanisms to achieve stability. While most of the works divide stablecoins into three categories (fiat-collateralized, crypto-collateralized and non-collaterlized), we divide them into two broad categories as backed and intervention. Then, we further group them under different mechanisms.
+
+%(https://multicoin.capital/2018/01/17/an-overview-of-stablecoins/)  Stablecoins are discussed under three main categories as centralized IOU issuance, collateral backed, and seigniorage shares along with the discussion of different types of oracles and the challenges that stablecoins face.
+
+%How we chose the projects: We performed a search query on \texttt{coindesk.com} and classified the projects that are mentioned in the posts until January 11, 2019. \footnote{https://www.coindesk.com/} (Copied the same text here!)
+ 
+ 
+ 
+ 
+ 
 
 %==========================================%
 
 %Mahsa:
 
-%In 2018, Bitmax published a report in which they briefly discuss the two types of stablecoin (\ie BitShares (BitUSD) and MakerDAO (Dai)) and provided a comparison in terms of different design decisions they apply~\cite{Bitmex}.
-%The idea seigniorage shares was first introduced by Robert Sams in 2017, where he proposed a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
+
 %In "The Denationalization of Money, F. A. Hayek, the Nobel Prize-winning economist, discussed about government authority over money supply. He argued that money should not be supplied by governments and instead, it should be market driven and based on market's supply and demand~\cite{F. A. Hayek}.
 %In 2016, Ametrano introduced "Hayek Money", a new monetary policy of elastic non-discretionary supply that can be used to achieve a price stable cryptocurrency~\cite{ametrano2016hayek}.
 %In one of his blog post, Buterin has discussed .... (https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/) ~\cite{TheSearc7:online}
@@ -50,27 +86,10 @@ Other blog posts, whitepapers, etc on systemizing stablecoins.
 %  year={2015}
 %}
 %
-%@book{F. A. Hayek,
-%  title={The Denationalization of Money},
-%  author={Friedrich Hayek},
-%  pages={},
-%  year={1978},
-%  publisher={Institute of Economic Affairs}
-%}
-%
-%@article{ametrano2016hayek,
-%  title={Hayek money: The cryptocurrency price stability solution},
-%  author={Ametrano, Ferdinando M},
-%  year={2016}
-%}
-%@misc{TheSearc7:online,
-%author = {Vitalik Buterin},
-%title = {The Search for a Stable Cryptocurrency},
-%howpublished = {\url{https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/}},
-%month = {November4},
-%year = {2014},
-%note = {(Accessed on 02/11/2019)}
-%}
+
+
+
+
 %=====================Gold vs ETFGold  ===================%
 %Gold ETF: Investors want  exposure to the asset that’s electronically traded without taking possession of the commodity.
 %advs
@@ -96,25 +115,9 @@ Other blog posts, whitepapers, etc on systemizing stablecoins.
 
 %==========================================%
 %Didem:
-%Bitmex provides a classification for the stablecoins based on the fact whether there is an underlying collateral or not~\cite{bitmex}. They focus on the distributed stablecoins. We take centralized projects into consideration too.
+%
 
-%The report from Blockchain provides an extensive classification of 57 stablecoins ~\cite{report}. Besides grouping them according to the mechanism that provides stability, they also provide information about the issues related to governance like legal structure, investors, partners etc.
 
-%Consensys also provides a classification base on the same framework.(https://media.consensys.net/the-state-of-stablecoins-2018-79ccb9988e63). They have a discussion decentralization too.
-
-%In~\cite{cryptoinsider}, the chosen projects are analyzed under two broad categories: centralized an decentralized. Centralized ones are further grouped into different categories according to the type of asset that is used to back the stablecoins.
-
-%~\cite{hackernoon},~\cite{comprehensiveOverview},~\cite{linkedin},~\cite{coinsexplained} and ~\cite{overview} categorize the stablecoins under three categories: fiat-collateralized, crypto-collateralized and non-collateralized.
-
-%(http://www.andrew.cmu.edu/user/azj/research/rzj_slides201808.pdf): three categories: 100\% USD Reserve backed coins, Protocol coins without redemption, Protocol coins with redemption in floating-rate crypto-currencies
-
-%(https://icosbull.com/whitepapers/2265/USDX_Protocol_whitepaper.pdf) three generations of stablecoins: Collateral-backed IOU, Collateral-backed on blockchain, Elastic monetary supply based. (This is a whitepaper for a protocol but it has a different classification)
-
-%Compared to aforementioned works that provide a systemization of the stablecoins, we provide a different framework to classify the existing mechanisms to achieve stability. While most of the works divide stablecoins into three categories (fiat-collateralized, crypto-collateralized and non-collaterlized), we divide them into two broad categories as backed and intervention. Then, we further group them under different mechanisms.
-
-%(https://multicoin.capital/2018/01/17/an-overview-of-stablecoins/)  Stablecoins are discussed under three main categories as centralized IOU issuance, collateral backed, and seigniorage shares along with the discussion of different types of oracles and the challenges that stablecoins face.
-
-%How we chose the projects: We performed a search query on \texttt{coindesk.com} and classified the projects that are mentioned in the posts until January 11, 2019. \footnote{https://www.coindesk.com/} (Copied the same text here!)
 
 
 %==========================================%
