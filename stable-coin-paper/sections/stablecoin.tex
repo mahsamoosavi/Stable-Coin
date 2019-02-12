@@ -8,12 +8,12 @@ Many early cryptocurrency proposals designed secure digital representations of g
 %========================%
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.75\textwidth]{figures/allCurrencies.pdf}
+	\includegraphics[width=0.8\textwidth]{figures/allCurrencies.pdf}
 	\caption{\label{fig:btcandfiat}Comparison among fiat currencies and Bitcoin: The values are retrieved daily between  01 Jan 2016 and 01 Jan 2019. Note that 1000 mBTC = 1 BTC.}
 \end{figure}
 %========================%
 
-From the inception of exchanges for buying and selling BTC for USD in 2010 to the time of writing, the exchange rate of BTC with the USD has been marked by extremely volatile with large fluctuations in its value that are atypical of a government-managed currency. Figure~\ref{fig:btcandfiat} illustrates this volatility by plotting the exchange rate of BTC (with the USD) alongside the same exchange rate for three economic zones---Europe, UK, and Canada---which all appear relatively stable. Note that Figure~\ref{fig:btcandfiat} deliberately includes the UK's referendum on exiting the EU (`Brexit') in June 2016, which was followed by a `sharp decline' and `volatility' in GBP's exchange rate.\footnote{Descriptions from the following BBC articles: ``The markets facing trading turmoil'' (27 Jun 2016) and ``How does Brexit affect the pound?'' (15 Jan 2019).}  Relative to BTC however, this `severe swing' looks like a mild pinch of GBP's exchange rate with EUR in Figure~\ref{fig:btcandfiat}.
+From the inception of exchanges for buying and selling BTC for USD in 2010 to the time of writing, the exchange rate of BTC with the USD has been marked by extremely volatile with large fluctuations in its value that are atypical of a government-managed currency. Figure~\ref{fig:btcandfiat} illustrates this volatility by plotting the exchange rate of BTC (with the USD) alongside the same exchange rate for three economic zones---Europe, UK, and Canada---which all appear relatively stable. Note that Figure~\ref{fig:btcandfiat} deliberately includes the UK's referendum on exiting the EU (`Brexit') in June 2016, which was followed by a `sharp decline' and `volatility' in GBP's exchange rate.\footnote{Descriptions from the following \textit{BBC} articles: ``The markets facing trading turmoil'' (27 Jun 2016) and ``How does Brexit affect the pound?'' (15 Jan 2019).}  Relative to BTC however, this `severe swing' looks like a mild pinch of GBP's exchange rate with EUR in Figure~\ref{fig:btcandfiat}.
 
 In response to Bitcoin's extreme volatility, a flood of proposals have been made for alternative designs that would offer a more stable exchange rate (called `stablecoins') between the newly proposed stablecoin and a government-issued currency like the USD. Broadly, the proposals can be split into two categories: ones that essentially create a digital representation of a currency that can be transacted like a cryptocurrency, and ones that propose separate currencies with some mechanism for stability and/or intervention built into the design.
 
@@ -23,98 +23,8 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 
 Other blog posts, whitepapers, etc on systemizing stablecoins.
 
-
 %==========================================%
 
-\section{Preliminaries}
-
-\subsection{Prices}
-
-If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are three subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and actual value, and (3) the concept that prices are really an exchange of one type of valuable good for another. The quoted price means that two (hopefully different) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Second, this does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
-
-Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might `cross' but this should be temporal and quickly resolved). The spread between these prices is called the bid-ask spread. For example, if one unit of a stablecoin is intended to be worth \$1 USD, it should be
-
-
-%===Explaining the crossing===%
-
-%When we establish a value for something, we do not really claim what the value is and what it worths, instead, we establish a value of its exchange. For example, today Alice is willing to pay 500 CAD for Bob's phone, whereas tomorrow, she will pay 600 CAD. What happened in this case? It could be (i) the value of money (CAD) going down or (ii) the value of good (phone) going up. Thus, in order to establish how much value something has, we should think of it in terms of being an exchange rate (the exchange rate between that asset and some other valuable assets). In other words, if Bob is willing to offer his phone for 1000 CAD, does it mean that it worths 1000 CAD? What we know about is that the value of Bob's phone is somewhere between 500 CAD (which Alice is willing to bid) and 1000 CAD (which Bob is willing to accept/ask). Therefore, the value of an object is not a single number and we can think of it as an interval between a least amount somebody wishes to sell for and the most amount somebody wishes to pay for that object, this interval is called bid-ask. If an ask comes below a bid, then the transaction happens and that amount is recorded as the final price, we call this \textit{crossing}.
-
-%What actually happens when they cross? Assume that they cross in such that Bob wants to pay (bid) 600 CAD for Alice's phone while Alice wants to sell (ask) it for 500 CAD. What happens in the real world is (i) either one party goes first and advertises a bid or an ask and when it crosses with other party's complimentary bid or ask, she accepts it. (ii) both parties advertise and they do not know about each other's price, so when they cross, the market decides (usually they pick the midpoint between the two).
-
-%When there is a cross, you have a price that is used for selling the object, that price is a last transaction price. So three values are actually important: 1) What is the most somebody is willing to pay for the object, 2) What's the least somebody is willing to accept for it, and 3) what was the last price this object is sold out. The value we see in the newspaper is always the last price, although it does not represent how much the object worths. In fact, we cannot actually say that and the best way to say that is when the bid-ask interval is really small. Assume that the interval is only 1 cent difference, in this case we can make sure what is the value and we are sure down to a cent. When the market changes so fast, the last price gives a lot of information on how much something worths, however, the last price that belongs to 30 years ago does not reveal a lot of information.
-
-\subsection{Exchange}
-
-
-
-
-%========================%
-
-\begin{figure}[!htb]
-	\centering
-	\subfloat[GBP with respect to EUR and USD]{\includegraphics[width=0.75\textwidth]{figures/gbpBrexit.pdf}\label{fig:btc}}
-	\hfill
-	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
-	\caption{Brexit's effect on GBP}
-	\label{fig:Comparison}
-\end{figure}
-%========================%
-
-%=======Plot Legend Explanation===========%
-\begin{table}[t]
-\centering
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Direction} & \textbf{Interpretation}   \\ \hline
-
-         1/5                & $Y$ is losing (1) / gaining (5) value \\ \hline
-         2/6                & Plotted asset is gaining (2) / losing (6) value \\ \hline
-         3/7                & $X$ is losing (3) / gaining (7) value \\ \hline
-         4/8                & \multicolumn{1}{p{12cm}|}{Plotted asset is gaining (4) / losing (8) value against $X$, while losing (4) / gaining (8) value against $Y$} \\ \hline
-
-\end{tabular}
-\vspace{1em}
-\caption{\footnotesize{The interpretation of the plots.}\label{tab:plotlegend}}
-\end{table}
-%===================%
-
-%Figure1: It shows how extreme the volatility of BTC is, when compared to fiat currencies.
-% Prices retireved daily between 2016.01.01 and 2019.01.01
-%EUR,CAD and GBP show stable behaviour.
-%After June 23, 2016 (when the referendum for withdrawal of UK from EU took place), it can be observed that GBP and EUR values start to come closer as GBP loses and EUR gains value compared to USD. This is how volatility looks like in fiat currencies. Even such an important event with economical impacts didn't cause a high volatility compared to BTC price which exhibits more extreme changes in its value.
-
-%Figure 2 illustrates GBP's behavior against EUR and USD. GBP plot moves in the 2-6 direction and there is a price drop of approximately 24 cents
-%over a five month period following the referendum for Brexit.
-%Figure 2 zooms into the changes that GBP exhibits over time, as it is plotted over a small interval to reflect the price changes. Here Brexit's effect can be seen in more detail.
-%Compared to Figure 1, the price drop is more visible, but it is worth noting that the price change is small compared to the changes in the value of BTC. NOTE: about terminology: price or vaue? or something different?
-%GBP -(EUR and USD) chart "The pound dropped to its lowest level against the euro in 2017 after Mario Draghi, head of the European Central Bank, pushed the eurozone currency higher by saying he could start tightening monetary policy." September 2017 GBP loses value against both USD end EUR.
-
-
-Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. %However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
-Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time. This indicates that the changes in the values of USD and gold are highly correlated.
-
-Considering these facts, there is a desire to design stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the blockchain which is the underlying technology of cryptocurrencies.
-\subsection{Volatility}
-
-% \cite{harris2003trading}
-
-%book value and fundamental value
-%Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
-%Episodic volatility: large price change over a short period of time.
-%Fundamental volatility (due to unanticipated changes)vs transitory volatility (due to trading activity by uninformed traders)
-%Fundamental volatility: new information about a change in fundamental values is common knowledge, then price change happens without trading. If a few people know, price change is observed in high trading volumes.
-%Fundamental volatility factors: for commodities, it is supply and demand affects. For currencies: national inflation rates, macroeconomic policies, trade and capital flows
-%unexpected events cause fundamental price volatility
-%commodities that are expensive to store are volatile.
-%
-% It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high.
-
-
-
-%==========================================%
-\section{Preliminaries}
-
-\section{Related Works}
 %Mahsa:
 
 %In 2018, Bitmax published a report in which they briefly discuss the two types of stablecoin (\ie BitShares (BitUSD) and MakerDAO (Dai)) and provided a comparison in terms of different design decisions they apply~\cite{Bitmex}.
@@ -182,9 +92,68 @@ Considering these facts, there is a desire to design stablecoins with the stable
 
 
 %==========================================%
-\subsection{Valuation}
-% Every thing has two prices
 
+\section{Preliminaries}
+
+\subsection{Prices}
+
+If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are several subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and its actual price, (3) the concept that prices are really an exchange of one type of valuable good for another, and (4) the distinction between something's price and its value. The quoted price means that two (hopefully different\footnote{A trade between the same person is called a wash trade and is illegal in most regulated markets.}) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Further, this valuation on the previous trade does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
+
+Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might occasionally `cross' but this should be temporal and quickly resolved with an exchange). The spread between these prices is called the bid-ask spread. 
+
+To understand why this is relevant to stablecoins, consider an example. Say a stablecoin is designed to ensure one unit is always priced at \$1 USD. To argue stability, one must show both that (1) the bid price should never exceed \$1 dollar and (2) the offer price should never dip below \$1 USD. Note, conversely, that bids can dip below \$1 USD (everyone prefers to pay less than something is worth) and asks can exceed \$1 USD (everyone prefers to receive more than something is worth).
+
+\subsection{Exchange Rates} 
+
+Consider that several hours after writing the previous section, 1 BTC is now worth \$3566.56 USD. In one sense, the price of BTC decreased by \$32.20. However it is exactly equivalent to say the price of \$1 USD increased by 0.002 mBTC. This raises a natural question: did BTC decrease in price or did USD increase in price? With an exchange rate, it is impossible to tell. We only know that the price of BTC and USD became closer in price over this short period of time.
+
+To determine which currency is moving, one might consider a third or forth currencies to try and triangulate if BTC is moving in price, or USD is moving in price, or both. For example, in Figure~\ref{fig:btcandfiat} it certainly appears that BTC is the currency that is moving because the rest of the currencies are stable relative to each other. The only alternative is that USD, EUR, GBP, and CAD are volatile currencies that move together as a cluster relative to the stability of BTC. But it is much simpler to conclude that BTC is moving. 
+
+%========================%
+\begin{figure}[t]
+	\centering
+	\subfloat[GBP with respect to EUR and USD]{\includegraphics[width=0.75\textwidth]{figures/gbpBrexit.pdf}\label{fig:brexit}}
+	\hfill
+	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
+	\hfill
+	\subfloat[The simpliest interpretation of the plots where $X$ refers to the currency on the x-axis and likewise $Y$.]{
+	\begin{tabular}{|c|l|}
+\hline
+\textbf{Direction} & \textbf{Interpretation}   \\ \hline
+
+         1/5                & $Y$ is losing (1) / gaining (5) value \\ \hline
+         2/6                & Plotted asset is gaining (2) / losing (6) value \\ \hline
+         3/7                & $X$ is losing (3) / gaining (7) value \\ \hline
+         4/8                & \multicolumn{1}{p{14cm}|}{Plotted asset is gaining (4) / losing (8) value against $X$, while losing (4) / gaining (8) value against $Y$} \\ \hline
+
+\end{tabular}
+	}
+	\caption{Brexit's effect on GBP.\label{fig:Comparison}}
+\end{figure}
+%========================%
+
+In order to apply this same logic in a visual way, we have created a number of charts like the one provided in Figure~\ref{fig:brexit}. Unlike most exchange rate graphs, these do not use a time axis. Instead each axis is a reference currency. In this case, the price of GBP (plotted value) in USD (x-axis) and EUR (y-axis) forms a coordinate. For the last day of each month, a new coordinate is added and joined with a line from the previous value. This is inspired by similar charts on the website FiveThiryEight for things like kicking distance in football\footnote{``The 52 Best---And Weirdest---Charts We Made In 2016,'' \textit{FiveThirtyEight}, 30 Dec 2016.} and they appear to be called connected scatter plots.
+
+Lines in a connected scatter plot can move in any direction. Figure~\ref{fig:legend} shows how we number the directions from 1 (upward or due north) clockwise to 8 (north-west). For each direction, we describe the simplest interpretation of what that price direction means. By simplest, we mean specifically that we keep an explanation that involves a single currency moving rather than an explanation that involves a pair of currencies moving in tandem. For example, in Figure~\ref{fig:brexit}, GBP shows a drastic movement along direction 6 starting at the time period marked Brexit. This means that GBP is losing value against both EUR and USD. The simplest explanation is that the movements are originating from GBP which is consistent with it losing value after Brexit. Later, GBP shows a lot of horizontal movements along the 7/3 line. The simplest explanation for this segment is volatility in USD rather than GBP. 
+
+We will return to these charts later in Section~\ref{sec:stability} where we will use a government currency as one reference (USD on the x-axis) and a cryptocurrency as the other reference (BTC on the y-axis). A stablecoin should exhibit mostly vertical movements along the 1/5 direction. 
+
+\subsection{Valuation, Stability, and Volatility}
+
+
+
+% \cite{harris2003trading}
+
+%book value and fundamental value
+%Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
+%Episodic volatility: large price change over a short period of time.
+%Fundamental volatility (due to unanticipated changes)vs transitory volatility (due to trading activity by uninformed traders)
+%Fundamental volatility: new information about a change in fundamental values is common knowledge, then price change happens without trading. If a few people know, price change is observed in high trading volumes.
+%Fundamental volatility factors: for commodities, it is supply and demand affects. For currencies: national inflation rates, macroeconomic policies, trade and capital flows
+%unexpected events cause fundamental price volatility
+%commodities that are expensive to store are volatile.
+%
+% It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high.
 
 \subsection{Money}
 
@@ -212,15 +181,13 @@ Lending is difficult to be deployed on the blockchains, bdue to the monetary ins
 
 
 
-\subsection{Valuation}
+%\subsection{Valuation}
 % Every thing has two priceso
 
 %How do we assign value to something? how do we establish what something is worth?  The value is usually given in some units of account (\eg CAD).
 
 
 
-
-\clearpage
 \subsection{No-Seignorage Theory of Money}
 
 To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
@@ -230,13 +197,6 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 
 
 
-
-
-
-
-
-
-\subsection{plot explanations}
 
 
 
@@ -397,6 +357,8 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 %==========================================%
 
+\section{What Stability looks like}\label{sec:stability}
+
 \section{Investigation of gas volatility}\label{sec:GasInvs}
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
 % Depending on how much the user wants to pay for ecah unit of Gas, this will determine how expensive the tx is in Ether.
@@ -528,7 +490,7 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 	\subfloat[Tether]{\includegraphics[width=0.45\textwidth]{figures/tether.pdf}\label{fig:tether}}
 	\hfill
 	\subfloat[BitUSD]{\includegraphics[width=0.45\textwidth]{figures/bitusd.pdf}\label{fig:bitusd}}
-	\caption{Stability in fiat currencies and stablecoins }
+	\caption{Stability in two government-issued fiat currencies (CAD and EUR) and two stablecoin projects (Tether and BitUSD). Note that the x-axis is sized consistently across all four plots, with a \$0.30 USD spread. }
 	\label{fig:fiatandcrypto}
 \end{figure}
 %========================%

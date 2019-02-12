@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  11 FEB 2019 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  11 FEB 2019 21:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,7 +1006,7 @@ File: figures/allCurrencies.pdf Graphic file (type pdf)
 
 <use figures/allCurrencies.pdf>
 Package pdftex.def Info: figures/allCurrencies.pdf used on input line 11.
-(pdftex.def)             Requested size: 352.31625pt x 208.165pt.
+(pdftex.def)             Requested size: 375.80544pt x 222.0442pt.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./f
@@ -1014,96 +1014,104 @@ igures/allCurrencies.pdf>]
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gbpBrexit.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/gbpBrexit.pdf, id=173, 803.0pt x 515.9275pt>
+<figures/gbpBrexit.pdf, id=177, 803.0pt x 515.9275pt>
 File: figures/gbpBrexit.pdf Graphic file (type pdf)
 
 <use figures/gbpBrexit.pdf>
-Package pdftex.def Info: figures/gbpBrexit.pdf used on input line 55.
+Package pdftex.def Info: figures/gbpBrexit.pdf used on input line 115.
 (pdftex.def)             Requested size: 352.31625pt x 226.37114pt.
 
-<figures/compass.jpg, id=174, 191.21437pt x 176.15813pt>
+<figures/compass.jpg, id=178, 191.21437pt x 176.15813pt>
 File: figures/compass.jpg Graphic file (type jpg)
 
 <use figures/compass.jpg>
-Package pdftex.def Info: figures/compass.jpg used on input line 57.
+Package pdftex.def Info: figures/compass.jpg used on input line 117.
 (pdftex.def)             Requested size: 117.43875pt x 108.19278pt.
- [3 <./figures/gbpBrexit.pdf> <./figures/compass.jpg>] [4] (./setup/table.tex
+
+Overfull \hbox (7.38747pt too wide) in paragraph at lines 115--131
+ [][] 
+ []
+
+[3] [4 <./figures/gbpBrexit.pdf> <./figures/compass.jpg>] (./setup/table.tex
 Overfull \hbox (13.37045pt too wide) in paragraph at lines 26--62
  [][] 
  []
 
-) [5
-
-] <figures/gas.pdf, id=241, 401.5pt x 252.945pt>
+) [5] <figures/gas.pdf, id=250, 401.5pt x 252.945pt>
 File: figures/gas.pdf Graphic file (type pdf)
  <use figures/gas.pdf>
-Package pdftex.def Info: figures/gas.pdf used on input line 386.
+Package pdftex.def Info: figures/gas.pdf used on input line 423.
 (pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
 
-<figures/gasElectricity.pdf, id=242, 401.5pt x 260.975pt>
+<figures/gasElectricity.pdf, id=251, 401.5pt x 260.975pt>
 File: figures/gasElectricity.pdf Graphic file (type pdf)
 
 <use figures/gasElectricity.pdf>
-Package pdftex.def Info: figures/gasElectricity.pdf used on input line 388.
+Package pdftex.def Info: figures/gasElectricity.pdf used on input line 425.
 (pdftex.def)             Requested size: 211.38832pt x 137.40417pt.
- [6 <./figures/gas.pdf> <./figures/gasElectricity.pdf
+
+
+LaTeX Warning: Reference `fig:gas' on page 6 undefined on input line 464.
+
+
+LaTeX Warning: Reference `fig:eth' on page 6 undefined on input line 466.
+
+[6]
+
+LaTeX Warning: Reference `fig:eth' on page 7 undefined on input line 468.
+
+
+LaTeX Warning: Reference `fig:gas' on page 7 undefined on input line 468.
+
+<figures/eth.pdf, id=272, 401.5pt x 265.99374pt>
+File: figures/eth.pdf Graphic file (type pdf)
+ <use figures/eth.pdf>
+Package pdftex.def Info: figures/eth.pdf used on input line 474.
+(pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
+
+<figures/xrp.pdf, id=273, 401.5pt x 256.96pt>
+File: figures/xrp.pdf Graphic file (type pdf)
+ <use figures/xrp.pdf>
+Package pdftex.def Info: figures/xrp.pdf used on input line 476.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/cad.pdf, id=274, 401.5pt x 256.96pt>
+File: figures/cad.pdf Graphic file (type pdf)
+ <use figures/cad.pdf>
+Package pdftex.def Info: figures/cad.pdf used on input line 486.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/eur.pdf, id=275, 401.5pt x 256.96pt>
+File: figures/eur.pdf Graphic file (type pdf)
+ <use figures/eur.pdf>
+Package pdftex.def Info: figures/eur.pdf used on input line 488.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/tether.pdf, id=276, 401.5pt x 256.96pt>
+File: figures/tether.pdf Graphic file (type pdf)
+ <use figures/tether.pdf>
+Package pdftex.def Info: figures/tether.pdf used on input line 490.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/bitusd.pdf, id=277, 401.5pt x 256.96pt>
+File: figures/bitusd.pdf Graphic file (type pdf)
+ <use figures/bitusd.pdf>
+Package pdftex.def Info: figures/bitusd.pdf used on input line 492.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+[7 <./figures/gas.pdf> <./figures/gasElectricity.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gasElectricity.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
->]
+> <./figures/eth.pdf
 
-LaTeX Warning: Reference `fig:gas' on page 7 undefined on input line 427.
-
-
-LaTeX Warning: Reference `fig:eth' on page 7 undefined on input line 429.
-
-
-LaTeX Warning: Reference `fig:eth' on page 7 undefined on input line 431.
-
-
-LaTeX Warning: Reference `fig:gas' on page 7 undefined on input line 431.
-
-<figures/eth.pdf, id=303, 401.5pt x 265.99374pt>
-File: figures/eth.pdf Graphic file (type pdf)
- <use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf used on input line 437.
-(pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
-
-<figures/xrp.pdf, id=304, 401.5pt x 256.96pt>
-File: figures/xrp.pdf Graphic file (type pdf)
- <use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf used on input line 439.
-(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
-
-<figures/cad.pdf, id=305, 401.5pt x 256.96pt>
-File: figures/cad.pdf Graphic file (type pdf)
- <use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf used on input line 449.
-(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
-
-<figures/eur.pdf, id=306, 401.5pt x 256.96pt>
-File: figures/eur.pdf Graphic file (type pdf)
- <use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf used on input line 451.
-(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
-
-<figures/tether.pdf, id=307, 401.5pt x 256.96pt>
-File: figures/tether.pdf Graphic file (type pdf)
- <use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf used on input line 453.
-(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
-
-<figures/bitusd.pdf, id=308, 401.5pt x 256.96pt>
-File: figures/bitusd.pdf Graphic file (type pdf)
- <use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf used on input line 455.
-(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
-)
-(./main.bbl [7 <./figures/eth.pdf> <./figures/xrp.pdf
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/eth.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+> <./figures/xrp.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/xrp.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
->]
+>]) (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 13--20
 []$\OT1/cmtt/m/n/10 https : / / www . linkedin . com / pulse / stablecoins -[] 
 vs -[] govtcoins -[] race -[] solve -[] cryptocurrencies -[]
@@ -1180,8 +1188,8 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 8BE59E55ED0D6959360369D919C5F054;2239
-(rerunfilecheck)             After:  D36FCAF8612A3F05C38F139B408C46B1;2236.
+(rerunfilecheck)             Before: 0D1B28C45B947BFD350987918EEC7EDE;2271
+(rerunfilecheck)             After:  CA35A3F56F3DEFEB63ECB91E1ED091AE;2204.
 
 LaTeX Warning: There were undefined references.
 
@@ -1191,34 +1199,39 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 22559 strings out of 493054
- 430446 string characters out of 6134759
- 544410 words of memory out of 5000000
- 25548 multiletter control sequences out of 15000+600000
- 11871 words of font info for 45 fonts, out of 8000000 for 9000
+ 22560 strings out of 493054
+ 430434 string characters out of 6134759
+ 543395 words of memory out of 5000000
+ 25546 multiletter control sequences out of 15000+600000
+ 12223 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,85p,1254b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (11 pages, 459845 bytes).
+ 57i,13n,85p,1281b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.3.7} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (11 pages, 482439 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
- 472 compressed objects within 5 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 594 PDF objects out of 1000 (max. 8388607)
+ 484 compressed objects within 5 object streams
+ 83 named destinations out of 1000 (max. 500000)
  324 words of extra memory for PDF output out of 10000 (max. 10000000)
 
