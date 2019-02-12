@@ -17,11 +17,11 @@ From the inception of exchanges for buying and selling BTC for USD in 2010 to th
 
 In response to Bitcoin's extreme volatility, a flood of proposals have been made for alternative designs that would offer a more stable exchange rate (called `stablecoins') between the newly proposed stablecoin and a government-issued currency like the USD. Broadly, the proposals can be split into two categories: ones that essentially create a digital representation of a currency that can be transacted like a cryptocurrency, and ones that propose separate currencies with some mechanism for stability and/or intervention built into the design.
 
-\paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is actually useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe these concepts rather than enumerating the intricate details of how particular `brands' of stablecoins work---details that could change tomorrow. That said, we do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of  index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates. 
+\paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is actually useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe these concepts rather than enumerating the intricate details of how particular `brands' of stablecoins work---details that could change tomorrow. That said, we do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of  index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates.
 
 \section{Related Work}
 
-Other blog posts, whitepapers, etc on systemizing stablecoins. 
+Other blog posts, whitepapers, etc on systemizing stablecoins.
 
 
 %==========================================%
@@ -32,7 +32,7 @@ Other blog posts, whitepapers, etc on systemizing stablecoins.
 
 If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are three subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and actual value, and (3) the concept that prices are really an exchange of one type of valuable good for another. The quoted price means that two (hopefully different) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Second, this does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
 
-Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might `cross' but this should be temporal and quickly resolved). The spread between these prices is called the bid-ask spread. For example, if one unit of a stablecoin is intended to be worth \$1 USD, it should be  
+Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might `cross' but this should be temporal and quickly resolved). The spread between these prices is called the bid-ask spread. For example, if one unit of a stablecoin is intended to be worth \$1 USD, it should be
 
 
 %===Explaining the crossing===%
@@ -78,13 +78,13 @@ Instead, we will use the idea of that a cryptocurrency (or any asset) has two pr
 \end{table}
 %===================%
 
-%Figure1: It shows how extreme the volatility of BTC is, when compared to fiat currencies. 
+%Figure1: It shows how extreme the volatility of BTC is, when compared to fiat currencies.
 % Prices retireved daily between 2016.01.01 and 2019.01.01
 %EUR,CAD and GBP show stable behaviour.
 %After June 23, 2016 (when the referendum for withdrawal of UK from EU took place), it can be observed that GBP and EUR values start to come closer as GBP loses and EUR gains value compared to USD. This is how volatility looks like in fiat currencies. Even such an important event with economical impacts didn't cause a high volatility compared to BTC price which exhibits more extreme changes in its value.
 
 %Figure 2 illustrates GBP's behavior against EUR and USD. GBP plot moves in the 2-6 direction and there is a price drop of approximately 24 cents
-%over a five month period following the referendum for Brexit. 
+%over a five month period following the referendum for Brexit.
 %Figure 2 zooms into the changes that GBP exhibits over time, as it is plotted over a small interval to reflect the price changes. Here Brexit's effect can be seen in more detail.
 %Compared to Figure 1, the price drop is more visible, but it is worth noting that the price change is small compared to the changes in the value of BTC. NOTE: about terminology: price or vaue? or something different?
 %GBP -(EUR and USD) chart "The pound dropped to its lowest level against the euro in 2017 after Mario Draghi, head of the European Central Bank, pushed the eurozone currency higher by saying he could start tightening monetary policy." September 2017 GBP loses value against both USD end EUR.
@@ -94,7 +94,6 @@ Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD an
 Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time. This indicates that the changes in the values of USD and gold are highly correlated.
 
 Considering these facts, there is a desire to design stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the blockchain which is the underlying technology of cryptocurrencies.
-
 \subsection{Volatility}
 
 % \cite{harris2003trading}
@@ -109,6 +108,82 @@ Considering these facts, there is a desire to design stablecoins with the stable
 %commodities that are expensive to store are volatile.
 %
 % It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high.
+
+
+
+%==========================================%
+\section{Preliminaries}
+
+\section{Related Works}
+%Mahsa:
+
+%In 2018, Bitmax published a report in which they briefly discuss the two types of stablecoin (\ie BitShares (BitUSD) and MakerDAO (Dai)) and provided a comparison in terms of different design decisions they apply~\cite{Bitmex}.
+%The idea seigniorage shares was first introduced by Robert Sams in 2017, where he proposed a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
+%In "The Denationalization of Money, F. A. Hayek, the Nobel Prize-winning economist, discussed about government authority over money supply. He argued that money should not be supplied by governments and instead, it should be market driven and based on market's supply and demand~\cite{F. A. Hayek}.
+%In 2016, Ametrano introduced "Hayek Money", a new monetary policy of elastic non-discretionary supply that can be used to achieve a price stable cryptocurrency~\cite{ametrano2016hayek}.
+%In one of his blog post, Buterin has discussed .... (https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/) ~\cite{TheSearc7:online}
+%
+%Should we talk about the followings:
+% https://static1.squarespace.com/static/55f73743e4b051cfcc0b02cf/t/58c7f80c2e69cf24220d335e/1489500174018/R3+Report-+Fedcoin.pdf ?
+% http://hardjono.mit.edu/sites/default/files/documents/Digital-Trade-Coin.pdf
+%
+%@article{sams2015note,
+%  title={A Note on Cryptocurrency Stabilisation: Seigniorage Shares},
+%  author={Sams, Robert},
+%  journal={Brave New Coin},
+%  pages={1--8},
+%  year={2015}
+%}
+%
+%@book{F. A. Hayek,
+%  title={The Denationalization of Money},
+%  author={Friedrich Hayek},
+%  pages={},
+%  year={1978},
+%  publisher={Institute of Economic Affairs}
+%}
+%
+%@article{ametrano2016hayek,
+%  title={Hayek money: The cryptocurrency price stability solution},
+%  author={Ametrano, Ferdinando M},
+%  year={2016}
+%}
+%@misc{TheSearc7:online,
+%author = {Vitalik Buterin},
+%title = {The Search for a Stable Cryptocurrency},
+%howpublished = {\url{https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/}},
+%month = {November4},
+%year = {2014},
+%note = {(Accessed on 02/11/2019)}
+%}
+
+
+%==========================================%
+%Didem:
+%Bitmex provides a classification for the stablecoins based on the fact whether there is an underlying collateral or not~\cite{bitmex}. They focus on the distributed stablecoins. We take centralized projects into consideration too.
+
+%The report from Blockchain provides an extensive classification of 57 stablecoins ~\cite{report}. Besides grouping them according to the mechanism that provides stability, they also provide information about the issues related to governance like legal structure, investors, partners etc.
+
+%Consensys also provides a classification base on the same framework.(https://media.consensys.net/the-state-of-stablecoins-2018-79ccb9988e63). They have a discussion decentralization too.
+
+%In~\cite{cryptoinsider}, the chosen projects are analyzed under two broad categories: centralized an decentralized. Centralized ones are further grouped into different categories according to the type of asset that is used to back the stablecoins.
+
+%~\cite{hackernoon},~\cite{comprehensiveOverview},~\cite{linkedin},~\cite{coinsexplained} and ~\cite{overview} categorize the stablecoins under three categories: fiat-collateralized, crypto-collateralized and non-collateralized.
+
+%(http://www.andrew.cmu.edu/user/azj/research/rzj_slides201808.pdf): three categories: 100\% USD Reserve backed coins, Protocol coins without redemption, Protocol coins with redemption in floating-rate crypto-currencies
+
+%(https://icosbull.com/whitepapers/2265/USDX_Protocol_whitepaper.pdf) three generations of stablecoins: Collateral-backed IOU, Collateral-backed on blockchain, Elastic monetary supply based. (This is a whitepaper for a protocol but it has a different classification)
+
+%Compared to aforementioned works that provide a systemization of the stablecoins, we provide a different framework to classify the existing mechanisms to achieve stability. While most of the works divide stablecoins into three categories (fiat-collateralized, crypto-collateralized and non-collaterlized), we divide them into two broad categories as backed and intervention. Then, we further group them under different mechanisms.
+
+%(https://multicoin.capital/2018/01/17/an-overview-of-stablecoins/)  Stablecoins are discussed under three main categories as centralized IOU issuance, collateral backed, and seigniorage shares along with the discussion of different types of oracles and the challenges that stablecoins face.
+
+%How we chose the projects: We performed a search query on \texttt{coindesk.com} and classified the projects that are mentioned in the posts until January 11, 2019. \footnote{https://www.coindesk.com/} (Copied the same text here!)
+
+
+%==========================================%
+\subsection{Valuation}
+% Every thing has two prices
 
 
 \subsection{Money}
@@ -201,7 +276,7 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 % Risk: not redeemable -> redemption is not 100%, the coin will be offered at less than $1. E.g., offers of $0.50, says 50% it can't be redeemed.
 % Examples: Gemini
 % Mahsa: Should we talk about these two recent incidents in this section?
-% According to the recent blogpost in coindesk (https://www.coindesk.com/winklevoss-crypto-gemini-gusd-stablecoin-redemption) Gemini has closed the account of some users and in some cases do not let redemption (some KYC issues) +     Paxos has has the same issue, although they let the user redeem their assets and then closed their account (https://www.ccn.com/paxos-standard-hassling-ethereum-traders-trying-to-redeem-stablecoin-pax-for-dollars)
+% According to the recent blogpost in  (https://www.coindesk.com/winklevoss-crypto-gemini-gusd-stablecoin-redemption) Gemini has closed the account of some users and in some cases do not let redemption (some KYC issues) +     Paxos has has the same issue, although they let the user redeem their assets and then closed their account (https://www.ccn.com/paxos-standard-hassling-ethereum-traders-trying-to-redeem-stablecoin-pax-for-dollars)
 
 
 \subsection{Non-Redeemable and Directly-Backed.}
@@ -240,15 +315,15 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 % Justification that offers will be less than $1
 % Examples:
 
-%=================% 
-%IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor 
+%=================%
+%IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor
 %aim: monetary stability and low inflation
 %currency board needs sufficient backing of base money (=central bank holds sufficient foreign exchange reserve)
 %CBA has adjustment mechanism. It reacts automatically to the changes in the foreign exchange outflows and inflows.Interest rates adjust automatically in currency board based systems
 %problem when the domestic inflation rate is higher than the inflation rate of the underlying foreign currency: results in overvaluation of the domestic currency
 
 %(https://www.imf.org/external/pubs/ft/wp/wp9808.pdf): Difference between currency board and pegged exchange rate
-%=================% 
+%=================%
 \subsection{Algorithmic with subjective external information}
 % Description of how it works.
 % Justification that bids will never exceed $1
@@ -272,9 +347,9 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 \textbf{Distribution of articles speaking about stablecoin:} 2014: 2, 2017: 4, 2018: 112, 2019 (up to Jan 11): 4.
 
-%================Notes on unranked projects:==========================% 
+%================Notes on unranked projects:==========================%
 
-%CarbonUSD: 
+%CarbonUSD:
 %t hybridizing both fiat backed and algorithmic stablecoins, (hybrid fiat-algorithmic approach)
 % 1-1 backed with USD
 % unlike purely fiat-backed stablecoin, CarbonUSD's novel meta-token structure enables a seamless future transition to an algorithmic stablecoin model once it reaches sufficient scale as a fully fiat-backed token.
@@ -284,16 +359,16 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 % they also have regular audits (unlike Tether)
 % Redeemable
 % Offchain (fiat-backed, crypto-backed) stablecoins are effective as bootstrapping trust and NOT maintaining it scale. HOWEVERM, Onchain (algorithmic) stablecoins are effective at maintaining trust at scale BUT not at bootstrapping it.
-%=================% 
+%=================%
 %NuBits:  https://nubits.com/NuWhitepaper.pdf
 % Like Tether, NuBits are pegged to US dollar, with one dollar equivalent to one NuBit.
 % NuBits controls its coin's value by getting shareholders to place buy and sell orders at 1$ for NuBits, rewarding them with revenue from sales of NuBits external cryptocurrency, NuShares.
 %==========
-% NuBits has suffered two big crashes, with extended peg breaking. 
+% NuBits has suffered two big crashes, with extended peg breaking.
 % First :
 % In 2016, NuBits’ peg infamously broke, and it remained broken for 3 months. The initial price drop happened between May 26th and June 20th, 2016. This was about the same time that Bitcoin’s price suddenly spiked, after 6 months of relative stability. It’s plausible that the drop happened because of the following: People who had capital in NuBits saw how Bitcoin was spiking. They wanted to get in on the spike, so they sold their NuBits in large quantities to buy Bitcoin. The NuBits peg was unable to handle the large sell-offs and broke. The price tanked and the peg stayed broken for an extended period. It seems that when the Bitcoin and volatile cryptoassets’ prices spike, investors with capital in stablecoins will want to sell them off to get in on the spike. That causes strong downward pressure on the stablecoin price.
 %==========
-% Second: 
+% Second:
 % After NuBits crashed in 2016, its market cap grew 1,500% on Coinmarketcap between the end of 2017 and the beginning of 2018, going from $950k to $14 million. This is strange, considering the NuBits peg had been broken for such a long period in 2016. Their market cap had been stagnant for years, and suddenly it takes off. Was this spike just an accounting error, or had people suddenly decided NuBits was actually amazing?
 % Turns out the increase was real. However, it did not happen in one day. People were buying millions of NuBits in late December. The price of the NuBits stablecoin was notably above its $1 peg between December 20 and December 28, when it peaked close to $1.50(!).
 % What caused the increase? It’s clear when one looks at the Bitcoin price history. The NuBits high price period starts when Bitcoin had its “Christmas crash.” By December 22 there was a strong news narrative about Bitcoin crashing.
@@ -302,24 +377,24 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 % This shows how when Bitcoin and cryptomarkets crash, capital rapidly flows into stablecoins.
 %==========
 % NuBits sounds very much like Basis: When the price of the Basis token below 1 dollar, they start selling sth called a bond token, and they actually sell this at a price below 1$ with a promise that it can be redeemed for a Basis coin in the future. when the price of Basis token goes above 1$, the Basis algorithm has to increase the money supply, so tehy issue you a 1 to 1 Basis coin for each Basis bond token that you held.
-%=================% 
+%=================%
 %Ampleforth:
 % It uses a different method of preserving its dollar-to-unit ration, by transferring volatility from unity price to unit count.
 %According to Trail of Bits, a malicious market maker could play with the stability of Ampleforth. the issue is their oracle services use whitelisted sources (just like Dai)
-%=================% 
+%=================%
 %Havven
 % is mostly like Dai, they also use over collateralization with 1:5 ratio.
 % They use a similar arbitrage as Dai but with different functionalities by locking up Havven tokens or by reverse burning Nomins by reclaiming Havven tokens  to keep the price stable.
 % One key difference between Nomin and Dai is the collateral for Dai is Eth but for Nomin is the actual Havven token itself.
-%=================% 
+%=================%
 %Basecoin (Basis Algorithm)
-% Non-collateralized 
-% Controlled by algorithmic supply 
-% The price  stability of this coin is managed by Basis protocol which is a central bank algorithm that increases or decreases the supply of teh coin based on supply and demand    
-% Still experimental and not yet operational 
+% Non-collateralized
+% Controlled by algorithmic supply
+% The price  stability of this coin is managed by Basis protocol which is a central bank algorithm that increases or decreases the supply of teh coin based on supply and demand
+% Still experimental and not yet operational
  % The coin supple is entirely done based on the information given by differnt oracles that make the protocol aware of condition of supply and demand
- % The peg could be anything: fiat, assets, or a basket of assets 
- 
+ % The peg could be anything: fiat, assets, or a basket of assets
+
 %==========================================%
 
 \section{Investigation of gas volatility}\label{sec:GasInvs}
@@ -334,32 +409,32 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 % there is an upper band and lower band for Gas
 % So in this section we look into how to trade Gas and its derivatives?
 
-%=======GasToken details=======% 
+%=======GasToken details=======%
 % Operations that modify the global state of the Ethereum blockchain are very expensive \ie writing into a contract storage.
 % Ethereum motivates the user to free up space on the blockchain by refunding the Gas if they delete their contracts. This is what GasToken does.
 % GasToken is a smart contract that for the first time allows Ethereum users to buy and sell gas by tokenizing gas on the network.
 % They allow users to store Gas when it is cheap and use it once its price goes up.
 % Gas price refers to the amount of Ether you’re willing to pay for every unit of gas.
 % When a user stores cheap Gas, he can later spend that Gas to send a tx, that means now he pays for less gas for that tx to go through.
-% GasToken allows a transaction to do the same amount of work and pay for less gas, saving on miner fees and costs and allowing users to bid higher gas prices without paying correspondingly higher fees. 
+% GasToken allows a transaction to do the same amount of work and pay for less gas, saving on miner fees and costs and allowing users to bid higher gas prices without paying correspondingly higher fees.
 %The gas tokens works on taking advantage of storage refund concept in ethereum, to inspire smart contracts to delete storage variable, ethereum network provides refund when storage variable is deleted up to half of the contract transaction.
 	% If a variable is changed from zero to a non-zero value, there is a gas fee  (writing into the storage is a very very expensive operation because it's altering the global state)
 	% If a variable is changed from a non-zero value to zero, there is a gas refund
 % A user can:
 	% Mint tokens when GasPrice is low: change a variable from a zero value to non-zero.
 	% Burn tokens when GasPrice is high: change a variable from non-zero to zero.
-	
+
 % As mentioned, the gas refunded from freeing some storage space is less than the initial gas cost of storing the data on-chain in the first place, so why would someone want to do this? Well, you can create these GasTokens (filling an array with ones or creating a bunch of contracts) at a time t with a low gas price (e.g. 2 Gwei) and later consume these GasTokens in a transaction that has a higher gas price. Hence, half of your gas used for the expensive transaction effectively costs you 2 Gwei, while the other half costs 50 Gwei. Even if you don’t get back as much gas as you spent creating these GasTokens, the difference in gas price can make it worth it.
 
 % IMPORTANT: How is the mechanic? 1) when the Gas price is low, user calls the gastoken contract and asks it to store a bunch of words, this costs a lot of gas but because gas is cheap it will only cost a few cents for the user. 2) later in the future, where the user wants to register a domain and the gas price is so expensive, user will create a tx and within that he does 2 things: (i) register the domain she wants and (ii) ask gastoken contract to remove those words she's stored before.
 
-%=================% 
+%=================%
 % Freeing up many storage slots in one transaction can quickly result in the refund counter surpassing half of the full transaction cost. In such a case or in case of self-destructs which can lead to a high refund counter as well we should evaluate how much of the refund can actually be used, as the refund can be at most half of the transaction cost. {The refund that has been accumulated cannot exceed half the gas used up during computation because miners need incentives to correctly execute your txs, and they should not pay Gas for your txs.} Thus freeing up storage slots or deleting contracts can make more sense in combination with other operations if possible (Gas Cost Analysis for Ethereum Smart Contracts: Zurich)
 % Refund balance: It is the amount to be refunded to the sender account post transaction execution. Storage in Ethereum is quite expensive, so there is an SSTORE instruction in Ethereum that is used as a refund counter. The refund counter starts at zero (no refund state) and gets incremented every time the transaction or contract deletes something from the storage. Please note that this refund amount is different and in addition to the unused gas that gets refunded to the sender.
 % In solidity, there are two commands which ensure that you get some gas refund back.
 	% SUICIDE: This basically kills the smart contract. Doing so will get you back 24000 gas.
 	%SSTORE: Storage deletion, which gets you back 15,000.
-%=================% 
+%=================%
 % since minting new coin burns gas, you can just show up and give your gas token (and burn that) and ask the system to use that gas to mint new tokens. If you burn one gas token for one coin, it's pointless. But they could mint 1.5 coin using that gas token.
 
 % Gas is a measure of computation, and the question we have to ask is is the price of computation stable?
@@ -367,12 +442,12 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 
 
-%=================IMPORTANT=================% 
-%=====Thoughts on GasToken used by Arbitrage for Font-running=======% 
+%=================IMPORTANT=================%
+%=====Thoughts on GasToken used by Arbitrage for Font-running=======%
 % arbitrage on the Ethereum network can use GasToken-like techniques. Arbitrage bots try to run the txs all the time and as soon as they see an opportunity to font-run some exchnage tx and make some money (cite front-running paper) so if they can lower their tx fees even a little bit, it extends the margins they can make (which txs are beneficial for them to front-run).
 
 
-%========GasPrice Plots Explanation:=========% 
+%========GasPrice Plots Explanation:=========%
 
 The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) when the FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the GasPrice to go up as Ethereum users had to pay more Gas for their transactions to go through.
 
@@ -381,14 +456,14 @@ The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryp
 
 %=========GasPlots========%
 \begin{figure}[!htb]
-	
+
 	\centering
 	\subfloat[Gas with respect to BTC and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
 	\hfill
 	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.45\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
 	\caption {Ethereum average GasPrice chart. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes in the chart represent specific events happened in certain dates which have increased the GasPrice.}
 	\label{fig:Gas}
-	
+
 \end{figure}
 
 %========================%
@@ -473,6 +548,3 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behaviour. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.
 
 %==========================================%
-
-
-
