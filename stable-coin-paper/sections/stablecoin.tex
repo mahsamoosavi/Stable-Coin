@@ -25,6 +25,7 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 
 
 \section{Related Work}
+\label{sec:lit}
 
 Other blog posts, whitepapers, etc on systemizing stablecoins.
 
@@ -154,7 +155,7 @@ To determine which currency is moving, one might consider a third or forth curre
 
 \end{tabular}
 	}
-	\caption{Brexit's effect on GBP.\label{fig:Comparison}}
+	\caption{A connected scatter plot of GBP's exchange rate with USD and EUR, demonstrating the effect of Brexit GBP. Supporting documentation helps interpret the line movements in the plot.\label{fig:Comparison}}
 \end{figure}
 %========================%
 
@@ -183,7 +184,9 @@ When the price of a currency changes over time, it is due to one of two reasons:
 
 \subsection{Functions of Money}
  
-There is controversy over whether Bitcoin, and other cryptocurrencies, can even be classified as currencies. The original intention was for Bitcoin to be a currency, however it has been classified in many different ways: from a digitally scarce commodity, to a speculative instrument, to an entirely new asset class. Most introductory finance textbooks classify currencies according to a set of properties it should fulfill for its users. It should operate as a medium of exchange, which roughly means that Alice will accept the currency from Bob because she is confident Carol will later accept it from her. Given the existence of exchange services, Bitcoin is generally considered an acceptable medium of exchange (albeit with some friction). Next, a currency is useful when it servers as the unit of account for pricing other assets. Bitcoin is almost never used as a unit of account and if goods are sold for Bitcoin, it is often priced in, say, USD with a short-lived spot conversion of the price to BTC for Bitcoin purchases. Finally, currencies should represent a stable store of value. Alice will not accept a currency that depreciates quickly in value from Bob because even though Carol might accept it, what she can obtain from Carol in exchange will be worth less. Less intuitively, currencies that appreciate quickly in value are equally problematic. Alice might gladly accept it from Bob but Bob is unlikely to part with it, and so currencies like this tend to be hoarded. They also hamper lending (see next section).
+There is controversy over whether Bitcoin, and other cryptocurrencies, can even be classified as currencies. The original intent from Bitcoin's creator was for it to be a currency, however it has been assigned many different classifications: from a digitally scarce commodity, to a speculative instrument, to an entirely new asset class. 
+
+Most introductory finance textbooks classify currencies according to a set of three core properties it should fulfill for its users. It should operate as a medium of exchange, which roughly means that Alice will accept the currency from Bob because she is confident Carol will later accept it from her. Given the existence of exchange services, Bitcoin is generally considered an acceptable medium of exchange (albeit with some friction). Next, a currency is useful when it serves as the unit of account for pricing other assets. Bitcoin is almost never used as a unit of account and if goods are sold for Bitcoin, it is often priced in, say, USD with a short-lived (\eg 2 minute) spot conversion of the price to BTC for Bitcoin purchases. Finally, currencies should represent a stable store of value. Alice will not accept a currency that depreciates quickly in value from Bob because even though Carol might accept it, what she can obtain from Carol in exchange will be worth less. Less intuitively, currencies that appreciate quickly in value are equally problematic. Alice might gladly accept it from Bob but Bob is unlikely to part with it, and so currencies like this tend to be hoarded. They also hamper lending (see next section).
 
 The goal of a stablecoin is to add the store of value feature to cryptocurrencies, which are already a somewhat adequate medium of exchange. Further, if the currency is stable, it may become a more prominent to use it as a unit of account. Thus stablecoins are intended to make cryptocurrencies more currency-like.
 
@@ -191,20 +194,32 @@ The goal of a stablecoin is to add the store of value feature to cryptocurrencie
 
 \subsection{Lending}
 
-Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending.
-Lending is difficult to be deployed on the blockchains, bdue to the monetary instability observed in the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their values are being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies causes serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
+Lending a volatile currency poses a risk for both the cash provider and cash taker. Currency depreciation results in the cash provider being repaid less than what they initially provided, and currency appreciation results in the cash taker having to repay a great amount than what was borrowed. Thus a stable currency enables low-risk lending which is beneficial to all participants and is the cornerstone of a modern economy. Okoye and Clark put it in a way that is hard to improve on, so we simply quote them~\cite{okoyetoward}:
+
+\begin{quote}
+
+``It is difficult to overstate the role of lending in a modern economy. Take, as an illustrative example, the role of a central bank; one of the main national institutes (along with the treasury) that cryptocurrencies aim to displace. First and foremost, a central bank is an actual bank, providing accounts for its member banks to deposit money and earn interest. Member banks provide interest-earning accounts to the public. Interest is paid to the public because banks use the deposited money to form loans. Because central bank interest rates are low, banks prefer to lend to other banks any excess cash they hold at day's end instead of depositing them (other banks borrow to meet liquidity requirements). These loans earn interest, and central banks target this specific lending rate when they intervene in the economy. The most common intervention is the buying (circulating new money) or selling (removing circulating money) of government bonds, which are interest-earning loans from investors to the government. Central banks will also provide loans (of `last resort') to banks unable to secure loans from other banks, typically during some sort of liquidity crisis. An economy without loans would have no interest rates, no bonds, and essentially nothing for a modern central bank to do.''
+
+\end{quote}
+
 
 
 %==========================================%
 
-\section{Systemization of stablecoins and Justification}
+\section{Type 1: Backed}
+\label{sec:t1}
+
+In this section, we discuss the first type of stablecoin. These coins try to directly match the stability of a different asset, such as the USD. These coins could not exist without their target asset.  In Section~\ref{sec:t2}, we consider the second type of coins which are independent of any other currency or asset, and use algorithms or human intervention to reduce volatility.
+
+\input{setup/table}
+
+In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in Section~\ref{sec:lit}, taxonomies for stablecoins have been proposed many times. \textblue{However our taxonomy ...}. We also surveyed a number of stablecoin proposals. To find projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Projects not yet actively traded are ranked as $\perp$. In some cases, a project 
 
 % Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt).
 
 
 % Dollar tokenization vs. low volatitility
 
-\input{setup/table}
 
 % Jeremy: How do we make a stable coin.
 % Jeremy: Table here
@@ -220,7 +235,7 @@ Lending is difficult to be deployed on the blockchains, bdue to the monetary ins
 	% expensive and slow to audit
 
 
-\subsection{Redeemable and Directly-Backed.}
+\subsection{Directly-Backed and Redeemable.}
 % Description of how it works: Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized. Although it's redeemable, a few people can redeem it and that itself shows that they have enough reserve, BUT what if nobody wants to redeem it?
 % Justification that bids will never exceed $1: an arbitrageur will pay $1 to mint 1 XSC and the 1 XSC for the bid
@@ -231,7 +246,7 @@ Lending is difficult to be deployed on the blockchains, bdue to the monetary ins
 % According to the recent blogpost in  (https://www.coindesk.com/winklevoss-crypto-gemini-gusd-stablecoin-redemption) Gemini has closed the account of some users and in some cases do not let redemption (some KYC issues) +     Paxos has has the same issue, although they let the user redeem their assets and then closed their account (https://www.ccn.com/paxos-standard-hassling-ethereum-traders-trying-to-redeem-stablecoin-pax-for-dollars)
 
 
-\subsection{Non-Redeemable and Directly-Backed.}
+\subsection{Directly-Backed.}
 % Description of how it works. Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized
 % Justification that bids will never exceed $1:
@@ -240,7 +255,7 @@ Lending is difficult to be deployed on the blockchains, bdue to the monetary ins
 % Remarks:
 %
 
-\subsection{Non-Redeemable and indirectly-Backed.}
+\subsection{Indirectly-Backed.}
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
@@ -256,7 +271,9 @@ Lending is difficult to be deployed on the blockchains, bdue to the monetary ins
 
 
 
-\section{Intervention-based} % it used to be Algorithmic
+\section{Type 2: Intervention-based}
+\label{sec:t2}
+
 
 % Control system: input (metrics), make a decision, implement the intervention
 % We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency.
@@ -294,10 +311,6 @@ Lending is difficult to be deployed on the blockchains, bdue to the monetary ins
 % Justification that offers will be less than $1
 % Examples:
 
-We performed a search query on \texttt{coindesk.com} and found the following projects which are mostly used in every articles published about stablecoins until January 11, 2019. \footnote{https://www.coindesk.com/} Table~\ref{tab:stablecoins} represents these projects and the methods they apply to achieve stability. (we should mention the search term that we used to extract our resources from coindesk)
-
-
-\textbf{Distribution of articles speaking about stablecoin:} 2014: 2, 2017: 4, 2018: 112, 2019 (up to Jan 11): 4.
 
 %================Notes on unranked projects:==========================%
 
@@ -349,9 +362,15 @@ We performed a search query on \texttt{coindesk.com} and found the following pro
 
 %==========================================%
 
-\section{What Stability looks like}\label{sec:stability}
+\section{Discussion}
 
-\section{Investigation of gas volatility}\label{sec:GasInvs}
+\subsection{Why so many?}
+
+%Emphasis on other things, like setting up contracts, governmence, audits, etc. 
+
+\subsection{What Stability looks like}\label{sec:stability}
+
+\subsection{Investigation of gas volatility}\label{sec:GasInvs}
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
 % Depending on how much the user wants to pay for ecah unit of Gas, this will determine how expensive the tx is in Ether.
 % Gas is internal to the Ethereum blockchain and users cannot hold it, instead they can have Ethere, BUT the conversion rate between Gas and Ether changes over time and that's why there are huge spikes in the average Gas price plots.
@@ -497,6 +516,8 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 %speculative attack
 
 % Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
+
+\subsection{Consequences for Central Banking}
 
 \section{Conclusion and Discussion}
 In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behaviour. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.

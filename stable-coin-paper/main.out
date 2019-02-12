@@ -7,20 +7,23 @@
 \BOOKMARK [2][-]{subsection.3.4}{Stability and Volatility}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.5}{Functions of Money}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.6}{Lending}{section.3}% 9
-\BOOKMARK [1][-]{section.4}{Systemization of stablecoins and Justification}{}% 10
+\BOOKMARK [1][-]{section.4}{Type 1: Backed}{}% 10
 \BOOKMARK [1][-]{section.5}{Backed}{}% 11
-\BOOKMARK [2][-]{subsection.5.1}{Redeemable and Directly-Backed.}{section.5}% 12
-\BOOKMARK [2][-]{subsection.5.2}{Non-Redeemable and Directly-Backed.}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.3}{Non-Redeemable and indirectly-Backed.}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.1}{Directly-Backed and Redeemable.}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Directly-Backed.}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Indirectly-Backed.}{section.5}% 14
 \BOOKMARK [2][-]{subsection.5.4}{Redeemable and indirectly-Backed.}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{Intervention-based}{}% 16
+\BOOKMARK [1][-]{section.6}{Type 2: Intervention-based}{}% 16
 \BOOKMARK [2][-]{subsection.6.1}{Currency Board}{section.6}% 17
 \BOOKMARK [2][-]{subsection.6.2}{Algorithmic with subjective external information}{section.6}% 18
 \BOOKMARK [2][-]{subsection.6.3}{Algorithmic with objective external information}{section.6}% 19
 \BOOKMARK [2][-]{subsection.6.4}{Algorithmic with only internal information}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{What Stability looks like}{}% 21
-\BOOKMARK [1][-]{section.8}{Investigation of gas volatility}{}% 22
-\BOOKMARK [1][-]{section.9}{Conclusion and Discussion}{}% 23
-\BOOKMARK [1][-]{section.10}{Appendix}{}% 24
-\BOOKMARK [1][-]{appendix.A}{The current state of stablecoins \(might be needed for the paper\)}{}% 25
-\BOOKMARK [2][-]{subsection.A.1}{Remittance}{appendix.A}% 26
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{Why so many?}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.2}{What Stability looks like}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.3}{Investigation of gas volatility}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.4}{Consequences for Central Banking}{section.7}% 25
+\BOOKMARK [1][-]{section.8}{Conclusion and Discussion}{}% 26
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 27
+\BOOKMARK [1][-]{appendix.A}{The current state of stablecoins \(might be needed for the paper\)}{}% 28
+\BOOKMARK [2][-]{subsection.A.1}{Remittance}{appendix.A}% 29
