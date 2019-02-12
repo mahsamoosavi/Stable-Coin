@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  5 FEB 2019 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  11 FEB 2019 19:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -905,7 +905,23 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (./setup/macros.tex
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)) (./main.aux)
+)) (./main.aux
+
+LaTeX Warning: Label `fig:cad' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:cad' multiply defined.
+
+
+LaTeX Warning: Label `fig:eur' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:eur' multiply defined.
+
+
+LaTeX Warning: Label `fig:fiatandcrypto' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -924,8 +940,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 13.
@@ -985,195 +1000,208 @@ LaTeX Info: Redefining \nameref on input line 13.
 LaTeX Font Info:    Try loading font information for U+stmry on input line 18.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-(./sections/stablecoin.tex
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-<figures/allCurrencies.pdf, id=122, 856.19875pt x 505.89pt>
+(./sections/abstract.tex) (./sections/stablecoin.tex
+<figures/allCurrencies.pdf, id=136, 856.19875pt x 505.89pt>
 File: figures/allCurrencies.pdf Graphic file (type pdf)
 
 <use figures/allCurrencies.pdf>
-Package pdftex.def Info: figures/allCurrencies.pdf used on input line 27.
+Package pdftex.def Info: figures/allCurrencies.pdf used on input line 11.
 (pdftex.def)             Requested size: 352.31625pt x 208.165pt.
+ [1
 
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./f
+igures/allCurrencies.pdf>]
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gbpBrexit.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/gbpBrexit.pdf, id=123, 803.0pt x 515.9275pt>
+<figures/gbpBrexit.pdf, id=173, 803.0pt x 515.9275pt>
 File: figures/gbpBrexit.pdf Graphic file (type pdf)
 
 <use figures/gbpBrexit.pdf>
-Package pdftex.def Info: figures/gbpBrexit.pdf used on input line 37.
+Package pdftex.def Info: figures/gbpBrexit.pdf used on input line 55.
 (pdftex.def)             Requested size: 352.31625pt x 226.37114pt.
 
-<figures/compass.jpg, id=124, 191.21437pt x 176.15813pt>
+<figures/compass.jpg, id=174, 191.21437pt x 176.15813pt>
 File: figures/compass.jpg Graphic file (type jpg)
 
 <use figures/compass.jpg>
-Package pdftex.def Info: figures/compass.jpg used on input line 39.
+Package pdftex.def Info: figures/compass.jpg used on input line 57.
 (pdftex.def)             Requested size: 117.43875pt x 108.19278pt.
- [1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
-es/allCurrencies.pdf>] [2 <./figures/gbpBrexit.pdf> <./figures/compass.jpg>] (.
-/setup/table.tex
+ [3 <./figures/gbpBrexit.pdf> <./figures/compass.jpg>] [4] (./setup/table.tex
 Overfull \hbox (13.37045pt too wide) in paragraph at lines 26--62
  [][] 
  []
 
+) [5
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [3
-
-] [4] <figures/cad.pdf, id=224, 361.35pt x 231.86626pt>
-File: figures/cad.pdf Graphic file (type pdf)
-
-<use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf used on input line 234.
-(pdftex.def)             Requested size: 211.38832pt x 135.63943pt.
- <figures/eur.pdf, id=225, 361.35pt x 231.86626pt>
-File: figures/eur.pdf Graphic file (type pdf)
-
-<use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf used on input line 238.
-(pdftex.def)             Requested size: 211.38832pt x 135.63943pt.
- <figures/eth.pdf, id=226, 361.35pt x 241.90375pt>
-File: figures/eth.pdf Graphic file (type pdf)
-
-<use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf used on input line 246.
-(pdftex.def)             Requested size: 211.38832pt x 141.51128pt.
- <figures/xrp.pdf, id=227, 361.35pt x 231.86626pt>
-File: figures/xrp.pdf Graphic file (type pdf)
-
-<use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf used on input line 250.
-(pdftex.def)             Requested size: 211.38832pt x 135.63943pt.
- <figures/tether.pdf, id=228, 361.35pt x 231.86626pt>
-File: figures/tether.pdf Graphic file (type pdf)
-
-<use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf used on input line 259.
-(pdftex.def)             Requested size: 211.38832pt x 135.63943pt.
- <figures/bitusd.pdf, id=229, 361.35pt x 231.86626pt>
-File: figures/bitusd.pdf Graphic file (type pdf)
-
-<use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf used on input line 263.
-(pdftex.def)             Requested size: 211.38832pt x 135.63943pt.
- <figures/gas.pdf, id=230, 361.35pt x 230.8625pt>
+] <figures/gas.pdf, id=241, 401.5pt x 252.945pt>
 File: figures/gas.pdf Graphic file (type pdf)
+ <use figures/gas.pdf>
+Package pdftex.def Info: figures/gas.pdf used on input line 386.
+(pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
 
-<use figures/gas.pdf>
-Package pdftex.def Info: figures/gas.pdf used on input line 272.
-(pdftex.def)             Requested size: 211.38832pt x 135.05225pt.
-
-<figures/gasElectricity.pdf, id=231, 361.35pt x 235.88126pt>
+<figures/gasElectricity.pdf, id=242, 401.5pt x 260.975pt>
 File: figures/gasElectricity.pdf Graphic file (type pdf)
 
 <use figures/gasElectricity.pdf>
-Package pdftex.def Info: figures/gasElectricity.pdf used on input line 276.
-(pdftex.def)             Requested size: 211.38832pt x 137.98817pt.
-) (./main.bbl [5 <./figures/cad.pdf> <./figures/eur.pdf
+Package pdftex.def Info: figures/gasElectricity.pdf used on input line 388.
+(pdftex.def)             Requested size: 211.38832pt x 137.40417pt.
+ [6 <./figures/gas.pdf> <./figures/gasElectricity.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/eur.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
-> <./figures/eth.pdf
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gasElectricity.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/eth.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
-> <./figures/xrp.pdf
+LaTeX Warning: Reference `fig:gas' on page 7 undefined on input line 427.
+
+
+LaTeX Warning: Reference `fig:eth' on page 7 undefined on input line 429.
+
+
+LaTeX Warning: Reference `fig:eth' on page 7 undefined on input line 431.
+
+
+LaTeX Warning: Reference `fig:gas' on page 7 undefined on input line 431.
+
+<figures/eth.pdf, id=303, 401.5pt x 265.99374pt>
+File: figures/eth.pdf Graphic file (type pdf)
+ <use figures/eth.pdf>
+Package pdftex.def Info: figures/eth.pdf used on input line 437.
+(pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
+
+<figures/xrp.pdf, id=304, 401.5pt x 256.96pt>
+File: figures/xrp.pdf Graphic file (type pdf)
+ <use figures/xrp.pdf>
+Package pdftex.def Info: figures/xrp.pdf used on input line 439.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/cad.pdf, id=305, 401.5pt x 256.96pt>
+File: figures/cad.pdf Graphic file (type pdf)
+ <use figures/cad.pdf>
+Package pdftex.def Info: figures/cad.pdf used on input line 449.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/eur.pdf, id=306, 401.5pt x 256.96pt>
+File: figures/eur.pdf Graphic file (type pdf)
+ <use figures/eur.pdf>
+Package pdftex.def Info: figures/eur.pdf used on input line 451.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/tether.pdf, id=307, 401.5pt x 256.96pt>
+File: figures/tether.pdf Graphic file (type pdf)
+ <use figures/tether.pdf>
+Package pdftex.def Info: figures/tether.pdf used on input line 453.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+
+<figures/bitusd.pdf, id=308, 401.5pt x 256.96pt>
+File: figures/bitusd.pdf Graphic file (type pdf)
+ <use figures/bitusd.pdf>
+Package pdftex.def Info: figures/bitusd.pdf used on input line 455.
+(pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
+)
+(./main.bbl [7 <./figures/eth.pdf> <./figures/xrp.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/xrp.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 16--23
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
 []$\OT1/cmtt/m/n/10 https : / / www . linkedin . com / pulse / stablecoins -[] 
 vs -[] govtcoins -[] race -[] solve -[] cryptocurrencies -[]
  []
 
 
-Underfull \hbox (badness 3579) in paragraph at lines 25--30
+Underfull \hbox (badness 3579) in paragraph at lines 22--27
 []\OT1/cmr/m/n/10 C. Durr.  Overview of sta-ble-coins.  []$\OT1/cmtt/m/n/10 htt
 ps : / / hackernoon . com / overview -[] of -[] stablecoins -[]
  []
 
 
-Underfull \hbox (badness 4242) in paragraph at lines 32--39
+Underfull \hbox (badness 4242) in paragraph at lines 29--36
 []\OT1/cmr/m/n/10 M. Huil-let.  Ibm backs new us dollar-pegged sta-ble-coin tha
 t runs on stel-lar net-work.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--39
+Underfull \hbox (badness 10000) in paragraph at lines 29--36
 []$\OT1/cmtt/m/n/10 https : / / cointelegraph . com / news / ibm -[] backs -[] 
 new -[] us -[] dollar -[] pegged -[] stablecoin -[] that -[] runs -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
 \OT1/cmtt/m/n/10 com / article / b1bbk5rb8gp227 / forget -[] bitcoin -[] stable
 coins -[] will -[] change -[] how -[] money -[]
  []
 
+[8 <./figures/cad.pdf> <./figures/eur.pdf
 
-Underfull \hbox (badness 2781) in paragraph at lines 65--71
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/eur.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+> <./figures/tether.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/tether.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./figures/bitusd.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/bitusd.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 2781) in paragraph at lines 62--68
 []\OT1/cmr/m/n/10 M. Or-cutt.  "sta-ble-coins" are trend-ing, but they may ig-n
 ore ba-sic eco-nomics.  []$\OT1/cmtt/m/n/10 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--71
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
 \OT1/cmtt/m/n/10 / / www . technologyreview . com / s / 611370 / stablecoins -[
 ] are -[] trending -[] but -[] they -[] may -[] ignore -[]
  []
 
-[6 <./figures/tether.pdf> <./figures/bitusd.pdf
+) (./sections/appendix.tex [9]
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/bitusd.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./figures/gas.pdf
+LaTeX Warning: Reference `Intro' on page 10 undefined on input line 35.
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gas.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
-> <./figures/gasElectricity.pdf
+[10
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gasElectricity.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->]) (./sections/appendix.tex [7]
+]
 
-LaTeX Warning: Citation `swan' on page 8 undefined on input line 27.
+LaTeX Warning: Reference `Intro' on page 11 undefined on input line 44.
 
-[8
-
-]) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D3FA62F2DB78F14F921408FB3A7C6EB7;2020.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 8BE59E55ED0D6959360369D919C5F054;2239
+(rerunfilecheck)             After:  D36FCAF8612A3F05C38F139B408C46B1;2236.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 22523 strings out of 493054
- 429992 string characters out of 6134759
- 546410 words of memory out of 5000000
- 25533 multiletter control sequences out of 15000+600000
- 11405 words of font info for 43 fonts, out of 8000000 for 9000
+ 22559 strings out of 493054
+ 430446 string characters out of 6134759
+ 544410 words of memory out of 5000000
+ 25548 multiletter control sequences out of 15000+600000
+ 11871 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,85p,1253b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,12n,85p,1254b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
@@ -1181,14 +1209,16 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (9 pages, 402983 bytes).
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (11 pages, 459845 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 64 named destinations out of 1000 (max. 500000)
- 292 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 580 PDF objects out of 1000 (max. 8388607)
+ 472 compressed objects within 5 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 324 words of extra memory for PDF output out of 10000 (max. 10000000)
 

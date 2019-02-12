@@ -3,41 +3,49 @@
 
 \section{Introduction}\label{sec:Intro}
 
-% \cite{harris2003trading}
-%book value and fundamental value
-%Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
-%Episodic volatility: large price change over a short period of time.
-%Fundamental volatility (due to unanticipated changes)vs transitory volatility (due to trading activity by uninformed traders)
-%Fundamental volatility: new information about a change in fundamental values is common knowledge, then price change happens without trading. If a few people know, price change is observed in high trading volumes.
-%Fundamental volatility factors: for commodities, it is supply and demand affects. For currencies: national inflation rates, macroeconomic policies, trade and capital flows
-%unexpected events cause fundamental price volatility
-%commodities that are expensive to store are volatile.
-
-% It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high.
-
-% Stablecoins are a topic of recent interest. A lot of blogs and some academic articles have systemized them. We know that the reader of this paper is expecting a chart of coins and what mechanisms they use: we do provide that, but we do not consider that the core contribution of the paper at all. Instead we really dug into finance to deeply understand the core methods and mechanisms that are employed for reducing volatility of a coin. We feel our paper is closer to a tutorial on stablecoins where we try to eliminate all the jargon (which is often misused and imprecisely applied) to explain the concepts, as well as drawing out appropriate foundations from finance.
-
-% Example: if we described the approach of stable coin in two simple words: ``currency board'' and you need no further explanation (just, perhaps, some details on the parameters), this paper is not for you. If you have heard the term and have a vague sense of how it works, but couldn't really explain it or why it achieves stability, this paper is for you. If you have never heard the term, this paper is also for you.
-
-% Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt).
-
-% Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin
-% Talk about the crypto custodianship somewhere in the paper
-%==========================================%
-
-\subsection{Motivation} %need a better name
-\textblue{In this section we talk about volatility and what does stability mean, and we make argument that we're not economist and everything is explained in our own language}
-Cryptocurrencies have gained a wide application after Bitcoin was first introduced in Satoshi Nakamoto’s (pseudonymous) 2008 whitepaper~\cite{nakamoto2008bitcoin}. For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence they cannot be adopted as money~\cite{overview}.
-
-Having said that, the volatile nature of cryptocurrencies (\eg Ether, Bitcoin) has raised the interest into what is known as stablecoin. Stablecoins (\ie cryptocurrencies with stable price) ensure that the fluctuation in the value remains low. Figure~\ref{fig:btcandfiat} illustrates the volatility of Bitcoin's value, when compared to fiat currencies, and the change of values of EUR, GBP, CAD, and BTC with respect to USD over time. Monthly values between January 2016 and November 2018 are shown. According the figures, while fiat currencies show stable behaviour, Bitcoin's value changes drastically over time, which makes it a non-stable cryptocurrency.
+Many early cryptocurrency proposals designed secure digital representations of government-issued money (which cryptocurrency enthusiasts typically call `fiat'). While Bitcoin was not the first proposal for a digital currency that is issued and operates independently of existing currencies and financial infrastructure, Bitcoin~\cite{nakamoto2008bitcoin} is the first of this type to establish wide-scale deployment. Without government oversight, the exchange rate of Bitcoin is essentially subject to: (a) an algorithm which releases new BTC (Bitcoin's currency) on a fixed schedule, and (b) the market for exchanging Bitcoin for other things of value, namely fiat currencies such as the USD, and potentially (c) the market for participating in transaction validation which is integral into how new BTC comes into circulation.
 
 %========================%
-\begin{figure}[!htb]
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.75\textwidth]{figures/allCurrencies.pdf}
-	\caption{\label{fig:btcandfiat}Comparison among fiat currencies and Bitcoin: The values are retrieved daily between  01-01-2016 and  01-01-2019.}
+	\caption{\label{fig:btcandfiat}Comparison among fiat currencies and Bitcoin: The values are retrieved daily between  01 Jan 2016 and 01 Jan 2019. Note that 1000 mBTC = 1 BTC.}
 \end{figure}
 %========================%
+
+From the inception of exchanges for buying and selling BTC for USD in 2010 to the time of writing, the exchange rate of BTC with the USD has been marked by extremely volatile with large fluctuations in its value that are atypical of a government-managed currency. Figure~\ref{fig:btcandfiat} illustrates this volatility by plotting the exchange rate of BTC (with the USD) alongside the same exchange rate for three economic zones---Europe, UK, and Canada---which all appear relatively stable. Note that Figure~\ref{fig:btcandfiat} deliberately includes the UK's referendum on exiting the EU (`Brexit') in June 2016, which was followed by a `sharp decline' and `volatility' in GBP's exchange rate.\footnote{Descriptions from the following BBC articles: ``The markets facing trading turmoil'' (27 Jun 2016) and ``How does Brexit affect the pound?'' (15 Jan 2019).}  Relative to BTC however, this `severe swing' looks like a mild pinch of GBP's exchange rate with EUR in Figure~\ref{fig:btcandfiat}.
+
+In response to Bitcoin's extreme volatility, a flood of proposals have been made for alternative designs that would offer a more stable exchange rate (called `stablecoins') between the newly proposed stablecoin and a government-issued currency like the USD. Broadly, the proposals can be split into two categories: ones that essentially create a digital representation of a currency that can be transacted like a cryptocurrency, and ones that propose separate currencies with some mechanism for stability and/or intervention built into the design.
+
+\paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is actually useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe these concepts rather than enumerating the intricate details of how particular `brands' of stablecoins work---details that could change tomorrow. That said, we do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of  index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates. 
+
+\section{Related Work}
+
+Other blog posts, whitepapers, etc on systemizing stablecoins. 
+
+
+%==========================================%
+
+\section{Preliminaries}
+
+\subsection{Prices}
+
+If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are three subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and actual value, and (3) the concept that prices are really an exchange of one type of valuable good for another. The quoted price means that two (hopefully different) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Second, this does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
+
+Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might `cross' but this should be temporal and quickly resolved). The spread between these prices is called the bid-ask spread. For example, if one unit of a stablecoin is intended to be worth \$1 USD, it should be  
+
+
+%===Explaining the crossing===%
+
+%When we establish a value for something, we do not really claim what the value is and what it worths, instead, we establish a value of its exchange. For example, today Alice is willing to pay 500 CAD for Bob's phone, whereas tomorrow, she will pay 600 CAD. What happened in this case? It could be (i) the value of money (CAD) going down or (ii) the value of good (phone) going up. Thus, in order to establish how much value something has, we should think of it in terms of being an exchange rate (the exchange rate between that asset and some other valuable assets). In other words, if Bob is willing to offer his phone for 1000 CAD, does it mean that it worths 1000 CAD? What we know about is that the value of Bob's phone is somewhere between 500 CAD (which Alice is willing to bid) and 1000 CAD (which Bob is willing to accept/ask). Therefore, the value of an object is not a single number and we can think of it as an interval between a least amount somebody wishes to sell for and the most amount somebody wishes to pay for that object, this interval is called bid-ask. If an ask comes below a bid, then the transaction happens and that amount is recorded as the final price, we call this \textit{crossing}.
+
+%What actually happens when they cross? Assume that they cross in such that Bob wants to pay (bid) 600 CAD for Alice's phone while Alice wants to sell (ask) it for 500 CAD. What happens in the real world is (i) either one party goes first and advertises a bid or an ask and when it crosses with other party's complimentary bid or ask, she accepts it. (ii) both parties advertise and they do not know about each other's price, so when they cross, the market decides (usually they pick the midpoint between the two).
+
+%When there is a cross, you have a price that is used for selling the object, that price is a last transaction price. So three values are actually important: 1) What is the most somebody is willing to pay for the object, 2) What's the least somebody is willing to accept for it, and 3) what was the last price this object is sold out. The value we see in the newspaper is always the last price, although it does not represent how much the object worths. In fact, we cannot actually say that and the best way to say that is when the bid-ask interval is really small. Assume that the interval is only 1 cent difference, in this case we can make sure what is the value and we are sure down to a cent. When the market changes so fast, the last price gives a lot of information on how much something worths, however, the last price that belongs to 30 years ago does not reveal a lot of information.
+
+\subsection{Exchange}
+
+
 
 
 %========================%
@@ -51,52 +59,6 @@ Having said that, the volatile nature of cryptocurrencies (\eg Ether, Bitcoin) h
 	\label{fig:Comparison}
 \end{figure}
 %========================%
-
-%Figure1: It shows how extreme the volatility of BTC is, when compared to fiat currencies. 
-% Prices retireved daily between 2016.01.01 and 2019.01.01
-%EUR,CAD and GBP show stable behaviour.
-%After June 23, 2016 (when the referendum for withdrawal of UK from EU took place), it can be observed that GBP and EUR values start to come closer as GBP loses and EUR gains value compared to USD. This is how volatility looks like in fiat currencies. Even such an important event with economical impacts didn't cause a high volatility compared to BTC price which exhibits more extreme changes in its value.
-
-%Figure 2 illustrates GBP's behavior against EUR and USD. GBP plot moves in the 2-6 direction and there is a price drop of approximately 24 cents
-%over a five month period following the referendum for Brexit. 
-%Figure 2 zooms into the changes that GBP exhibits over time, as it is plotted over a small interval to reflect the price changes. Here Brexit's effect can be seen in more detail.
-%Compared to Figure 1, the price drop is more visible, but it is worth noting that the price change is small compared to the changes in the value of BTC. NOTE: about terminology: price or vaue? or something different?
-%GBP -(EUR and USD) chart "The pound dropped to its lowest level against the euro in 2017 after Mario Draghi, head of the European Central Bank, pushed the eurozone currency higher by saying he could start tightening monetary policy." September 2017 GBP loses value against both USD end EUR.
-
-
-Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. %However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
-Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time. This indicates that the changes in the values of USD and gold are highly correlated.
-
-Considering these facts, there is a desire to design stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the blockchain which is the underlying technology of cryptocurrencies.
-
-%==========================================%
-
-\section{Preliminaries}
-
-\subsection{Valuation}
-% Every thing has two prices
-
-%How do we assign value to something? how do we establish what something is worth?  The value is usually given in some units of account (\eg CAD).
-
-%===Explaining the crossing===%
-
-%When we establish a value for something, we do not really claim what the value is and what it worths, instead, we establish a value of its exchange. For example, today Alice is willing to pay 500 CAD for Bob's phone, whereas tomorrow, she will pay 600 CAD. What happened in this case? It could be (i) the value of money (CAD) going down or (ii) the value of good (phone) going up. Thus, in order to establish how much value something has, we should think of it in terms of being an exchange rate (the exchange rate between that asset and some other valuable assets). In other words, if Bob is willing to offer his phone for 1000 CAD, does it mean that it worths 1000 CAD? What we know about is that the value of Bob's phone is somewhere between 500 CAD (which Alice is willing to bid) and 1000 CAD (which Bob is willing to accept/ask). Therefore, the value of an object is not a single number and we can think of it as an interval between a least amount somebody wishes to sell for and the most amount somebody wishes to pay for that object, this interval is called bid-ask. If an ask comes below a bid, then the transaction happens and that amount is recorded as the final price, we call this \textit{crossing}.
-
-%What actually happens when they cross? Assume that they cross in such that Bob wants to pay (bid) 600 CAD for Alice's phone while Alice wants to sell (ask) it for 500 CAD. What happens in the real world is (i) either one party goes first and advertises a bid or an ask and when it crosses with other party's complimentary bid or ask, she accepts it. (ii) both parties advertise and they do not know about each other's price, so when they cross, the market decides (usually they pick the midpoint between the two).
-
-%When there is a cross, you have a price that is used for selling the object, that price is a last transaction price. So three values are actually important: 1) What is the most somebody is willing to pay for the object, 2) What's the least somebody is willing to accept for it, and 3) what was the last price this object is sold out. The value we see in the newspaper is always the last price, although it does not represent how much the object worths. In fact, we cannot actually say that and the best way to say that is when the bid-ask interval is really small. Assume that the interval is only 1 cent difference, in this case we can make sure what is the value and we are sure down to a cent. When the market changes so fast, the last price gives a lot of information on how much something worths, however, the last price that belongs to 30 years ago does not reveal a lot of information.
-
-\subsection{Exchange}
-
-\clearpage
-\subsection{No-Seignorage Theory of Money}
-
-To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
-
-If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
-
-\subsection{plot explanations}
-
 
 %=======Plot Legend Explanation===========%
 \begin{table}[t]
@@ -116,11 +78,102 @@ If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a
 \end{table}
 %===================%
 
+%Figure1: It shows how extreme the volatility of BTC is, when compared to fiat currencies. 
+% Prices retireved daily between 2016.01.01 and 2019.01.01
+%EUR,CAD and GBP show stable behaviour.
+%After June 23, 2016 (when the referendum for withdrawal of UK from EU took place), it can be observed that GBP and EUR values start to come closer as GBP loses and EUR gains value compared to USD. This is how volatility looks like in fiat currencies. Even such an important event with economical impacts didn't cause a high volatility compared to BTC price which exhibits more extreme changes in its value.
+
+%Figure 2 illustrates GBP's behavior against EUR and USD. GBP plot moves in the 2-6 direction and there is a price drop of approximately 24 cents
+%over a five month period following the referendum for Brexit. 
+%Figure 2 zooms into the changes that GBP exhibits over time, as it is plotted over a small interval to reflect the price changes. Here Brexit's effect can be seen in more detail.
+%Compared to Figure 1, the price drop is more visible, but it is worth noting that the price change is small compared to the changes in the value of BTC. NOTE: about terminology: price or vaue? or something different?
+%GBP -(EUR and USD) chart "The pound dropped to its lowest level against the euro in 2017 after Mario Draghi, head of the European Central Bank, pushed the eurozone currency higher by saying he could start tightening monetary policy." September 2017 GBP loses value against both USD end EUR.
+
+
+Figure~\ref{fig:btc} shows the change of value of Bitcoin with respect to USD and gold. The value changes happen in directions 2 and 6 (Figure~\ref{fig:legend}). The part of plot in direction 2 means that Bitcoin is gaining value against gold and USD. This can also be interpreted as both gold and USD are losing value relative to Bitcoin. %However, the first explanation is more likely to be the case, as only Bitcoin's value is changing compared to two values (USD and gold) changing.
+Also, the fact that the plot is located on the diagonal shows that Bitcoin gains/loses value against both USD and Gold at the same time. This indicates that the changes in the values of USD and gold are highly correlated.
+
+Considering these facts, there is a desire to design stablecoins with the stable nature of the fiat currencies together with the decentralized nature of the blockchain which is the underlying technology of cryptocurrencies.
+
+\subsection{Volatility}
+
+% \cite{harris2003trading}
+
+%book value and fundamental value
+%Volatility: tendency of having unexpected changes in the price. Reasons for price change: new information about values and the trader's wanting liquidity.
+%Episodic volatility: large price change over a short period of time.
+%Fundamental volatility (due to unanticipated changes)vs transitory volatility (due to trading activity by uninformed traders)
+%Fundamental volatility: new information about a change in fundamental values is common knowledge, then price change happens without trading. If a few people know, price change is observed in high trading volumes.
+%Fundamental volatility factors: for commodities, it is supply and demand affects. For currencies: national inflation rates, macroeconomic policies, trade and capital flows
+%unexpected events cause fundamental price volatility
+%commodities that are expensive to store are volatile.
+%
+% It is difficult to define a stable coin because, the more we read, it captures a negative sentiment (what a coin ought not to be) more than what a coin ought to be. It ought not to be like Bitcoin, whose volatility is high.
+
+
+\subsection{Money}
+
+%Cryptocurrencies have gained a wide application after Bitcoin was first introduced in Satoshi Nakamoto’s (pseudonymous) 2008 whitepaper~\cite{nakamoto2008bitcoin}. For Bitcoin and any other cyptocurrency to function as money, they need to fulfill a set of properties that determine the strength and adoption of them \ie they are expected to serve as a medium of exchange, a unit of account, and a store of value. However, due to high fluctuations in their prices, majority of the cryptocurrencies do not meet these properties and hence they cannot be adopted as money~\cite{overview}.
+
+
+\subsection{Lending}
+
+Despite quite a few blockchain applications in financial technologies, there has been little deployment of lending.
+Lending is difficult to be deployed on the blockchains, bdue to the monetary instability observed in the existing cryptocurrencies~\cite{okoyetoward}. This volatility has led the cryptocurrencies to be used more as speculative investments instead of serving as store of value and unit of account. In a lending situation with volatile currencies, where their values are being depreciated or appreciated over time, the cash taker will eventually owe more than what he has borrowed or the vice versa. Therefore, the volatility in the value of cryptocurrencies causes serious concerns and difficulties both for cash takers and cash providers~\cite{okoyetoward}. In contrast, lending perfectly works if a loan is done with a stable cryptocurrency, whose value remains stable over the time.
+
+
+
+%
+%
+
+%
+% Stablecoins are a topic of recent interest. A lot of blogs and some academic articles have systemized them. We know that the reader of this paper is expecting a chart of coins and what mechanisms they use: we do provide that, but we do not consider that the core contribution of the paper at all. Instead we really dug into finance to deeply understand the core methods and mechanisms that are employed for reducing volatility of a coin. We feel our paper is closer to a tutorial on stablecoins where we try to eliminate all the jargon (which is often misused and imprecisely applied) to explain the concepts, as well as drawing out appropriate foundations from finance.
+%
+% Example: if we described the approach of stable coin in two simple words: ``currency board'' and you need no further explanation (just, perhaps, some details on the parameters), this paper is not for you. If you have heard the term and have a vague sense of how it works, but couldn't really explain it or why it achieves stability, this paper is for you. If you have never heard the term, this paper is also for you.
+%
+%
+% Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin
+% Talk about the crypto custodianship somewhere in the paper
+
+
+
+\subsection{Valuation}
+% Every thing has two priceso
+
+%How do we assign value to something? how do we establish what something is worth?  The value is usually given in some units of account (\eg CAD).
+
+
+
+
+\clearpage
+\subsection{No-Seignorage Theory of Money}
+
+To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
+
+If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
+
+
+
+
+
+
+
+
+
+
+\subsection{plot explanations}
+
+
+
+
 
 
 %==========================================%
 
 \section{Systemization of stablecoins and Justification}
+
+% Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt).
+
 
 % Dollar tokenization vs. low volatitility
 

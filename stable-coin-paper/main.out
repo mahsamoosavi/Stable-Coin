@@ -1,28 +1,32 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Motivation}{section.1}% 2
-\BOOKMARK [1][-]{section.2}{Preliminaries}{}% 3
-\BOOKMARK [2][-]{subsection.2.1}{Valuation}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.2}{Exchange}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.3}{No-Seignorage Theory of Money}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.4}{plot explanations}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{Systemization of stablecoins and Justification}{}% 8
-\BOOKMARK [1][-]{section.4}{Backed}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Redeemable and Directly-Backed.}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Non-Redeemable and Directly-Backed.}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.3}{Non-Redeemable and indirectly-Backed.}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.4}{Redeemable and indirectly-Backed.}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Intervention-based}{}% 14
-\BOOKMARK [2][-]{subsection.5.1}{Currency Board}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{Algorithmic with subjective external information}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Algorithmic with objective external information}{section.5}% 17
-\BOOKMARK [2][-]{subsection.5.4}{Algorithmic with only internal information}{section.5}% 18
-\BOOKMARK [1][-]{section.6}{Investigation of gas volatility}{}% 19
-\BOOKMARK [1][-]{section.7}{Conclusion and Discussion}{}% 20
-\BOOKMARK [1][-]{section.8}{Appendix}{}% 21
-\BOOKMARK [1][-]{appendix.A}{The current state of stablecoins \(might be needed for the paper\)}{}% 22
-\BOOKMARK [1][-]{appendix.B}{Issues that stablecoins address}{}% 23
-\BOOKMARK [2][-]{subsection.B.1}{Cryptocurrencies as Medium of Exchange}{appendix.B}% 24
-\BOOKMARK [2][-]{subsection.B.2}{Cryptocurrencies as Unit of Account}{appendix.B}% 25
-\BOOKMARK [2][-]{subsection.B.3}{Cryptocurrencies as Store of Value}{appendix.B}% 26
-\BOOKMARK [2][-]{subsection.B.4}{Lending with Cryptocurrencies}{appendix.B}% 27
-\BOOKMARK [2][-]{subsection.B.5}{Remittance}{appendix.B}% 28
+\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
+\BOOKMARK [1][-]{section.3}{Preliminaries}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Prices}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Exchange}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Volatility}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Money}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Lending}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Valuation}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{No-Seignorage Theory of Money}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.8}{plot explanations}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Systemization of stablecoins and Justification}{}% 12
+\BOOKMARK [1][-]{section.5}{Backed}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Redeemable and Directly-Backed.}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Non-Redeemable and Directly-Backed.}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Non-Redeemable and indirectly-Backed.}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.4}{Redeemable and indirectly-Backed.}{section.5}% 17
+\BOOKMARK [1][-]{section.6}{Intervention-based}{}% 18
+\BOOKMARK [2][-]{subsection.6.1}{Currency Board}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.2}{Algorithmic with subjective external information}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.3}{Algorithmic with objective external information}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.4}{Algorithmic with only internal information}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{Investigation of gas volatility}{}% 23
+\BOOKMARK [1][-]{section.8}{Conclusion and Discussion}{}% 24
+\BOOKMARK [1][-]{section.9}{Appendix}{}% 25
+\BOOKMARK [1][-]{appendix.A}{The current state of stablecoins \(might be needed for the paper\)}{}% 26
+\BOOKMARK [1][-]{appendix.B}{Issues that stablecoins address}{}% 27
+\BOOKMARK [2][-]{subsection.B.1}{Cryptocurrencies as Medium of Exchange}{appendix.B}% 28
+\BOOKMARK [2][-]{subsection.B.2}{Cryptocurrencies as Unit of Account}{appendix.B}% 29
+\BOOKMARK [2][-]{subsection.B.3}{Cryptocurrencies as Store of Value}{appendix.B}% 30
+\BOOKMARK [2][-]{subsection.B.4}{Lending with Cryptocurrencies}{appendix.B}% 31
+\BOOKMARK [2][-]{subsection.B.5}{Remittance}{appendix.B}% 32
