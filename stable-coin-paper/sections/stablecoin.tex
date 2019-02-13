@@ -170,7 +170,7 @@ We will return to these charts later in Section~\ref{sec:stability} where we wil
 
 \subsection{Valuation}
 
-Recall that in the previous section, 1 BTC was priced at \$3566.56 USD. This simply means that two people recently swapped some amount of BTC and USD for the stated valuation. Does this mean 1 BTC is worth \$3566.56 USD? Value can mean different things in different contexts. The market value of a currency does present one type of value --- its replacement value, or the cost in USD to replace it. Note that more technically, one should  determine replacement value from the set of best offer prices sufficient to cover the volume of BTC being valued.
+Recall that in the previous section, 1 BTC was priced at \$3566.56 USD. This means that two people recently swapped some amount of BTC and USD for the stated valuation. Does this mean 1 BTC is worth \$3566.56 USD? Value can mean different things in different contexts. The market value of a currency does present one type of value --- its replacement value, or the cost in USD to replace it. Note that more technically, one should  determine replacement value from the set of best offer prices sufficient to cover the volume of BTC being valued.
 
 But does this mean that BTC is fundamentally worth \$3566.56 USD. This is unlikely because by the time you read this paper, the price of BTC in USD is probably quite different from this quoted value (perhaps humorously so). So what constitutes fundamental value? And why do prices change over time?
 
@@ -209,25 +209,40 @@ Lending a volatile currency poses a risk for both the cash provider and cash tak
 
 %==========================================%
 
-\section{Type 1: Backed}
+\section{Type 1: Backed Stablecoins}
 \label{sec:t1}
 
-In this section, we discuss the first type of stablecoin. These coins try to directly match the stability of a different asset, such as the USD. These coins could not exist without their target asset.  In Section~\ref{sec:t2}, we consider the second type of coins which are independent of any other currency or asset, and use algorithms or human intervention to reduce volatility.
+In this section, we discuss the first type of stablecoin. These coins try to directly match the stability of a different asset, such as the USD. These coins could not exist without their target asset. In Section~\ref{sec:t2}, we consider the second type of coin which is a standalone currency that uses algorithms and/or human intervention to reduce volatility.
 
 \input{setup/table}
 
-In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in Section~\ref{sec:lit}, taxonomies for stablecoins have been proposed many times. \textblue{However our taxonomy ...}. We also surveyed a number of stablecoin proposals. To find projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Projects not yet actively traded are ranked as $\perp$. In some cases, a project 
+In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in Section~\ref{sec:lit}, taxonomies for stablecoins have been proposed many times. The focus of our taxonomy is a bit different; we do not care about classification \textit{per se}, we view our work as a tutorial on how to build a stablecoin and the taxonomy are simply is a set of directions a designer can choose between or combine. We also surveyed a number of stablecoin proposals. To find projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Projects not yet listed are ranked as $\perp$.
 
 % Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt).
 
 
-% Dollar tokenization vs. low volatitility
 
 
-% Jeremy: How do we make a stable coin.
-% Jeremy: Table here
 
-\section{Backed}
+
+
+\subsection{Directly-Backed and Redeemable.}
+
+The first direction one might take in producing a stablecoin is the creation of a digital representation (or tokenization) of a fiat currency, commodity, or portfolio of assets. Tokens are designed to have the same price (and thus volatility) as the underlying portfolio. To further enable an equivalence of value (we will explain how shortly), the digital token can be redeemed on-demand for the underlying asset. For simplicity, we will consider a cryptocurrency designed to digitally represent the USD. 
+
+The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. Liberty Reserve and e-gold provided a similar service. Liberty Reserve dollars were redeemable in principle, but only indirectly through an intermediary and redemption could be refused. Meanwhile, e-gold was not redeemable (see next section of a discussion of the consequences of this). What is novel about a stable cryptocurrency is that transactions are not done on a centralized server, but rather finalized and settled on a decentralized blockchain. However since directly-backed stablecoins reintroduce centralization to create the digital tokens, maintain reserves of the underlying asset, and process redemption requests, the benefit of a decentralized transaction platform is marginal.
+
+\paragraph{Process.} Alice uses Ethereum to generate a contract to issue 1000 AliceCoins as standard (\eg ERC20) tokens. She lists asks \$1 USD for 1 AliceCoin and promises to redeem the tokens for \$1 USD. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones. If Carol wants to redeem 5 AliceCoins, Alice withdraws \$5 USD and exchanges it with Carol and takes the AliceCoins out of circulation. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
+
+\paragraph{Price Stability.} For simplicity, assume all transactions are free and frictionless. Consider a bid for 1 AliceCoin that is greater than \$1 USD. Alice will generate a new AliceCoin, deposit only \$1 USD, and keep the rest of the bid value as profit. Therefore bids in excess of \$1 USD will be temporal. Next, consider an ask for 1 AliceCoin for less than \$1 USD. Anyone can purchase this AliceCoin for its asking price, try to redeem it for \$1 USD from Alice, and if successful, keep the difference as profit. Therefore the ask price of an AliceCoin is proportional to the expectation that it can actually be redeemed for \$1 USD. For an example, an ask of \$ 0.60 USD reveals that the trader believes there is only a 60\% chance of redeeming the coin (otherwise he'd redeem it rather than sell it). 
+
+ Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD. 
+
+\paragraph{Discussion.} 
+
+% Discussion: transactions are decentralized but creation, reserves, redemption are not, still strictly better. 
+% Discussion: role of audit
+
 % issue: the stablecoin is valid as long as the holder trusts the company/person who keeps the reserve, once the trust is gone, the stablecoin worths nothing
 %adv:
  	%easy to implement
@@ -236,9 +251,7 @@ In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stableco
 	% trust 3rd party to hold it
 	% need additional 3rd party to audit
 	% expensive and slow to audit
-
-
-\subsection{Directly-Backed and Redeemable.}
+	
 % Description of how it works: Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized. Although it's redeemable, a few people can redeem it and that itself shows that they have enough reserve, BUT what if nobody wants to redeem it?
 % Justification that bids will never exceed $1: an arbitrageur will pay $1 to mint 1 XSC and the 1 XSC for the bid
@@ -266,15 +279,7 @@ In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stableco
 % Remarks: Oracles
 
 
-\subsection{Redeemable and indirectly-Backed.}
-% Description of how it works.
-% Justification that bids will never exceed $1
-% Justification that offers will be less than $1
-% Examples:
-
-
-
-\section{Type 2: Intervention-based}
+\section{Type 2: Intervention-based Stablecoins}
 \label{sec:t2}
 
 
@@ -370,10 +375,11 @@ In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stableco
 \subsection{Why so many?}
 
 %Emphasis on other things, like setting up contracts, governmence, audits, etc. 
+% Which blockchain
 
 \subsection{What Stability looks like}\label{sec:stability}
 
-\subsection{Investigation of gas volatility}\label{sec:GasInvs}
+\subsection{Ethereum's Gas}\label{sec:GasInvs}
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
 % Depending on how much the user wants to pay for ecah unit of Gas, this will determine how expensive the tx is in Ether.
 % Gas is internal to the Ethereum blockchain and users cannot hold it, instead they can have Ethere, BUT the conversion rate between Gas and Ether changes over time and that's why there are huge spikes in the average Gas price plots.

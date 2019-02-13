@@ -4,10 +4,30 @@
 Black swan.
 \newblock \url{ https://www.investopedia.com/terms/b/blackswan.asp }, 2008.
 
+\bibitem{ametrano2016hayek}
+F.~M. Ametrano.
+\newblock Hayek money: The cryptocurrency price stability solution.
+\newblock 2016.
+
+\bibitem{bitmex}
+Bitmex.
+\newblock A brief history of stablecoins (part 1).
+\newblock \url{https://blog.bitmex.com/a-brief-history-of-stablecoins-part-1/},
+  2018.
+\newblock Accessed: 2018-09-02.
+
 \bibitem{report}
 Blockchain.
 \newblock The state of stablecoins.
 \newblock 2018.
+
+\bibitem{TheSearc7:online}
+V.~Buterin.
+\newblock The search for a stable cryptocurrency.
+\newblock
+  \url{https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/},
+  November4 2014.
+\newblock (Accessed on 02/11/2019).
 
 \bibitem{linkedin}
 S.~Dhillon.
@@ -17,13 +37,6 @@ S.~Dhillon.
   https://www.linkedin.com/pulse/stablecoins-vs-govtcoins-race-solve-cryptocurrencies-price-dhillon},
   2018.
 \newblock Accessed: 2018-10-29.
-
-\bibitem{overview}
-C.~Durr.
-\newblock Overview of stablecoins.
-\newblock \url{ https://hackernoon.com/overview-of-stablecoins-2e4ffef82a73},
-  2018.
-\newblock Accessed: 2018-01-15.
 
 \bibitem{harris2003trading}
 L.~Harris.
@@ -77,10 +90,5 @@ L.~Schor.
 \newblock \url{
   https://medium.com/@argongroup/stablecoins-explained-206466da5e61 }, 2018.
 \newblock Accessed: 2018-10-29.
-
-\bibitem{smithin2002money}
-J.~Smithin.
-\newblock What is money? introduction.
-\newblock In {\em What is Money?}, pages 11--25. Routledge, 2002.
 
 \end{thebibliography}
