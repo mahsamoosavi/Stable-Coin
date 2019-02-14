@@ -43,6 +43,11 @@ L.~Harris.
 \newblock {\em Trading and exchanges: Market microstructure for practitioners}.
 \newblock Oxford University Press, USA, 2003.
 
+\bibitem{FHayek}
+F.~Hayek.
+\newblock {\em The Denationalization of Money}.
+\newblock Institute of Economic Affairs, 1978.
+
 \bibitem{cointelegraph}
 M.~Huillet.
 \newblock Ibm backs new us dollar-pegged stablecoin that runs on stellar
@@ -84,11 +89,35 @@ M.~Orcutt.
   2018.
 \newblock Accessed: 2018-07-06.
 
+\bibitem{hackernoon}
+H.~Qureshi.
+\newblock Stablecoins: designing a price-stable cryptocurrency.
+\newblock \url{
+  https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5},
+  2018.
+\newblock Accessed: 2018-09-03.
+
 \bibitem{coinsexplained}
 L.~Schor.
 \newblock Stablecoins explained.
 \newblock \url{
-  https://medium.com/@argongroup/stablecoins-explained-206466da5e61 }, 2018.
+  https://medium.com/@argongroup/stablecoins-explained-206466da5e61}, 2018.
 \newblock Accessed: 2018-10-29.
+
+\bibitem{StateofS96:online}
+N.~Sexer.
+\newblock State of stablecoins, 2018 – consensys media.
+\newblock
+  \url{https://media.consensys.net/the-state-of-stablecoins-2018-79ccb9988e63},
+  July24 2018.
+\newblock (Accessed on 02/12/2019).
+
+\bibitem{comprehensiveOverview}
+C.~P. TEAM.
+\newblock Comprehensive overview of stablecoins.
+\newblock \url{
+  https://medium.com/cp-processor/comprehensive-overview-of-stablecoins-819d183f6ac7},
+  2018.
+\newblock Accessed: 2018-01-15.
 
 \end{thebibliography}

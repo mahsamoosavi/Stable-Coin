@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: bib/stablecoinRef.bib
+Warning--to sort, need author or key in swan
+Warning--empty journal in ametrano2016hayek
+Warning--empty journal in report
+Warning--empty journal in okoyetoward
+Warning--empty year in okoyetoward
+You've used 18 entries,
+            2118 wiz_defined-function locations,
+            586 strings with 6390 characters,
+and the built_in function-call counts, 3852 in all, are:
+= -- 371
+> -- 126
+< -- 0
++ -- 58
+- -- 36
+* -- 131
+:= -- 662
+add.period$ -- 62
+call.type$ -- 18
+change.case$ -- 70
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 145
+empty$ -- 383
+format.name$ -- 36
+if$ -- 830
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 7
+newline$ -- 101
+num.names$ -- 34
+pop$ -- 142
+preamble$ -- 1
+purify$ -- 54
+quote$ -- 0
+skip$ -- 113
+stack$ -- 0
+substring$ -- 94
+swap$ -- 15
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 5
+while$ -- 34
+width$ -- 20
+write$ -- 195
+(There were 5 warnings)

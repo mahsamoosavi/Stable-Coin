@@ -87,11 +87,11 @@ To determine which currency is moving, one might consider a third or forth curre
 %========================%
 \begin{figure}[t]
 	\centering
-	\subfloat[GBP with respect to EUR and USD]{\includegraphics[width=0.75\textwidth]{figures/gbpBrexit.pdf}\label{fig:brexit}}
+	\subfloat[GBP with respect to EUR and USD.]{\includegraphics[width=0.75\textwidth]{figures/gbpBrexit.pdf}\label{fig:brexit}}
 	\hfill
-	\subfloat[Legend]{\includegraphics[width=0.25\textwidth]{figures/compass}\label{fig:legend}}
+	\subfloat[Direction labels.]{\includegraphics[width=0.25\textwidth]{figures/compass.pdf}\label{fig:legend}}
 	\hfill
-	\subfloat[The simpliest interpretation of the plots where $X$ refers to the currency on the x-axis and likewise $Y$.]{
+	\subfloat[The simpliest interpretation of the plots where $X$ refers to the currency on the x-axis (likewise $Y$).]{
 	\begin{tabular}{|c|l|}
 \hline
 \textbf{Direction} & \textbf{Interpretation}   \\ \hline
@@ -99,11 +99,11 @@ To determine which currency is moving, one might consider a third or forth curre
          1/5                & $Y$ is losing (1) / gaining (5) value \\ \hline
          2/6                & Plotted asset is gaining (2) / losing (6) value \\ \hline
          3/7                & $X$ is losing (3) / gaining (7) value \\ \hline
-         4/8                & \multicolumn{1}{p{14cm}|}{Plotted asset is gaining (4) / losing (8) value against $X$, while losing (4) / gaining (8) value against $Y$} \\ \hline
+         4/8                & \multicolumn{1}{p{13cm}|}{Plotted asset is gaining (4) / losing (8) value against $X$, while losing (4) / gaining (8) value against $Y$} \\ \hline
 
 \end{tabular}
 	}
-	\caption{A connected scatter plot of GBP's exchange rate with USD and EUR, demonstrating the effect of Brexit GBP. Supporting documentation helps interpret the line movements in the plot.\label{fig:Comparison}}
+	\caption{A connected scatter plot of GBP's exchange rate with EUR and USD demonstrating the effect of Brexit on GBP. Supporting documentation helps interpret the line movements in the plot.\label{fig:Comparison}}
 \end{figure}
 %========================%
 
@@ -142,11 +142,11 @@ The goal of a stablecoin is to add the store of value feature to cryptocurrencie
 
 \subsection{Lending}
 
-Lending a volatile currency poses a risk for both the cash provider and cash taker. Currency depreciation results in the cash provider being repaid less than what they initially provided, and currency appreciation results in the cash taker having to repay a great amount than what was borrowed. Thus a stable currency enables low-risk lending which is beneficial to all participants and is the cornerstone of a modern economy. Okoye and Clark put it in a way that is hard to improve on, so we simply quote them~\cite{okoyetoward}:
+Lending a volatile currency poses a risk for both the cash provider and cash taker. Currency depreciation results in the cash provider being repaid less than what they initially provided, and currency appreciation results in the cash taker having to repay a great amount than what was borrowed. Thus a stable currency enables low-risk lending which is beneficial to all participants and is the cornerstone of a modern economy. Okoye \etal put it in a way that is hard to improve on:
 
 \begin{quote}
 
-``It is difficult to overstate the role of lending in a modern economy. Take, as an illustrative example, the role of a central bank; one of the main national institutes (along with the treasury) that cryptocurrencies aim to displace. First and foremost, a central bank is an actual bank, providing accounts for its member banks to deposit money and earn interest. Member banks provide interest-earning accounts to the public. Interest is paid to the public because banks use the deposited money to form loans. Because central bank interest rates are low, banks prefer to lend to other banks any excess cash they hold at day's end instead of depositing them (other banks borrow to meet liquidity requirements). These loans earn interest, and central banks target this specific lending rate when they intervene in the economy. The most common intervention is the buying (circulating new money) or selling (removing circulating money) of government bonds, which are interest-earning loans from investors to the government. Central banks will also provide loans (of `last resort') to banks unable to secure loans from other banks, typically during some sort of liquidity crisis. An economy without loans would have no interest rates, no bonds, and essentially nothing for a modern central bank to do.''
+``It is difficult to overstate the role of lending in a modern economy. Take, as an illustrative example, the role of a central bank; one of the main national institutes (along with the treasury) that cryptocurrencies aim to displace. First and foremost, a central bank is an actual bank, providing accounts for its member banks to deposit money and earn interest. Member banks provide interest-earning accounts to the public. Interest is paid to the public because banks use the deposited money to form loans. Because central bank interest rates are low, banks prefer to lend to other banks any excess cash they hold at day's end instead of depositing them (other banks borrow to meet liquidity requirements). These loans earn interest, and central banks target this specific lending rate when they intervene in the economy. The most common intervention is the buying (circulating new money) or selling (removing circulating money) of government bonds, which are interest-earning loans from investors to the government. Central banks will also provide loans (of `last resort') to banks unable to secure loans from other banks, typically during some sort of liquidity crisis. An economy without loans would have no interest rates, no bonds, and essentially nothing for a modern central bank to do.~\cite{okoyetoward}''
 
 \end{quote}
 
@@ -157,19 +157,13 @@ Lending a volatile currency poses a risk for both the cash provider and cash tak
 \section{Type 1: Backed Stablecoins}
 \label{sec:t1}
 
-In this section, we discuss the first type of stablecoin. These coins try to directly match the stability of a different asset, such as the USD. These coins could not exist without their target asset. In Section~\ref{sec:t2}, we consider the second type of coin which is a standalone currency that uses algorithms and/or human intervention to reduce volatility.
+In this section, we discuss the first type of stablecoin. These coins try to directly match the stability of a second asset, such as the USD. These coins could not exist without their target asset. In Section~\ref{sec:t2}, we consider the second type of coin which is a standalone currency that use intervention (algorithmic and/or human) to reduce volatility.
 
 \input{setup/table}
 
-In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in Section~\ref{sec:lit}, taxonomies for stablecoins have been proposed many times. The focus of our taxonomy is a bit different; we do not care about classification \textit{per se}, we view our work as a tutorial on how to build a stablecoin and the taxonomy are simply is a set of directions a designer can choose between or combine. We also surveyed a number of stablecoin proposals. To find projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Projects not yet listed are ranked as $\perp$.
+In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in related work (see Section~\ref{sec:lit}), taxonomies for stablecoins have been proposed many times. The focus of our taxonomy is a bit different. We do not care about classification \textit{per se}---we view our work as a tutorial on how to build a stablecoin, and the taxonomy are simply is a set of directions a designer can choose between or combine. They are based on proposals for stablecons, as well as insights from monetary policy for governmental currencies. 
 
-% Two basic concepts: (1) a tokenization of a fiat currency (say a digital dollar) or any asset or asset portfolio of assets. This is an old idea: liberty reserve, eGold. (2) a low-volatility coin that is tied to any existing asset. For example, with USD as the baseline, Euros are much more stable than Bitcoin. It is not because Euros are backed by USD or have any direct reference to the USD. It is because USD and Euros use the same model, a central bank management, with similar inputs (the interest rates their customers, commercial banks, use when lending cash to each other to meet various legal requirements that help ensure the banks will have enough cash on hand to server their customers and can withstand some of their investments going bad without going bankrupt).
-
-
-
-
-
-
+To find stablecoin projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Unlisted projects are ranked $\perp$.
 
 \subsection{Directly-Backed and Redeemable.}
 
@@ -177,34 +171,22 @@ The first direction one might take in producing a stablecoin is the creation of 
 
 The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. Liberty Reserve and e-gold provided a similar service. Liberty Reserve dollars were redeemable in principle, but only indirectly through an intermediary and redemption could be refused. Meanwhile, e-gold was not redeemable (see next section of a discussion of the consequences of this). What is novel about a stable cryptocurrency is that transactions are not done on a centralized server, but rather finalized and settled on a decentralized blockchain. However since directly-backed stablecoins reintroduce centralization to create the digital tokens, maintain reserves of the underlying asset, and process redemption requests, the benefit of a decentralized transaction platform is marginal.
 
-\paragraph{Process.} Alice uses Ethereum to generate a contract to issue 1000 AliceCoins as standard (\eg ERC20) tokens. She lists asks \$1 USD for 1 AliceCoin and promises to redeem the tokens for \$1 USD. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones. If Carol wants to redeem 5 AliceCoins, Alice withdraws \$5 USD and exchanges it with Carol and takes the AliceCoins out of circulation. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
+\paragraph{Process.} Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as standard (\eg ERC20) tokens. She lists asks \$1 USD for 1 AliceCoin and promises to redeem the tokens for \$1 USD. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones. If Carol wants to redeem 5 AliceCoins, Alice withdraws \$5 USD and exchanges it with Carol and takes the AliceCoins out of circulation. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
 
-\paragraph{Price Stability.} For simplicity, assume all transactions are free and frictionless. Consider a bid for 1 AliceCoin that is greater than \$1 USD. Alice will generate a new AliceCoin, deposit only \$1 USD, and keep the rest of the bid value as profit. Therefore bids in excess of \$1 USD will be temporal. Next, consider an ask for 1 AliceCoin for less than \$1 USD. Anyone can purchase this AliceCoin for its asking price, try to redeem it for \$1 USD from Alice, and if successful, keep the difference as profit. Therefore the ask price of an AliceCoin is proportional to the expectation that it can actually be redeemed for \$1 USD. For an example, an ask of \$ 0.60 USD reveals that the trader believes there is only a 60\% chance of redeeming the coin (otherwise he'd redeem it rather than sell it). 
+\paragraph{Price Stability.} For simplicity, assume all transactions are free and frictionless. Consider a bid for 1 AliceCoin that is greater than \$1 USD. Bob will sell an AliceCoin immediately for this price and will ask Alice to generate a new AliceCoin, deposit only \$1 USD for this, and keep the rest of the bid value as profit. Therefore bids in excess of \$1 USD will be temporal assuming Alice is quick to generate new coins on demand. Next, consider an ask for 1 AliceCoin for less than \$1 USD. Bob will immediately purchase this AliceCoin for its asking price, try to redeem it for \$1 USD from Alice, and if successful, keep the difference as profit. Bob's willingness is proportional to the expectation that it can actually be redeemed for \$1 USD. For an example, if he only buys at \$ 0.60 USD, it might reveal that Bob believes there is only a 60\% chance of redeeming the coin or that he can only redeem 60\% of its redemption value (the asker thinks it must be less, otherwise she'd rather redeem it than sell it). 
 
- Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD. 
+Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD assuming the market is close to 100\% confident in a frictionless creation and redemption process for of coins. In reality, fees and time delays for moving stablecoins and fiat payments will cause distortions.  
 
-\paragraph{Discussion.} 
+\paragraph{Discussion.} Blockchain-based cryptocurrencies are designed to minimize trust in third parties. The trust assumption on stablecoins in this category are close to pre-bockchain currencies like Liberty Reserve and e-gold, who would maintain transaction details and account balances on a private server. Blockchain enables decentralized trust for the transactions, although it also makes them transparent---at least, as transparent as token movements are for the underlying contract and/or blockchain. This includes transactions with other decentralized applications. However the coin creation and redemption processes rely on trust.
 
-% Discussion: transactions are decentralized but creation, reserves, redemption are not, still strictly better. 
-% Discussion: role of audit
+A financial audit is an important step than can establish confidence in the redemption process, which in turns provides stable prices on coins being offered for sale. The auditor becomes a further trusted entity, and ties its reputation to the firm operating the stablecoin. For regulatory reasons, reputable auditing firms will want a clear indication of the coin's legality, as well as confidence in the firm's internal controls over the issuance and redemption of tokens and the custodianship of the backing assets. A sensible template for a stablecoins of this type will consist of three trusted entities: the firm operating the coin, a reputable auditor, and a reputable custodian of the assets. 
 
-% issue: the stablecoin is valid as long as the holder trusts the company/person who keeps the reserve, once the trust is gone, the stablecoin worths nothing
-%adv:
- 	%easy to implement
-	% value should matched exactly (eg to USD)
-%disadv:
-	% trust 3rd party to hold it
-	% need additional 3rd party to audit
-	% expensive and slow to audit
-	
-% Description of how it works: Deposit in bank, etc.
-% Regular audits are needed to ensure that the stablecoin is indeed fully collateralized. Although it's redeemable, a few people can redeem it and that itself shows that they have enough reserve, BUT what if nobody wants to redeem it?
-% Justification that bids will never exceed $1: an arbitrageur will pay $1 to mint 1 XSC and the 1 XSC for the bid
-% Justification that offers will be less than $1: an arbitrageur will purchase the 1 XSC and redeem it for $1
-% Risk: not redeemable -> redemption is not 100%, the coin will be offered at less than $1. E.g., offers of $0.50, says 50% it can't be redeemed.
-% Examples: Gemini
-% Mahsa: Should we talk about these two recent incidents in this section?
+If the firm operates in a jurisdiction with modern securities laws, the issuance of the stablecoins is likely subject to regulatory approval. Further, the redemption of the coins will serve as a main point of regulation, requiring financial reporting to prevent the kind of crime that was prevalent on pre-blockchain coins like Liberty Reserve and e-gold. A number of existing coins with operations in the United States have been reported as disallowing redemption for some holders.
+
 % According to the recent blogpost in  (https://www.coindesk.com/winklevoss-crypto-gemini-gusd-stablecoin-redemption) Gemini has closed the account of some users and in some cases do not let redemption (some KYC issues) +     Paxos has has the same issue, although they let the user redeem their assets and then closed their account (https://www.ccn.com/paxos-standard-hassling-ethereum-traders-trying-to-redeem-stablecoin-pax-for-dollars)
+
+A variety of firms and projects providing stablecoins in this category exist. Why so many? The differentiation between coins is along a few parameters: (1) the type of asset that can be redeemed for the coin: USD, EUR, gold, \etc; (2) the underlying blockchain (\eg Bitcoin, Ethereum, \etc) and the low-level technical design; and (3) the degree of regulatory compliance: paving forward in a highly regulated environment to bootstrap trust, or seeking under-regulated environments to move to market quickly and avoid government surveillance for participants.
+
 
 
 \subsection{Directly-Backed.}
@@ -214,7 +196,10 @@ The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. 
 % Justification that offers will be less than $1
 % Examples: Tether
 % Remarks:
-%
+
+% Discussion: ETF are 1\%, CEF are 5\% but CEF still gives you equity in the SPV holding the funds, redemption is point of regulation
+% Tether attacks
+
 
 \subsection{Indirectly-Backed.}
 % Description of how it works.
@@ -468,6 +453,8 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 %on October 15, 2018; where the price drastically surged from $6,376 at 12.31 UTC to $7,083 at 14.50 UTC. A downturn in price was seen approximately one hour after that to $6,821, before went stable at around $6,400 — $6,600. It was one of the one of the most unexpected fluctuations after a while. The first ‘stable coin’ tether (USDT) which supposedly pegged 1:1 to the U.S. dollar fell up to 15% at the same time as the price of bitcoin fluctuate wildly. The movement caused a loss of trust among traders, causing them to sell tether and invest in other cryptocurrencies. A massive selloff for tether against bitcoin was seen, resulting in a price rise in bitcoin.
 %bitcoin and other crypto assets are perfectly negatively correlated with stablecoins.
 %speculative attack
+
+% When tether breaks its peg it moves diagonally, indpendent of bitcoin. When BitUSD breaks, it moves with Bitcoin. 
 
 % Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
 
