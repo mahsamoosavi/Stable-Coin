@@ -171,7 +171,7 @@ The first direction one might take in producing a stablecoin is the creation of 
 
 The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. Liberty Reserve and e-gold provided a similar service. Liberty Reserve dollars were redeemable in principle, but only indirectly through an intermediary and redemption could be refused. Meanwhile, e-gold was not redeemable (see next section of a discussion of the consequences of this). What is novel about a stable cryptocurrency is that transactions are not done on a centralized server, but rather finalized and settled on a decentralized blockchain. However since directly-backed stablecoins reintroduce centralization to create the digital tokens, maintain reserves of the underlying asset, and process redemption requests, the benefit of a decentralized transaction platform is marginal.
 
-\paragraph{Process.} Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as standard (\eg ERC20) tokens. She lists asks \$1 USD for 1 AliceCoin and promises to redeem the tokens for \$1 USD. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones. If Carol wants to redeem 5 AliceCoins, Alice withdraws \$5 USD and exchanges it with Carol and takes the AliceCoins out of circulation. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
+\paragraph{Process.} Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as standard (\eg ERC20) tokens. She lists asks \$1 USD for 1 AliceCoin and promises to redeem the tokens for \$1 USD. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones and deposits the payment. If Carol wants to redeem 5 AliceCoins, Alice withdraws \$5 USD and exchanges it with Carol and takes the AliceCoins out of circulation. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
 
 \paragraph{Price Stability.} For simplicity, assume all transactions are free and frictionless. Consider a bid for 1 AliceCoin that is greater than \$1 USD. Bob will sell an AliceCoin immediately for this price and will ask Alice to generate a new AliceCoin, deposit only \$1 USD for this, and keep the rest of the bid value as profit. Therefore bids in excess of \$1 USD will be temporal assuming Alice is quick to generate new coins on demand. Next, consider an ask for 1 AliceCoin for less than \$1 USD. Bob will immediately purchase this AliceCoin for its asking price, try to redeem it for \$1 USD from Alice, and if successful, keep the difference as profit. Bob's willingness is proportional to the expectation that it can actually be redeemed for \$1 USD. For an example, if he only buys at \$ 0.60 USD, it might reveal that Bob believes there is only a 60\% chance of redeeming the coin or that he can only redeem 60\% of its redemption value (the asker thinks it must be less, otherwise she'd rather redeem it than sell it). 
 
@@ -185,11 +185,21 @@ If the firm operates in a jurisdiction with modern securities laws, the issuance
 
 % According to the recent blogpost in  (https://www.coindesk.com/winklevoss-crypto-gemini-gusd-stablecoin-redemption) Gemini has closed the account of some users and in some cases do not let redemption (some KYC issues) +     Paxos has has the same issue, although they let the user redeem their assets and then closed their account (https://www.ccn.com/paxos-standard-hassling-ethereum-traders-trying-to-redeem-stablecoin-pax-for-dollars)
 
-A variety of firms and projects providing stablecoins in this category exist. Why so many? The differentiation between coins is along a few parameters: (1) the type of asset that can be redeemed for the coin: USD, EUR, gold, \etc; (2) the underlying blockchain (\eg Bitcoin, Ethereum, \etc) and the low-level technical design; and (3) the degree of regulatory compliance: paving forward in a highly regulated environment to bootstrap trust, or seeking under-regulated environments to move to market quickly and avoid government surveillance for participants.
-
-
+A variety of firms and projects providing stablecoins in this category exist. Why so many? The differentiation between coins is along a few parameters: (1) the type of asset that can be redeemed for the coin: USD, EUR, gold, \etc; (2) the underlying blockchain (\eg Bitcoin, Ethereum, \etc) and the low-level technical design (updatable contracts, governance, \etc) \textblue{cite that talk on gemini from michael's company's conference}; and (3) the degree of regulatory compliance: paving forward in a highly regulated environment to bootstrap trust, or seeking under-regulated environments to move to market quickly and avoid government surveillance for participants.
 
 \subsection{Directly-Backed.}
+
+Next we consider stablecoins that are directly-backed---exactly as in the previous section but they do not offer a redemption process for the coin's underlying assets. Redemption is logistically complicated. Consider a USD-backed dollar---it is usually easier for a firm to receive USD payments from users than it is for it to send payments back, and sending payments opens up new exposure to regulation. Instead, it pledges to keep the backing assets in trust for the duration of the circulating coins. We will shortly explain what impact there is on the coin if it does not provide redemption---obviously, if redemption were inconsequential, than no one would offer it as it increases costs and complexity. For our ranking in Table~\ref{tab:stablecoins}, if we could not find a clear assertion of redemption, we listed the project under this category.
+
+\paragraph{Process.} As previously, Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as ERC20 tokens. She asks \$1 USD for 1 AliceCoin and promises to deposit the payment. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones and deposits the payment. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
+
+\paragraph{Price Stability.} 
+
+\paragraph{Discussion.} The idea of tokenizing material assets and selling tokens is common in finance however most tokenizations have some redeemable value. As one example, an electronically traded fund (ETF), which might sell shares of a portfolio of assets, is likely redeemable for the assets and will be prices very close (+/- 1\%) to the value of what is redeemable    industries. 
+
+
+ but does not 
+
 % Description of how it works. Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized
 % Justification that bids will never exceed $1:
@@ -199,6 +209,7 @@ A variety of firms and projects providing stablecoins in this category exist. Wh
 
 % Discussion: ETF are 1\%, CEF are 5\% but CEF still gives you equity in the SPV holding the funds, redemption is point of regulation
 % Tether attacks
+% imparted attacks
 
 
 \subsection{Indirectly-Backed.}
