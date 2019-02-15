@@ -151,8 +151,7 @@ Lending a volatile currency poses a risk for both the cash provider and cash tak
 \end{quote}
 
 
-
-%==========================================%
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \section{Type 1: Backed Stablecoins}
 \label{sec:t1}
@@ -164,6 +163,8 @@ In this section, we discuss the first type of stablecoin. These coins try to dir
 In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in related work (see Section~\ref{sec:lit}), taxonomies for stablecoins have been proposed many times. The focus of our taxonomy is a bit different. We do not care about classification \textit{per se}---we view our work as a tutorial on how to build a stablecoin, and the taxonomy are simply is a set of directions a designer can choose between or combine. They are based on proposals for stablecons, as well as insights from monetary policy for governmental currencies. 
 
 To find stablecoin projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Unlisted projects are ranked $\perp$.
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Directly-Backed and Redeemable.}
 
@@ -187,6 +188,8 @@ If the firm operates in a jurisdiction with modern securities laws, the issuance
 
 A variety of firms and projects providing stablecoins in this category exist. Why so many? The differentiation between coins is along a few parameters: (1) the type of asset that can be redeemed for the coin: USD, EUR, gold, \etc; (2) the underlying blockchain (\eg Bitcoin, Ethereum, \etc) and the low-level technical design (updatable contracts, governance, \etc) \textblue{cite that talk on gemini from michael's company's conference}; and (3) the degree of regulatory compliance: paving forward in a highly regulated environment to bootstrap trust, or seeking under-regulated environments to move to market quickly and avoid government surveillance for participants.
 
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
 \subsection{Directly-Backed.}
 
 Next we consider stablecoins that are directly-backed---exactly as in the previous section but they do not offer a redemption process for the coin's underlying assets. Redemption is logistically complicated. Consider a USD-backed dollar---it is usually easier for a firm to receive USD payments from users than it is for it to send payments back, and sending payments opens up new exposure to regulation. Instead, it pledges to keep the backing assets in trust for the duration of the circulating coins. We will shortly explain what impact there is on the coin if it does not provide redemption---obviously, if redemption were inconsequential, than no one would offer it as it increases costs and complexity. For our ranking in Table~\ref{tab:stablecoins}, if we could not find a clear assertion of redemption, we listed the project under this category.
@@ -195,10 +198,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 \paragraph{Price Stability.} 
 
-\paragraph{Discussion.} The idea of tokenizing material assets and selling tokens is common in finance however most tokenizations have some redeemable value. As one example, an electronically traded fund (ETF), which might sell shares of a portfolio of assets, is likely redeemable for the assets and will be prices very close (+/- 1\%) to the value of what is redeemable    industries. 
-
-
- but does not 
+\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in the previous section. A simplification of a trust fund, such as a closed end fund, is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will be more moderately priced ($\pm 5\%$) to the value of its assets. \textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
 
 % Description of how it works. Deposit in bank, etc.
 % Regular audits are needed to ensure that the stablecoin is indeed fully collateralized
@@ -211,6 +211,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 % Tether attacks
 % imparted attacks
 
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Indirectly-Backed.}
 % Description of how it works.
@@ -219,6 +220,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 % Examples:
 % Remarks: Oracles
 
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \section{Type 2: Intervention-based Stablecoins}
 \label{sec:t2}
@@ -227,7 +229,9 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 % Control system: input (metrics), make a decision, implement the intervention
 % We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency.
 
-\subsection{Currency Board}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+\subsection{Discretionary input; currency purchase/sale}
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
@@ -242,19 +246,44 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 %(https://www.imf.org/external/pubs/ft/wp/wp9808.pdf): Difference between currency board and pegged exchange rate
 %=================%
-\subsection{Algorithmic with subjective external information}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+\subsection{Discretionary input; money expansion/contraction output}
+
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
 % Examples: RSCoin
 
-\subsection{Algorithmic with objective external information}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+\subsection{Exchange rate input; money expansion/contraction output}
+
+%Intro
+
+\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin. 
+
+% Zero bound -> actually maybe not: Miner gets Reward + Fees, reward can be negative if fees are larger and difference is removed from circulation.
+
+\subsection{Exchange rate input; asset purchase/sale output}
+
+\paragraph{Process.} Alice creates an ERC20 token called AliceCoin and setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. A smart contract is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD.  If the price exceeds \$1.02 USD, the contract creates new a set of AliceCoins (the size is determined by some mathematical relationship with how much the price exceeds \$1.02 USD) and transfers them to users waiting in line for them. How do users wait in line? When the price dips under \$0.98 USD, the contract creates new positions at the end of the line and auctions them off to the highest bidder. The payment for a place in line is made in AliceCoins from the bidder to the contract and the contract destroys the payment. The place in line is a transferrable token. An additional transferrable token can be auctioned off which receives AliceCoins when the line is empty.
+
 % Description of how it works.
+
+\paragraph{Price Stability.} 
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
 % Examples:
 
-\subsection{Algorithmic with only internal information}
+\paragraph{Discussion.}
+% Push volatility around
+% \textblue{Ethereum Alarm Clock problem.}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+\subsection{Blockchian metrics input; with only internal information}
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
