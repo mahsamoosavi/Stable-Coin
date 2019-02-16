@@ -347,22 +347,84 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 %==========================================%
 \section{Evaluation Framework}
 
-%=============%
-\begin{table}
-  \begin{tabular}{|*{8}{c|}}
-    \hline
-      \multirow{2}{*}{Category} & \multicolumn{2}{c|}{Stability} &  \multicolumn{4}{c|}{Trust} & \multirow{2}{*}{Risks} 
-       \\ \cmidrule{2-7}
-      &  Under Valued & Above Valued & Issuance & Redemption & Transfer & Oracle & \\ 
-    \hline
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
-    \hline
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
-    \hline
-  \end{tabular}
+%===========Version1============%
+
+\begin{table}[t]
+\centering
+\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lccccccccc}
+
+&
+&
+&
+\headrow{Under Valued} & 
+\headrow{Above Valued} &  
+\headrow{Issuance} &
+\headrow{Redemption} &
+\headrow{Transfer} &
+\headrow{Oracle} &
+\headrow{Risks} \\ 
+
+\hline
+
+\textit{Class} &\textit{Mechanism}&\textit{Resembles}&  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\ 
+
+\hline
+
+\multirow{3}{*}{Backed}                                                         \\	
+& \multicolumn{1}{c}{Directly Backed and Redeemable}	       \\	
+&\multicolumn{1}{c}{Directly Backed}                                     \\	                               
+&\multicolumn{1}{c}{Indirectly Backed}                                     \\  
+\hline                               
+\multirow{5}{*}{Intervention}                                                        \\	
+&\multicolumn{1}{c}{Currency Board}                                         \\
+&\multicolumn{1}{c}{Contract Expand }                                       \\ 
+&\multicolumn{1}{c}{Managed}                                                    \\ 
+&\multicolumn{1}{c}{seignorage Shares}	                                     \\
+&\multicolumn{1}{c}{Internal}                                                        \\ 
+\hline
+																		
+\end{tabular*}
+\caption{Evaluation Framework Version 1.\label{tab:evframework}}
+
+\end{table}
+%===============Version2===================%
+
+
+\begin{table}[t]
+\centering
+\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lcccccccc}
+
+&
+&
+\headrow{Under Valued} & 
+\headrow{Above Valued} &  
+\headrow{Issuance} &
+\headrow{Redemption} &
+\headrow{Transfer} &
+\headrow{Oracle} &
+\headrow{Risks} \\ 
+
+\hline
+
+\textit{Mechanism}  &   \textit{Resembles}  &  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\ 
+
+\hline
+                                                 	
+Directly Backed and Redeemable	       \\	
+Directly Backed                                    \\	                               
+Indirectly Backed                                  \\  
+Currency Board                                        \\
+Contract Expand                                        \\ 
+Managed                                                   \\ 
+Seignorage Shares	                                     \\
+Internal                                                        \\ 
+\hline
+																		
+\end{tabular*}
+\caption{Evaluation Framework Version 2.\label{tab:evframework}}
+
 \end{table}
 %=============%
-
 
 \section{Discussion}
 
@@ -506,7 +568,12 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 	\caption{Stability in two government-issued fiat currencies (CAD and EUR) and two stablecoin projects (Tether and BitUSD). Note that the x-axis is sized consistently across all four plots, with a \$0.30 USD spread. }
 	\label{fig:fiatandcrypto}
 \end{figure}
-%========================%
+
+
+
+
+
+%===============
 
 %GRAPHS:
 % Figure4: ETH,XRP - (BTC and USD): mostly diagonal movements. Do they move with BTC or not? Shows how cryptocurrencies are volatile. They don't move with BTC
