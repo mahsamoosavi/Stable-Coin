@@ -34,8 +34,8 @@ Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed
 % Cite Ross Anderson's paper :"Bitcoin Reducx" :
 % Anderson\etal discuss different negative externalities that are introduced by Bitcoin~\cite{anderson2019bitcoin}. They perform and discuss taint tracking using First-In-First-Out (FIFO) algorithm ( inspired by the Clayton’s case) on some well-established Bitcoin theft scenarios. They also point out that crypto space needs effective regulation in order to function properly and securely, at the end they provide regulatory remarks for the future.
 %=============
-
-
+%RSCoin: It is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and auditability.
+%=============
 
 % our chart is basically same as others, but we do different categorization. We all cluster the same way, the main difference is that we strip out the terminalogies, not relying on economic terminologies, we try to represent the difference between these projects. A lot of them leave the readers with the burden of interpretation, things are not clearly defined, except for some technical terms that finance people know. BTW, the table is not our contribution.
 % also nobody looked at gas in the context of stablecoin.
@@ -359,9 +359,9 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 &
 &
 &
-\headrow{Under Valued} &
-\headrow{Above Valued} &
-\headrow{Issuance} &
+\headrow{Stable to undervaluation} &
+\headrow{Stable to overvaluation} &
+\headrow{Issuance is decentralized} &
 \headrow{Redemption} &
 \headrow{Transfer} &
 \headrow{Oracle} &
@@ -450,6 +450,13 @@ Internal                                                        \\
 %Risk
 %-----
 %For Dai: the underlying cdp can lose its value and the coin cannot be redeemed. About time sensitivity, semi-redeemable (there is a risk of not being able to redeem)
+%========
+%Directly-backed and redeemable:
+%Stability:
+%It is stable to undervaluation, as it is redeemable
+%overvaluation??
+%Trust:
+%Needs to trust a central party for issuance and redemption
 
 \section{Discussion}
 
