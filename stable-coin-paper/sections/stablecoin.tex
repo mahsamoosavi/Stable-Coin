@@ -237,46 +237,39 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Discretionary input; currency purchase/sale}
+\subsection{Market manipulation}
+
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
 % Examples:
 
-%=================%
-%IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor
-%aim: monetary stability and low inflation
-%currency board needs sufficient backing of base money (=central bank holds sufficient foreign exchange reserve)
-%CBA has adjustment mechanism. It reacts automatically to the changes in the foreign exchange outflows and inflows.Interest rates adjust automatically in currency board based systems
-%problem when the domestic inflation rate is higher than the inflation rate of the underlying foreign currency: results in overvaluation of the domestic currency
-
-%(https://www.imf.org/external/pubs/ft/wp/wp9808.pdf): Difference between currency board and pegged exchange rate
-%=================%
+% Curb 
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Discretionary input; money expansion/contraction output}
+\subsection{Money expansion/contraction}
+
+%Intro
+
+\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin. 
+
+\paragraph{Variant.} Similar to above, Alice forks Bitcoin, preserves its coinbase schedule, and adds a trusted exchange rate oracle. When the price exceeds \$1.02 USD, the coin increases the balance of every AliceCoin holder; when it dips below \$0.98 USD, the coin decreases the balance of every AliceCoin holder.
+
+% Zero bound -> actually maybe not: Miner gets Reward + Fees, reward can be negative if fees are larger and difference is removed from circulation. -> pushing volatility into fees
+% Ambleforth -> just take currency from holders.
 
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
 % Examples: RSCoin
 
-% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
-
-\subsection{Exchange rate input; money expansion/contraction output}
-
-%Intro
-
-\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin. 
-
-% Zero bound -> actually maybe not: Miner gets Reward + Fees, reward can be negative if fees are larger and difference is removed from circulation.
-
-\subsection{Exchange rate input; asset purchase/sale output}
+\subsection{Indirect money expansion/contraction}
 
 \paragraph{Process.} Alice creates an ERC20 token called AliceCoin and setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. A smart contract is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD.  If the price exceeds \$1.02 USD, the contract creates new a set of AliceCoins (the size is determined by some mathematical relationship with how much the price exceeds \$1.02 USD) and transfers them to users waiting in line for them. How do users wait in line? When the price dips under \$0.98 USD, the contract creates new positions at the end of the line and auctions them off to the highest bidder. The payment for a place in line is made in AliceCoins from the bidder to the contract and the contract destroys the payment. The place in line is a transferrable token. An additional transferrable token can be auctioned off which receives AliceCoins when the line is empty.
 
 % Description of how it works.
+% Push volatility around -> into bonds which flucuate from deep haircut to \$1 USD
 
 \paragraph{Price Stability.} 
 % Justification that bids will never exceed $1

@@ -8,45 +8,45 @@ Warning--empty journal in ametrano2016hayek
 Warning--empty journal in report
 Warning--empty journal in okoyetoward
 Warning--empty year in okoyetoward
-You've used 18 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            586 strings with 6390 characters,
-and the built_in function-call counts, 3852 in all, are:
-= -- 371
-> -- 126
+            580 strings with 6300 characters,
+and the built_in function-call counts, 3635 in all, are:
+= -- 352
+> -- 119
 < -- 0
-+ -- 58
-- -- 36
-* -- 131
-:= -- 662
-add.period$ -- 62
-call.type$ -- 18
-change.case$ -- 70
++ -- 54
+- -- 34
+* -- 123
+:= -- 624
+add.period$ -- 59
+call.type$ -- 17
+change.case$ -- 67
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 145
-empty$ -- 383
-format.name$ -- 36
-if$ -- 830
+cite$ -- 22
+duplicate$ -- 133
+empty$ -- 361
+format.name$ -- 34
+if$ -- 784
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 7
-newline$ -- 101
-num.names$ -- 34
-pop$ -- 142
+int.to.str$ -- 17
+missing$ -- 5
+newline$ -- 96
+num.names$ -- 32
+pop$ -- 134
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 51
 quote$ -- 0
-skip$ -- 113
+skip$ -- 107
 stack$ -- 0
-substring$ -- 94
-swap$ -- 15
+substring$ -- 88
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 66
 warning$ -- 5
-while$ -- 34
-width$ -- 20
-write$ -- 195
+while$ -- 32
+width$ -- 19
+write$ -- 185
 (There were 5 warnings)
