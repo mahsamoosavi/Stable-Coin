@@ -406,39 +406,39 @@ In this Section, we review various issues with different mechanisms of designing
 %===============Version2===================%
 
 
-\begin{table}[t]
-\centering
-\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lcccccccc}
-
-&
-&
-\headrow{Under Valued} &
-\headrow{Above Valued} &
-\headrow{Issuance} &
-\headrow{Redemption} &
-\headrow{Transfer} &
-\headrow{Oracle} &
-\headrow{Risks} \\
-
-\hline
-
-\textit{Mechanism}  &   \textit{Resembles}  &  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
-
-\hline
-
-Directly Backed and Redeemable	       \\
-Directly Backed                                    \\
-Indirectly Backed                                  \\
-Currency Board                                        \\
-Contract Expand                                        \\
-Managed                                                   \\
-Seignorage Shares	                                     \\
-Internal                                                        \\
-\hline
-
-\end{tabular*}
-\caption{Evaluation Framework Version 2.\label{tab:evframework}}
-
+\begin{table}[htb!]
+	\centering
+	\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lcccccccc}
+		
+		&
+		&
+		\headrow{Stable to undervaluation} &
+		\headrow{Stable to overvaluation} &
+		\headrow{No issuance violation} &
+		\headrow{Redemption guaranteed} &
+		\headrow{No intermediaries for transfer} &
+		\headrow{No trusted oracle} &
+		\headrow{No collateral termination} \\
+		
+		\hline
+		
+		\textit{Mechanism}  &   \textit{Resembles}  &  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
+		
+		\hline
+		
+		Directly Backed and Redeemable	 &&\full&\full      \\
+		Directly Backed                      \\
+		Indirectly Backed                                  \\
+		Currency Board                                        \\
+		Contract Expand                                        \\
+		Managed                                                   \\
+		Seignorage Shares	                                     \\
+		Internal                                                        \\
+		\hline
+		
+	\end{tabular*}
+	\caption{Evaluation Framework Version 2.\label{tab:evframework}}
+	
 \end{table}
 %=============%
 %About the evaluation Framework:
@@ -470,6 +470,14 @@ Internal                                                        \\
 %overvaluation??
 %Trust:
 %Needs to trust a central party for issuance and redemption
+%Directly backed:
+%not stable to undervaluation because it is not redeemable. So, if I buy a token for 80 cents and can't redeem it back for 1 dollar (which is the promised price for the token by the system), then I cannot profit.
+%
+%
+%full circle: the property is achieved
+%empty cell: the property is not achieved
+%empty circle: the property is partially achieved
+%-: not applicable
 
 \section{Discussion}
 
