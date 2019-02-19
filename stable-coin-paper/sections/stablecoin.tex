@@ -30,26 +30,21 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 In 2016, Ametrano introduces \textit{Hayek Money}, a new monetary policy of elastic non-discretionary supply that can be used to achieve a price stable cryptocurrency~\cite{ametrano2016hayek}. There are currently many blog posts on the overview of stablecoins and how to design them. According to these resources, the main three approaches to design a stablecoin are (i) fiat-collateralized, (ii) crypto-collateralized and (iii) non-collateralized (also known as algorithmic)(\eg~\cite{hackernoon, comprehensiveOverview, linkedin}) are the examples that give the overview of stablecoins based on these three approaches. \textblue{Note that these resources uses various terms for these three categories interchangeably, \textbf{do we have to mention this? if yes (i) is it the best way of saying it? and (ii) should we mention each and every of these terms? (algorithmic, seignorage shares, elastic money supply)}}
 Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report from a crypto company called Blockchain \footnote{https://www.blockchain.com} provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{report}. In one of its blog posts, Consensys \footnote{https://consensys.net} describes stablecoins as "crypto-assets that maintain a stable value against a target price (e.g. USD)" and classify them according to the three main categories~\cite{StateofS96:online}. In~\cite{cryptoinsider}, the authors use a slightly different categorization to group 13 stabelcoin projects into two broad categories: (i) centralized-- which itself contains subcategories based on the type of the asset the coins are backed by (\eg fiat and gold), (ii) decentralized. Unlike other resources that define stablecoins within three categories (fiat-collateralized, crypto-collateralized, and non-collaterlaized), in this paper, we introduce new systemization of stablecoin projects and describe their fundamental primitives.
 
-% our chart is basically same as others, but we do different categorization. We all cluster the same way, the main difference is that we strip out the terminalogies, not relying on economic terminologies, we try to represent the difference between these projects. A lot of them leave the readers with the burden of interpretation, things are not clearly defined, except for some technical terms that finance people know. BTW, the table is not our contribution. 
-% also nobody looked at gas in the context of stablecoin. 
+%=============
+% Cite Ross Anderson's paper :"Bitcoin Reducx" :
+% Anderson\etal discuss different negative externalities that are introduced by Bitcoin~\cite{anderson2019bitcoin}. They perform and discuss taint tracking using First-In-First-Out (FIFO) algorithm ( inspired by the Clayton’s case) on some well-established Bitcoin theft scenarios. They also point out that crypto space needs effective regulation in order to function properly and securely, at the end they provide regulatory remarks for the future.
+%=============
+%RSCoin: It is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and auditability.
+%=============
 
-
-
+% our chart is basically same as others, but we do different categorization. We all cluster the same way, the main difference is that we strip out the terminalogies, not relying on economic terminologies, we try to represent the difference between these projects. A lot of them leave the readers with the burden of interpretation, things are not clearly defined, except for some technical terms that finance people know. BTW, the table is not our contribution.
+% also nobody looked at gas in the context of stablecoin.
 
 
 %The idea seigniorage shares was first introduced by Robert Sams in 2017, where he proposed a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
 %(http://www.andrew.cmu.edu/user/azj/research/rzj_slides201808.pdf): three categories: 100\% USD Reserve backed coins, Protocol coins without redemption, Protocol coins with redemption in floating-rate crypto-currencies
 %(https://icosbull.com/whitepapers/2265/USDX_Protocol_whitepaper.pdf) three generations of stablecoins: Collateral-backed IOU, Collateral-backed on blockchain, Elastic monetary supply based. (This is a whitepaper for a protocol but it has a different classification)
 %(https://multicoin.capital/2018/01/17/an-overview-of-stablecoins/)  Stablecoins are discussed under three main categories as centralized IOU issuance, collateral backed, and seigniorage shares along with the discussion of different types of oracles and the challenges that stablecoins face.
-
- 
- 
- 
- 
-
-
-
-
 
 %=====================Gold vs ETFGold  ===================%
 %Gold ETF: Investors want  exposure to the asset that’s electronically traded without taking possession of the commodity.
@@ -60,7 +55,7 @@ Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed
 % Gold ETF is the most convenient way to store money in gold.
 % It is both convenient and low cost. If you’re looking for an inexpensive way to invest in the direction of the gold price, GLD is ideal.
 % disadv:
-% Ownership of Gold ETFs does not entitle investors to any physical gold. 
+% Ownership of Gold ETFs does not entitle investors to any physical gold.
 %  in special occasions when the  market or the bank is not available, the user does not have access to to trade his shares. In this case, ownership of ETF is not any useful for the user.
 %  Gold EtTF has counter-party risk and exposed to bad management as the investors have to trust a bank or other trustee to hold and manage their shares
 % Physical Gold: Investors want to own the tangible asset
@@ -80,15 +75,15 @@ Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed
 
 If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are several subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and its actual price, (3) the concept that prices are really an exchange of one type of valuable good for another, and (4) the distinction between something's price and its value. The quoted price means that two (hopefully different\footnote{A trade between the same person is called a wash trade and is illegal in most regulated markets.}) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Further, this valuation on the previous trade does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
 
-Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might occasionally `cross' but this should be temporal and quickly resolved with an exchange). The spread between these prices is called the bid-ask spread. 
+Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might occasionally `cross' but this should be temporal and quickly resolved with an exchange). The spread between these prices is called the bid-ask spread.
 
 To understand why this is relevant to stablecoins, consider an example. Say a stablecoin is designed to ensure one unit is always priced at \$1 USD. To argue stability, one must show both that (1) the bid price should never exceed \$1 dollar and (2) the offer price should never dip below \$1 USD. Note, conversely, that bids can dip below \$1 USD (everyone prefers to pay less than something is worth) and asks can exceed \$1 USD (everyone prefers to receive more than something is worth).
 
-\subsection{Exchange Rates} 
+\subsection{Exchange Rates}
 
 Consider that several hours after writing the previous section, 1 BTC is now priced at \$3566.56 USD. In one sense, the price of BTC decreased by \$32.20. However it is exactly equivalent to say the price of \$1 USD increased by 0.002 mBTC. This raises a natural question: did BTC decrease in price or did USD increase in price? With an exchange rate, it is impossible to tell. We only know that the price of BTC and USD became closer in price over this short period of time.
 
-To determine which currency is moving, one might consider a third or forth currencies to try and triangulate if BTC is moving in price, or USD is moving in price, or both. For example, in Figure~\ref{fig:btcandfiat} it certainly appears that BTC is the currency that is moving because the rest of the currencies are stable relative to each other. The only alternative is that USD, EUR, GBP, and CAD are volatile currencies that move together as a cluster relative to the stability of BTC. But it is much simpler to conclude that BTC is moving. 
+To determine which currency is moving, one might consider a third or forth currencies to try and triangulate if BTC is moving in price, or USD is moving in price, or both. For example, in Figure~\ref{fig:btcandfiat} it certainly appears that BTC is the currency that is moving because the rest of the currencies are stable relative to each other. The only alternative is that USD, EUR, GBP, and CAD are volatile currencies that move together as a cluster relative to the stability of BTC. But it is much simpler to conclude that BTC is moving.
 
 %========================%
 \begin{figure}[t]
@@ -115,9 +110,9 @@ To determine which currency is moving, one might consider a third or forth curre
 
 In order to apply this same logic in a visual way, we have created a number of charts like the one provided in Figure~\ref{fig:brexit}. Unlike most exchange rate graphs, these do not use a time axis. Instead each axis is a reference currency. In this case, the price of GBP (plotted value) in USD (x-axis) and EUR (y-axis) forms a coordinate. For the last day of each month, a new coordinate is added and joined with a line from the previous value. This is inspired by similar charts on the website FiveThiryEight for things like kicking distance in football\footnote{``The 52 Best---And Weirdest---Charts We Made In 2016,'' \textit{FiveThirtyEight}, 30 Dec 2016.} and they appear to be called connected scatter plots.
 
-Lines in a connected scatter plot can move in any direction. Figure~\ref{fig:legend} shows how we number the directions from 1 (upward or due north) clockwise to 8 (north-west). For each direction, we describe the simplest interpretation of what that price direction means. By simplest, we mean specifically that we keep an explanation that involves a single currency moving rather than an explanation that involves a pair of currencies moving in tandem. For example, in Figure~\ref{fig:brexit}, GBP shows a drastic movement along direction 6 starting at the time period marked Brexit. This means that GBP is losing value against both EUR and USD. The simplest explanation is that the movements are originating from GBP which is consistent with it losing value after Brexit. Later, GBP shows a lot of horizontal movements along the 7/3 line. The simplest explanation for this segment is volatility in USD rather than GBP. 
+Lines in a connected scatter plot can move in any direction. Figure~\ref{fig:legend} shows how we number the directions from 1 (upward or due north) clockwise to 8 (north-west). For each direction, we describe the simplest interpretation of what that price direction means. By simplest, we mean specifically that we keep an explanation that involves a single currency moving rather than an explanation that involves a pair of currencies moving in tandem. For example, in Figure~\ref{fig:brexit}, GBP shows a drastic movement along direction 6 starting at the time period marked Brexit. This means that GBP is losing value against both EUR and USD. The simplest explanation is that the movements are originating from GBP which is consistent with it losing value after Brexit. Later, GBP shows a lot of horizontal movements along the 7/3 line. The simplest explanation for this segment is volatility in USD rather than GBP.
 
-We will return to these charts later in Section~\ref{sec:stability} where we will use a government currency as one reference (USD on the x-axis) and a cryptocurrency as the other reference (BTC on the y-axis). A stablecoin should exhibit mostly vertical movements along the 1/5 direction. 
+We will return to these charts later in Section~\ref{sec:stability} where we will use a government currency as one reference (USD on the x-axis) and a cryptocurrency as the other reference (BTC on the y-axis). A stablecoin should exhibit mostly vertical movements along the 1/5 direction.
 
 \subsection{Valuation}
 
@@ -137,8 +132,8 @@ To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory 
 When the price of a currency changes over time, it is due to one of two reasons: new information about the currency's fundamental value (even if we cannot concretely say what it is) or transitory volatility due to the trading activites of uninformed traders~\cite{harris2003trading}. For a government issued currencies, information like national inflation rates, macro-economic policies, changes in trade flows, and changes in capital flows seem predictive of changes in the value of the country's currency~\cite{harris2003trading}. Note that a cryptocurrency, like Bitcoin, has none of these indicators. While volatility can be measured mathematically (using variances or deviations), most stablecoins do not offer a concrete, positive definition of what stability means. They tend to be defined by a negative sentiment of what they do not want (the volatility of Bitcoin) rather than a positive sentiment of what they do want.
 
 \subsection{Functions of Money}
- 
-There is controversy over whether Bitcoin, and other cryptocurrencies, can even be classified as currencies. The original intent from Bitcoin's creator was for it to be a currency, however it has been assigned many different classifications: from a digitally scarce commodity, to a speculative instrument, to an entirely new asset class. 
+
+There is controversy over whether Bitcoin, and other cryptocurrencies, can even be classified as currencies. The original intent from Bitcoin's creator was for it to be a currency, however it has been assigned many different classifications: from a digitally scarce commodity, to a speculative instrument, to an entirely new asset class.
 
 Most introductory finance textbooks classify currencies according to a set of three core properties it should fulfill for its users. It should operate as a medium of exchange, which roughly means that Alice will accept the currency from Bob because she is confident Carol will later accept it from her. Given the existence of exchange services, Bitcoin is generally considered an acceptable medium of exchange (albeit with some friction). Next, a currency is useful when it serves as the unit of account for pricing other assets. Bitcoin is almost never used as a unit of account and if goods are sold for Bitcoin, it is often priced in, say, USD with a short-lived (\eg 2 minute) spot conversion of the price to BTC for Bitcoin purchases. Finally, currencies should represent a stable store of value. Alice will not accept a currency that depreciates quickly in value from Bob because even though Carol might accept it, what she can obtain from Carol in exchange will be worth less. Less intuitively, currencies that appreciate quickly in value are equally problematic. Alice might gladly accept it from Bob but Bob is unlikely to part with it, and so currencies like this tend to be hoarded. They also hamper lending (see next section).
 
@@ -166,7 +161,7 @@ In this section, we discuss the first type of stablecoin. These coins try to dir
 
 \input{setup/table}
 
-In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in related work (see Section~\ref{sec:lit}), taxonomies for stablecoins have been proposed many times. The focus of our taxonomy is a bit different. We do not care about classification \textit{per se}---we view our work as a tutorial on how to build a stablecoin, and the taxonomy are simply is a set of directions a designer can choose between or combine. They are based on proposals for stablecons, as well as insights from monetary policy for governmental currencies. 
+In Table~\ref{tab:stablecoins}, we show the taxonomy we use to classify stablecoins. As mentioned earlier in related work (see Section~\ref{sec:lit}), taxonomies for stablecoins have been proposed many times. The focus of our taxonomy is a bit different. We do not care about classification \textit{per se}---we view our work as a tutorial on how to build a stablecoin, and the taxonomy are simply is a set of directions a designer can choose between or combine. They are based on proposals for stablecons, as well as insights from monetary policy for governmental currencies.
 
 To find stablecoin projects, we performed a number of search queries on \textit{CoinDesk}, an online news source for cryptocurrencies and blockchain technology.\footnote{https://www.coindesk.com/} Our search terms included ``stablecoins,'' ``stability,'' and ``price-stable.'' We read 185 articles up to January 11, 2019 and extracted the names of projects. For the 25 projects for which we could find sufficient documentation, we classified them in Table~\ref{tab:stablecoins}. This classification is done according to what the projects assert they do---we provide no warranty of what the projects do in reality. Finally, within each category, we sort projects according to their rank on \textit{CoinMarketCap} which ranks cryptocurrencies that are actively traded on an exchange service.\footnote{https://coinmarketcap.com} Unlisted projects are ranked $\perp$.
 
@@ -174,19 +169,19 @@ To find stablecoin projects, we performed a number of search queries on \textit{
 
 \subsection{Directly-Backed and Redeemable.}
 
-The first direction one might take in producing a stablecoin is the creation of a digital representation (or tokenization) of a fiat currency, commodity, or portfolio of assets. Tokens are designed to have the same price (and thus volatility) as the underlying portfolio. To further enable an equivalence of value (we will explain how shortly), the digital token can be redeemed on-demand for the underlying asset. For simplicity, we will consider a cryptocurrency designed to digitally represent the USD. 
+The first direction one might take in producing a stablecoin is the creation of a digital representation (or tokenization) of a fiat currency, commodity, or portfolio of assets. Tokens are designed to have the same price (and thus volatility) as the underlying portfolio. To further enable an equivalence of value (we will explain how shortly), the digital token can be redeemed on-demand for the underlying asset. For simplicity, we will consider a cryptocurrency designed to digitally represent the USD.
 
 The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. Liberty Reserve and e-gold provided a similar service. Liberty Reserve dollars were redeemable in principle, but only indirectly through an intermediary and redemption could be refused. Meanwhile, e-gold was not redeemable (see next section of a discussion of the consequences of this). What is novel about a stable cryptocurrency is that transactions are not done on a centralized server, but rather finalized and settled on a decentralized blockchain. However since directly-backed stablecoins reintroduce centralization to create the digital tokens, maintain reserves of the underlying asset, and process redemption requests, the benefit of a decentralized transaction platform is marginal.
 
 \paragraph{Process.} Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as standard (\eg ERC20) tokens. She lists asks \$1 USD for 1 AliceCoin and promises to redeem the tokens for \$1 USD. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones and deposits the payment. If Carol wants to redeem 5 AliceCoins, Alice withdraws \$5 USD and exchanges it with Carol and takes the AliceCoins out of circulation. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
 
-\paragraph{Price Stability.} For simplicity, assume all transactions are free and frictionless. Consider a bid for 1 AliceCoin that is greater than \$1 USD. Bob will sell an AliceCoin immediately for this price and will ask Alice to generate a new AliceCoin, deposit only \$1 USD for this, and keep the rest of the bid value as profit. Therefore bids in excess of \$1 USD will be temporal assuming Alice is quick to generate new coins on demand. Next, consider an ask for 1 AliceCoin for less than \$1 USD. Bob will immediately purchase this AliceCoin for its asking price, try to redeem it for \$1 USD from Alice, and if successful, keep the difference as profit. Bob's willingness is proportional to the expectation that it can actually be redeemed for \$1 USD. For an example, if he only buys at \$ 0.60 USD, it might reveal that Bob believes there is only a 60\% chance of redeeming the coin or that he can only redeem 60\% of its redemption value (the asker thinks it must be less, otherwise she'd rather redeem it than sell it). 
+\paragraph{Price Stability.} For simplicity, assume all transactions are free and frictionless. Consider a bid for 1 AliceCoin that is greater than \$1 USD. Bob will sell an AliceCoin immediately for this price and will ask Alice to generate a new AliceCoin, deposit only \$1 USD for this, and keep the rest of the bid value as profit. Therefore bids in excess of \$1 USD will be temporal assuming Alice is quick to generate new coins on demand. Next, consider an ask for 1 AliceCoin for less than \$1 USD. Bob will immediately purchase this AliceCoin for its asking price, try to redeem it for \$1 USD from Alice, and if successful, keep the difference as profit. Bob's willingness is proportional to the expectation that it can actually be redeemed for \$1 USD. For an example, if he only buys at \$ 0.60 USD, it might reveal that Bob believes there is only a 60\% chance of redeeming the coin or that he can only redeem 60\% of its redemption value (the asker thinks it must be less, otherwise she'd rather redeem it than sell it).
 
-Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD assuming the market is close to 100\% confident in a frictionless creation and redemption process for of coins. In reality, fees and time delays for moving stablecoins and fiat payments will cause distortions.  
+Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD assuming the market is close to 100\% confident in a frictionless creation and redemption process for of coins. In reality, fees and time delays for moving stablecoins and fiat payments will cause distortions.
 
 \paragraph{Discussion.} Blockchain-based cryptocurrencies are designed to minimize trust in third parties. The trust assumption on stablecoins in this category are close to pre-bockchain currencies like Liberty Reserve and e-gold, who would maintain transaction details and account balances on a private server. Blockchain enables decentralized trust for the transactions, although it also makes them transparent---at least, as transparent as token movements are for the underlying contract and/or blockchain. This includes transactions with other decentralized applications. However the coin creation and redemption processes rely on trust.
 
-A financial audit is an important step than can establish confidence in the redemption process, which in turns provides stable prices on coins being offered for sale. The auditor becomes a further trusted entity, and ties its reputation to the firm operating the stablecoin. For regulatory reasons, reputable auditing firms will want a clear indication of the coin's legality, as well as confidence in the firm's internal controls over the issuance and redemption of tokens and the custodianship of the backing assets. A sensible template for a stablecoins of this type will consist of three trusted entities: the firm operating the coin, a reputable auditor, and a reputable custodian of the assets. 
+A financial audit is an important step than can establish confidence in the redemption process, which in turns provides stable prices on coins being offered for sale. The auditor becomes a further trusted entity, and ties its reputation to the firm operating the stablecoin. For regulatory reasons, reputable auditing firms will want a clear indication of the coin's legality, as well as confidence in the firm's internal controls over the issuance and redemption of tokens and the custodianship of the backing assets. A sensible template for a stablecoins of this type will consist of three trusted entities: the firm operating the coin, a reputable auditor, and a reputable custodian of the assets.
 
 If the firm operates in a jurisdiction with modern securities laws, the issuance of the stablecoins is likely subject to regulatory approval. Further, the redemption of the coins will serve as a main point of regulation, requiring financial reporting to prevent the kind of crime that was prevalent on pre-blockchain coins like Liberty Reserve and e-gold. A number of existing coins with operations in the United States have been reported as disallowing redemption for some holders.
 
@@ -202,7 +197,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 \paragraph{Process.} As previously, Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as ERC20 tokens. She asks \$1 USD for 1 AliceCoin and promises to deposit the payment. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones and deposits the payment. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
 
-\paragraph{Price Stability.} 
+\paragraph{Price Stability.}
 
 \paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in the previous section. A simplification of a trust fund, such as a closed end fund, is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will be more moderately priced ($\pm 5\%$) to the value of its assets. \textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
 
@@ -228,6 +223,10 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
+%There is middle category of redeemability.
+%similar to indirect owership of gold. It is redeemable for a share of the company that holds the gold.
+%check the backed ones for having shares or not
+
 \section{Type 2: Intervention-based Stablecoins}
 \label{sec:t2}
 
@@ -244,7 +243,28 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 % Justification that offers will be less than $1
 % Examples:
 
-% Curb 
+%=================%
+%IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor
+%aim: monetary stability and low inflation
+%currency board needs sufficient backing of base money (=central bank holds sufficient foreign exchange reserve)
+%CBA has adjustment mechanism. It reacts automatically to the changes in the foreign exchange outflows and inflows.Interest rates adjust automatically in currency board based systems
+%problem when the domestic inflation rate is higher than the inflation rate of the underlying foreign currency: results in overvaluation of the domestic currency
+
+%(https://www.imf.org/external/pubs/ft/wp/wp9808.pdf): Difference between currency board and pegged exchange rate
+%=================%
+
+%Interest rates: borrower pays her loan + interest
+%Negative interest rate: borrower is paid the interest + she uses the loan
+%Sweden and Japan are examples of countries that use NIR
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+\subsection{Discretionary input; money expansion/contraction output}
+
+% Description of how it works.
+% Justification that bids will never exceed $1
+% Justification that offers will be less than $1
+% Examples: RSCoin
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
@@ -252,7 +272,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 %Intro
 
-\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin. 
+\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin.
 
 \paragraph{Variant.} Similar to above, Alice forks Bitcoin, preserves its coinbase schedule, and adds a trusted exchange rate oracle. When the price exceeds \$1.02 USD, the coin increases the balance of every AliceCoin holder; when it dips below \$0.98 USD, the coin decreases the balance of every AliceCoin holder.
 
@@ -271,7 +291,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 % Description of how it works.
 % Push volatility around -> into bonds which flucuate from deep haircut to \$1 USD
 
-\paragraph{Price Stability.} 
+\paragraph{Price Stability.}
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
 % Examples:
@@ -338,16 +358,124 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
  % The peg could be anything: fiat, assets, or a basket of assets
 
 %==========================================%
+\section{Evaluation Framework}
+
+%===========Version1============%
+
+\begin{table}[t]
+\centering
+\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lccccccccc}
+
+&
+&
+&
+\headrow{Stable to undervaluation} &
+\headrow{Stable to overvaluation} &
+\headrow{Issuance is decentralized} &
+\headrow{Redemption} &
+\headrow{Transfer} &
+\headrow{Oracle} &
+\headrow{Risks} \\
+
+\hline
+
+\textit{Class} &\textit{Mechanism}&\textit{Resembles}&  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
+
+\hline
+
+\multirow{3}{*}{Backed}                                                         \\
+& \multicolumn{1}{c}{Directly Backed and Redeemable}	       \\
+&\multicolumn{1}{c}{Directly Backed}                                     \\
+&\multicolumn{1}{c}{Indirectly Backed}                                     \\
+\hline
+\multirow{5}{*}{Intervention}                                                        \\
+&\multicolumn{1}{c}{Currency Board}                                         \\
+&\multicolumn{1}{c}{Contract Expand }                                       \\
+&\multicolumn{1}{c}{Managed}                                                    \\
+&\multicolumn{1}{c}{seignorage Shares}	                                     \\
+&\multicolumn{1}{c}{Internal}                                                        \\
+\hline
+
+\end{tabular*}
+\caption{Evaluation Framework Version 1.\label{tab:evframework}}
+
+\end{table}
+%===============Version2===================%
+
+
+\begin{table}[t]
+\centering
+\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lcccccccc}
+
+&
+&
+\headrow{Under Valued} &
+\headrow{Above Valued} &
+\headrow{Issuance} &
+\headrow{Redemption} &
+\headrow{Transfer} &
+\headrow{Oracle} &
+\headrow{Risks} \\
+
+\hline
+
+\textit{Mechanism}  &   \textit{Resembles}  &  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
+
+\hline
+
+Directly Backed and Redeemable	       \\
+Directly Backed                                    \\
+Indirectly Backed                                  \\
+Currency Board                                        \\
+Contract Expand                                        \\
+Managed                                                   \\
+Seignorage Shares	                                     \\
+Internal                                                        \\
+\hline
+
+\end{tabular*}
+\caption{Evaluation Framework Version 2.\label{tab:evframework}}
+
+\end{table}
+%=============%
+%About the evaluation Framework:
+%Stability
+%-----------
+%Is the currency stable to undervaluation?
+%Let's say, I buy a token for 80 cents and sell it for 1 dollar (which means the token is redeemable), then  I profit; but if it is not redeemable than I can't do this.
+%The problem with undervaluation is that I may end up not being able to redeem my token for the underlying currency.
+%
+%Is the currency stable to overvaluation?
+%I buy a token for 1 dollar and if someone wants to buy it for 1.30, I profit.
+%
+%Trust
+%------
+%Does the token requires trust in a central party (for example to keep the required amount in reserves to back the coin)?
+%I need to be able to trust the system that it won't issue many tokens, so that the token deflates eventually.
+% Do I trust you'll issue right number of tokens?
+%About transfer: liberty reserve, egold similar to tether only difference is that Tether is decentralized
+%in order to redeem whom should I trust?
+%Is there an oracle feed for determining the exchange rate?
+%
+%Risk
+%-----
+%For Dai: the underlying cdp can lose its value and the coin cannot be redeemed. About time sensitivity, semi-redeemable (there is a risk of not being able to redeem)
+%========
+%Directly-backed and redeemable:
+%Stability:
+%It is stable to undervaluation, as it is redeemable
+%overvaluation??
+%Trust:
+%Needs to trust a central party for issuance and redemption
 
 \section{Discussion}
 
 \subsection{Why so many?}
 
-%Emphasis on other things, like setting up contracts, governmence, audits, etc. 
+%Emphasis on other things, like setting up contracts, governmence, audits, etc.
 % Which blockchain
 
 \subsection{What Stability looks like}\label{sec:stability}
-
 \subsection{Ethereum's Gas}\label{sec:GasInvs}
 % Gas: non-redeemable backed by Ether. like putting Ether in the contract and get USD digital token. why non-redeemable? because you burn Gas to get your digital tokens.
 % Depending on how much the user wants to pay for ecah unit of Gas, this will determine how expensive the tx is in Ether.
@@ -363,7 +491,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 %=======GasToken details=======%
 % Operations that modify the global state of the Ethereum blockchain are very expensive \ie writing into a contract storage.
 % Ethereum motivates the user to free up space on the blockchain by refunding the Gas if they delete their contracts. This is what GasToken does.
-% GasToken is a smart contract that for the first time allows Ethereum users to buy and sell gas by tokenizing gas on the network.
+% GasToken is a smart contract that for the first time allows Ethereum users to buy and sell gas by tokenizing gas on the network. \footnote{https://github.com/projectchicago/gastoken}
 % They allow users to store Gas when it is cheap and use it once its price goes up.
 % Gas price refers to the amount of Ether you’re willing to pay for every unit of gas.
 % When a user stores cheap Gas, he can later spend that Gas to send a tx, that means now he pays for less gas for that tx to go through.
@@ -422,37 +550,10 @@ The two spikes in the Fig~\ref{fig:Gas} correspond to (i) January 2018 when Cryp
 
 
 
-\textblue{ it would be nice to have a chart : Ether, Electricity (Global energy index), and Gas} \par
+\textblue{ Following text should be changed!} \par
 Our analysis in Section~\ref{sec:Intro} shows that cryptocurrencies exhibit less stable behavior compared to fiat currencies. Hence, we aim to analyze the price stability of \emph{Gas}. In Ethereum blockchain, every transaction contains a number of operations and there is a precise amount of gas unit associated with each.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Since Ether is volatile, this concept is introduced to have fixed cost for operations. Thus, even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases; so that users pay the same price for the transactions on the Ethereum blockchain. Hence, the notion of gas is yet to be investigated to find out whether it exhibits behavior similar to fiat currencies or cryptocurrencies.
 
-%========================%
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=0.95\textwidth]{figures/eur.pdf}
-%	\caption{\label{fig:eur} EUR with respect to BTC and gold.}
-%\end{figure}
-%========================%
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=0.95\textwidth]{figures/eth.pdf}
-%	\caption{\label{fig:eth} ETH with respect to BTC and gold.}
-%\end{figure}
-%========================%
-
-%\begin{figure}[!htb]
-%	\centering
-%	\includegraphics[width=0.95\textwidth]{figures/gas.pdf}
-%	\caption{\label{fig:gas} Gas with respect to BTC and gold.}
-%\end{figure}
-%========================%
-
 %references to figures wrong now!
-
-Figures~\ref{fig:eur}-~\ref{fig:gas} illustrate how the values of EUR, ETH and Gas change with respect to BTC and gold. EUR plot in Figure~\ref{fig:eur} tends to have more movements in the directions 1-5 and 3-7 suggesting that while the value of EUR stays the same according to one axis, it changes according to the other. For instance, between June 2018 and August 2018, the value of EUR increased with respect to BTC, while it stayed the same according to USD. This type of movement suggests that EUR-USD exchange rate is going under less change, whereas BTC-EUR rate is subject to high volatility. On the other hand, in the first half of 2017, while EUR retained its value against BTC, EUR to USD rate went under change.
-
-ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and gold, as there are horizontal, vertical and diagonal changes. The fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC and Gold.
 
 Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref{fig:gas}) has mostly diagonal changes, spread over a smaller range. There are less number of changes compared to ETH. Except from the changes between May 2018-July 2018 and January 2018-March 2018, the gas price changes in a smaller range. Even though there are fluctuations in the gas price, it can be inferred that gas price is less volatile than ETH. Also, it worths mentioning that gas is changing over a small scale in x-axis (USD), when compared to Ether's plot over the same axis in a larger interval.
 
@@ -482,18 +583,28 @@ Compared to Figure~\ref{fig:eur} and Figure~\ref{fig:eth}, gas plot (Figure~\ref
 	\caption{Stability in two government-issued fiat currencies (CAD and EUR) and two stablecoin projects (Tether and BitUSD). Note that the x-axis is sized consistently across all four plots, with a \$0.30 USD spread. }
 	\label{fig:fiatandcrypto}
 \end{figure}
-%========================%
+
+
+
+
+
+%===============
 
 %GRAPHS:
 % Figure4: ETH,XRP - (BTC and USD): mostly diagonal movements. Do they move with BTC or not? Shows how cryptocurrencies are volatile. They don't move with BTC
+%Figure5: In Figure~\ref{fig:fiatandcrypto}, CAD and EUR are plotted against two reference currencies: BTC on y-axis and USD on x-axis to illustrate what type of movements government issued fiat currencies exhibit. Similarly, two stablecoins, Tether and BitUSD, are also plotted against the same reference currencies.
 %CAD, EUR,Tether, BitUsd: We expect stablecoins to be close to a vertical line. CAD and EUR are central bank issued "stablecoins" and compared to Tether and BitUsd (crypto stableoins), we can conclude that they are also fairly stable. (same x-axis range!)The graph seems like Tether's having drastic fluctuations. Note that the price change is around 10 cents. The change is accentuated due to the scale.
+
+%Look at the following paragraph, previous text!
+%EUR plot in Figure~\ref{fig:eur} tends to have more movements in the directions 1-5 and 3-7 suggesting that while the value of EUR stays the same according to one axis, it changes according to the other.EUR-USD exchange rate is going under less change, whereas BTC-EUR rate is subject to high volatility.ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and USD, as there are horizontal, vertical and diagonal changes. The fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC and USD.
+
 % TETHER: Does it artificially inflate BTC price? Do they issue un-backed tokens to reinforce BTC price, then sell BTC to fully back tokens?
 %TETHER ATTACK: On October 15, 2018, tether, the market dominating stablecoin with a market cap of $2 billion, was attacked, breaking tether’s peg to USD, dropping its value by 7 percent but simultaneously driving up bitcoin and the whole crypto market by more than 10 percent.
 %on October 15, 2018; where the price drastically surged from $6,376 at 12.31 UTC to $7,083 at 14.50 UTC. A downturn in price was seen approximately one hour after that to $6,821, before went stable at around $6,400 — $6,600. It was one of the one of the most unexpected fluctuations after a while. The first ‘stable coin’ tether (USDT) which supposedly pegged 1:1 to the U.S. dollar fell up to 15% at the same time as the price of bitcoin fluctuate wildly. The movement caused a loss of trust among traders, causing them to sell tether and invest in other cryptocurrencies. A massive selloff for tether against bitcoin was seen, resulting in a price rise in bitcoin.
 %bitcoin and other crypto assets are perfectly negatively correlated with stablecoins.
 %speculative attack
 
-% When tether breaks its peg it moves diagonally, indpendent of bitcoin. When BitUSD breaks, it moves with Bitcoin. 
+% When tether breaks its peg it moves diagonally, indpendent of bitcoin. When BitUSD breaks, it moves with Bitcoin.
 
 % Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
 
