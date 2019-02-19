@@ -360,46 +360,49 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 %==========================================%
 \section{Evaluation Framework}
 
+In this Section, we review various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide an evaluation framework based on x (\textblue{to be filled}) criteria (see Table~\ref{tab:evframework}) that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of advantages and disadvantages of different mechanisms for creating stablecoins. 
+
+
 %===========Version1============%
 
-\begin{table}[t]
-\centering
-\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lccccccccc}
-
-&
-&
-&
-\headrow{Stable to undervaluation} &
-\headrow{Stable to overvaluation} &
-\headrow{Issuance is decentralized} &
-\headrow{Redemption} &
-\headrow{Transfer} &
-\headrow{Oracle} &
-\headrow{Risks} \\
-
-\hline
-
-\textit{Class} &\textit{Mechanism}&\textit{Resembles}&  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
-
-\hline
-
-\multirow{3}{*}{Backed}                                                         \\
-& \multicolumn{1}{c}{Directly Backed and Redeemable}	       \\
-&\multicolumn{1}{c}{Directly Backed}                                     \\
-&\multicolumn{1}{c}{Indirectly Backed}                                     \\
-\hline
-\multirow{5}{*}{Intervention}                                                        \\
-&\multicolumn{1}{c}{Currency Board}                                         \\
-&\multicolumn{1}{c}{Contract Expand }                                       \\
-&\multicolumn{1}{c}{Managed}                                                    \\
-&\multicolumn{1}{c}{seignorage Shares}	                                     \\
-&\multicolumn{1}{c}{Internal}                                                        \\
-\hline
-
-\end{tabular*}
-\caption{Evaluation Framework Version 1.\label{tab:evframework}}
-
-\end{table}
+%\begin{table}[t]
+%\centering
+%\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lccccccccc}
+%
+%&
+%&
+%&
+%\headrow{Stable to undervaluation} &
+%\headrow{Stable to overvaluation} &
+%\headrow{Issuance is decentralized} &
+%\headrow{Redemption} &
+%\headrow{Transfer} &
+%\headrow{Oracle} &
+%\headrow{Risks} \\
+%
+%\hline
+%
+%\textit{Class} &\textit{Mechanism}&\textit{Resembles}&  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
+%c
+%\hline
+%
+%\multirow{3}{*}{Backed}                                                         \\
+%& \multicolumn{1}{c}{Directly Backed and Redeemable}	       \\
+%&\multicolumn{1}{c}{Directly Backed}                                     \\
+%&\multicolumn{1}{c}{Indirectly Backed}                                     \\
+%\hline
+%\multirow{5}{*}{Intervention}                                                        \\
+%&\multicolumn{1}{c}{Currency Board}                                         \\
+%&\multicolumn{1}{c}{Contract Expand }                                       \\
+%&\multicolumn{1}{c}{Managed}                                                    \\
+%&\multicolumn{1}{c}{seignorage Shares}	                                     \\
+%&\multicolumn{1}{c}{Internal}                                                        \\
+%\hline
+%
+%\end{tabular*}
+%\caption{Evaluation Framework Version 1.\label{tab:evframework}}
+%
+%\end{table}
 %===============Version2===================%
 
 
@@ -523,7 +526,7 @@ Internal                                                        \\
 
 %=================IMPORTANT=================%
 %=====Thoughts on GasToken used by Arbitrage for Font-running=======%
-% arbitrage on the Ethereum network can use GasToken-like techniques. Arbitrage bots try to run the txs all the time and as soon as they see an opportunity to font-run some exchnage tx and make some money (cite front-running paper) so if they can lower their tx fees even a little bit, it extends the margins they can make (which txs are beneficial for them to front-run).
+% arbitrage on the Ethereum network can use GasToken-like techniques. Arbitrage bots try to run the txs all the time and as soon as they see an opportunity to font-run some exchnage tx and make some money (~\cite{Eskandari2019SoKTD}) so if they can lower their tx fees even a little bit, it extends the margins they can make (which txs are beneficial for them to front-run).
 
 
 %========GasPrice Plots Explanation:=========%
