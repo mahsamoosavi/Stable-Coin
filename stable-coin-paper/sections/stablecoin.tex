@@ -363,52 +363,12 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 In this Section, we review various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide an evaluation framework based on x (\textblue{to be filled}) criteria (see Table~\ref{tab:evframework}) that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of advantages and disadvantages of different mechanisms for creating stablecoins.
 
 
-%===========Version1============%
 
-%\begin{table}[t]
-%\centering
-%\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lccccccccc}
-%
-%&
-%&
-%&
-%\headrow{Stable to undervaluation} &
-%\headrow{Stable to overvaluation} &
-%\headrow{Issuance is decentralized} &
-%\headrow{Redemption} &
-%\headrow{Transfer} &
-%\headrow{Oracle} &
-%\headrow{Risks} \\
-%
-%\hline
-%
-%\textit{Class} &\textit{Mechanism}&\textit{Resembles}&  \multicolumn{2}{|c|}{Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
-%c
-%\hline
-%
-%\multirow{3}{*}{Backed}                                                         \\
-%& \multicolumn{1}{c}{Directly Backed and Redeemable}	       \\
-%&\multicolumn{1}{c}{Directly Backed}                                     \\
-%&\multicolumn{1}{c}{Indirectly Backed}                                     \\
-%\hline
-%\multirow{5}{*}{Intervention}                                                        \\
-%&\multicolumn{1}{c}{Currency Board}                                         \\
-%&\multicolumn{1}{c}{Contract Expand }                                       \\
-%&\multicolumn{1}{c}{Managed}                                                    \\
-%&\multicolumn{1}{c}{seignorage Shares}	                                     \\
-%&\multicolumn{1}{c}{Internal}                                                        \\
-%\hline
-%
-%\end{tabular*}
-%\caption{Evaluation Framework Version 1.\label{tab:evframework}}
-%
-%\end{table}
-%===============Version2===================%
-\newcolumntype{N}{>{\centering\arraybackslash}m{.45in}}
+
 
 \begin{table}[htb!]
 	
-	\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lllllllll}
+	\begin{tabular}{ lllllllll}
 		
 		&
 		
@@ -429,15 +389,14 @@ In this Section, we review various issues with different mechanisms of designing
 		Directly Backed and Redeemable	  & \multicolumn{1}{|c|}{\full } & \multicolumn{1}{c|}{ \full }   & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
 		Directly Backed                                   & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
 		Indirectly Backed                                 & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\      \hline
-%		Currency Board                                  &  & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Market Manipulation                                    & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Money Supply Adjustments                                              & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Asset Transfer	                                 & \multicolumn{1}{|N|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
+		Market Manipulation                             & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
+		Money Supply Adjustments                  & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
+		Asset Transfer	                                  & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
 	
 		\hline
 		%p{1cm}
 		
-	\end{tabular*}
+	\end{tabular}
 	\caption{Evaluation Framework.\label{tab:evframework}}
 	
 \end{table}
@@ -547,7 +506,7 @@ In this Section, we review various issues with different mechanisms of designing
 
 The two spikes in the Fig~\ref{fig:gas} correspond to (i) January 2018 when Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was launched for the first time and (ii) when the FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was launched and required a lot of on-chain voting. Both these events have caused the GasPrice to go up as Ethereum users had to pay more Gas for their transactions to go through.
 
-% Importnat note: If some companies (for example Fcoin) knows that they're gonna be sending lots of txs to the network that will definitely increase the Gas price in the future, they can store this gastoken ahead of time and benefit from using cheap Gas when the price is up.
+% Important note: If some companies (for example Fcoin) knows that they're gonna be sending lots of txs to the network that will definitely increase the Gas price in the future, they can store this gastoken ahead of time and benefit from using cheap Gas when the price is up.
 
 
 %=========GasPlots========%
@@ -563,9 +522,12 @@ The two spikes in the Fig~\ref{fig:gas} correspond to (i) January 2018 when Cryp
 \end{figure}
 
 %========================%
-%=====Gas plot justification====%
-%Compared to Figure~\ref{fig:fiatandcrypto} and Figure~\ref{fig:all} (see Section~\ref{sec:plots}), Figure~\ref{fig:gas} has mostly diagonal changes, spread over a smaller range. Thus, gas is relatively stable compared to Ether. Also, it is only changing over a small scale in x-axis (USD), when compared to Ether's plot over the same axis in a larger interval. Note that the only two spikes in the plot represent two specific events occurred on the Ethereum blockchain on those certain dates. 
-% Need some explanation for Gas, ether, and electricity
+%=====Gas plots justification====%
+
+%BTC and Ether are the kind of the same, Elect and USD are kind of the same
+%Those two spikes in the gas plot are not because the change in the price of BTC, Ether, Elects. As mentioned, those changes are related to the specific events on the Etherum blockchain that increase the gas price on certain dates. In other words, the price of gas itself changed without being related to anything.
+% Everytime we plot gas with respect to anything we’ll have those spikes anyways, again because these changes are in the gas price itself.
+
 
 
 %==========================================%
