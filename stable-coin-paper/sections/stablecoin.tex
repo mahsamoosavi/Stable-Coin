@@ -454,6 +454,23 @@ Note that in these dates, gas price has not been changed against any of BTC, Eth
 Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. \par
 Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and biding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
 
+%=========GasPlots========%
+\begin{figure}[!htb]
+
+	\centering
+	\subfloat[Gas with respect to ETH and USD]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gas3}}
+	\hfill
+	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.50\textwidth]{figures/gaselectricityether.pdf}\label{fig:gas4}}
+	\caption {NEW ONES}
+	\label{fig:gas}
+
+\end{figure}
+
+%========================%
+
+
+
+
 
 %=========GasPlots========%
 \begin{figure}[!htb]
