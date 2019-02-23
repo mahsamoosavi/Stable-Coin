@@ -218,17 +218,6 @@ There are many design decisions to consider when deploying an indirectly-backed 
 
 % Jeremy: check the math of triggering earlier to confirm that there is no difference
 
-\section{Type 2: Intervention-based Stablecoins}
-\label{sec:t2}
-
-
-% Control system: input (metrics), make a decision, implement the intervention
-% We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency.
-
-% Why USD targets?
-
-% Currency expansion / contraction
-
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Market manipulation}
@@ -239,8 +228,6 @@ If a currency is not backed, directly or indirectly, by an asset, such as the US
 \paragraph{Process.} Alice decides that BobCoins should be worth \$1 USD. She purchases a large quantity of BobCoins and a large quantity of USD. If traders bid more than \$1.02 for a BobCoin, she executes the trade. If traders ask less than \$0.98 USD for a BobCoin, she executes the trade. Bob notices the value that Alice's is providing to BobCoin and rewards her with shares of the firm that generates BobCoins.
 
 \paragraph{Price Stability.} Alice will execute any bid over \$1.02 and any offer under \$0.98, therefore maintaining a bid-ask spread of $\tuple{\$0.98, \$1.02}$ at most. If her USD reserves deplete, she can no longer fulfill offers under \$0.98 and the price of BobCoins can lose value. Similarly, if she depletes her reserves of BobCoins, she can no longer fulfill bids over \$1.02 and the price could rise above \$1. 
-
-Conclusion: recap.
 
 \paragraph{Discussion.} Oracles
 
@@ -264,19 +251,20 @@ Conclusion: recap.
 % NuBits sounds very much like Basis: When the price of the Basis token below 1 dollar, they start selling sth called a bond token, and they actually sell this at a price below 1$ with a promise that it can be redeemed for a Basis coin in the future. when the price of Basis token goes above 1$, the Basis algorithm has to increase the money supply, so tehy issue you a 1 to 1 Basis coin for each Basis bond token that you held.
 %=================%
 
-%=================%
-%IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor
-%aim: monetary stability and low inflation
-%currency board needs sufficient backing of base money (=central bank holds sufficient foreign exchange reserve)
-%CBA has adjustment mechanism. It reacts automatically to the changes in the foreign exchange outflows and inflows.Interest rates adjust automatically in currency board based systems
-%problem when the domestic inflation rate is higher than the inflation rate of the underlying foreign currency: results in overvaluation of the domestic currency
 
-%(https://www.imf.org/external/pubs/ft/wp/wp9808.pdf): Difference between currency board and pegged exchange rate
-%=================%
 
-%Interest rates: borrower pays her loan + interest
-%Negative interest rate: borrower is paid the interest + she uses the loan
-%Sweden and Japan are examples of countries that use NIR
+\section{Type 2: Intervention-based Stablecoins}
+\label{sec:t2}
+
+The second main class of stablecoin is not defines intervensions not 
+
+% Control system: input (metrics), make a decision, implement the intervention
+% We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency.
+
+% Why USD targets?
+
+% Currency expansion / contraction
+
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
@@ -326,40 +314,6 @@ Conclusion: recap.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-
-
-%================Notes on unranked projects:==========================%
-
-%CarbonUSD:
-%t hybridizing both fiat backed and algorithmic stablecoins, (hybrid fiat-algorithmic approach)
-% 1-1 backed with USD
-% unlike purely fiat-backed stablecoin, CarbonUSD's novel meta-token structure enables a seamless future transition to an algorithmic stablecoin model once it reaches sufficient scale as a fully fiat-backed token.
-% meta-token smart contract is a key innovation that enables carbonusd to eventually transition from full fiat-collateralization without distrupting its liquidity network effects on exchanges and while maintaining the highest standards for regulatory compliance.
-% HOW? CarbonUSD is a basket of whitelisted tokens. A token that is whitelisted may be used to create new CarbonUSD, serving as its collateral. Initially, only one token will be whitelisted, a stablecoin that is 1-1 backed with USdollars in a trust account.
-% The first whitelisted token, WT0, is a compliant fiat-backed stablecoin where users can deposit and withdrawal real USD. Governing members of the whitelist can decide when CarbonUSD has enough liquidity to safely switch off from full fiat- collateralization.
-% they also have regular audits (unlike Tether)
-% Redeemable
-% Offchain (fiat-backed, crypto-backed) stablecoins are effective as bootstrapping trust and NOT maintaining it scale. HOWEVERM, Onchain (algorithmic) stablecoins are effective at maintaining trust at scale BUT not at bootstrapping it.
-
-%Ampleforth:
-% It uses a different method of preserving its dollar-to-unit ration, by transferring volatility from unity price to unit count.
-%According to Trail of Bits, a malicious market maker could play with the stability of Ampleforth. the issue is their oracle services use whitelisted sources (just like Dai)
-%=================%
-%Havven
-% is mostly like Dai, they also use over collateralization with 1:5 ratio.
-% They use a similar arbitrage as Dai but with different functionalities by locking up Havven tokens or by reverse burning Nomins by reclaiming Havven tokens  to keep the price stable.
-% One key difference between Nomin and Dai is the collateral for Dai is Eth but for Nomin is the actual Havven token itself.
-%=================%
-%Basecoin (Basis Algorithm)
-% Non-collateralized
-% Controlled by algorithmic supply
-% The price  stability of this coin is managed by Basis protocol which is a central bank algorithm that increases or decreases the supply of teh coin based on supply and demand
-% Still experimental and not yet operational
- % The coin supple is entirely done based on the information given by differnt oracles that make the protocol aware of condition of supply and demand
- % The peg could be anything: fiat, assets, or a basket of assets
-
-%==========================================%
-
 \subsection{Summary}
 
 In this Section, we review various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide an evaluation framework based on 6 criteria (see Table~\ref{tab:evframework}) that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of advantages and disadvantages of different mechanisms for creating stablecoins.
@@ -390,13 +344,13 @@ In this Section, we review various issues with different mechanisms of designing
 	Directly Backed and Redeemable	& \multicolumn{1}{|c|}{\full} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{\full}    \\
 	Directly Backed                              	& \multicolumn{1}{|c|}{} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{ } 	& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{\full}    \\
 	Indirectly Backed 				& \multicolumn{1}{|c|}{\prt} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\      \hline
-	Market Manipulation                       	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
+	Market Manipulation                       	& \multicolumn{1}{|c|}{\prt} 		& \multicolumn{1}{c|}{\prt}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
 	Money Supply Adjustments             	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
 	Asset Transfer	                                & \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
 	\hline
 
 	\end{tabular}
-	\caption{Comparative evaluation of mechanisms to design stablecoins: {\full} indicates the properties (columns) are fulfilled by the corresponding mechanisms (rows), {\prt} means the property is fulfilled but the fulfillment is bounded, {?} indicates a heuristic has been proposed for stability but the conditions under which it will work are not well-established, and $\times$ indicates the property is not applicable.
+	\caption{Comparative evaluation of mechanisms to design stablecoins: {\full} indicates the properties (columns) are fulfilled by the corresponding mechanism (rows) within reason, {\prt} means the property is fulfilled but the fulfillment is bounded, {?} indicates a heuristic has been proposed for stability and the conditions under which it will work are not well-established enough to rank, and $\times$ indicates the property is not applicable.
 	\label{tab:evframework}}
 \end{table}
 %=============%
@@ -437,6 +391,39 @@ In this Section, we review various issues with different mechanisms of designing
 %empty cell: the property is not achieved
 %empty circle: the property is partially achieved
 %-: not applicable
+
+
+%================Notes on unranked projects:==========================%
+
+%CarbonUSD:
+%t hybridizing both fiat backed and algorithmic stablecoins, (hybrid fiat-algorithmic approach)
+% 1-1 backed with USD
+% unlike purely fiat-backed stablecoin, CarbonUSD's novel meta-token structure enables a seamless future transition to an algorithmic stablecoin model once it reaches sufficient scale as a fully fiat-backed token.
+% meta-token smart contract is a key innovation that enables carbonusd to eventually transition from full fiat-collateralization without distrupting its liquidity network effects on exchanges and while maintaining the highest standards for regulatory compliance.
+% HOW? CarbonUSD is a basket of whitelisted tokens. A token that is whitelisted may be used to create new CarbonUSD, serving as its collateral. Initially, only one token will be whitelisted, a stablecoin that is 1-1 backed with USdollars in a trust account.
+% The first whitelisted token, WT0, is a compliant fiat-backed stablecoin where users can deposit and withdrawal real USD. Governing members of the whitelist can decide when CarbonUSD has enough liquidity to safely switch off from full fiat- collateralization.
+% they also have regular audits (unlike Tether)
+% Redeemable
+% Offchain (fiat-backed, crypto-backed) stablecoins are effective as bootstrapping trust and NOT maintaining it scale. HOWEVERM, Onchain (algorithmic) stablecoins are effective at maintaining trust at scale BUT not at bootstrapping it.
+
+%Ampleforth:
+% It uses a different method of preserving its dollar-to-unit ration, by transferring volatility from unity price to unit count.
+%According to Trail of Bits, a malicious market maker could play with the stability of Ampleforth. the issue is their oracle services use whitelisted sources (just like Dai)
+%=================%
+%Havven
+% is mostly like Dai, they also use over collateralization with 1:5 ratio.
+% They use a similar arbitrage as Dai but with different functionalities by locking up Havven tokens or by reverse burning Nomins by reclaiming Havven tokens  to keep the price stable.
+% One key difference between Nomin and Dai is the collateral for Dai is Eth but for Nomin is the actual Havven token itself.
+%=================%
+%Basecoin (Basis Algorithm)
+% Non-collateralized
+% Controlled by algorithmic supply
+% The price  stability of this coin is managed by Basis protocol which is a central bank algorithm that increases or decreases the supply of teh coin based on supply and demand
+% Still experimental and not yet operational
+ % The coin supple is entirely done based on the information given by differnt oracles that make the protocol aware of condition of supply and demand
+ % The peg could be anything: fiat, assets, or a basket of assets
+
+%==========================================%
 
 \section{Discussion}
 
@@ -543,6 +530,10 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 \subsection{Oracles Everywhere!}
 
 \subsection{Consequences for Central Banking}
+
+%Interest rates: borrower pays her loan + interest
+%Negative interest rate: borrower is paid the interest + she uses the loan
+%Sweden and Japan are examples of countries that use NIR
 
 \section{Conclusion}
 

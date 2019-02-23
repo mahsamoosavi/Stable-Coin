@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 15:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 16:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1030,51 +1030,51 @@ Package pdftex.def Info: figures/compass.pdf used on input line 60.
 File: figures/gasetherusd.pdf Graphic file (type pdf)
 
 <use figures/gasetherusd.pdf>
-Package pdftex.def Info: figures/gasetherusd.pdf used on input line 465.
+Package pdftex.def Info: figures/gasetherusd.pdf used on input line 456.
 (pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
 
 <figures/gaselectricityether.pdf, id=359, 401.5pt x 225.84375pt>
 File: figures/gaselectricityether.pdf Graphic file (type pdf)
 
 <use figures/gaselectricityether.pdf>
-Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 467
+Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 458
 .
 (pdftex.def)             Requested size: 230.18253pt x 129.48007pt.
 
 <figures/eth.pdf, id=362, 401.5pt x 265.99374pt>
 File: figures/eth.pdf Graphic file (type pdf)
  <use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf used on input line 498.
+Package pdftex.def Info: figures/eth.pdf used on input line 489.
 (pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
 
 <figures/xrp.pdf, id=363, 401.5pt x 256.96pt>
 File: figures/xrp.pdf Graphic file (type pdf)
  <use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf used on input line 500.
+Package pdftex.def Info: figures/xrp.pdf used on input line 491.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
 <figures/cad.pdf, id=364, 401.5pt x 256.96pt>
 File: figures/cad.pdf Graphic file (type pdf)
  <use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf used on input line 510.
+Package pdftex.def Info: figures/cad.pdf used on input line 501.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
 <figures/eur.pdf, id=365, 401.5pt x 256.96pt>
 File: figures/eur.pdf Graphic file (type pdf)
  <use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf used on input line 512.
+Package pdftex.def Info: figures/eur.pdf used on input line 503.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
 <figures/tether.pdf, id=366, 401.5pt x 256.96pt>
 File: figures/tether.pdf Graphic file (type pdf)
  <use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf used on input line 514.
+Package pdftex.def Info: figures/tether.pdf used on input line 505.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
 <figures/bitusd.pdf, id=367, 401.5pt x 256.96pt>
 File: figures/bitusd.pdf Graphic file (type pdf)
  <use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf used on input line 516.
+Package pdftex.def Info: figures/bitusd.pdf used on input line 507.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
 [14 <./figures/gasetherusd.pdf> <./figures/gaselectricityether.pdf
@@ -1158,7 +1158,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (16 pages, 766288 bytes).
+Output written on main.pdf (16 pages, 766255 bytes).
 PDF statistics:
  696 PDF objects out of 1000 (max. 8388607)
  565 compressed objects within 6 object streams
