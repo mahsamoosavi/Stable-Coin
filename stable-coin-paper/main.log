@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 13:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -907,9 +907,6 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )) (./main.aux
 
-LaTeX Warning: Label `fig:gas' multiply defined.
-
-
 LaTeX Warning: Label `fig:cad' multiply defined.
 
 
@@ -1001,7 +998,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 21.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 (./sections/abstract.tex) (./sections/stablecoin.tex
-<figures/allCurrencies.pdf, id=116, 640.3925pt x 378.41376pt>
+<figures/allCurrencies.pdf, id=120, 640.3925pt x 378.41376pt>
 File: figures/allCurrencies.pdf Graphic file (type pdf)
 
 <use figures/allCurrencies.pdf>
@@ -1014,14 +1011,14 @@ igures/allCurrencies.pdf>]
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gbpBrexit.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/gbpBrexit.pdf, id=179, 803.0pt x 515.9275pt>
+<figures/gbpBrexit.pdf, id=183, 803.0pt x 515.9275pt>
 File: figures/gbpBrexit.pdf Graphic file (type pdf)
 
 <use figures/gbpBrexit.pdf>
 Package pdftex.def Info: figures/gbpBrexit.pdf used on input line 60.
 (pdftex.def)             Requested size: 352.31625pt x 226.37114pt.
 
-<figures/compass.pdf, id=180, 1027.84pt x 770.88pt>
+<figures/compass.pdf, id=184, 1027.84pt x 770.88pt>
 File: figures/compass.pdf Graphic file (type pdf)
  <use figures/compass.pdf>
 Package pdftex.def Info: figures/compass.pdf used on input line 62.
@@ -1029,83 +1026,62 @@ Package pdftex.def Info: figures/compass.pdf used on input line 62.
 
 [3] [4 <./figures/gbpBrexit.pdf> <./figures/compass.pdf>] [5]
 (./setup/table.tex) [6] [7] [8] [9] [10] [11] [12]
-<figures/gasetherusd.pdf, id=343, 401.5pt x 252.945pt>
+<figures/gasetherusd.pdf, id=355, 401.5pt x 252.945pt>
 File: figures/gasetherusd.pdf Graphic file (type pdf)
 
 <use figures/gasetherusd.pdf>
-Package pdftex.def Info: figures/gasetherusd.pdf used on input line 466.
+Package pdftex.def Info: figures/gasetherusd.pdf used on input line 459.
 (pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
 
-<figures/gaselectricityether.pdf, id=344, 401.5pt x 252.945pt>
+<figures/gaselectricityether.pdf, id=356, 401.5pt x 225.84375pt>
 File: figures/gaselectricityether.pdf Graphic file (type pdf)
 
 <use figures/gaselectricityether.pdf>
-Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 468
+Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 461
 .
-(pdftex.def)             Requested size: 234.8775pt x 147.97801pt.
+(pdftex.def)             Requested size: 234.8775pt x 132.12321pt.
 
-<figures/gas.pdf, id=345, 401.5pt x 252.945pt>
-File: figures/gas.pdf Graphic file (type pdf)
- <use figures/gas.pdf>
-Package pdftex.def Info: figures/gas.pdf used on input line 479.
-(pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
-
-<figures/gasElectricity.pdf, id=346, 401.5pt x 223.83624pt>
-File: figures/gasElectricity.pdf Graphic file (type pdf)
-
-<use figures/gasElectricity.pdf>
-Package pdftex.def Info: figures/gasElectricity.pdf used on input line 481.
-(pdftex.def)             Requested size: 244.27461pt x 136.1847pt.
-
-<figures/eth.pdf, id=349, 401.5pt x 265.99374pt>
+<figures/eth.pdf, id=359, 401.5pt x 265.99374pt>
 File: figures/eth.pdf Graphic file (type pdf)
  <use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf used on input line 499.
+Package pdftex.def Info: figures/eth.pdf used on input line 492.
 (pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
 
-<figures/xrp.pdf, id=350, 401.5pt x 256.96pt>
+<figures/xrp.pdf, id=360, 401.5pt x 256.96pt>
 File: figures/xrp.pdf Graphic file (type pdf)
  <use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf used on input line 501.
+Package pdftex.def Info: figures/xrp.pdf used on input line 494.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/cad.pdf, id=351, 401.5pt x 256.96pt>
+<figures/cad.pdf, id=361, 401.5pt x 256.96pt>
 File: figures/cad.pdf Graphic file (type pdf)
  <use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf used on input line 511.
+Package pdftex.def Info: figures/cad.pdf used on input line 504.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/eur.pdf, id=352, 401.5pt x 256.96pt>
+<figures/eur.pdf, id=362, 401.5pt x 256.96pt>
 File: figures/eur.pdf Graphic file (type pdf)
  <use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf used on input line 513.
+Package pdftex.def Info: figures/eur.pdf used on input line 506.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/tether.pdf, id=353, 401.5pt x 256.96pt>
+<figures/tether.pdf, id=363, 401.5pt x 256.96pt>
 File: figures/tether.pdf Graphic file (type pdf)
  <use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf used on input line 515.
+Package pdftex.def Info: figures/tether.pdf used on input line 508.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/bitusd.pdf, id=354, 401.5pt x 256.96pt>
+<figures/bitusd.pdf, id=364, 401.5pt x 256.96pt>
 File: figures/bitusd.pdf Graphic file (type pdf)
  <use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf used on input line 517.
+Package pdftex.def Info: figures/bitusd.pdf used on input line 510.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
-
-[13 <./figures/gasetherusd.pdf> <./figures/gaselectricityether.pdf
+)
+(./main.bbl [13 <./figures/gasetherusd.pdf> <./figures/gaselectricityether.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gaselectricityethe
 r.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures/gas.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gas.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
-> <./figures/gasElectricity.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gasElectricity.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->]) (./main.bbl [14 <./figures/eth.pdf> <./figures/xrp.pdf
+>] [14 <./figures/eth.pdf> <./figures/xrp.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/xrp.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
@@ -1126,7 +1102,7 @@ nclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/bitusd.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 34--41
+Underfull \hbox (badness 10000) in paragraph at lines 40--47
 []$\OT1/cmtt/m/n/10 https : / / www . linkedin . com / pulse / stablecoins -[] 
 vs -[] govtcoins -[] race -[] solve -[] cryptocurrencies -[]
  []
@@ -1135,7 +1111,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-Underfull \hbox (badness 1112) in paragraph at lines 91--97
+Underfull \hbox (badness 1112) in paragraph at lines 103--109
 []\OT1/cmr/m/n/10 C. P. TEAM.  Com-pre-hen-sive overview of sta-ble-coins.  []$
 \OT1/cmtt/m/n/10 https : / / medium . com / cp -[] processor /
  []
@@ -1147,7 +1123,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AEB8B96CE668F062B2A83567C62D37E2;1769.
+(rerunfilecheck)             Checksum: 281D9FFE329018B59CC9EF34D4B48C64;1826.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1155,10 +1131,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 22612 strings out of 493054
- 431266 string characters out of 6134759
- 547395 words of memory out of 5000000
- 25570 multiletter control sequences out of 15000+600000
+ 22601 strings out of 493054
+ 431100 string characters out of 6134759
+ 548395 words of memory out of 5000000
+ 25561 multiletter control sequences out of 15000+600000
  12528 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,85p,2215b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1182,10 +1158,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (15 pages, 796506 bytes).
+Output written on main.pdf (15 pages, 759688 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 583 compressed objects within 6 object streams
+ 695 PDF objects out of 1000 (max. 8388607)
+ 565 compressed objects within 6 object streams
  111 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{geminido29:online}
+gemini-dollar-trailofbits-audit.pdf.
+\newblock
+  \url{https://gemini.com/wp-content/themes/gemini/assets/img/dollar/gemini-dollar-trailofbits-audit.pdf}.
+\newblock (Accessed on 02/23/2019).
+
 \bibitem{ametrano2016hayek}
 F.~M. Ametrano.
 \newblock Hayek money: The cryptocurrency price stability solution.
@@ -73,6 +79,12 @@ H.~Qureshi.
   https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5},
   2018.
 \newblock Accessed: 2018-09-03.
+
+\bibitem{rogoff2017curse}
+K.~S. Rogoff.
+\newblock {\em The Curse of Cash: How Large-Denomination Bills Aid Crime and
+  Tax Evasion and Constrain Monetary Policy}.
+\newblock Princeton University Press, 2017.
 
 \bibitem{sams2015note}
 R.~Sams.
