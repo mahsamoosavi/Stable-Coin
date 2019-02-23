@@ -23,52 +23,22 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 % Talk about the crypto custodianship somewhere in the paper
 
 
+%========================%
 \section{Related Work}
 \label{sec:lit}
 
-\textblue{there is a lot of different views,  but we should include bank of england(explain that)}
-In 2016, Ametrano introduces \textit{Hayek Money}, a new monetary policy of elastic non-discretionary supply that can be used to achieve a price stable cryptocurrency~\cite{ametrano2016hayek}. There are currently many blog posts on the overview of stablecoins and how to design them. According to these resources, the main three approaches to design a stablecoin are (i) fiat-collateralized, (ii) crypto-collateralized and (iii) non-collateralized (also known as algorithmic)(\eg~\cite{hackernoon, comprehensiveOverview, linkedin}) are the examples that give the overview of stablecoins based on these three approaches. \textblue{Note that these resources uses various terms for these three categories interchangeably, \textbf{do we have to mention this? if yes (i) is it the best way of saying it? and (ii) should we mention each and every of these terms? (algorithmic, seignorage shares, elastic money supply)}}
-Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report by a crypto company called \textit{the Blockchain} \footnote{https://www.blockchain.com} provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{report1}. They extend this research in a newly published report that reflects a significant update on their previous work~\cite{report2}. In one of its blog posts, Consensys \footnote{https://consensys.net} describes stablecoins as "crypto-assets that maintain a stable value against a target price (e.g. USD)" and classify them according to the three main categories~\cite{StateofS96:online}. In~\cite{cryptoinsider}, the authors use a slightly different categorization to group 13 stabelcoin projects into two broad categories: (i) centralized-- which itself contains subcategories based on the type of the asset the coins are backed by (\eg fiat and gold), (ii) decentralized. Unlike other resources that define stablecoins within three categories (fiat-collateralized, crypto-collateralized, and non-collaterlaized), in this paper, we introduce new systemization of stablecoin projects and describe their fundamental primitives.
+The idea of stable cryptocurrencies was introduced by Ametrano introduces in 2016~\cite{ametrano2016hayek}. In this paper, he presented \textit{Hayek Money}-- a new monetary policy of elastic non-discretionary supply to achieve a price stable cryptocurrency. In 2017, Robert Sams introduced a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
+Currently there are many blog posts and professional reports on the overview of stablecoins. According to these resources, there are three main approaches to achieve a stablecoin: (i) fiat-collateralized, (ii) crypto-collateralized and (iii) non-collateralized, also known as algorithmic,\eg~\cite{hackernoon, comprehensiveOverview, linkedin}. Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report by a crypto company called Blockchain \footnote{https://www.blockchain.com} provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{reportone}. They extend this research in a newly published report that reflects a significant update on their previous work~\cite{reporttwo}. In one of its blog posts, Consensys \footnote{https://consensys.net} describes stablecoins as "crypto-assets that maintain a stable value against a target price (\eg USD)" and classify them according to the three main categories~\cite{StateofS96:online}. In~\cite{cryptoinsider}, the authors use a slightly different categorization to group 13 stabelcoin projects into two broad categories: (i) centralized-- which itself contains subcategories based on the type of the asset the coins are backed by (\eg fiat and gold), (ii) decentralized. Unlike other resources that define stablecoins within three categories (fiat-collateralized, crypto-collateralized, and non-collateralized). \par
+In this paper, we provide a survey on the current active stablecoin projects. In contrast with other resources, we remove jargons and economic terminologies when describing the fundamental concept of creating a stablecoin. Thus, users will not  bear different levels of burden in interpreting jargons and finance terminologies. In addition, we take a deep look into the Ethereum gas in the context of stablecoins.
 
-
-%=============
-% Cite Ross Anderson's paper :"Bitcoin Reducx" :
+%Cite Ross Anderson's paper :"Bitcoin Reducx" :
 % Anderson\etal discuss different negative externalities that are introduced by Bitcoin~\cite{anderson2019bitcoin}. They perform and discuss taint tracking using First-In-First-Out (FIFO) algorithm ( inspired by the Clayton’s case) on some well-established Bitcoin theft scenarios. They also point out that crypto space needs effective regulation in order to function properly and securely, at the end they provide regulatory remarks for the future.
-%=============
-%RSCoin: It is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and auditability.
-%=============
-
-% our chart is basically same as others, but we do different categorization. We all cluster the same way, the main difference is that we strip out the terminalogies, not relying on economic terminologies, we try to represent the difference between these projects. A lot of them leave the readers with the burden of interpretation, things are not clearly defined, except for some technical terms that finance people know. BTW, the table is not our contribution.
-% also nobody looked at gas in the context of stablecoin.
+%Cite RSCoin: 
+% RSCoin is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
 
 
-%The idea seigniorage shares was first introduced by Robert Sams in 2017, where he proposed a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
-%(http://www.andrew.cmu.edu/user/azj/research/rzj_slides201808.pdf): three categories: 100\% USD Reserve backed coins, Protocol coins without redemption, Protocol coins with redemption in floating-rate crypto-currencies
-%(https://icosbull.com/whitepapers/2265/USDX_Protocol_whitepaper.pdf) three generations of stablecoins: Collateral-backed IOU, Collateral-backed on blockchain, Elastic monetary supply based. (This is a whitepaper for a protocol but it has a different classification)
-%(https://multicoin.capital/2018/01/17/an-overview-of-stablecoins/)  Stablecoins are discussed under three main categories as centralized IOU issuance, collateral backed, and seigniorage shares along with the discussion of different types of oracles and the challenges that stablecoins face.
 
-%=====================Gold vs ETFGold  ===================%
-%Gold ETF: Investors want  exposure to the asset that’s electronically traded without taking possession of the commodity.
-%advs
-% Easy to trade
-% No storage and insurance cost
-% Hard to steal
-% Gold ETF is the most convenient way to store money in gold.
-% It is both convenient and low cost. If you’re looking for an inexpensive way to invest in the direction of the gold price, GLD is ideal.
-% disadv:
-% Ownership of Gold ETFs does not entitle investors to any physical gold.
-%  in special occasions when the  market or the bank is not available, the user does not have access to to trade his shares. In this case, ownership of ETF is not any useful for the user.
-%  Gold EtTF has counter-party risk and exposed to bad management as the investors have to trust a bank or other trustee to hold and manage their shares
-% Physical Gold: Investors want to own the tangible asset
-%advs:
-% It’s a solid investment and serves as a great hedge against inflation. With strong appreciation through the years, it has proven reliably positive returns even during economic downtimes. Gold prices fluctuate but won’t go away, it won’t be devalued, and it will always be valuable anywhere in the world.
-% When you invest in physical gold, you’re entirely in charge of your investment, meaning you’re not trusting it to someone else like an ETF. You decide how to store and secure it.
-% When you sell a gold ETF, that data is required by law to be immediately transmitted to the government by the brokerage. Sell gold bullion or bars, and you must report capital gains on your income tax return.
-%disadv:
-% When you decide to sell your gold, you will have to pay a dealer’s fee as a percentage of your purchase. Hard to buy and sell (trade)
-% easy to be stolen
-% hard to store
-
+%========================%
 
 \section{Preliminaries}
 
@@ -446,6 +416,8 @@ In this Section, we review various issues with different mechanisms of designing
 
 \subsection{What Stability looks like}\label{sec:stability}
 
+%========================%
+
 \subsection{Ethereum Gas: A Stable Currency?}\label{sec:GasInvs}
 
 Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain. 
@@ -454,6 +426,11 @@ Note that in these dates, gas price has not been changed against any of Ether, U
 Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. \par
 Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and biding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
 
+
+
+
+
+%which one to keep?
 %=========GasPlots========%
 \begin{figure}[!htb]
 
@@ -467,11 +444,6 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 \end{figure}
 
 %========================%
-
-
-
-
-
 %=========GasPlots========%
 \begin{figure}[!htb]
 
@@ -539,6 +511,8 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 % When tether breaks its peg it moves diagonally, indpendent of bitcoin. When BitUSD breaks, it moves with Bitcoin.
 
 % Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
+
+
 
 \subsection{Consequences for Central Banking}
 
