@@ -133,7 +133,7 @@ To find stablecoin projects, we performed a number of search queries on \textit{
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Directly-Backed and Redeemable.}
+\subsection{Directly-Backed and Redeemable}
 \label{sec:redeem}
 
 The first direction one might take in producing a stablecoin is the creation of a digital representation (or tokenization) of a fiat currency, commodity, or portfolio of assets. Tokens are designed to have the same price (and thus volatility) as the underlying portfolio. To further enable an equivalence of value (we will explain how shortly), the digital token can be redeemed on-demand for the underlying asset. For simplicity, we will consider a cryptocurrency designed to digitally represent the USD.
@@ -158,7 +158,7 @@ A variety of firms and projects providing stablecoins in this category exist. Wh
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Directly-Backed.}
+\subsection{Directly-Backed}
 \label{sec:tether}
 
 Next we consider stablecoins that are directly-backed---exactly as in the previous section but they do not offer a redemption process for the coin's underlying assets. Redemption is logistically complicated. Consider a USD-backed dollar---it is usually easier for a firm to receive USD payments from users than it is for it to send payments back, and sending payments opens up new exposure to regulation. Instead the firms behind these coins  pledge to keep the backing assets in trust for the duration of the circulating coins. We will shortly explain what impact there is on the exchange rate if it does not provide redemption---obviously, if redemption was inconsequential than no one would offer it as it increases costs and complexity. For our ranking in Table~\ref{tab:stablecoins}, if we could not find a clear assertion of redemption, we listed the project under this category.
@@ -171,7 +171,9 @@ Conclusion: bids will not exceed \$1 USD but the best ask could vary from \$0 US
 
 \paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portfolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
 
-%\textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
+%There is middle category of redeemability.
+%similar to indirect owership of gold. It is redeemable for a share of the company that holds the gold.
+%check the backed ones for having shares or not
 
 A coin that has no redemption, direct or indirect, will not clearly trade for a particular amount. An informal argument in favour of it being stable is that minting the coin is costly---it requires obtaining USD to hold in reserve. This feature serves an important function, albeit a different one. This bounds the firm from over-issuing tokens, which would cause the coin to loose value, however it does not ensure asks do not drop below \$1 USD.
 
@@ -185,7 +187,7 @@ Even if the market does not accept the psychology that a coin backed by \$1 USD 
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Indirectly-Backed.}
+\subsection{Indirectly-Backed}
 \label{sec:dai}
 
 The previous two sections describe coins that require a trusted firm to hold assets. The difference between these coins and traditional digital currencies like Liberty Reserve and e-gold is marginal---it is only that transactions are now decentralized. By contrasts, coins in this class prioritize decentralization and offer stablecoins that are issued, transacted, and redeemed in an autonomous fashion, while still being redeemable for USD. However these requirements are in conflict as there are no USD on a blockchain like Ethereum.
@@ -208,13 +210,7 @@ Conclusion: Indirectly-backed coins will fulfill bids greater than \$1 USD assum
 
 There are many design decisions to consider when deploying an indirectly-backed stablecoin: the ratio by which the initial deposit exceeds the redemption value (\eg 1.5x), if coins can be redeemed any time, if a third-party can trigger a redemption (\eg for a fee) if they notice a deposit is close to losing more value than the face value of the coins (before the coin holder does), how close the deposit can get to losing value before such a trigger, and if all deposits backing all such coins should be pooled together, so all coins are interchangeable (`fungible'), or each coin is tied to a specific deposit. Note that while allowing third parties to trigger a redemption seems like a sensible service, if the coin holder is not monitoring the situation, they will end up holding ETH, instead of an AliceCoin, which is still losing value. This mechanism is really only about maintaining the reputation of the stablecoin.
 
-% Jeremy: check the above!
-
-% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
-
-%There is middle category of redeemability.
-%similar to indirect owership of gold. It is redeemable for a share of the company that holds the gold.
-%check the backed ones for having shares or not
+% Jeremy: check the math of triggering earlier to confirm that there is no difference
 
 \section{Type 2: Intervention-based Stablecoins}
 \label{sec:t2}
@@ -239,6 +235,26 @@ Conclusion: recap.
 \paragraph{Discussion.} Oracles
 
 %=================%
+%NuBits:  https://nubits.com/NuWhitepaper.pdf
+% Like Tether, NuBits are pegged to US dollar, with one dollar equivalent to one NuBit.
+% NuBits controls its coin's value by getting shareholders to place buy and sell orders at 1$ for NuBits, rewarding them with revenue from sales of NuBits external cryptocurrency, NuShares.
+%==========
+% NuBits has suffered two big crashes, with extended peg breaking.
+% First :
+% In 2016, NuBits’ peg infamously broke, and it remained broken for 3 months. The initial price drop happened between May 26th and June 20th, 2016. This was about the same time that Bitcoin’s price suddenly spiked, after 6 months of relative stability. It’s plausible that the drop happened because of the following: People who had capital in NuBits saw how Bitcoin was spiking. They wanted to get in on the spike, so they sold their NuBits in large quantities to buy Bitcoin. The NuBits peg was unable to handle the large sell-offs and broke. The price tanked and the peg stayed broken for an extended period. It seems that when the Bitcoin and volatile cryptoassets’ prices spike, investors with capital in stablecoins will want to sell them off to get in on the spike. That causes strong downward pressure on the stablecoin price.
+%==========
+% Second:
+% After NuBits crashed in 2016, its market cap grew 1,500% on Coinmarketcap between the end of 2017 and the beginning of 2018, going from $950k to $14 million. This is strange, considering the NuBits peg had been broken for such a long period in 2016. Their market cap had been stagnant for years, and suddenly it takes off. Was this spike just an accounting error, or had people suddenly decided NuBits was actually amazing?
+% Turns out the increase was real. However, it did not happen in one day. People were buying millions of NuBits in late December. The price of the NuBits stablecoin was notably above its $1 peg between December 20 and December 28, when it peaked close to $1.50(!).
+% What caused the increase? It’s clear when one looks at the Bitcoin price history. The NuBits high price period starts when Bitcoin had its “Christmas crash.” By December 22 there was a strong news narrative about Bitcoin crashing.
+% As long as there was a lot of uncertainty about Bitcoin’s stability, people kept buying large numbers of NuBits. Then, by the New Year, when Bitcoin temporarily normalized again, the large NuBits buy-ins stopped.
+% What happened, then? Well, Bitcoin holders noted the dropping Bitcoin prices and got worried about an imminent crash. Converting BTC to USD is slow and can lead to taxation. So the worried Bitcoin holders converted their crypto assets to stablecoins rather than cash. Some choose NuBits. The very large influx of Bitcoin money doubled the NuBits market cap several times over. The NuBits folks were frantically printing new money and selling it off to the Bitcoin holders. But demand was so great among panicked Bitcoin holders that the new NuBits couldn’t be printed fast enough and their price was driven up high.
+% This shows how when Bitcoin and cryptomarkets crash, capital rapidly flows into stablecoins.
+%==========
+% NuBits sounds very much like Basis: When the price of the Basis token below 1 dollar, they start selling sth called a bond token, and they actually sell this at a price below 1$ with a promise that it can be redeemed for a Basis coin in the future. when the price of Basis token goes above 1$, the Basis algorithm has to increase the money supply, so tehy issue you a 1 to 1 Basis coin for each Basis bond token that you held.
+%=================%
+
+%=================%
 %IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor
 %aim: monetary stability and low inflation
 %currency board needs sufficient backing of base money (=central bank holds sufficient foreign exchange reserve)
@@ -259,34 +275,30 @@ Conclusion: recap.
 
 Intro
 
-\paragraph{Process.} Description of how it works.
+\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin.
+
+\paragraph{Variant Process.} Similar to above, Alice forks Bitcoin, preserves its coinbase schedule, and adds a trusted exchange rate oracle. When the price exceeds \$1.02 USD, the coin increases the balance of every AliceCoin holder; when it dips below \$0.98 USD, the coin decreases the balance of every AliceCoin holder.
 
 \paragraph{Price Stability.} Justification that bids will never exceed \$1. Justification that offers will be less than \$1.
 
 Conclusion: recap.
 
-\paragraph{Discussion.} Oracles
+\paragraph{Discussion.} Can actionally do this. No zero bound. 
+
+% Examples: RSCoin (Danezis\etal ~\cite{danezis2015centrally}) : a cryptocurrency framework proposed by Danezis\etal  The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
+
+
+% Zero bound -> actually maybe not: Miner gets Reward + Fees, reward can be negative if fees are larger and difference is removed from circulation. -> pushing volatility into fees
+% Ambleforth -> just take currency from holders.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Asset Transfer}
 \label{sec:basecoin}
 
-%Intro
-
-\paragraph{Process.} Alice forks Bitcoin to create a new altcoin called AliceCoin. She sets Bitcoin's fixed schedule for releasing new Bitcoin as the default behaviour but allows this value (called the coinbase amount) to be tweaked according to the rules outlined below. She setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. AliceCoin is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD. If the price exceeds \$1.02 USD, the miner is allowed to increase the coinbase amount (the amount is determined by some mathematical relationship with how much the price exceeds \$1.02 USD). If the price dips under \$0.98 USD, the miner must decrease the coinbase amount (again, based on some mathematical relationship). The correctness of the claimed coinbase is verified by other miners in deciding to accept or reject a mined block, as per all other checked conditions in Bitcoin.
-
-\paragraph{Variant.} Similar to above, Alice forks Bitcoin, preserves its coinbase schedule, and adds a trusted exchange rate oracle. When the price exceeds \$1.02 USD, the coin increases the balance of every AliceCoin holder; when it dips below \$0.98 USD, the coin decreases the balance of every AliceCoin holder.
-
-% Zero bound -> actually maybe not: Miner gets Reward + Fees, reward can be negative if fees are larger and difference is removed from circulation. -> pushing volatility into fees
-% Ambleforth -> just take currency from holders.
-
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
-% Examples: RSCoin (Danezis\etal ~\cite{danezis2015centrally}) : a cryptocurrency framework proposed by Danezis\etal  The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
-
-\subsection{Indirect money expansion/contraction}
 
 \paragraph{Process.} Alice creates an ERC20 token called AliceCoin and setups up a trusted oracle for the latest exchange rate of AliceCoins to USD. A smart contract is programmed to apply an intervention when the price of an AliceCoin exceeds \$1.02 USD or dips below \$0.98 USD.  If the price exceeds \$1.02 USD, the contract creates new a set of AliceCoins (the size is determined by some mathematical relationship with how much the price exceeds \$1.02 USD) and transfers them to users waiting in line for them. How do users wait in line? When the price dips under \$0.98 USD, the contract creates new positions at the end of the line and auctions them off to the highest bidder. The payment for a place in line is made in AliceCoins from the bidder to the contract and the contract destroys the payment. The place in line is a transferrable token. An additional transferrable token can be auctioned off which receives AliceCoins when the line is empty.
 
@@ -304,11 +316,6 @@ Conclusion: recap.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Blockchain metrics input; with only internal information}
-% Description of how it works.
-% Justification that bids will never exceed $1
-% Justification that offers will be less than $1
-% Examples:
 
 
 %================Notes on unranked projects:==========================%
@@ -323,25 +330,7 @@ Conclusion: recap.
 % they also have regular audits (unlike Tether)
 % Redeemable
 % Offchain (fiat-backed, crypto-backed) stablecoins are effective as bootstrapping trust and NOT maintaining it scale. HOWEVERM, Onchain (algorithmic) stablecoins are effective at maintaining trust at scale BUT not at bootstrapping it.
-%=================%
-%NuBits:  https://nubits.com/NuWhitepaper.pdf
-% Like Tether, NuBits are pegged to US dollar, with one dollar equivalent to one NuBit.
-% NuBits controls its coin's value by getting shareholders to place buy and sell orders at 1$ for NuBits, rewarding them with revenue from sales of NuBits external cryptocurrency, NuShares.
-%==========
-% NuBits has suffered two big crashes, with extended peg breaking.
-% First :
-% In 2016, NuBits’ peg infamously broke, and it remained broken for 3 months. The initial price drop happened between May 26th and June 20th, 2016. This was about the same time that Bitcoin’s price suddenly spiked, after 6 months of relative stability. It’s plausible that the drop happened because of the following: People who had capital in NuBits saw how Bitcoin was spiking. They wanted to get in on the spike, so they sold their NuBits in large quantities to buy Bitcoin. The NuBits peg was unable to handle the large sell-offs and broke. The price tanked and the peg stayed broken for an extended period. It seems that when the Bitcoin and volatile cryptoassets’ prices spike, investors with capital in stablecoins will want to sell them off to get in on the spike. That causes strong downward pressure on the stablecoin price.
-%==========
-% Second:
-% After NuBits crashed in 2016, its market cap grew 1,500% on Coinmarketcap between the end of 2017 and the beginning of 2018, going from $950k to $14 million. This is strange, considering the NuBits peg had been broken for such a long period in 2016. Their market cap had been stagnant for years, and suddenly it takes off. Was this spike just an accounting error, or had people suddenly decided NuBits was actually amazing?
-% Turns out the increase was real. However, it did not happen in one day. People were buying millions of NuBits in late December. The price of the NuBits stablecoin was notably above its $1 peg between December 20 and December 28, when it peaked close to $1.50(!).
-% What caused the increase? It’s clear when one looks at the Bitcoin price history. The NuBits high price period starts when Bitcoin had its “Christmas crash.” By December 22 there was a strong news narrative about Bitcoin crashing.
-% As long as there was a lot of uncertainty about Bitcoin’s stability, people kept buying large numbers of NuBits. Then, by the New Year, when Bitcoin temporarily normalized again, the large NuBits buy-ins stopped.
-% What happened, then? Well, Bitcoin holders noted the dropping Bitcoin prices and got worried about an imminent crash. Converting BTC to USD is slow and can lead to taxation. So the worried Bitcoin holders converted their crypto assets to stablecoins rather than cash. Some choose NuBits. The very large influx of Bitcoin money doubled the NuBits market cap several times over. The NuBits folks were frantically printing new money and selling it off to the Bitcoin holders. But demand was so great among panicked Bitcoin holders that the new NuBits couldn’t be printed fast enough and their price was driven up high.
-% This shows how when Bitcoin and cryptomarkets crash, capital rapidly flows into stablecoins.
-%==========
-% NuBits sounds very much like Basis: When the price of the Basis token below 1 dollar, they start selling sth called a bond token, and they actually sell this at a price below 1$ with a promise that it can be redeemed for a Basis coin in the future. when the price of Basis token goes above 1$, the Basis algorithm has to increase the money supply, so tehy issue you a 1 to 1 Basis coin for each Basis bond token that you held.
-%=================%
+
 %Ampleforth:
 % It uses a different method of preserving its dollar-to-unit ration, by transferring volatility from unity price to unit count.
 %According to Trail of Bits, a malicious market maker could play with the stability of Ampleforth. the issue is their oracle services use whitelisted sources (just like Dai)
@@ -391,15 +380,14 @@ In this Section, we review various issues with different mechanisms of designing
 	Directly Backed and Redeemable	& \multicolumn{1}{|c|}{\full} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\full}    \\
 	Directly Backed                              	& \multicolumn{1}{|c|}{} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{ } 	& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\full}    \\
 	Indirectly Backed 				& \multicolumn{1}{|c|}{\prt} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\      \hline
-	Market Manipulation                       	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\~} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\
-	Money Supply Adjustments             	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\~} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\
-	Asset Transfer	                                & \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\~} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\
+	Market Manipulation                       	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\
+	Money Supply Adjustments             	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\
+	Asset Transfer	                                & \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{}    \\
 	\hline
 
 	\end{tabular}
-	\caption{Comparative evaluation of mechanisms to design stablecoins. {\full} indicates the properties (columns) are fulfilled by the corresponding mechanisms (rows). {\prt} partially fulfilled. (\textblue{is there any other newly defined sign?})
+	\caption{Comparative evaluation of mechanisms to design stablecoins: {\full} indicates the properties (columns) are fulfilled by the corresponding mechanisms (rows), {\prt} means they are partially fulfilled, {?} indicates a heuristic has been proposed for stability but the conditions under which it will work are not well-established, and $\times$ indicates the property is not applicable. 
 	\label{tab:evframework}}
-
 \end{table}
 %=============%
 %About the evaluation Framework:
