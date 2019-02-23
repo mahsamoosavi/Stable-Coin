@@ -108,7 +108,7 @@ To determine which currency is moving, one might consider a third or forth curre
 \end{figure}
 %========================%
 
-In order to apply this same logic in a visual way, we have created a number of charts like the one provided in Figure~\ref{fig:brexit}. Unlike most exchange rate graphs, these do not use a time axis. Instead each axis is a reference currency. In this case, the price of GBP (plotted value) in USD (x-axis) and EUR (y-axis) forms a coordinate. For the last day of each month, a new coordinate is added and joined with a line from the previous value. This is inspired by similar charts on the website FiveThiryEight for things like kicking distance in football\footnote{``The 52 Best---And Weirdest---Charts We Made In 2016,'' \textit{FiveThirtyEight}, 30 Dec 2016.} and they appear to be called connected scatter plots.
+In order to apply this same logic in a visual way, we have created a number of charts like the one provided in Figure~\ref{fig:brexit}. Unlike most exchange rate graphs, these do not use a time axis. Instead each axis is a reference currency. In this case, the price of GBP (plotted value) in USD (x-axis) and EUR (y-axis) forms a coordinate. For the last day of each month, a new coordinate is added and joined with a line from the previous value. This is inspired by similar charts on the website FiveThiryEight for things like kicking distance in football\footnote{``The 52 Best---And Weirdest---Charts We Made In 2016,'' \textit{FiveThirtyEight}, 30 Dec 2016.} and they have been called connected scatter plots.
 
 Lines in a connected scatter plot can move in any direction. Figure~\ref{fig:legend} shows how we number the directions from 1 (upward or due north) clockwise to 8 (north-west). For each direction, we describe the simplest interpretation of what that price direction means. By simplest, we mean specifically that we keep an explanation that involves a single currency moving rather than an explanation that involves a pair of currencies moving in tandem. For example, in Figure~\ref{fig:brexit}, GBP shows a drastic movement along direction 6 starting at the time period marked Brexit. This means that GBP is losing value against both EUR and USD. The simplest explanation is that the movements are originating from GBP which is consistent with it losing value after Brexit. Later, GBP shows a lot of horizontal movements along the 7/3 line. The simplest explanation for this segment is volatility in USD rather than GBP.
 
@@ -404,41 +404,41 @@ In this Section, we review various issues with different mechanisms of designing
 %
 %\end{table}
 %===============Version2===================%
-\newcolumntype{N}{>{\centering\arraybackslash}m{.45in}}
 
 \begin{table}[htb!]
-	
-	\begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}} lllllllll}
+\centering	
+\begin{tabular}{lllllllll}
 		
-		&
+&
+\headrow{Corrects undervaluation} &
+\headrow{Corrects overvaluation} &
+\headrow{Decentralized issuance } &
+\headrow{Decentralized redemption} &
+\headrow{Decentralized transfer} &
+\headrow{No trusted oracle} &
+\headrow{TBD} \\
 		
-		\headrow{Stable to undervaluation} &
-		\headrow{Stable to overvaluation} &
-		\headrow{No issuance violation} &
-		\headrow{Redemption guaranteed} &
-		\headrow{No intermediaries for transfer} &
-		\headrow{No trusted oracle} &
-		\headrow{No collateral termination} \\
-		
-		\hline
-		
-		\textit{Mechanism}  &    \multicolumn{2}{|c|}{Price Stability} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
-		
-		\hline
-		
-		Directly Backed and Redeemable	  & \multicolumn{1}{|c|}{\full } & \multicolumn{1}{c|}{ \full }   & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Directly Backed                                   & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Indirectly Backed                                 & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\      \hline
-%		Currency Board                                  &  & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Market Manipulation                                    & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Money Supply Adjustments                                              & \multicolumn{1}{|c|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-		Asset Transfer	                                 & \multicolumn{1}{|N|}{ } & \multicolumn{1}{c|}{}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &   \\
-	
-		\hline
+\hline
+
+\textit{Mechanism}  &    \multicolumn{2}{|c|}{Price} &  \multicolumn{4}{c|}{Trust} &  \multicolumn{1}{c}{Risks} \\
+
+\hline
+
+Traditional Digital Cash			& \multicolumn{1}{|c|}{\full} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\full} &   \\
+
+\hline
+
+Directly Backed and Redeemable	& \multicolumn{1}{|c|}{\full} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\full} &   \\
+Directly Backed                              	& \multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{ } & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\full} &   \\
+Indirectly Backed 				& \multicolumn{1}{|c|}{\prt} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{} &   \\      \hline
+Market Manipulation                       	& \multicolumn{1}{|c|}{?} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\~} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{} &   \\
+Money Supply Adjustments             	& \multicolumn{1}{|c|}{?} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\~} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{} &   \\
+Asset Transfer	                                & \multicolumn{1}{|c|}{?} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{\~} & \multicolumn{1}{c|}{\full} & \multicolumn{1}{c|}{} &   \\
+\hline
 		%p{1cm}
 		
-	\end{tabular*}
-	\caption{Evaluation Framework.\label{tab:evframework}}
+\end{tabular}
+\caption{Evaluation Framework.\label{tab:evframework}}
 	
 \end{table}
 %=============%
