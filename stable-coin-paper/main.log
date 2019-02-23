@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 15:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -998,7 +998,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 21.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 (./sections/abstract.tex) (./sections/stablecoin.tex
-<figures/allCurrencies.pdf, id=120, 640.3925pt x 378.41376pt>
+<figures/allCurrencies.pdf, id=116, 640.3925pt x 378.41376pt>
 File: figures/allCurrencies.pdf Graphic file (type pdf)
 
 <use figures/allCurrencies.pdf>
@@ -1011,14 +1011,14 @@ igures/allCurrencies.pdf>]
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gbpBrexit.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/gbpBrexit.pdf, id=183, 803.0pt x 515.9275pt>
+<figures/gbpBrexit.pdf, id=179, 803.0pt x 515.9275pt>
 File: figures/gbpBrexit.pdf Graphic file (type pdf)
 
 <use figures/gbpBrexit.pdf>
 Package pdftex.def Info: figures/gbpBrexit.pdf used on input line 58.
 (pdftex.def)             Requested size: 352.31625pt x 226.37114pt.
 
-<figures/compass.pdf, id=184, 1027.84pt x 770.88pt>
+<figures/compass.pdf, id=180, 1027.84pt x 770.88pt>
 File: figures/compass.pdf Graphic file (type pdf)
  <use figures/compass.pdf>
 Package pdftex.def Info: figures/compass.pdf used on input line 60.
@@ -1026,55 +1026,55 @@ Package pdftex.def Info: figures/compass.pdf used on input line 60.
 
 [3] [4 <./figures/gbpBrexit.pdf> <./figures/compass.pdf>] [5]
 (./setup/table.tex) [6] [7] [8] [9] [10] [11] [12]
-<figures/gasetherusd.pdf, id=347, 401.5pt x 252.945pt>
+<figures/gasetherusd.pdf, id=345, 401.5pt x 252.945pt>
 File: figures/gasetherusd.pdf Graphic file (type pdf)
 
 <use figures/gasetherusd.pdf>
-Package pdftex.def Info: figures/gasetherusd.pdf used on input line 459.
+Package pdftex.def Info: figures/gasetherusd.pdf used on input line 461.
 (pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
 
-<figures/gaselectricityether.pdf, id=348, 401.5pt x 225.84375pt>
+<figures/gaselectricityether.pdf, id=346, 401.5pt x 225.84375pt>
 File: figures/gaselectricityether.pdf Graphic file (type pdf)
 
 <use figures/gaselectricityether.pdf>
-Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 461
+Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 463
 .
 (pdftex.def)             Requested size: 230.18253pt x 129.48007pt.
 
-<figures/eth.pdf, id=351, 401.5pt x 265.99374pt>
+<figures/eth.pdf, id=349, 401.5pt x 265.99374pt>
 File: figures/eth.pdf Graphic file (type pdf)
  <use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf used on input line 492.
+Package pdftex.def Info: figures/eth.pdf used on input line 494.
 (pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
 
-<figures/xrp.pdf, id=352, 401.5pt x 256.96pt>
+<figures/xrp.pdf, id=350, 401.5pt x 256.96pt>
 File: figures/xrp.pdf Graphic file (type pdf)
  <use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf used on input line 494.
+Package pdftex.def Info: figures/xrp.pdf used on input line 496.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/cad.pdf, id=353, 401.5pt x 256.96pt>
+<figures/cad.pdf, id=351, 401.5pt x 256.96pt>
 File: figures/cad.pdf Graphic file (type pdf)
  <use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf used on input line 504.
+Package pdftex.def Info: figures/cad.pdf used on input line 506.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/eur.pdf, id=354, 401.5pt x 256.96pt>
+<figures/eur.pdf, id=352, 401.5pt x 256.96pt>
 File: figures/eur.pdf Graphic file (type pdf)
  <use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf used on input line 506.
+Package pdftex.def Info: figures/eur.pdf used on input line 508.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/tether.pdf, id=355, 401.5pt x 256.96pt>
+<figures/tether.pdf, id=353, 401.5pt x 256.96pt>
 File: figures/tether.pdf Graphic file (type pdf)
  <use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf used on input line 508.
+Package pdftex.def Info: figures/tether.pdf used on input line 510.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/bitusd.pdf, id=356, 401.5pt x 256.96pt>
+<figures/bitusd.pdf, id=354, 401.5pt x 256.96pt>
 File: figures/bitusd.pdf Graphic file (type pdf)
  <use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf used on input line 510.
+Package pdftex.def Info: figures/bitusd.pdf used on input line 512.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
 [13]) (./main.bbl [14 <./figures/gasetherusd.pdf> <./figures/gaselectricityethe
@@ -1124,55 +1124,46 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B1F56FF674A19E6443BADE9ED947745E;1668.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: B78708B415E73F105C0269CACA5E57A7;1774
-(rerunfilecheck)             After:  B1F56FF674A19E6443BADE9ED947745E;1668.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 22601 strings out of 493054
- 431096 string characters out of 6134759
- 548395 words of memory out of 5000000
- 25561 multiletter control sequences out of 15000+600000
+ 22600 strings out of 493054
+ 431078 string characters out of 6134759
+ 547395 words of memory out of 5000000
+ 25560 multiletter control sequences out of 15000+600000
  12528 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,85p,2215b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.5.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (16 pages, 763346 bytes).
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (16 pages, 763696 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
+ 696 PDF objects out of 1000 (max. 8388607)
+ 565 compressed objects within 6 object streams
  111 named destinations out of 1000 (max. 500000)
- 292 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
