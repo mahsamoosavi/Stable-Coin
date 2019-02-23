@@ -191,6 +191,13 @@ Even if the market does not accept the psychology that a coin backed by \$1 USD 
 
 %It seems like the issuance of new Tether, probably unbacked at that time, inflates the BTC price and then this is used as an advantage to back the issued tokens by selling BTC.
 
+% TETHER: Does it artificially inflate BTC price? Do they issue un-backed tokens to reinforce BTC price, then sell BTC to fully back tokens?
+%TETHER ATTACK: On October 15, 2018, tether, the market dominating stablecoin with a market cap of $2 billion, was attacked, breaking tether’s peg to USD, dropping its value by 7 percent but simultaneously driving up bitcoin and the whole crypto market by more than 10 percent.
+%on October 15, 2018; where the price drastically surged from $6,376 at 12.31 UTC to $7,083 at 14.50 UTC. A downturn in price was seen approximately one hour after that to $6,821, before went stable at around $6,400 — $6,600. It was one of the one of the most unexpected fluctuations after a while. The first ‘stable coin’ tether (USDT) which supposedly pegged 1:1 to the U.S. dollar fell up to 15% at the same time as the price of bitcoin fluctuate wildly. The movement caused a loss of trust among traders, causing them to sell tether and invest in other cryptocurrencies. A massive selloff for tether against bitcoin was seen, resulting in a price rise in bitcoin.
+%bitcoin and other crypto assets are perfectly negatively correlated with stablecoins.
+%speculative attack
+
+
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Indirectly-Backed}
@@ -292,154 +299,51 @@ Conclusion: recap.
 % Push volatility around
 % \textblue{Ethereum Alarm Clock problem.}
 
+
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Summary}
+\section{Discussion Points}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+\subsection{Summary of mechanisms}
+
+\input{sections/eval.tex}
 
 We have considered various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide a summary of these results in  Table~\ref{tab:evframework} that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of the advantages and disadvantages of the different mechanisms for creating stablecoins.
 
-
-\begin{table}[t!]
-\centering
-
-	\begin{tabular}{ lllllllll}
-
-&
-\headrow{Corrects undervaluation} &
-\headrow{Corrects overvaluation} &
-\headrow{Decentralized issuance } &
-\headrow{Decentralized redemption} &
-\headrow{Decentralized transfer} &
-\headrow{No trusted oracle} \\
-\hline
-
-	 \multicolumn{1}{c}{\textit{Mechanism} } &    \multicolumn{2}{|c|}{Price} &  \multicolumn{4}{c}{Trust}  \\
-
-	\hline
-
-	Traditional Digital Cash			& \multicolumn{1}{|c|}{\full} & \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c}{\full}   \\
-
-	\hline
-
-	Directly Backed and Redeemable	& \multicolumn{1}{|c|}{\full} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{\full}    \\
-	Directly Backed                              	& \multicolumn{1}{|c|}{} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{ } 	& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{\full}    \\
-	Indirectly Backed 				& \multicolumn{1}{|c|}{\prt} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\      
-%	Market Manipulation                       	& \multicolumn{1}{|c|}{\prt} 		& \multicolumn{1}{c|}{\prt}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\ \hline
-	Money Supply Adjustments             	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
-	Asset Transfer	                                & \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
-	\hline
-
-	\end{tabular}
-	\caption{Comparative evaluation of mechanisms to design stablecoins: {\full} indicates the properties (columns) are fulfilled by the corresponding mechanism (rows) within reason, {\prt} means the property is fulfilled but the fulfillment is bounded, {?} indicates a heuristic has been proposed for stability and the conditions under which it will work are not well-established enough to rank, and $\times$ indicates the property is not applicable.
-	\label{tab:evframework}}
-\end{table}
 %========================%
 
-
-%================Notes on unranked projects:==========================%
-
-%CarbonUSD:
-%t hybridizing both fiat backed and algorithmic stablecoins, (hybrid fiat-algorithmic approach)
-% 1-1 backed with USD
-% unlike purely fiat-backed stablecoin, CarbonUSD's novel meta-token structure enables a seamless future transition to an algorithmic stablecoin model once it reaches sufficient scale as a fully fiat-backed token.
-% meta-token smart contract is a key innovation that enables carbonusd to eventually transition from full fiat-collateralization without distrupting its liquidity network effects on exchanges and while maintaining the highest standards for regulatory compliance.
-% HOW? CarbonUSD is a basket of whitelisted tokens. A token that is whitelisted may be used to create new CarbonUSD, serving as its collateral. Initially, only one token will be whitelisted, a stablecoin that is 1-1 backed with USdollars in a trust account.
-% The first whitelisted token, WT0, is a compliant fiat-backed stablecoin where users can deposit and withdrawal real USD. Governing members of the whitelist can decide when CarbonUSD has enough liquidity to safely switch off from full fiat- collateralization.
-% they also have regular audits (unlike Tether)
-% Redeemable
-% Offchain (fiat-backed, crypto-backed) stablecoins are effective as bootstrapping trust and NOT maintaining it scale. HOWEVERM, Onchain (algorithmic) stablecoins are effective at maintaining trust at scale BUT not at bootstrapping it.
-
-%Ampleforth:
-% It uses a different method of preserving its dollar-to-unit ration, by transferring volatility from unity price to unit count.
-%According to Trail of Bits, a malicious market maker could play with the stability of Ampleforth. the issue is their oracle services use whitelisted sources (just like Dai)
-%=================%
-%Havven
-% is mostly like Dai, they also use over collateralization with 1:5 ratio.
-% They use a similar arbitrage as Dai but with different functionalities by locking up Havven tokens or by reverse burning Nomins by reclaiming Havven tokens  to keep the price stable.
-% One key difference between Nomin and Dai is the collateral for Dai is Eth but for Nomin is the actual Havven token itself.
-%=================%
-%Basecoin (Basis Algorithm)
-% Non-collateralized
-% Controlled by algorithmic supply
-% The price  stability of this coin is managed by Basis protocol which is a central bank algorithm that increases or decreases the supply of teh coin based on supply and demand
-% Still experimental and not yet operational
- % The coin supple is entirely done based on the information given by differnt oracles that make the protocol aware of condition of supply and demand
- % The peg could be anything: fiat, assets, or a basket of assets
-
-%==========================================%
-
-\section{Discussion}
-
-\subsection{Why so many?}
+%\subsection{Why so many?}
 
 %Emphasis on other things, like setting up contracts, governmence, audits, etc.
 % Which blockchain
 
-\subsection{Oracles Everywhere}
+%========================%
 
-\subsection{What Stability looks like}\label{sec:stability}
+\subsection{Oracles everywhere}
+
+A number of stablecoin proposals feature oracles which feed information about the stablecoin's exchange rate onto the blockchain. This is essential for indirectly-backed stablecoins, and incidental to intervention-based coins. This raises an important design question. A stablecoin exists so that a digital (or material) good or service can be effectively priced in, say, USD instead of in ETH. To be clear, it is priced in the stablecoin, which maintains a stable exchange rate with USD. To accomplish this, an oracle provides a reliable exchange rate and somewhat elaborate contracts issue stablecoins with an unusual risk profile (\eg full redemption might not be possible under certain market conditions) that could be difficult for non-experts to understand.
+
+Let us take a step back and think about the larger picture. If we have trustworthy oracles providing reliable exchange rates, is it not a simpler design to just have transacting parties use the oracle directly? Anyone wanting to do business in a stable currency can determine at transaction time how much their good or service, priced in USD, is in ETH and charge the correct amount in ETH (which can then be immediately liquidated for USD, if desired). In summary, the oracle assumption that underlies many stablecoins is itself sufficient to side-step the need for stablecoins. This is applicable to lending as well: loans, interest rates, and repayment amounts can be denominated in USD but paid in ETH using a spot conversion via an oracle.
 
 %========================%
 
-\section {Ethereum Gas: A Stable Coin?}\label{sec:GasInvs}
+\subsection{Visualizing stability}\label{sec:stability}
 
-Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain. \par
-
-Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through. Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
-
-Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? \par
-
-Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data~\cite{wood2014ethereum}. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
-
-
-%=========GasPlots========%
-\begin{figure}[!htb]
-
+\begin{figure}[t]
 	\centering
-	\subfloat[Ethereum gas with respect to ETH and USD.]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gasetherusd}}
+	\subfloat[ETH]{\includegraphics[width=0.45\textwidth]{figures/eth.pdf}\label{fig:eth}}
 	\hfill
-	\subfloat[Ethereum gas with respect to ETH and Electricity.]{\includegraphics[width=0.49\textwidth]{figures/gaselectricityether.pdf}\label{fig:gaselectricityether}}
-	\caption {Ethereum average gas price variations with respect to Ether, USD, and Electricity. As mentioned in the Section~\ref{sec:GasInvs}, two drastic movements in the charts represent specific events happened in certain dates  that blocked the Ethereum network and increased the gas price.}
-	\label{fig:gas}
-
-\end{figure}
-
-%========================%
-%%=========GasPlots========%
-%\begin{figure}[!htb]
-%
-%	\centering
-%	\subfloat[Gas with respect to ETH and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
-%	\hfill
-%	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.52\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
-%	\caption {Ethereum average gas price charts. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes in the plots represent specific events happened in certain dates that blocked the Ethereum network and increased the gas price.}
-%	\label{fig:gas}
-%
-%\end{figure}
-%
-%%========================%
-
-
-
-
-%==========================================%
-
-\section{plots}\label{sec:plots}
-
-%========================%
-\begin{figure}[!htb]
-	\centering
-	\subfloat[ETH]{\includegraphics[width=0.45\textwidth]{figures/eth.pdf}\label{fig:cad}}
-	\hfill
-	\subfloat[XRP]{\includegraphics[width=0.45\textwidth]{figures/xrp.pdf}\label{fig:eur}}
+	\subfloat[XRP]{\includegraphics[width=0.45\textwidth]{figures/xrp.pdf}\label{fig:xrp}}
 	\caption{Volatility in cryptocurrencies}
 	\label{fig:fiatandcrypto}
 \end{figure}
 
+We show a connected scatter plot in Figure~\ref{fig:fiatandcrypto} that shows two cryptocurrencies, ETH and XRP (from Ripple) plotted against two reference currencies: the USD on the x-axis as a currency with government-managed stability, and Bitcoin which has no stability mechanism. Like Bitcoin, neither ETH nor XRP have a stability mechanism. The reader might anticipate one of two things: either (i) they move independently from the reference currencies (diagonal movements along the 2/6 direction) or (ii) they move in a way that is correlated to Bitcoin (3/7 movements) because the market prices all cryptocurrencies like a sector. From Figure~\ref{fig:fiatandcrypto}, it is fairly apparent that (i) is correct. The graph displays XRP's strong price surge in December 2017.
 
-%========================%
 
-\begin{figure}[!htb]
+\begin{figure}[t]
 	\centering
 	\subfloat[CAD]{\includegraphics[width=0.45\textwidth]{figures/cad.pdf}\label{fig:cad}}
 	\hfill
@@ -451,28 +355,40 @@ Ethereum is designed in such a way that it allows users to create a smart contra
 	\caption{Stability in two government-issued fiat currencies (CAD and EUR) and two stablecoin projects (Tether and BitUSD). Note that the x-axis is sized consistently across all four plots, with a \$0.30 USD spread. }
 	\label{fig:all}
 \end{figure}
+
+Next we plot a number of stablecoins in Figure~\ref{fig:all}. The top two plots are governmental currencies, the Canadian dollar and the Euro, which have no formal relationship to the USD but are managed by their central banks using similar policies and have intertwined economies. The bottom two currencies are two stablecoins, Tether (directly backed with USD) and BitUSD (indirectly backed with USD). All four currencies exhibit movements in 1/5 direction which indicate that most price movements are due to Bitcoin's volatility and not the volatility of either the plotted currency or USD. Note also that the spread of the x-axis is consistent across all four plots to allow cross-comparison. Both Tether and BitUSD exhibit some volatility. When Tether breaks from its stability with the USD, it moves in diagonal movements that are not correlated with either Bitcoin or USD. When BitUSD loses its stability relative to the USD, it moves in a horizontal 3/7 direction which is correlated with BTC.
+
 %========================%
 
-%GRAPHS:
-%Both in Figure~\ref{fig:fiatandcrypto} and Figure~\ref{fig:all}, the currencies are plotted against two reference currencies: a cryptocurrency, BTC, on y-axis and a fiat currency, USD, on x-axis to capture the movement in their prices against these two different group of currencies. Figure~\ref{fig:fiatandcrypto} illustrates the volatility in cryptocurrencies. Both ETH and XRP exhibit movements mostly in 4/8 and 2/6 directions. Also, the fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC and USD. Here, the main question to bear in mind is whether ETH and XRP move with BTC. The diagonal movement of the plotted values suggests that they do not move along with BTC.
+\section {Ethereum's Gas: A Stable Coin?}\label{sec:GasInvs}
 
-%Compared to the previous figure, Figure~\ref{fig:all} shows stable currencies. CAD and EUR are chosen to show the behavior in two different currency zones. For the stablecoins, Tether and BitUSD are plotted. Both the government-issued currencies and the stablecoins mostly move along the 1/5 direction, showing that a stable currency moves along a vertical line with mild fluctuations. It is important to note that these fluctuations are accentuated due to the scale. For instance, it seems like Tether is undergoing drastic changes in price. However, the price change is around 10 cents.
+\begin{figure}[t]
+	\centering
+	\subfloat[Ethereum gas with respect to ETH and USD.]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gasetherusd}}
+	\hfill
+	\subfloat[Ethereum gas with respect to ETH and Electricity.]{\includegraphics[width=0.49\textwidth]{figures/gaselectricityether.pdf}\label{fig:gaselectricityether}}
+	\caption {Ethereum average gas price variations with respect to Ether, USD, and Electricity. As mentioned in the Section~\ref{sec:GasInvs}, two drastic movements in the charts represent specific events happened in certain dates  that blocked the Ethereum network and increased the gas price.}
+	\label{fig:gas}
+\end{figure}
 
-% TETHER: Does it artificially inflate BTC price? Do they issue un-backed tokens to reinforce BTC price, then sell BTC to fully back tokens?
-%TETHER ATTACK: On October 15, 2018, tether, the market dominating stablecoin with a market cap of $2 billion, was attacked, breaking tether’s peg to USD, dropping its value by 7 percent but simultaneously driving up bitcoin and the whole crypto market by more than 10 percent.
-%on October 15, 2018; where the price drastically surged from $6,376 at 12.31 UTC to $7,083 at 14.50 UTC. A downturn in price was seen approximately one hour after that to $6,821, before went stable at around $6,400 — $6,600. It was one of the one of the most unexpected fluctuations after a while. The first ‘stable coin’ tether (USDT) which supposedly pegged 1:1 to the U.S. dollar fell up to 15% at the same time as the price of bitcoin fluctuate wildly. The movement caused a loss of trust among traders, causing them to sell tether and invest in other cryptocurrencies. A massive selloff for tether against bitcoin was seen, resulting in a price rise in bitcoin.
-%bitcoin and other crypto assets are perfectly negatively correlated with stablecoins.
-%speculative attack
+Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain.
 
-% When tether breaks its peg it moves diagonally, indpendent of bitcoin. When BitUSD breaks, it moves with Bitcoin.
+Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through. Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
 
-% Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
+Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? \par
 
-\subsection{Consequences for Central Banking}
+Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data~\cite{wood2014ethereum}. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
+
+%========================%
+
+
+%\subsection{Consequences for Central Banking}
 
 %Interest rates: borrower pays her loan + interest
 %Negative interest rate: borrower is paid the interest + she uses the loan
 %Sweden and Japan are examples of countries that use NIR
+
+%========================%
 
 \section{Conclusion}
 
