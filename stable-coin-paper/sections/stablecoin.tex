@@ -33,8 +33,7 @@ There are many blog posts and professional reports providing an overview of stab
 
 %Cite Ross Anderson's paper :"Bitcoin Reducx" :
 % Anderson\etal discuss different negative externalities that are introduced by Bitcoin~\cite{anderson2019bitcoin}. They perform and discuss taint tracking using First-In-First-Out (FIFO) algorithm ( inspired by the Clayton’s case) on some well-established Bitcoin theft scenarios. They also point out that crypto space needs effective regulation in order to function properly and securely, at the end they provide regulatory remarks for the future.
-%Cite RSCoin:
-% RSCoin is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
+
 
 %========================%
 
@@ -148,7 +147,7 @@ The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. 
 
 Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD assuming the market is close to 100\% confident in a frictionless creation and redemption process for of coins. In reality, fees and time delays for moving stablecoins and fiat payments will cause distortions.
 
-\paragraph{Discussion.} Blockchain-based cryptocurrencies are designed to minimize trust in third parties. The trust assumption on stablecoins in this category are close to pre-bockchain currencies like Liberty Reserve and e-gold, who would maintain transaction details and account balances on a private server. Blockchain enables decentralized trust for the transactions, although it also makes them transparent---at least, as transparent as token movements are for the underlying contract and/or blockchain. This includes transactions with other decentralized applications. However the coin creation and redemption processes rely on trust.
+\paragraph{Discussion.} Blockchain-based cryptocurrencies are designed to minimize trust in third parties. The trust assumption on stablecoins in this category are close to pre-blockchain currencies like Liberty Reserve and e-gold, who would maintain transaction details and account balances on a private server. Blockchain enables decentralized trust for the transactions, although it also makes them transparent---at least, as transparent as token movements are for the underlying contract and/or blockchain. This includes transactions with other decentralized applications. However the coin creation and redemption processes rely on trust.
 
 A financial audit is an important step than can establish confidence in the redemption process, which in turns provides stable prices on coins being offered for sale. The auditor becomes a further trusted entity, and ties its reputation to the firm operating the stablecoin. For regulatory reasons, reputable auditing firms will want a clear indication of the coin's legality, as well as confidence in the firm's internal controls over the issuance and redemption of tokens and the custodianship of the backing assets. A sensible template for a stablecoins of this type will consist of three trusted entities: the firm operating the coin, a reputable auditor, and a reputable custodian of the assets.
 
@@ -171,7 +170,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 Conclusion: bids will not exceed \$1 USD but the best ask could vary from \$0 USD to \$1 USD without being immediately traded.
 
-\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
+\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portfolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
 
 %\textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
 
@@ -278,7 +277,7 @@ Conclusion: recap.
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
-% Examples: RSCoin
+% Examples: RSCoin (Danezis\etal ~\cite{danezis2015centrally}) : a cryptocurrency framework proposed by Danezis\etal  The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
 
 \subsection{Indirect money expansion/contraction}
 
@@ -298,7 +297,7 @@ Conclusion: recap.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Blockchian metrics input; with only internal information}
+\subsection{Blockchain metrics input; with only internal information}
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
