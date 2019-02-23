@@ -210,7 +210,7 @@ Tokens then created when the equivalent of \$1 USD in ETH is collected, and rede
 
 Next, consider an ask for 1 AliceCoin less than \$1 USD. If the contract backing the coin has an ETH deposit valued at the bid price or more, Bob will immediately purchase the AliceCoin, redeem it for \$1 USD, and keep the difference as profit. If the contract's deposit is worth less than the bid price, the ask will not necessarily be filled. Therefore AliceCoins will trade for less \$1 USD when contracts have insufficient deposits, as might happen following a fast deterioration in the value of ETH relative to USD.
 
-Conclusion: Indirectly-backed coins will fulfill bids greater than \$1 USD assuming there is a willingness for ETH holders to lock up their ETH. Asks less than \$1 USD for an indirectly-backed coin will also be quickly fulfilled when the exchange rate of ETH is favorable (by any amount) or when it decreases by a moderate amount. Asks less than \$1 USD will persist if ETH decreases substantially.
+Conclusion: Indirectly-backed coins will fulfill bids greater than \$1 USD assuming there is a willingness for ETH holders to lock up their ETH. Asks less than \$1 USD for an indirectly-backed coin will also be quickly fulfilled when the exchange rate of ETH is favourable (by any amount) or when it decreases by a moderate amount. Asks less than \$1 USD will persist if ETH decreases substantially.
 
 \paragraph{Discussion.} In standard finance, brokerages will lend money to investors but are concerned about getting it back in the case that the investors lose their borrowed money. They generally will require a deposit from the investor, monitor the investor's profits and losses, and liquidate the investor's position if their losses approach the deposited amount (or ask the investor to deposit more). This is premised on the assumption that prices do not fall too quickly to react and that the position can be sold quickly at a good price. Therefore it is a precedented premise that an indirectly-backed stablecoin can be redeemed quickly before the deposit is worth less than the coins, however ETH may be far more volatile than other financial instruments.
 
@@ -353,44 +353,7 @@ In this Section, we review various issues with different mechanisms of designing
 	\caption{Comparative evaluation of mechanisms to design stablecoins: {\full} indicates the properties (columns) are fulfilled by the corresponding mechanism (rows) within reason, {\prt} means the property is fulfilled but the fulfillment is bounded, {?} indicates a heuristic has been proposed for stability and the conditions under which it will work are not well-established enough to rank, and $\times$ indicates the property is not applicable.
 	\label{tab:evframework}}
 \end{table}
-%=============%
-%About the evaluation Framework:
-%Stability
-%-----------
-%Is the currency stable to undervaluation?
-%Let's say, I buy a token for 80 cents and sell it for 1 dollar (which means the token is redeemable), then  I profit; but if it is not redeemable than I can't do this.
-%The problem with undervaluation is that I may end up not being able to redeem my token for the underlying currency.
-%
-%Is the currency stable to overvaluation?
-%I buy a token for 1 dollar and if someone wants to buy it for 1.30, I profit.
-%
-%Trust
-%------
-%Does the token requires trust in a central party (for example to keep the required amount in reserves to back the coin)?
-%I need to be able to trust the system that it won't issue many tokens, so that the token deflates eventually.
-% Do I trust you'll issue right number of tokens?
-%About transfer: liberty reserve, egold similar to tether only difference is that Tether is decentralized
-%in order to redeem whom should I trust?
-%Is there an oracle feed for determining the exchange rate?
-%
-%Risk
-%-----
-%For Dai: the underlying cdp can lose its value and the coin cannot be redeemed. About time sensitivity, semi-redeemable (there is a risk of not being able to redeem)
-%========
-%Directly-backed and redeemable:
-%Stability:
-%It is stable to undervaluation, as it is redeemable
-%overvaluation??
-%Trust:
-%Needs to trust a central party for issuance and redemption
-%Directly backed:
-%not stable to undervaluation because it is not redeemable. So, if I buy a token for 80 cents and can't redeem it back for 1 dollar (which is the promised price for the token by the system), then I cannot profit.
-%
-%
-%full circle: the property is achieved
-%empty cell: the property is not achieved
-%empty circle: the property is partially achieved
-%-: not applicable
+%========================%
 
 
 %================Notes on unranked projects:==========================%
@@ -431,7 +394,6 @@ In this Section, we review various issues with different mechanisms of designing
 
 %Emphasis on other things, like setting up contracts, governmence, audits, etc.
 % Which blockchain
-% custodianship
 
 \subsection{Oracles}
 
@@ -443,10 +405,11 @@ In this Section, we review various issues with different mechanisms of designing
 
 Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain. \par
 
-Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through.
-Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
-Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. \par
-Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
+Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through. Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
+
+Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? \par
+
+Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
 
 
 %=========GasPlots========%
@@ -537,7 +500,7 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 
 \section{Conclusion}
 
-In this paper, we provide a survey of active stablecoin projects. Unlike previous research studies performed on this topic, we selectively use the concepts from finance while eliminating the jargons. In addition, rather than focusing on the details of how particular `brands' of stablecoins work, we thoroughly describe the fundamental mechanics and concepts to achieve price stability. Respectively, we show the taxonomy we use to classify stablecoins which represents the techniques to build a stablecoin. Eventually, we explore the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
+In this paper, we provide a survey of active stablecoin projects. Unlike previous research studies performed on this topic, we selectively use the concepts from finance while eliminating the jargons. In addition, rather than focusing on the details of how particular `brands' of stablecoins work, we thoroughly describe the fundamental mechanics and concepts to achieve price stability. Respectively, we show the taxonomy we use to classify stablecoins which represents the techniques to build a stablecoin. Additionally, we evaluate different price stability achieving mechanics based on their fundamental design decisions and trust models. The comparative evaluation framework highlights the advantages and disadvantages of each techniques more precisely. Eventually, we explore the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
 
 
 
