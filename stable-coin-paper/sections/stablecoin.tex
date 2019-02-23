@@ -236,15 +236,15 @@ There are many design decisions to consider when deploying an indirectly-backed 
 \section{Type 2: Intervention-based Stablecoins}
 \label{sec:t2}
 
-The second main class of stablecoin is not defines intervensions not 
+The second main class of stablecoins are not backed by a separate asset, like the USD. Instead they allow for interventions that are meant to increase or decrease the value of the currency.  Deciding when to intervene is the first design decision, and the decision central banks use. A modern central bank might look at how much one bank charges another bank, in interest, for a short-term loan.\footnote{This value is readably available to the central bank, as these loans tend to be arranged daily by a payments system the bank maintains, and influencing this interest rate trickles out over time to other interest rates in the economy, and interest rates are seem as a force for influencing other metrics like the stability of the exchange rate, inflation, imports and exports, and the general health of the economy.} In a cryptocurrency, none of this infrastructure exists: there are no banks, no central banks, no interest rates without lending, and no lending without a stable currency.
 
-% Control system: input (metrics), make a decision, implement the intervention
+Instead, most stablecoin projects use the exchange rate with a fiat currency (\eg the USD) as input to the intervention mechanism. This makes these coins look more similar to coins that are backed by USD (in Section~\ref{sec:t2}). This is good for cross-comparison in a paper like this, but the reader should bear in mind that any economic metric could be used instead with these coins, including ones not based on an exchange rate. Second, we remark that central banks in the past have used exchange rates to decide when to intervene, but this approach was not found inadequate for stablising an economy. Alternatives to the exchange rate might include interest rates (if lending markets emerge), purchasing power, or measurements on the amount, volume, and/or velocity of transactions. The challenge for these is ensuring the metrics cannot be easily manipulated in the blockchain environment, where single entities can created unlimited identities and wash transactions, trades, loans, \etc with themselves.  
+
+The second design decision is what intervention to make. All the stablecoin projects in this category make the same fundamental intervention: the supply of the stablecoin is increased to curb the value of the currency, and the supply is contracted to boost its value. The final design decision is how exactly the supply is manipulated. Some coins very directly influence the money supply, while other coins try to turn currency into assets to contract, and turn assets into currency to expand. This is obviously inspired by how modern central banks influence interest rates.\footnote{Central banks will purchase assets, like government bonds, from banks at competitive prices to increase the bank's cash and lower the interest rate at which the bank will lend. Conversely, they will sell assets to the banks at competitive prices to remove cash from the banks, causing a greater demand for cash loans, which tends to increase inter-bank interest rates.} The final design decision is deciding who participates in these mechanisms. 
+
+In this section, we refer to the proposed stability mechanisms as \textit{heuristics} because their validity can only be shown within models that may or may not actually model human (and trader) behaviour. In fact, this is the best case scenario. Most of these heuristics do not even have models or simulations showing the conditions under which they work, however there is interesting future work to be done here. 
+
 % We cannot prove that something here works or not. It is all heuristics. We know this because central banks themselves operate on heuristics that change every couple of decades. Even if we cannot say something does work, we can point out a few suggestions that it will not work. Game-able inputs, inputs/interventions that have not worked for currency.
-
-% Why USD targets?
-
-% Currency expansion / contraction
-
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
@@ -265,8 +265,8 @@ Conclusion: recap.
 
 % Examples: RSCoin (Danezis\etal ~\cite{danezis2015centrally}) : a cryptocurrency framework proposed by Danezis\etal  The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
 
-
 % Zero bound -> actually maybe not: Miner gets Reward + Fees, reward can be negative if fees are larger and difference is removed from circulation. -> pushing volatility into fees
+
 % Ambleforth -> just take currency from holders.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
@@ -296,7 +296,7 @@ Conclusion: recap.
 
 \subsection{Summary}
 
-In this Section, we review various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide an evaluation framework based on 6 criteria (see Table~\ref{tab:evframework}) that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of advantages and disadvantages of different mechanisms for creating stablecoins.
+We have considered various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide a summary of these results in  Table~\ref{tab:evframework} that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of the advantages and disadvantages of the different mechanisms for creating stablecoins.
 
 
 \begin{table}[t!]
@@ -375,7 +375,7 @@ In this Section, we review various issues with different mechanisms of designing
 %Emphasis on other things, like setting up contracts, governmence, audits, etc.
 % Which blockchain
 
-\subsection{Oracles}
+\subsection{Oracles Everywhere}
 
 \subsection{What Stability looks like}\label{sec:stability}
 
@@ -467,10 +467,6 @@ Ethereum is designed in such a way that it allows users to create a smart contra
 % When tether breaks its peg it moves diagonally, indpendent of bitcoin. When BitUSD breaks, it moves with Bitcoin.
 
 % Talk about Ripple surge in  December 2017 {https://www.forbes.com/sites/jessedamiani/2017/12/22/5-reasons-why-the-ripple-price-is-going-up-so-fast-will-the-xrp-surge-continue/#58337c997cbb}  reasons: altcoins gained importance, Rippe's strategy on partnership and customer acquisition, Ripple's partnersips in Asia, rumors that Coinbase will support xrp, "it's speed (4-second transactions) and low fees also make it appealing to general consumers"
-
-
-
-\subsection{Oracles Everywhere!}
 
 \subsection{Consequences for Central Banking}
 
