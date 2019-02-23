@@ -220,36 +220,16 @@ There are many design decisions to consider when deploying an indirectly-backed 
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Market manipulation}
-\label{sec:board}
-
-If a currency is not backed, directly or indirectly, by an asset, such as the USD, anyone that wishes to drive a coin toward stability can intervene in the market. However this intervention can become very costly if traders correctly believe the fundamental value of the coin is different. The approach is very simple: the manipulator starts with a large amount of both assets (\eg a stablecoin and USD) and will place large volume bids and asks near their target price (\eg \$1). If they do not run out of either asset, the bid-ask spread will always be smaller than or equal to where they placed their bids/asks. They might strive to simply dampen volatility, instead of eliminating it, by allowing the spread to crawl upward or downward as the market dictates. Note that the manipulator can be completely independent from the firm behind the stablecoin, which distinguishes it from the approaches in the previous section.
-
-\paragraph{Process.} Alice decides that BobCoins should be worth \$1 USD. She purchases a large quantity of BobCoins and a large quantity of USD. If traders bid more than \$1.02 for a BobCoin, she executes the trade. If traders ask less than \$0.98 USD for a BobCoin, she executes the trade. Bob notices the value that Alice's is providing to BobCoin and rewards her with shares of the firm that generates BobCoins.
-
-\paragraph{Price Stability.} Alice will execute any bid over \$1.02 and any offer under \$0.98, therefore maintaining a bid-ask spread of $\tuple{\$0.98, \$1.02}$ at most. If her USD reserves deplete, she can no longer fulfill offers under \$0.98 and the price of BobCoins can lose value. Similarly, if she depletes her reserves of BobCoins, she can no longer fulfill bids over \$1.02 and the price could rise above \$1. 
-
-\paragraph{Discussion.} Oracles
-
-%=================%
-%NuBits:  https://nubits.com/NuWhitepaper.pdf
-% Like Tether, NuBits are pegged to US dollar, with one dollar equivalent to one NuBit.
-% NuBits controls its coin's value by getting shareholders to place buy and sell orders at 1$ for NuBits, rewarding them with revenue from sales of NuBits external cryptocurrency, NuShares.
-%==========
-% NuBits has suffered two big crashes, with extended peg breaking.
-% First :
-% In 2016, NuBits’ peg infamously broke, and it remained broken for 3 months. The initial price drop happened between May 26th and June 20th, 2016. This was about the same time that Bitcoin’s price suddenly spiked, after 6 months of relative stability. It’s plausible that the drop happened because of the following: People who had capital in NuBits saw how Bitcoin was spiking. They wanted to get in on the spike, so they sold their NuBits in large quantities to buy Bitcoin. The NuBits peg was unable to handle the large sell-offs and broke. The price tanked and the peg stayed broken for an extended period. It seems that when the Bitcoin and volatile cryptoassets’ prices spike, investors with capital in stablecoins will want to sell them off to get in on the spike. That causes strong downward pressure on the stablecoin price.
-%==========
-% Second:
-% After NuBits crashed in 2016, its market cap grew 1,500% on Coinmarketcap between the end of 2017 and the beginning of 2018, going from $950k to $14 million. This is strange, considering the NuBits peg had been broken for such a long period in 2016. Their market cap had been stagnant for years, and suddenly it takes off. Was this spike just an accounting error, or had people suddenly decided NuBits was actually amazing?
-% Turns out the increase was real. However, it did not happen in one day. People were buying millions of NuBits in late December. The price of the NuBits stablecoin was notably above its $1 peg between December 20 and December 28, when it peaked close to $1.50(!).
-% What caused the increase? It’s clear when one looks at the Bitcoin price history. The NuBits high price period starts when Bitcoin had its “Christmas crash.” By December 22 there was a strong news narrative about Bitcoin crashing.
-% As long as there was a lot of uncertainty about Bitcoin’s stability, people kept buying large numbers of NuBits. Then, by the New Year, when Bitcoin temporarily normalized again, the large NuBits buy-ins stopped.
-% What happened, then? Well, Bitcoin holders noted the dropping Bitcoin prices and got worried about an imminent crash. Converting BTC to USD is slow and can lead to taxation. So the worried Bitcoin holders converted their crypto assets to stablecoins rather than cash. Some choose NuBits. The very large influx of Bitcoin money doubled the NuBits market cap several times over. The NuBits folks were frantically printing new money and selling it off to the Bitcoin holders. But demand was so great among panicked Bitcoin holders that the new NuBits couldn’t be printed fast enough and their price was driven up high.
-% This shows how when Bitcoin and cryptomarkets crash, capital rapidly flows into stablecoins.
-%==========
-% NuBits sounds very much like Basis: When the price of the Basis token below 1 dollar, they start selling sth called a bond token, and they actually sell this at a price below 1$ with a promise that it can be redeemed for a Basis coin in the future. when the price of Basis token goes above 1$, the Basis algorithm has to increase the money supply, so tehy issue you a 1 to 1 Basis coin for each Basis bond token that you held.
-%=================%
+%\subsection{Market manipulation}
+%\label{sec:board}
+%
+%If a currency is not backed, directly or indirectly, by an asset, such as the USD, anyone that wishes to drive a coin toward stability can intervene in the market. However this intervention can become very costly if traders correctly believe the fundamental value of the coin is different. The approach is very simple: the manipulator starts with a large amount of both assets (\eg a stablecoin and USD) and will place large volume bids and asks near their target price (\eg \$1). If they do not run out of either asset, the bid-ask spread will always be smaller than or equal to where they placed their bids/asks. They might strive to simply dampen volatility, instead of eliminating it, by allowing the spread to crawl upward or downward as the market dictates. Note that the manipulator can be completely independent from the firm behind the stablecoin, which distinguishes it from the approaches in the previous section.
+%
+%\paragraph{Process.} Alice decides that BobCoins should be worth \$1 USD. She purchases a large quantity of BobCoins and a large quantity of USD. If traders bid more than \$1.02 for a BobCoin, she executes the trade. If traders ask less than \$0.98 USD for a BobCoin, she executes the trade. Bob notices the value that Alice's is providing to BobCoin and rewards her with shares of the firm that generates BobCoins.
+%
+%\paragraph{Price Stability.} Alice will execute any bid over \$1.02 and any offer under \$0.98, therefore maintaining a bid-ask spread of $\tuple{\$0.98, \$1.02}$ at most. If her USD reserves deplete, she can no longer fulfill offers under \$0.98 and the price of BobCoins can lose value. Similarly, if she depletes her reserves of BobCoins, she can no longer fulfill bids over \$1.02 and the price could rise above \$1. 
+%
+%\paragraph{Discussion.} \textblue{This is quite ridiculous.}
 
 
 
@@ -344,7 +324,7 @@ In this Section, we review various issues with different mechanisms of designing
 	Directly Backed and Redeemable	& \multicolumn{1}{|c|}{\full} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{\full}    \\
 	Directly Backed                              	& \multicolumn{1}{|c|}{} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{ } 	& \multicolumn{1}{c|}{} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{\full}    \\
 	Indirectly Backed 				& \multicolumn{1}{|c|}{\prt} 	& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\      
-	Market Manipulation                       	& \multicolumn{1}{|c|}{\prt} 		& \multicolumn{1}{c|}{\prt}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\ \hline
+%	Market Manipulation                       	& \multicolumn{1}{|c|}{\prt} 		& \multicolumn{1}{c|}{\prt}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\ \hline
 	Money Supply Adjustments             	& \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
 	Asset Transfer	                                & \multicolumn{1}{|c|}{?} 		& \multicolumn{1}{c|}{\full}   & \multicolumn{1}{c|}{\full} 	& \multicolumn{1}{c|}{$\times$} 		& \multicolumn{1}{c|}{\full} & \multicolumn{1}{c}{}    \\
 	\hline
