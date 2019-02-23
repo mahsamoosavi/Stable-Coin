@@ -20,7 +20,6 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 \paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe how these concepts work, as opposed to enumerating the intricate details of how a particular `brand' of stablecoins works today---details that could change tomorrow. We do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates.
 
 % Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin
-% Talk about the crypto custodianship somewhere in the paper
 
 
 %========================%
@@ -33,8 +32,7 @@ There are many blog posts and professional reports providing an overview of stab
 
 %Cite Ross Anderson's paper :"Bitcoin Reducx" :
 % Anderson\etal discuss different negative externalities that are introduced by Bitcoin~\cite{anderson2019bitcoin}. They perform and discuss taint tracking using First-In-First-Out (FIFO) algorithm ( inspired by the Clayton’s case) on some well-established Bitcoin theft scenarios. They also point out that crypto space needs effective regulation in order to function properly and securely, at the end they provide regulatory remarks for the future.
-%Cite RSCoin:
-% RSCoin is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
+
 
 %========================%
 
@@ -148,7 +146,7 @@ The idea of tokenizing USD (or EUR or gold) for use on the internet is not new. 
 
 Conclusion: the bid-ask spread will saddle \$1 USD and trades should execute close to \$1 USD assuming the market is close to 100\% confident in a frictionless creation and redemption process for of coins. In reality, fees and time delays for moving stablecoins and fiat payments will cause distortions.
 
-\paragraph{Discussion.} Blockchain-based cryptocurrencies are designed to minimize trust in third parties. The trust assumption on stablecoins in this category are close to pre-bockchain currencies like Liberty Reserve and e-gold, who would maintain transaction details and account balances on a private server. Blockchain enables decentralized trust for the transactions, although it also makes them transparent---at least, as transparent as token movements are for the underlying contract and/or blockchain. This includes transactions with other decentralized applications. However the coin creation and redemption processes rely on trust.
+\paragraph{Discussion.} Blockchain-based cryptocurrencies are designed to minimize trust in third parties. The trust assumption on stablecoins in this category are close to pre-blockchain currencies like Liberty Reserve and e-gold, who would maintain transaction details and account balances on a private server. Blockchain enables decentralized trust for the transactions, although it also makes them transparent---at least, as transparent as token movements are for the underlying contract and/or blockchain. This includes transactions with other decentralized applications. However the coin creation and redemption processes rely on trust.
 
 A financial audit is an important step than can establish confidence in the redemption process, which in turns provides stable prices on coins being offered for sale. The auditor becomes a further trusted entity, and ties its reputation to the firm operating the stablecoin. For regulatory reasons, reputable auditing firms will want a clear indication of the coin's legality, as well as confidence in the firm's internal controls over the issuance and redemption of tokens and the custodianship of the backing assets. A sensible template for a stablecoins of this type will consist of three trusted entities: the firm operating the coin, a reputable auditor, and a reputable custodian of the assets.
 
@@ -171,7 +169,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 Conclusion: bids will not exceed \$1 USD but the best ask could vary from \$0 USD to \$1 USD without being immediately traded.
 
-\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
+\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portfolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
 
 %\textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
 
@@ -286,7 +284,7 @@ Conclusion: recap.
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
-% Examples: RSCoin
+% Examples: RSCoin (Danezis\etal ~\cite{danezis2015centrally}) : a cryptocurrency framework proposed by Danezis\etal  The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
 
 \subsection{Indirect money expansion/contraction}
 
@@ -306,7 +304,7 @@ Conclusion: recap.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Blockchian metrics input; with only internal information}
+\subsection{Blockchain metrics input; with only internal information}
 % Description of how it works.
 % Justification that bids will never exceed $1
 % Justification that offers will be less than $1
@@ -394,7 +392,7 @@ In this Section, we review various issues with different mechanisms of designing
 		%p{1cm}
 
 	\end{tabular}
-	\caption{Comparative evaluation of mechanisms to design stablecoins. {\full} indicates the properties (columns) are fulfilled the corresponding mechanisms (rows). {\prt} partially fulfilled. (\textblue{is there any other newly defined sign?})
+	\caption{Comparative evaluation of mechanisms to design stablecoins. {\full} indicates the properties (columns) are fulfilled by the corresponding mechanisms (rows). {\prt} partially fulfilled. (\textblue{is there any other newly defined sign?})
 	\label{tab:evframework}}
 
 \end{table}
@@ -443,6 +441,7 @@ In this Section, we review various issues with different mechanisms of designing
 
 %Emphasis on other things, like setting up contracts, governmence, audits, etc.
 % Which blockchain
+% custodianship
 
 \subsection{Oracles}
 
@@ -450,14 +449,14 @@ In this Section, we review various issues with different mechanisms of designing
 
 %========================%
 
-\subsection{Ethereum Gas: A Stable Currency?}\label{sec:GasInvs}
+\section {Ethereum Gas: A Stable Coin?}\label{sec:GasInvs}
 
 Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain. \par
 
 Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through.
 Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
 Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. \par
-Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and biding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
+Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
 
 
 %=========GasPlots========%
@@ -466,7 +465,7 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 	\centering
 	\subfloat[Ethereum gas with respect to ETH and USD.]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gasetherusd}}
 	\hfill
-	\subfloat[Ethereum gas with respect to ETH and Electricity.]{\includegraphics[width=0.50\textwidth]{figures/gaselectricityether.pdf}\label{fig:gaselectricityether}}
+	\subfloat[Ethereum gas with respect to ETH and Electricity.]{\includegraphics[width=0.49\textwidth]{figures/gaselectricityether.pdf}\label{fig:gaselectricityether}}
 	\caption {Ethereum average gas price variations with respect to Ether, USD, and Electricity. As mentioned in the Section~\ref{sec:GasInvs}, two drastic movements in the charts represent specific events happened in certain dates  that blocked the Ethereum network and increased the gas price.}
 	\label{fig:gas}
 
@@ -521,15 +520,10 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 \end{figure}
 %========================%
 
-
-
 %GRAPHS:
-% Figure4: ETH,XRP - (BTC and USD): mostly diagonal movements. Do they move with BTC or not? Shows how cryptocurrencies are volatile. They don't move with BTC
-%Figure5: In Figure~\ref{fig:fiatandcrypto}, CAD and EUR are plotted against two reference currencies: BTC on y-axis and USD on x-axis to illustrate what type of movements government issued fiat currencies exhibit. Similarly, two stablecoins, Tether and BitUSD, are also plotted against the same reference currencies.
-%CAD, EUR,Tether, BitUsd: We expect stablecoins to be close to a vertical line. CAD and EUR are central bank issued "stablecoins" and compared to Tether and BitUsd (crypto stableoins), we can conclude that they are also fairly stable. (same x-axis range!)The graph seems like Tether's having drastic fluctuations. Note that the price change is around 10 cents. The change is accentuated due to the scale.
+%Both in Figure~\ref{fig:fiatandcrypto} and Figure~\ref{fig:all}, the currencies are plotted against two reference currencies: a cryptocurrency, BTC, on y-axis and a fiat currency, USD, on x-axis to capture the movement in their prices against these two different group of currencies. Figure~\ref{fig:fiatandcrypto} illustrates the volatility in cryptocurrencies. Both ETH and XRP exhibit movements mostly in 4/8 and 2/6 directions. Also, the fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC and USD. Here, the main question to bear in mind is whether ETH and XRP move with BTC. The diagonal movement of the plotted values suggests that they do not move along with BTC.
 
-%Look at the following paragraph, previous text!
-%EUR plot in Figure~\ref{fig:eur} tends to have more movements in the directions 1-5 and 3-7 suggesting that while the value of EUR stays the same according to one axis, it changes according to the other.EUR-USD exchange rate is going under less change, whereas BTC-EUR rate is subject to high volatility.ETH plot in Figure~\ref{fig:eth} illustrates more volatility against BTC and USD, as there are horizontal, vertical and diagonal changes. The fact that the points are spread in a large range of values indicates drastic changes in ETH price with respect to BTC and USD.
+%Compared to the previous figure, Figure~\ref{fig:all} shows stable currencies. CAD and EUR are chosen to show the behavior in two different currency zones. For the stablecoins, Tether and BitUSD are plotted. Both the government-issued currencies and the stablecoins mostly move along the 1/5 direction, showing that a stable currency moves along a vertical line with mild fluctuations. It is important to note that these fluctuations are accentuated due to the scale. For instance, it seems like Tether is undergoing drastic changes in price. However, the price change is around 10 cents.
 
 % TETHER: Does it artificially inflate BTC price? Do they issue un-backed tokens to reinforce BTC price, then sell BTC to fully back tokens?
 %TETHER ATTACK: On October 15, 2018, tether, the market dominating stablecoin with a market cap of $2 billion, was attacked, breaking tether’s peg to USD, dropping its value by 7 percent but simultaneously driving up bitcoin and the whole crypto market by more than 10 percent.
@@ -547,9 +541,9 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 
 \subsection{Consequences for Central Banking}
 
-\section{Conclusion and Discussion}
+\section{Conclusion}
 
-In this paper, we provide a survey of active stablecoin projects. Unlike previous research studies performed on this topic, we selectively use the concepts from finance while eliminating the jargons. In addition, rather than focusing on the details of how particular `brands' of stablecoins work, we thoroughly describe the fundamental mechanics and concepts to achieve price stability. Respectively, we show the taxonomy we use to classify stablecoins which represents the techniques to build a stablecoin. Eventually, we explored the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
+In this paper, we provide a survey of active stablecoin projects. Unlike previous research studies performed on this topic, we selectively use the concepts from finance while eliminating the jargons. In addition, rather than focusing on the details of how particular `brands' of stablecoins work, we thoroughly describe the fundamental mechanics and concepts to achieve price stability. Respectively, we show the taxonomy we use to classify stablecoins which represents the techniques to build a stablecoin. Eventually, we explore the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
 
 
 
