@@ -15,9 +15,9 @@ Many early cryptocurrency proposals designed secure digital representations of g
 
 From the inception of exchanges for buying and selling BTC for USD in 2010 to the time of writing, the exchange rate of BTC with the USD has been marked by extremely volatile with large fluctuations in its value that are atypical of a government-managed currency. Figure~\ref{fig:btcandfiat} illustrates this volatility by plotting the exchange rate of BTC (with the USD) alongside the same exchange rate for three economic zones---Europe, UK, and Canada---which all appear relatively stable. Note that Figure~\ref{fig:btcandfiat} deliberately includes the UK's referendum on exiting the EU (`Brexit') in June 2016, which was followed by a `sharp decline' and `volatility' in GBP's exchange rate.\footnote{Descriptions from the following \textit{BBC} articles: ``The markets facing trading turmoil'' (27 Jun 2016) and ``How does Brexit affect the pound?'' (15 Jan 2019).}  Relative to BTC however, this `severe swing' looks like a mild pinch of GBP's exchange rate with EUR in Figure~\ref{fig:btcandfiat}.
 
-In response to Bitcoin's extreme volatility, a flood of proposals have been made for alternative designs that would offer a more stable exchange rate (called `stablecoins') between the newly proposed stablecoin and a government-issued currency like the USD. Broadly, the proposals can be split into two categories: ones that essentially create a digital representation of a currency that can be transacted like a cryptocurrency, and ones that propose separate currencies with some mechanism for stability and/or intervention built into the design.
+In response to Bitcoin's extreme volatility, a flood of proposals have been made for alternative designs that would offer a more stable exchange rate (called `stablecoins') between such a proposed stablecoin and a government-issued currency like the USD. Broadly, the proposals can be split into two categories: ones that essentially create a digital representation of a fiat currency that can be transacted like a cryptocurrency, and ones that propose separate currencies with some mechanism for stability and/or intervention built into the design.
 
-\paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is actually useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe these concepts rather than enumerating the intricate details of how particular `brands' of stablecoins work---details that could change tomorrow. That said, we do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates.
+\paragraph{Contributions.} This paper is essentially a survey of work on stablecoins but we aim at making a number of subtle research contributions to ensure this survey is useful to the reader. First and foremost, we are very selective in the concepts from finance we bring into the survey and explain each from first principles, while attempting to minimize or eliminate jargon. Next we distill stablecoin proposals down to a set of fundamental primitives and describe how these concepts work, as opposed to enumerating the intricate details of how a particular `brand' of stablecoins works today---details that could change tomorrow. We do provide, as the reader probably expects, a chart mapping existing stablecoin brands into our categorization. Additionally, we also consider the question and potential for the stability of index-cryptocurrencies (namely gas which is used in Ethereum), which are very pertinent to a discussion of stablecoins, yet not typically addressed. Last, we offer a novel visualization style for exchange rates we have not seen before used for exchange rates.
 
 % Most of the coins are mostly focusing on the supporting infrastructure, maybe we also have to talk about the supporting infrastructure of the stablecoin
 % Talk about the crypto custodianship somewhere in the paper
@@ -27,16 +27,14 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 \section{Related Work}
 \label{sec:lit}
 
-The idea of stable cryptocurrencies was introduced by Ametrano introduces in 2016~\cite{ametrano2016hayek}. In this paper, he presented \textit{Hayek Money}-- a new monetary policy of elastic non-discretionary supply to achieve a price stable cryptocurrency. In 2017, Robert Sams introduced a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note}.
-Currently there are many blog posts and professional reports on the overview of stablecoins. According to these resources, there are three main approaches to achieve a stablecoin: (i) fiat-collateralized, (ii) crypto-collateralized and (iii) non-collateralized, also known as algorithmic,\eg~\cite{hackernoon, comprehensiveOverview, linkedin}. Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report by a crypto company called Blockchain \footnote{https://www.blockchain.com} provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{reportone}. They extend this research in a newly published report that reflects a significant update on their previous work~\cite{reporttwo}. In one of its blog posts, Consensys \footnote{https://consensys.net} describes stablecoins as "crypto-assets that maintain a stable value against a target price (\eg USD)" and classify them according to the three main categories~\cite{StateofS96:online}. In~\cite{cryptoinsider}, the authors use a slightly different categorization to group 13 stabelcoin projects into two broad categories: (i) centralized-- which itself contains subcategories based on the type of the asset the coins are backed by (\eg fiat and gold), (ii) decentralized. Unlike other resources that define stablecoins within three categories (fiat-collateralized, crypto-collateralized, and non-collateralized). \par
-In this paper, we provide a survey on the current active stablecoin projects. In contrast with other resources, we remove jargons and economic terminologies when describing the fundamental concept of creating a stablecoin. Thus, users will not  bear different levels of burden in interpreting jargons and finance terminologies. In addition, we take a deep look into the Ethereum gas in the context of stablecoins.
+An early idea for a stable cryptocurrency was introduced by Ametrano in 2016~\cite{ametrano2016hayek} which tweaked supply (see Section~\ref{sec:stability}) In 2017, Robert Sams introduced a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note} (see Section~\ref{sec:stability}). These informed the designs of stablecoins we discuss in the paper. 
+
+There are many blog posts and professional reports providing an overview of stablecoins with essentially the same goal as this paper. Most have the same general categorization: (i) fiat-collateralized, (ii) crypto-collateralized and (iii) non-collateralized, also known as algorithmic,\eg~\cite{hackernoon, comprehensiveOverview, linkedin}. Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report by crypto company Blockchain provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{reportone}. They extend this research in a newly published report that reflects a significant update on their previous work~\cite{reporttwo}. In one of its blog posts, Consensys \footnote{https://consensys.net} describes stablecoins as ``crypto-assets that maintain a stable value against a target price (\eg USD)'' and classify them according to three main categories~\cite{StateofS96:online}. In~\cite{cryptoinsider}, the authors use a slightly different categorization to group 13 stabelcoin projects into two broad categories: (i) centralized-- which itself contains subcategories based on the type of the asset the coins are backed by (\eg fiat and gold), (ii) decentralized. Our survey can be differentiated from the related work in its focus: we strive for clear descriptions of the mechanics of stability within a coin, without glossing over details or substituting financial jargon for explanation. We focus less on any infrastructure around a stablecoin deployment (\eg it's code, interactions between contracts, governance, \etc).
 
 %Cite Ross Anderson's paper :"Bitcoin Reducx" :
 % Anderson\etal discuss different negative externalities that are introduced by Bitcoin~\cite{anderson2019bitcoin}. They perform and discuss taint tracking using First-In-First-Out (FIFO) algorithm ( inspired by the Clayton’s case) on some well-established Bitcoin theft scenarios. They also point out that crypto space needs effective regulation in order to function properly and securely, at the end they provide regulatory remarks for the future.
 %Cite RSCoin:
 % RSCoin is a cryptocurrency framework proposed by Danezis\etal ~\cite{danezis2015centrally}. The supply of money is regulated by a central bank. However, the system depends on a group of distributed authorities to provide transparency and audibility.
-
-
 
 %========================%
 
@@ -95,7 +93,6 @@ Stocks, which represent ownership in a firm, and thus a stake in the firm's equi
 
 To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
 
-%If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
 
 
 \subsection{Stability and Volatility}
@@ -139,6 +136,7 @@ To find stablecoin projects, we performed a number of search queries on \textit{
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Directly-Backed and Redeemable.}
+\label{sec:redeem}
 
 The first direction one might take in producing a stablecoin is the creation of a digital representation (or tokenization) of a fiat currency, commodity, or portfolio of assets. Tokens are designed to have the same price (and thus volatility) as the underlying portfolio. To further enable an equivalence of value (we will explain how shortly), the digital token can be redeemed on-demand for the underlying asset. For simplicity, we will consider a cryptocurrency designed to digitally represent the USD.
 
@@ -163,34 +161,48 @@ A variety of firms and projects providing stablecoins in this category exist. Wh
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Directly-Backed.}
+\label{sec:tether}
 
-Next we consider stablecoins that are directly-backed---exactly as in the previous section but they do not offer a redemption process for the coin's underlying assets. Redemption is logistically complicated. Consider a USD-backed dollar---it is usually easier for a firm to receive USD payments from users than it is for it to send payments back, and sending payments opens up new exposure to regulation. Instead, it pledges to keep the backing assets in trust for the duration of the circulating coins. We will shortly explain what impact there is on the coin if it does not provide redemption---obviously, if redemption were inconsequential, than no one would offer it as it increases costs and complexity. For our ranking in Table~\ref{tab:stablecoins}, if we could not find a clear assertion of redemption, we listed the project under this category.
+Next we consider stablecoins that are directly-backed---exactly as in the previous section but they do not offer a redemption process for the coin's underlying assets. Redemption is logistically complicated. Consider a USD-backed dollar---it is usually easier for a firm to receive USD payments from users than it is for it to send payments back, and sending payments opens up new exposure to regulation. Instead the firms behind these coins  pledge to keep the backing assets in trust for the duration of the circulating coins. We will shortly explain what impact there is on the exchange rate if it does not provide redemption---obviously, if redemption was inconsequential than no one would offer it as it increases costs and complexity. For our ranking in Table~\ref{tab:stablecoins}, if we could not find a clear assertion of redemption, we listed the project under this category.
 
 \paragraph{Process.} As previously, Alice is a trusted third party and uses Ethereum to generate a contract to issue 1000 AliceCoins as ERC20 tokens. She asks \$1 USD for 1 AliceCoin and promises to deposit the payment. If Bob buys 10 AliceCoins for \$10 USD, Alice deposits the \$10 USD in a bank account. Any time Alice receives a request for AliceCoins but does not have any left to sell, she creates new ones and deposits the payment. Alice frequently obtains bank statements showing that her account holds USD equivalent to the number of coins in circulation (the number of AliceCoins can be checked anytime on Ethereum).
 
-\paragraph{Price Stability.}
+\paragraph{Price Stability.} Again, assume all transactions are free and frictionless. Bids will not exceed \$1 for the same reason the coins in the previous section (Section~\ref{sec:redeem}). Consider an ask for 1 AliceCoin for less than \$1 USD. Bob will only immediately purchase this AliceCoin for its asking price if he has some assurance it will return to \$1 USD. Because it is not redeemable, the only mechanism that will push the value up is psychological: others in the market will ask \$1 USD because they believe it is valued at \$ USD because it is backed by \$1 USD.
 
-\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in the previous section. A simplification of a trust fund, such as a closed end fund, is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will be more moderately priced ($\pm 5\%$) to the value of its assets. \textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
+Conclusion: bids will not exceed \$1 USD but the best ask could vary from \$0 USD to \$1 USD without being immediately traded.
 
-% Description of how it works. Deposit in bank, etc.
-% Regular audits are needed to ensure that the stablecoin is indeed fully collateralized
-% Justification that bids will never exceed $1:
-% Justification that offers will be less than $1
-% Examples: Tether
-% Remarks:
+\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$). 
 
-% Discussion: ETF are 1\%, CEF are 5\% but CEF still gives you equity in the SPV holding the funds, redemption is point of regulation
-% Tether attacks
-% imparted attacks
+%\textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
+
+A coin that has no redemption, direct or indirect, will not clearly trade for a particular amount. An informal argument in favour of it being stable is that minting the coin is costly---it requires obtaining USD to hold in reserve. This feature serves an important function, albeit a different one. This bounds the firm from over-issuing tokens, which would cause the coin to loose value, however it does not ensure asks do not drop below \$1 USD.
+
+The difference between the market value of a newly minted coin and the cost to produce it is called seignorage. A backed stablecoin has no seignorage: it sells for \$1 USD and requires holding \$1 USD to `produce' it. There appears to be a folk theorem that if minting asset X requires consuming asset Y, asset X will take on the value of asset Y (otherwise, who would produce X?). In reality, resources can be consumed to produce something of no value---that value is simply lost. A canvas that has been applied with acrylic paint might cost \$100 USD in raw materials; its value could none-the-less be much less than \$100 USD\ldots or much more.
+
+%If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
+
+Even if the market does not accept the psychology that a coin backed by \$1 USD should be priced at \$1 USD, it is still important to establish that the coin is actually backed as a guard against over-issuance. As in the previous section, holders of the coin will want assurance that the custodianship of the backing asset is sound. A financial audit by reputable firm is one method to provide this assurance. \textblue{Recap: Is bitcoin really un-tethered?}.
+
+%Tether attacks.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Indirectly-Backed.}
-% Description of how it works.
-% Justification that bids will never exceed $1
-% Justification that offers will be less than $1
-% Examples:
-% Remarks: Oracles
+\label{sec:dai}
+
+The previous two sections describe coins that require a trusted firm to hold assets. The difference between these coins and traditional digital currencies like Liberty Reserve and e-gold is marginal---it is only that transactions are now decentralized. By contrasts, coins in this class prioritize decentralization and offer stablecoins that are issued, transacted, and redeemed in an autonomous fashion, while still being redeemable for USD. However these requirements are in conflict as there are no USD on a blockchain like Ethereum. 
+
+Coins in this section try to find a middle-ground. They introduce a single trusted element: an exchange rate of the underlying (non-stable) cryptocurrency on the blockchain (\eg ether) and a stable fiat currency (\eg USD). Since the blockchain has no inherent knowledge of the USD/ETH exchange rate, the rate is stored and periodically updated by a trusted entity called an oracle (the consensus of multiple oracles can also be referenced), and such a service could have useful applications beyond stablecoins. 
+
+Tokens then created when the equivalent of \$1 USD in ETH is collected, and redeemable for the equivalent of \$1 USD in ETH. Thus the amount of redeemable ETH can grow or shrink as the exchange rate with the USD changes. If it shrinks, the contract that issued the coin holds the difference and returns it to creator of the coin. If it grows, it is problematic because the contract cannot hold an unbounded amount of ETH. Thus the contract collects more than \$1 USD (say \$1.5 USD) when it mints a new coin to provide a buffer against falling ETH prices.
+
+\paragraph{Process.} Alice sets up a DApp that can hold ETH and issue ERC20 tokens called AliceCoins. The DApp determines how much ETH is equivalent to \$1.5 USD using the current exchange rate, provided to the DApp by a trusted oracle. Alice deposits this amount into the DApp and it issues 1 AliceCoin to Alice. Bob purchases 1 AliceCoin from Alice for \$1 USD. Bob transfer the AliceCoin to Carol and Carol returns to the DApp to redeem the coin. The DApp determines how much amount ETH is equivalent to \$1 USD (call this the strike price). If the deposit of ETH in the DApp is greater than the strike price, the DApp pays Carol the strike price and it returns the remainder of the deposited ETH to Alice. If the strike price is less than or equal to the deposit, Carol is paid the entire deposit and Alice is paid nothing (she does however have \$1 USD from Bob).
+
+\paragraph{Price Stability.} Justification that bids will never exceed \$1. Justification that offers will be less than \$1.
+
+Conclusion: recap.
+
+\paragraph{Discussion.} Oracles everywhere
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
@@ -208,11 +220,17 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Market manipulation}
+\label{sec:board}
 
-% Description of how it works.
-% Justification that bids will never exceed $1
-% Justification that offers will be less than $1
-% Examples:
+Intro
+
+\paragraph{Process.} Description of how it works.
+
+\paragraph{Price Stability.} Justification that bids will never exceed \$1. Justification that offers will be less than \$1.
+
+Conclusion: recap.
+
+\paragraph{Discussion.} Oracles
 
 %=================%
 %IMF's papers on currency boards(https://www.imf.org/external/pubs/ft/pdp/2000/pdp01.pdf):one of the elements in a currency board: fixed exchange rate pegged to a foreign anchor
@@ -230,16 +248,23 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Discretionary input; money expansion/contraction output}
+\subsection{Money Supply Adjustments}
+\label{sec:elastic}
 
-% Description of how it works.
-% Justification that bids will never exceed $1
-% Justification that offers will be less than $1
-% Examples: RSCoin
+Intro
+
+\paragraph{Process.} Description of how it works.
+
+\paragraph{Price Stability.} Justification that bids will never exceed \$1. Justification that offers will be less than \$1.
+
+Conclusion: recap.
+
+\paragraph{Discussion.} Oracles
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\subsection{Money expansion/contraction}
+\subsection{Asset Transfer}
+\label{sec:basecoin}
 
 %Intro
 
@@ -334,21 +359,11 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 In this Section, we review various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide an evaluation framework based on x (\textblue{to be filled}) criteria (see Table~\ref{tab:evframework}) that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of advantages and disadvantages of different mechanisms for creating stablecoins.
 
 
-\begin{table}[htb!]
+\begin{table}[t!]
 
 	\begin{tabular}{ lllllllll}
 
 		&
-
-		\headrow{Stable to undervaluation} &
-		\headrow{Stable to overvaluation} &
-		\headrow{No issuance violation} &
-		\headrow{Redemption guaranteed} &
-		\headrow{No intermediaries for transfer} &
-		\headrow{No trusted oracle} &
-		\headrow{No collateral termination} \\
-
-		\hline
 
 &
 \headrow{Corrects undervaluation} &
@@ -420,6 +435,8 @@ In this Section, we review various issues with different mechanisms of designing
 
 %Emphasis on other things, like setting up contracts, governmence, audits, etc.
 % Which blockchain
+
+\subsection{Oracles}
 
 \subsection{What Stability looks like}\label{sec:stability}
 
