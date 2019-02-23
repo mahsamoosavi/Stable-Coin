@@ -27,7 +27,7 @@ In response to Bitcoin's extreme volatility, a flood of proposals have been made
 \section{Related Work}
 \label{sec:lit}
 
-An early idea for a stable cryptocurrency was introduced by Ametrano in 2016~\cite{ametrano2016hayek} which tweaked supply (see Section~\ref{sec:stability}) In 2017, Robert Sams introduced a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note} (see Section~\ref{sec:stability}). These informed the designs of stablecoins we discuss in the paper. 
+An early idea for a stable cryptocurrency was introduced by Ametrano in 2016~\cite{ametrano2016hayek} which tweaked supply (see Section~\ref{sec:stability}) In 2017, Robert Sams introduced a new dual token system that uses two coins to achieve price stability: (i) a stablecoin (\eg fiat currency) and (ii) a volatile coin (\eg equity shares)~\cite{sams2015note} (see Section~\ref{sec:stability}). These informed the designs of stablecoins we discuss in the paper.
 
 There are many blog posts and professional reports providing an overview of stablecoins with essentially the same goal as this paper. Most have the same general categorization: (i) fiat-collateralized, (ii) crypto-collateralized and (iii) non-collateralized, also known as algorithmic,\eg~\cite{hackernoon, comprehensiveOverview, linkedin}. Buterin, in one of the earliest blog posts on stable cryptocurrencies, discussed different techniques to measure cryptocurrencies' price and how to make adjustments in the supply to achieve a fixed price accordingly~\cite{TheSearc7:online}. Bitmex looked at the mechanics of the distributed stablecoins while focusing on two case studies (\ie BitShares (BitUSD) and MakerDAO (Dai))~\cite{bitmex}. Another report by crypto company Blockchain provides an extensive classification of 57 stablecoins together with discussions on issues related to governance (\eg legal structure, investors, partners \etc)~\cite{reportone}. They extend this research in a newly published report that reflects a significant update on their previous work~\cite{reporttwo}. In one of its blog posts, Consensys \footnote{https://consensys.net} describes stablecoins as ``crypto-assets that maintain a stable value against a target price (\eg USD)'' and classify them according to three main categories~\cite{StateofS96:online}. In~\cite{cryptoinsider}, the authors use a slightly different categorization to group 13 stabelcoin projects into two broad categories: (i) centralized-- which itself contains subcategories based on the type of the asset the coins are backed by (\eg fiat and gold), (ii) decentralized. Our survey can be differentiated from the related work in its focus: we strive for clear descriptions of the mechanics of stability within a coin, without glossing over details or substituting financial jargon for explanation. We focus less on any infrastructure around a stablecoin deployment (\eg it's code, interactions between contracts, governance, \etc).
 
@@ -105,9 +105,9 @@ There is controversy over whether Bitcoin, and other cryptocurrencies, can even 
 
 Most introductory finance textbooks classify currencies according to a set of three core properties it should fulfill for its users. It should operate as a medium of exchange, which roughly means that Alice will accept the currency from Bob because she is confident Carol will later accept it from her. Given the existence of exchange services, Bitcoin is generally considered an acceptable medium of exchange (albeit with some friction). Next, a currency is useful when it serves as the unit of account for pricing other assets. Bitcoin is almost never used as a unit of account and if goods are sold for Bitcoin, it is often priced in, say, USD with a short-lived (\eg 2 minute) spot conversion of the price to BTC for Bitcoin purchases. Finally, currencies should represent a stable store of value. Alice will not accept a currency that depreciates quickly in value from Bob because even though Carol might accept it, what she can obtain from Carol in exchange will be worth less. Less intuitively, currencies that appreciate quickly in value are equally problematic. Alice might gladly accept it from Bob but Bob is unlikely to part with it, and so currencies like this tend to be hoarded. They also hamper lending (see next section).
 
-The goal of a stablecoin is to add the store of value feature to cryptocurrencies, which are already a somewhat adequate medium of exchange. Further, if the currency is stable, it may become a more prominent to use it as a unit of account. Thus stablecoins are intended to make cryptocurrencies more currency-like.
+The goal of a stablecoin is to add the store of value feature to cryptocurrencies, which are already a somewhat adequate medium of exchange. Further, if the currency is stable, it may become a more prominent to use it as a unit of account. Thus stablecoins are intended to make cryptocurrencies more currency-like.~\cite{rogoff2017curse}
 
- %Cite Curse of Cash
+ %Cite Curse of Cash: Is its cited in the right place? (above parag)
 
 \subsection{Lending}
 
@@ -156,7 +156,7 @@ If the firm operates in a jurisdiction with modern securities laws, the issuance
 
 % According to the recent blogpost in  (https://www.coindesk.com/winklevoss-crypto-gemini-gusd-stablecoin-redemption) Gemini has closed the account of some users and in some cases do not let redemption (some KYC issues) +     Paxos has has the same issue, although they let the user redeem their assets and then closed their account (https://www.ccn.com/paxos-standard-hassling-ethereum-traders-trying-to-redeem-stablecoin-pax-for-dollars)
 
-A variety of firms and projects providing stablecoins in this category exist. Why so many? The differentiation between coins is along a few parameters: (1) the type of asset that can be redeemed for the coin: USD, EUR, gold, \etc; (2) the underlying blockchain (\eg Bitcoin, Ethereum, \etc) and the low-level technical design (updatable contracts, governance, \etc) \textblue{cite that talk on gemini from michael's company's conference}; and (3) the degree of regulatory compliance: paving forward in a highly regulated environment to bootstrap trust, or seeking under-regulated environments to move to market quickly and avoid government surveillance for participants.
+A variety of firms and projects providing stablecoins in this category exist. Why so many? The differentiation between coins is along a few parameters: (1) the type of asset that can be redeemed for the coin: USD, EUR, gold, \etc; (2) the underlying blockchain (\eg Bitcoin, Ethereum, \etc) and the low-level technical design (updatable contracts, governance, \etc) ~\cite{geminido29:online}; and (3) the degree of regulatory compliance: paving forward in a highly regulated environment to bootstrap trust, or seeking under-regulated environments to move to market quickly and avoid government surveillance for participants.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
@@ -171,7 +171,7 @@ Next we consider stablecoins that are directly-backed---exactly as in the previo
 
 Conclusion: bids will not exceed \$1 USD but the best ask could vary from \$0 USD to \$1 USD without being immediately traded.
 
-\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$). 
+\paragraph{Discussion.} The idea of tokenizing assets and re-selling them in a useful format (\eg as a portofolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
 
 %\textblue{Need to distinguish out three cases: directly redeemable, redeemable for ownership, not redeemable at all}.
 
@@ -190,9 +190,9 @@ Even if the market does not accept the psychology that a coin backed by \$1 USD 
 \subsection{Indirectly-Backed.}
 \label{sec:dai}
 
-The previous two sections describe coins that require a trusted firm to hold assets. The difference between these coins and traditional digital currencies like Liberty Reserve and e-gold is marginal---it is only that transactions are now decentralized. By contrasts, coins in this class prioritize decentralization and offer stablecoins that are issued, transacted, and redeemed in an autonomous fashion, while still being redeemable for USD. However these requirements are in conflict as there are no USD on a blockchain like Ethereum. 
+The previous two sections describe coins that require a trusted firm to hold assets. The difference between these coins and traditional digital currencies like Liberty Reserve and e-gold is marginal---it is only that transactions are now decentralized. By contrasts, coins in this class prioritize decentralization and offer stablecoins that are issued, transacted, and redeemed in an autonomous fashion, while still being redeemable for USD. However these requirements are in conflict as there are no USD on a blockchain like Ethereum.
 
-Coins in this section try to find a middle-ground. They introduce a single trusted element: an exchange rate of the underlying (non-stable) cryptocurrency on the blockchain (\eg ether) and a stable fiat currency (\eg USD). Since the blockchain has no inherent knowledge of the USD/ETH exchange rate, the rate is stored and periodically updated by a trusted entity called an oracle (the consensus of multiple oracles can also be referenced), and such a service could have useful applications beyond stablecoins. 
+Coins in this section try to find a middle-ground. They introduce a single trusted element: an exchange rate of the underlying (non-stable) cryptocurrency on the blockchain (\eg ether) and a stable fiat currency (\eg USD). Since the blockchain has no inherent knowledge of the USD/ETH exchange rate, the rate is stored and periodically updated by a trusted entity called an oracle (the consensus of multiple oracles can also be referenced), and such a service could have useful applications beyond stablecoins.
 
 Tokens then created when the equivalent of \$1 USD in ETH is collected, and redeemable for the equivalent of \$1 USD in ETH. Thus the amount of redeemable ETH can grow or shrink as the exchange rate with the USD changes. If it shrinks, the contract that issued the coin holds the difference and returns it to creator of the coin. If it grows, it is problematic because the contract cannot hold an unbounded amount of ETH. Thus the contract collects more than \$1 USD (say \$1.5 USD) when it mints a new coin to provide a buffer against falling ETH prices.
 
@@ -359,11 +359,10 @@ Conclusion: recap.
 In this Section, we review various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide an evaluation framework based on x (\textblue{to be filled}) criteria (see Table~\ref{tab:evframework}) that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of advantages and disadvantages of different mechanisms for creating stablecoins.
 
 
-\begin{table}[t!]
+\begin{table}[htb!]
+\centering
 
 	\begin{tabular}{ lllllllll}
-
-		&
 
 &
 \headrow{Corrects undervaluation} &
@@ -387,7 +386,8 @@ In this Section, we review various issues with different mechanisms of designing
 		%p{1cm}
 
 	\end{tabular}
-	\caption{Evaluation Framework.\label{tab:evframework}}
+	\caption{Comparative evaluation of mechanisms to design stablecoins. {\full} indicates the properties (columns) are fulfilled the corresponding mechanisms (rows). {\prt} partially fulfilled. (\textblue{is there any other newly defined sign?})
+	\label{tab:evframework}}
 
 \end{table}
 %=============%
@@ -444,43 +444,40 @@ In this Section, we review various issues with different mechanisms of designing
 
 \subsection{Ethereum Gas: A Stable Currency?}\label{sec:GasInvs}
 
-Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain.
-Figure~\ref{fig:gas} shows the monthly average gas price changes with respect to Ether, USD, and Electricity from January 2017 to November 2018. As it can be seen in these plots, gas is relatively stable in price. The two spikes in this Figure correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through.
+Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain. \par
+
+Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through.
 Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
 Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. \par
 Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and biding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
 
 
-
-
-
-%which one to keep?
 %=========GasPlots========%
 \begin{figure}[!htb]
 
 	\centering
-	\subfloat[Gas with respect to ETH and USD]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gas3}}
+	\subfloat[Ethereum gas with respect to ETH and USD.]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gasetherusd}}
 	\hfill
-	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.50\textwidth]{figures/gaselectricityether.pdf}\label{fig:gas4}}
-	\caption {NEW ONES}
+	\subfloat[Ethereum gas with respect to ETH and Electricity.]{\includegraphics[width=0.50\textwidth]{figures/gaselectricityether.pdf}\label{fig:gaselectricityether}}
+	\caption {Ethereum average gas price variations with respect to Ether, USD, and Electricity. As mentioned in the Section~\ref{sec:GasInvs}, two drastic movements in the charts represent specific events happened in certain dates  that blocked the Ethereum network and increased the gas price.}
 	\label{fig:gas}
 
 \end{figure}
 
 %========================%
-%=========GasPlots========%
-\begin{figure}[!htb]
-
-	\centering
-	\subfloat[Gas with respect to ETH and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
-	\hfill
-	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.52\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
-	\caption {Ethereum average gas price charts. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes in the plots represent specific events happened in certain dates that blocked the Ethereum network and increased the gas price.}
-	\label{fig:gas}
-
-\end{figure}
-
-%========================%
+%%=========GasPlots========%
+%\begin{figure}[!htb]
+%
+%	\centering
+%	\subfloat[Gas with respect to ETH and USD]{\includegraphics[width=0.45\textwidth]{figures/gas.pdf}\label{fig:gas1}}
+%	\hfill
+%	\subfloat[Gas with respect to ETH and Electricity price]{\includegraphics[width=0.52\textwidth]{figures/gasElectricity.pdf}\label{fig:gas2}}
+%	\caption {Ethereum average gas price charts. As mentioned in the Section~\ref{sec:GasInvs}, the two spikes in the plots represent specific events happened in certain dates that blocked the Ethereum network and increased the gas price.}
+%	\label{fig:gas}
+%
+%\end{figure}
+%
+%%========================%
 
 
 
@@ -541,6 +538,19 @@ Operations that store data on Ethereum blockchain modify its global state hence 
 \subsection{Consequences for Central Banking}
 
 \section{Conclusion and Discussion}
-In this paper, we analyze the current state of stablecoins with the various options that have been so far proposed to achieve price stability. We also discuss various issues that stablecoins would address. According to the charts represented in the paper, gas is relatively stable in price, while Bitcoin and Ether show volatile behaviour. The reason could be the fact that how users interact with the interface to set the gas price when sending transactions to the Ethereum. By analyzing the properties of gas together with the existing methods to create stablecoin, we can later propose what properties stablecoins should attain.
+
+In this paper, we provide a survey of active stablecoin projects. Unlike previous research studies performed on this topic, we selectively use the concepts from finance while eliminating the jargons. In addition, rather than focusing on the details of how particular `brands' of stablecoins work, we thoroughly describe the fundamental mechanics and concepts to achieve price stability. Respectively, we show the taxonomy we use to classify stablecoins which represents the techniques to build a stablecoin. Eventually, we explored the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
+
+
+
+
+
+
+
+
+
+
+
+
 
 %==========================================%
