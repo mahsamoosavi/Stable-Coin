@@ -50,7 +50,7 @@ To understand why this is relevant to stablecoins, consider an example. Say a st
 
 Consider that several hours after writing the previous section, 1 BTC is now priced at \$3566.56 USD. In one sense, the price of BTC decreased by \$32.20. However it is exactly equivalent to say the price of \$1 USD increased by 0.002 mBTC. This raises a natural question: did BTC decrease in price or did USD increase in price? With an exchange rate, it is impossible to tell. We only know that the price of BTC and USD became closer in price over this short period of time.
 
-To determine which currency is moving, one might consider a third or forth currencies to try and triangulate if BTC is moving in price, or USD is moving in price, or both. For example, in Figure~\ref{fig:btcandfiat} it certainly appears that BTC is the currency that is moving because the rest of the currencies are stable relative to each other. The only alternative is that USD, EUR, GBP, and CAD are volatile currencies that move together as a cluster relative to the stability of BTC. But it is much simpler to conclude that BTC is moving.
+To determine which currency is moving, one might consider a third or forth currencies (\cf US Dollar Index) to try and triangulate if BTC is moving in price, or USD is moving in price, or both. For example, in Figure~\ref{fig:btcandfiat} it certainly appears that BTC is the currency that is moving because the rest of the currencies are stable relative to each other. The only alternative is that USD, EUR, GBP, and CAD are volatile currencies that move together as a cluster relative to the stability of BTC. But it is much simpler to conclude that BTC is moving.
 
 %========================%
 \begin{figure}[t]
@@ -238,7 +238,7 @@ There are many design decisions to consider when deploying an indirectly-backed 
 %
 %\paragraph{Discussion.} \textblue{This is quite ridiculous.}
 
-
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \section{Type 2: Intervention-based Stablecoins}
 \label{sec:t2}
@@ -276,7 +276,14 @@ Conclusion: recap.
 
 % Ambleforth -> just take currency from holders.
 
+
+
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+% Jeremy: Putting summary chart here so the spacing is better
+\input{sections/eval.tex}
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
+
+
 
 \subsection{Asset Transfer}
 \label{sec:basecoin}
@@ -307,8 +314,6 @@ Conclusion: recap.
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
 \subsection{Summary of mechanisms}
-
-\input{sections/eval.tex}
 
 We have considered various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}) . We provide a summary of these results in  Table~\ref{tab:evframework} that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of the advantages and disadvantages of the different mechanisms for creating stablecoins.
 
@@ -360,24 +365,26 @@ Next we plot a number of stablecoins in Figure~\ref{fig:all}. The top two plots 
 
 %========================%
 
-\section {Ethereum's Gas: A Stable Coin?}\label{sec:GasInvs}
+\section {Ethereum's gas: a stable `coin'?}\label{sec:GasInvs}
 
 \begin{figure}[t]
 	\centering
 	\subfloat[Ethereum gas with respect to ETH and USD.]{\includegraphics[width=0.45\textwidth]{figures/gasetherusd.pdf}\label{fig:gasetherusd}}
 	\hfill
 	\subfloat[Ethereum gas with respect to ETH and Electricity.]{\includegraphics[width=0.49\textwidth]{figures/gaselectricityether.pdf}\label{fig:gaselectricityether}}
-	\caption {Ethereum average gas price variations with respect to Ether, USD, and Electricity. As mentioned in the Section~\ref{sec:GasInvs}, two drastic movements in the charts represent specific events happened in certain dates  that blocked the Ethereum network and increased the gas price.}
+	\caption {Ethereum average gas price variations with respect to Ether, USD, and Electricity. As mentioned in the Section~\ref{sec:GasInvs}, the drastic movement in the chart represents a specific event. Data is from January 2017 to November 2018.}
 	\label{fig:gas}
 \end{figure}
 
-Ethereum transactions contain a number of operations with which there are small amount of Ether called \textit{gas} associated.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Fixed cost operations prevent Ethereum transaction fees from being exposed to the volatility of Ether. So even though the price of Ether changes, the amount of Ether corresponding to a unit of gas decreases and users pay the same price for the transactions they send on the Ethereum blockchain.
+DApps on Ethereum execute arbitrary code provided by the owner of the DApp. While this code might be written in a high-level programming language like Solidity, it is compiled to a compact representation (called `bytecode') that is a set of low-level instructions to the environment (Ethereum virtual machine or EVM). Because different functions will have different complexities, the user running the function pays in proportion to the number of instructions, the complexity of the instructions, and the storage requirements. This means that each operation has a fixed price. Naturally the operations might be priced in ETH, since this the on-board currency, however this would cause the price of computation to be as volatile as Ether itself. Instead, Ethereum uses a pseudo-currency called gas.\footnote{http://ethdocs.org/en/latest/contracts-and-transactions/account-types-gas-and-transactions.html\#what-is-gas} Each instructions has a fixed price in gas. A user who wants to run a function will offer to pay a certain amount of ETH per unit of gas to the miner who finalizes the function. Miners will generally choose which functions to run first based on how much ETH/gas they offer, and they might ignore functions that offer too little ETH/gas. We describe gas as a pseudo-currency because it cannot be directly stored or transacted, however we will revisit this below.
 
-Charts in Figure~\ref{fig:gas} show the monthly average gas price variations with respect to Ether, USD, and Electricity from January 2017 to November 2018. The axis in these charts represent a currency. The monthly average price of  Ethereum gas (plotted value) in USD (x-axis) and in ETH (y-axis) forms a coordinate. For each month, a new coordinate is added and joined with a line from the previous value, see Figure~\ref{fig:gasetherusd}. Alternatively, in Figure~\ref{fig:gaselectricityether} the monthly average price of  Ethereum gas (plotted value) in ELECT (x-axis) and in ETH (y-axis) coordinates were collected and plotted. As explained in Figure~\ref{fig:legend} and based on  gas vertical movements in these charts, it can be inferred that the price of gas is relatively stable with respect to Ether, USD, and Electricity. The only two drastic movements along direction 2 in gas price correspond to (i) when the world's first Ethereum game, Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and increased the traffic on the network. (ii) When the China-based crypto exchange, FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was first launched (July 2018) and required a lot of on-chain voting. Both these events have clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through. Note that in these dates, gas price has not been changed against any of Ether, USD, and Electricity. Alternatively, the price of gas itself changed without being related to any other external factors. Thus, it can be inferred that gas is relatively stable in price while it is not backed by anything. \par
+Gas was envisioned as maintaining a relatively stable value where a particular function should cost the same amount (say in USD) over time, even as the price of ETH changes dramatically (as seen in Figure~\ref{fig:eth}). We first investigate how successful gas has been with the charts in Figure~\ref{fig:gas}, which show the monthly average gas price variations with respect to USD and ETH in the first chart; and electricity and USD in the other. Electricity data is from a US-based average index which does not necessarily reflect the costs of mining on a global blockchain, like Ethereum, but if gas were correlated to electricity generally, it should be evident from a representative energy index. Gas demonstrates diagonal movements along the 2/6 direction meaning that it actually moves independently of ETH, USD and electricity. There is no strong evidence of stability. This could be due to a few factors. First, the graph is dominated by one large spike and one moderate spike which correspond to (i) when the popuar Ethereum game Cryptokitties \footnote{Cryptokitties website \url{https://www.cryptokitties.co/}} was first launched (January 2018) and, (ii) when the China-based crypto exchange FCOIN \footnote{Fcoin website \url{https://www.fcoin.com}} was launched (July 2018) and required a lot of on-chain voting. Both these events  clogged up the Ethereum network and increased the gas price as users had to pay more gas for their transactions to go through. Second, it is probably true that users do not have a strong mental model of how much gas to stake for a computation and rely heavily on the user interface for prompts about gas.
 
-Although gas is a stable unit, it is not a currency so users cannot trade it. But we can we can turn gas  into a non-redeemable currency that is directly backed by Ether. In this case, users can burn gas by sending transactions to a smart contract and receive digital tokens in return. But how to turn Ethereum gas into a redeemable digital token? \par
+Although gas might become a stable unit of account, it is not a store of value because it cannot be held or transacted. However gas could be used to back a stablecoin, much like the coins in the directly-backed category. Amazingly, such a gas-backed coin could even be made redeemable.Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data~\cite{wood2014ethereum}. 
 
-Ethereum is designed in such a way that it allows users to create a smart contract which stockpile and swaps gas with other tokens. Operations that store data on Ethereum blockchain modify its global state hence they are very expensive. So in order to incentivize users to free up space on the blockchain, Ethereum refunds the amount of gas users paid if they delete their smart contracts or stored data~\cite{wood2014ethereum}. \textbf{GasToken} is the first smart contract that tokenized gas on the Ethereum network.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
+GasToken is the directly-backed and redeemable tokenization of gas.\footnote{https://github.com/projectchicago/gastoken} When the gas price is low (\eg 1 Gwei), users can store some data on the GasToken contract and create GasTokens, as mentioned, such transaction costs a lot of gas but it does not cost much in ETH or USD as the gas is cheap. Later when the gas price increases (\eg 50 Gwei), users can spend their GasTokens to pay for transactions. Thus, users benefit from paying for less gas and bidding for higher \textsf{gasPrice} in their transactions. 
+
+%However, GasToken can also simplify the front-running attacks for arbitrage on the Ethereum network. In order to profit, arbitrage bots need to be fast traders and they constantly send transactions to the Ethereum network. So lower transaction fees (provided by GasTokens) simplifies the front-running attacks for them~\cite{Eskandari2019SoKTD}.
 
 %========================%
 
