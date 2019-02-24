@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  23 FEB 2019 19:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1095,7 +1095,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 
-Underfull \hbox (badness 1112) in paragraph at lines 103--109
+Underfull \hbox (badness 1112) in paragraph at lines 97--103
 []\OT1/cmr/m/n/10 C. P. TEAM.  Com-pre-hen-sive overview of sta-ble-coins.  []$
 \OT1/cmtt/m/n/10 https : / / medium . com / cp -[] processor /
  []
@@ -1111,10 +1111,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 22597 strings out of 493054
- 431037 string characters out of 6134759
+ 22595 strings out of 493054
+ 430994 string characters out of 6134759
  547395 words of memory out of 5000000
- 25558 multiletter control sequences out of 15000+600000
+ 25557 multiletter control sequences out of 15000+600000
  12528 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,85p,2215b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1138,10 +1138,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (17 pages, 770988 bytes).
+Output written on main.pdf (17 pages, 770231 bytes).
 PDF statistics:
- 683 PDF objects out of 1000 (max. 8388607)
- 551 compressed objects within 6 object streams
- 107 named destinations out of 1000 (max. 500000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 550 compressed objects within 6 object streams
+ 106 named destinations out of 1000 (max. 500000)
  244 words of extra memory for PDF output out of 10000 (max. 10000000)
 
