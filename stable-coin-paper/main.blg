@@ -3,6 +3,8 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: bib/stablecoinRef.bib
+Warning--I didn't find a database entry for "danezis2015centrally"
+Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in geminido29:online
 Warning--empty journal in ametrano2016hayek
 Warning--empty journal in reportone
@@ -11,7 +13,7 @@ Warning--empty journal in okoyetoward
 Warning--empty year in okoyetoward
 You've used 17 entries,
             2118 wiz_defined-function locations,
-            581 strings with 6076 characters,
+            582 strings with 6096 characters,
 and the built_in function-call counts, 3710 in all, are:
 = -- 357
 > -- 119
@@ -50,4 +52,4 @@ warning$ -- 6
 while$ -- 35
 width$ -- 19
 write$ -- 178
-(There were 6 warnings)
+(There were 8 warnings)
