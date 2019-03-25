@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  25 FEB 2019 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.14)  25 MAR 2019 14:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1013,62 +1013,67 @@ Package pdftex.def Info: figures/compass.pdf used on input line 60.
 (pdftex.def)             Requested size: 117.43875pt x 88.07884pt.
 
 [3] [4 <./figures/gbpBrexit.pdf> <./figures/compass.pdf>] [5]
-(./setup/table.tex) [6] [7] [8] [9] [10] [11]
+(./setup/table.tex)
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 144--158
+ [][] 
+ []
+
+[6] [7] [8] [9] [10] [11]
 
 LaTeX Warning: Citation `danezis2015centrally' on page 12 undefined on input li
-ne 265.
+ne 291.
 
 [12] (./sections/eval.tex) [13]
-<figures/eth.pdf, id=321, 401.5pt x 265.99374pt>
+<figures/eth.pdf, id=327, 401.5pt x 265.99374pt>
 File: figures/eth.pdf Graphic file (type pdf)
  <use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf used on input line 326.
+Package pdftex.def Info: figures/eth.pdf used on input line 352.
 (pdftex.def)             Requested size: 211.38832pt x 140.04655pt.
 
-<figures/xrp.pdf, id=322, 401.5pt x 256.96pt>
+<figures/xrp.pdf, id=328, 401.5pt x 256.96pt>
 File: figures/xrp.pdf Graphic file (type pdf)
  <use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf used on input line 328.
+Package pdftex.def Info: figures/xrp.pdf used on input line 354.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
  [14]
-<figures/cad.pdf, id=331, 401.5pt x 256.96pt>
+<figures/cad.pdf, id=338, 401.5pt x 256.96pt>
 File: figures/cad.pdf Graphic file (type pdf)
  <use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf used on input line 338.
+Package pdftex.def Info: figures/cad.pdf used on input line 364.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/eur.pdf, id=332, 401.5pt x 256.96pt>
+<figures/eur.pdf, id=339, 401.5pt x 256.96pt>
 File: figures/eur.pdf Graphic file (type pdf)
  <use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf used on input line 340.
+Package pdftex.def Info: figures/eur.pdf used on input line 366.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/tether.pdf, id=333, 401.5pt x 256.96pt>
+<figures/tether.pdf, id=340, 401.5pt x 256.96pt>
 File: figures/tether.pdf Graphic file (type pdf)
  <use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf used on input line 342.
+Package pdftex.def Info: figures/tether.pdf used on input line 368.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/bitusd.pdf, id=334, 401.5pt x 256.96pt>
+<figures/bitusd.pdf, id=341, 401.5pt x 256.96pt>
 File: figures/bitusd.pdf Graphic file (type pdf)
  <use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf used on input line 344.
+Package pdftex.def Info: figures/bitusd.pdf used on input line 370.
 (pdftex.def)             Requested size: 211.38832pt x 135.29025pt.
 
-<figures/gasetherusd.pdf, id=336, 401.5pt x 252.945pt>
+<figures/gasetherusd.pdf, id=343, 361.35pt x 227.85126pt>
 File: figures/gasetherusd.pdf Graphic file (type pdf)
 
 <use figures/gasetherusd.pdf>
-Package pdftex.def Info: figures/gasetherusd.pdf used on input line 357.
-(pdftex.def)             Requested size: 211.38832pt x 133.17635pt.
+Package pdftex.def Info: figures/gasetherusd.pdf used on input line 383.
+(pdftex.def)             Requested size: 211.38832pt x 133.2907pt.
 
-<figures/gaselectricityether.pdf, id=337, 401.5pt x 225.84375pt>
+<figures/gaselectricityether.pdf, id=344, 401.5pt x 245.91875pt>
 File: figures/gaselectricityether.pdf Graphic file (type pdf)
 
 <use figures/gaselectricityether.pdf>
-Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 359
+Package pdftex.def Info: figures/gaselectricityether.pdf used on input line 385
 .
-(pdftex.def)             Requested size: 230.18253pt x 129.48007pt.
+(pdftex.def)             Requested size: 230.18253pt x 140.98941pt.
  [15 <./figures/eth.pdf> <./figures/xrp.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/xrp.pdf): PDF incl
@@ -1120,11 +1125,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 22599 strings out of 493054
- 431052 string characters out of 6134759
- 547395 words of memory out of 5000000
- 25559 multiletter control sequences out of 15000+600000
- 12570 words of font info for 47 fonts, out of 8000000 for 9000
+ 22603 strings out of 493054
+ 431099 string characters out of 6134759
+ 553395 words of memory out of 5000000
+ 25561 multiletter control sequences out of 15000+600000
+ 12907 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,85p,2215b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1147,11 +1152,12 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (18 pages, 794301 bytes).
+t/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (18 pages, 810000 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 561 compressed objects within 6 object streams
- 108 named destinations out of 1000 (max. 500000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 568 compressed objects within 6 object streams
+ 109 named destinations out of 1000 (max. 500000)
  244 words of extra memory for PDF output out of 10000 (max. 10000000)
 
