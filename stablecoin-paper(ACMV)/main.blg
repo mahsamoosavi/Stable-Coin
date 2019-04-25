@@ -1,0 +1,85 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bib/stablecoinRef.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in geminido29:online
+Warning--no author, editor, organization, or key in geminido29:online
+Warning--to sort, need author or key in geminido29:online
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--no key, author in geminido29:online
+Warning--no key, author in geminido29:online
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in geminido29:online
+Warning--no author, editor, organization, or key in geminido29:online
+Warning--empty author in geminido29:online
+Warning--empty year in geminido29:online
+Warning--no journal in ametrano2016hayek
+Warning--no number and no volume in ametrano2016hayek
+Warning--page numbers missing in both pages and numpages fields in ametrano2016hayek
+Warning--no journal in reportone
+Warning--no number and no volume in reportone
+Warning--page numbers missing in both pages and numpages fields in reportone
+Warning--no journal in reporttwo
+Warning--no number and no volume in reporttwo
+Warning--page numbers missing in both pages and numpages fields in reporttwo
+Warning--empty publisher in carlsten2016instability
+Warning--empty address in carlsten2016instability
+Warning--no number and no volume in danezis2015centrally
+Warning--page numbers missing in both pages and numpages fields in danezis2015centrally
+Warning--empty address in harris2003trading
+Warning--empty year in okoyetoward
+Warning--no journal in okoyetoward
+Warning--no number and no volume in okoyetoward
+Warning--page numbers missing in both pages and numpages fields in okoyetoward
+Warning--empty address in rogoff2017curse
+Warning--no number and no volume in sams2015note
+Warning--no number and no volume in wood2014ethereum
+Warning--page numbers missing in both pages and numpages fields in wood2014ethereum
+You've used 19 entries,
+            5719 wiz_defined-function locations,
+            1382 strings with 17147 characters,
+and the built_in function-call counts, 16008 in all, are:
+= -- 1841
+> -- 428
+< -- 1
++ -- 129
+- -- 168
+* -- 966
+:= -- 1732
+add.period$ -- 105
+call.type$ -- 19
+change.case$ -- 99
+chr.to.int$ -- 19
+cite$ -- 54
+duplicate$ -- 1526
+empty$ -- 1101
+format.name$ -- 180
+if$ -- 3645
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 37
+newline$ -- 207
+num.names$ -- 144
+pop$ -- 580
+preamble$ -- 1
+purify$ -- 258
+quote$ -- 0
+skip$ -- 513
+stack$ -- 0
+substring$ -- 1150
+swap$ -- 109
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 442
+warning$ -- 31
+while$ -- 148
+width$ -- 0
+write$ -- 371
+(There were 31 warnings)
