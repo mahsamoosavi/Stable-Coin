@@ -1,10 +1,14 @@
-This is BibTeX, Version 0.99d (TeX Live 2018)
+This is BibTeX, Version 0.99d (TeX Live 2019)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/stablecoinRef.bib
+Repeated entry---line 282 of file bib/stablecoinRef.bib
+ : @article{griffin2018bitcoin
+ :                            ,
+I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--no key, author in geminido29:online
 Warning--no author, editor, organization, or key in geminido29:online
@@ -32,6 +36,9 @@ Warning--empty publisher in carlsten2016instability
 Warning--empty address in carlsten2016instability
 Warning--no number and no volume in danezis2015centrally
 Warning--page numbers missing in both pages and numpages fields in danezis2015centrally
+Warning--no journal in griffin2018bitcoin
+Warning--no number and no volume in griffin2018bitcoin
+Warning--page numbers missing in both pages and numpages fields in griffin2018bitcoin
 Warning--empty address in harris2003trading
 Warning--empty year in okoyetoward
 Warning--no journal in okoyetoward
@@ -41,45 +48,45 @@ Warning--empty address in rogoff2017curse
 Warning--no number and no volume in sams2015note
 Warning--no number and no volume in wood2014ethereum
 Warning--page numbers missing in both pages and numpages fields in wood2014ethereum
-You've used 19 entries,
+You've used 20 entries,
             5719 wiz_defined-function locations,
-            1382 strings with 17147 characters,
-and the built_in function-call counts, 16008 in all, are:
-= -- 1841
-> -- 428
+            1385 strings with 17226 characters,
+and the built_in function-call counts, 16904 in all, are:
+= -- 1925
+> -- 466
 < -- 1
-+ -- 129
-- -- 168
-* -- 966
-:= -- 1732
-add.period$ -- 105
-call.type$ -- 19
-change.case$ -- 99
-chr.to.int$ -- 19
-cite$ -- 54
-duplicate$ -- 1526
-empty$ -- 1101
-format.name$ -- 180
-if$ -- 3645
++ -- 142
+- -- 184
+* -- 1032
+:= -- 1839
+add.period$ -- 110
+call.type$ -- 20
+change.case$ -- 105
+chr.to.int$ -- 20
+cite$ -- 58
+duplicate$ -- 1608
+empty$ -- 1161
+format.name$ -- 200
+if$ -- 3838
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 37
-newline$ -- 207
-num.names$ -- 144
-pop$ -- 580
+missing$ -- 41
+newline$ -- 215
+num.names$ -- 152
+pop$ -- 616
 preamble$ -- 1
-purify$ -- 258
+purify$ -- 273
 quote$ -- 0
-skip$ -- 513
+skip$ -- 539
 stack$ -- 0
-substring$ -- 1150
-swap$ -- 109
+substring$ -- 1206
+swap$ -- 113
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 442
-warning$ -- 31
-while$ -- 148
+type$ -- 458
+warning$ -- 34
+while$ -- 156
 width$ -- 0
-write$ -- 371
-(There were 31 warnings)
+write$ -- 387
+(There was 1 error message)

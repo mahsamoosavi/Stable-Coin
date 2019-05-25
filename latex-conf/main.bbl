@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -134,6 +134,15 @@
 \newblock
 \newblock
 \shownote{Accessed: 2018-10-29.}
+
+
+\bibitem[\protect\citeauthoryear{Griffin and Shams}{Griffin and Shams}{2018}]%
+        {griffin2018bitcoin}
+\bibfield{author}{\bibinfo{person}{John~M Griffin} {and} \bibinfo{person}{Amin
+  Shams}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Is bitcoin really un-tethered?}
+\newblock  (\bibinfo{year}{2018}).
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Harris}{Harris}{2003}]%
