@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{20}
+\begin{thebibliography}{21}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -164,6 +164,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Narayanan, Bonneau, Felten, Miller, and
+  Goldfeder}{Narayanan et~al\mbox{.}}{2016}]%
+        {NBFMG16}
+\bibfield{author}{\bibinfo{person}{A Narayanan}, \bibinfo{person}{J Bonneau},
+  \bibinfo{person}{Edward~W. Felten}, \bibinfo{person}{Andrew Miller}, {and}
+  \bibinfo{person}{Steven Goldfeder}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Bitcoin and Cryptocurrency Technologies}}.
+\newblock \bibinfo{publisher}{Princeton}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{O'Higgins}{O'Higgins}{2018}]%
         {cryptoinsider}
 \bibfield{author}{\bibinfo{person}{Conor O'Higgins}.}
@@ -223,7 +234,7 @@
         {StateofS96:online}
 \bibfield{author}{\bibinfo{person}{Nathan Sexer}.}
   \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{State of Stablecoins, 2018 – ConsenSys Media}.
+\newblock \bibinfo{title}{State of Stablecoins, 2018 -- ConsenSys Media}.
 \newblock
   \bibinfo{howpublished}{\url{https://media.consensys.net/the-state-of-stablecoins-2018-79ccb9988e63}}.
 \newblock
