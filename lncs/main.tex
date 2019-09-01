@@ -1,0 +1,51 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+\input{setup/packages}
+\input{setup/macros}
+%
+%\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{SoK: Demystifying Stablecoins}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+
+%\author{Jeremy Clark \thanks{Authors listed alphabetically. D. Demirag and S. Moosavi should be considered equal first authors.} \and Didem Demirag \and Seyedehmahsa Moosavi}
+%\institute{Gina Cody School of Engineering and Computer Science \\ Concordia University}
+
+
+\author{}
+\institute{}
+\maketitle              % typeset the header of the contribution
+%
+\input{sections/abstract}
+%\keywords{bitcoin, ethereum, tether, blockchain, stablecoins}
+
+\input{sections/stablecoin}
+
+%\subsubsection*{Acknowledgements.}
+%The authors thank the Autorit\'e des March\'es Financiers (AMF) for sponsoring this research through the Education and Good Governance Fund (EGGF), as well as NSERC through a Discovery Grant.
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+ \bibliographystyle{splncs04}
+\bibliography{bib/stablecoinRef, bib/pulp.bib}
+%
+
+\end{document}
