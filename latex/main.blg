@@ -6,13 +6,26 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/stablecoinRef.bib
 Database file #2: bib/pulp.bib
+Warning--I didn't find a database entry for "hackernoon"
+Warning--I didn't find a database entry for "comprehensiveOverview"
+Warning--I didn't find a database entry for "linkedin"
+Warning--I didn't find a database entry for "TheSearc7:online"
+Warning--I didn't find a database entry for "reportone"
+Warning--I didn't find a database entry for "reporttwo"
+Warning--I didn't find a database entry for "StateofS96:online"
+Warning--I didn't find a database entry for "okoyetoward"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in bitmex
+Warning--no author, editor, organization, or key in bitmex
+Warning--to sort, need author or key in bitmex
 Warning--no key, author in geminido29:online
 Warning--no author, editor, organization, or key in geminido29:online
 Warning--to sort, need author or key in geminido29:online
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Warning--no key, author in bitmex
+Warning--no key, author in bitmex
 Warning--no key, author in geminido29:online
 Warning--no key, author in geminido29:online
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -20,71 +33,64 @@ Warning--no key, author in geminido29:online
 Warning--no author, editor, organization, or key in geminido29:online
 Warning--empty author in geminido29:online
 Warning--empty year in geminido29:online
-Warning--no journal in ametrano2016hayek
+Warning--no key, author in bitmex
+Warning--no author, editor, organization, or key in bitmex
+Warning--empty author in bitmex
 Warning--no number and no volume in ametrano2016hayek
 Warning--page numbers missing in both pages and numpages fields in ametrano2016hayek
-Warning--no journal in reportone
-Warning--no number and no volume in reportone
-Warning--page numbers missing in both pages and numpages fields in reportone
-Warning--no journal in reporttwo
-Warning--no number and no volume in reporttwo
-Warning--page numbers missing in both pages and numpages fields in reporttwo
 Warning--empty publisher in carlsten2016instability
 Warning--empty address in carlsten2016instability
 Warning--no number and no volume in danezis2015centrally
 Warning--page numbers missing in both pages and numpages fields in danezis2015centrally
-Warning--no journal in griffin2018bitcoin
 Warning--no number and no volume in griffin2018bitcoin
 Warning--page numbers missing in both pages and numpages fields in griffin2018bitcoin
 Warning--empty address in harris2003trading
+Warning--no journal in nakamoto2008bitcoin
+Warning--no number and no volume in nakamoto2008bitcoin
+Warning--page numbers missing in both pages and numpages fields in nakamoto2008bitcoin
 Warning--empty address in NBFMG16
-Warning--empty year in okoyetoward
-Warning--no journal in okoyetoward
-Warning--no number and no volume in okoyetoward
-Warning--page numbers missing in both pages and numpages fields in okoyetoward
 Warning--empty address in rogoff2017curse
-Warning--no number and no volume in sams2015note
 Warning--no number and no volume in wood2014ethereum
 Warning--page numbers missing in both pages and numpages fields in wood2014ethereum
-You've used 21 entries,
+You've used 14 entries,
             5719 wiz_defined-function locations,
-            1391 strings with 17384 characters,
-and the built_in function-call counts, 17887 in all, are:
-= -- 2011
-> -- 529
+            1379 strings with 16650 characters,
+and the built_in function-call counts, 13434 in all, are:
+= -- 1728
+> -- 387
 < -- 1
-+ -- 163
-- -- 204
-* -- 1125
-:= -- 1968
-add.period$ -- 116
-call.type$ -- 21
-change.case$ -- 114
-chr.to.int$ -- 21
-cite$ -- 60
-duplicate$ -- 1685
-empty$ -- 1215
-format.name$ -- 224
-if$ -- 4043
++ -- 126
+- -- 148
+* -- 871
+:= -- 1343
+add.period$ -- 75
+call.type$ -- 14
+change.case$ -- 78
+chr.to.int$ -- 14
+cite$ -- 55
+duplicate$ -- 1216
+empty$ -- 874
+format.name$ -- 168
+if$ -- 3249
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 43
-newline$ -- 223
-num.names$ -- 160
-pop$ -- 649
+missing$ -- 39
+newline$ -- 165
+num.names$ -- 96
+pop$ -- 496
 preamble$ -- 1
-purify$ -- 291
+purify$ -- 198
 quote$ -- 0
-skip$ -- 565
+skip$ -- 395
 stack$ -- 0
-substring$ -- 1259
-swap$ -- 120
+substring$ -- 903
+swap$ -- 99
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 473
-warning$ -- 35
-while$ -- 160
+type$ -- 277
+warning$ -- 33
+while$ -- 97
 width$ -- 0
-write$ -- 404
-(There were 35 warnings)
+write$ -- 284
+(There were 41 warnings)

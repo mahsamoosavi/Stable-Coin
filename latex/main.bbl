@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{21}
+\begin{thebibliography}{14}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -48,55 +48,30 @@
 \shownote{(Accessed on 02/23/2019).}
 
 
+\bibitem[\protect\citeauthoryear{??}{bit}{2019}]%
+        {bitmex}
+ \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{{A brief history of Stablecoins (Part 1)
+  {\textendash} BitMEX Blog}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://blog.bitmex.com/a-brief-history-of-stablecoins-part-1}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{[Online; accessed 21. Aug. 2019].}
+
+
 \bibitem[\protect\citeauthoryear{Ametrano}{Ametrano}{2016}]%
         {ametrano2016hayek}
 \bibfield{author}{\bibinfo{person}{Ferdinando~M Ametrano}.}
   \bibinfo{year}{2016}\natexlab{}.
 \newblock \showarticletitle{Hayek money: The cryptocurrency price stability
   solution}.
-\newblock  (\bibinfo{year}{2016}).
+\newblock \bibinfo{journal}{\emph{Available at SSRN 2425270}}
+  (\bibinfo{year}{2016}).
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Bitmex}{Bitmex}{2018}]%
-        {bitmex}
-\bibfield{author}{\bibinfo{person}{Bitmex}.} \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{A brief history of Stablecoins (Part 1)}.
-\newblock
-  \bibinfo{howpublished}{\url{https://blog.bitmex.com/a-brief-history-of-stablecoins-part-1/}}.
-\newblock
-\newblock
-\shownote{Accessed: 2018-09-02.}
-
-
-\bibitem[\protect\citeauthoryear{Blockchain}{Blockchain}{2018}]%
-        {reportone}
-\bibfield{author}{\bibinfo{person}{Blockchain}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \showarticletitle{The state of stablecoins}.
-\newblock  (\bibinfo{year}{2018}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Blockchain}{Blockchain}{2019}]%
-        {reporttwo}
-\bibfield{author}{\bibinfo{person}{Blockchain}.}
-  \bibinfo{year}{2019}\natexlab{}.
-\newblock \showarticletitle{2019 state of stablecoin}.
-\newblock  (\bibinfo{year}{2019}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Buterin}{Buterin}{2014}]%
-        {TheSearc7:online}
-\bibfield{author}{\bibinfo{person}{Vitalik Buterin}.}
-  \bibinfo{year}{2014}\natexlab{}.
-\newblock \bibinfo{title}{The Search for a Stable Cryptocurrency}.
-\newblock
-  \bibinfo{howpublished}{\url{https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/}}.
-\newblock
-\newblock
-\shownote{(Accessed on 02/11/2019).}
 
 
 \bibitem[\protect\citeauthoryear{Carlsten, Kalodner, Weinberg, and
@@ -123,25 +98,13 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Dhillon}{Dhillon}{2018}]%
-        {linkedin}
-\bibfield{author}{\bibinfo{person}{Sunny Dhillon}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{Stablecoins vs. Govtcoins: The Race to Solve
-  Cryptocurrencies Price Volatility Problems}.
-\newblock \bibinfo{howpublished}{\url{
-  https://www.linkedin.com/pulse/stablecoins-vs-govtcoins-race-solve-cryptocurrencies-price-dhillon}}.
-\newblock
-\newblock
-\shownote{Accessed: 2018-10-29.}
-
-
 \bibitem[\protect\citeauthoryear{Griffin and Shams}{Griffin and Shams}{2018}]%
         {griffin2018bitcoin}
 \bibfield{author}{\bibinfo{person}{John~M Griffin} {and} \bibinfo{person}{Amin
   Shams}.} \bibinfo{year}{2018}\natexlab{}.
 \newblock \showarticletitle{Is bitcoin really un-tethered?}
-\newblock  (\bibinfo{year}{2018}).
+\newblock \bibinfo{journal}{\emph{Available at SSRN 3195066}}
+  (\bibinfo{year}{2018}).
 \newblock
 
 
@@ -155,12 +118,13 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Nakamoto}{Nakamoto}{2008}]%
+\bibitem[\protect\citeauthoryear{Nakamoto et~al\mbox{.}}{Nakamoto
+  et~al\mbox{.}}{2008}]%
         {nakamoto2008bitcoin}
-\bibfield{author}{\bibinfo{person}{Satoshi Nakamoto}.}
+\bibfield{author}{\bibinfo{person}{Satoshi Nakamoto} {et~al\mbox{.}}}
   \bibinfo{year}{2008}\natexlab{}.
-\newblock \bibinfo{title}{Bitcoin: A peer-to-peer electronic cash system}.
-\newblock
+\newblock \showarticletitle{Bitcoin: A peer-to-peer electronic cash system}.
+\newblock  (\bibinfo{year}{2008}).
 \newblock
 
 
@@ -175,6 +139,22 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Narayanan and Clark}{Narayanan and
+  Clark}{2017}]%
+        {NaCl17}
+\bibfield{author}{\bibinfo{person}{Arvind Narayanan} {and}
+  \bibinfo{person}{Jeremy Clark}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Bitcoin's Academic Pedigree}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{60},
+  \bibinfo{number}{12} (\bibinfo{date}{Nov.} \bibinfo{year}{2017}),
+  \bibinfo{pages}{36--45}.
+\newblock
+\showISSN{0001-0782}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3132259}
+\showDOI{\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{O'Higgins}{O'Higgins}{2018}]%
         {cryptoinsider}
 \bibfield{author}{\bibinfo{person}{Conor O'Higgins}.}
@@ -185,28 +165,6 @@
 \newblock
 \newblock
 \shownote{Accessed: 2018-07-09.}
-
-
-\bibitem[\protect\citeauthoryear{Okoye and Clark}{Okoye and Clark}{[n. d.]}]%
-        {okoyetoward}
-\bibfield{author}{\bibinfo{person}{Mildred~Chidinma Okoye} {and}
-  \bibinfo{person}{Jeremy Clark}.} \bibinfo{year}{[n. d.]}\natexlab{}.
-\newblock \showarticletitle{Toward Cryptocurrency Lending}.
-\newblock  (\bibinfo{year}{[n. d.]}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Qureshi}{Qureshi}{2018}]%
-        {hackernoon}
-\bibfield{author}{\bibinfo{person}{Haseeb Qureshi}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{Stablecoins: designing a price-stable
-  cryptocurrency}.
-\newblock \bibinfo{howpublished}{\url{
-  https://hackernoon.com/stablecoins-designing-a-price-stable-cryptocurrency-6bf24e2689e5}}.
-\newblock
-\newblock
-\shownote{Accessed: 2018-09-03.}
 
 
 \bibitem[\protect\citeauthoryear{Rogoff}{Rogoff}{2017}]%
@@ -225,33 +183,9 @@
   \bibinfo{year}{2015}\natexlab{}.
 \newblock \showarticletitle{A Note on Cryptocurrency Stabilisation: Seigniorage
   Shares}.
-\newblock \bibinfo{journal}{\emph{Brave New Coin}} (\bibinfo{year}{2015}),
-  \bibinfo{pages}{1--8}.
+\newblock \bibinfo{journal}{\emph{BraveNewCoin. com. Retrieved on April}}
+  \bibinfo{volume}{28} (\bibinfo{year}{2015}), \bibinfo{pages}{2015}.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Sexer}{Sexer}{2018}]%
-        {StateofS96:online}
-\bibfield{author}{\bibinfo{person}{Nathan Sexer}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{State of Stablecoins, 2018 -- ConsenSys Media}.
-\newblock
-  \bibinfo{howpublished}{\url{https://media.consensys.net/the-state-of-stablecoins-2018-79ccb9988e63}}.
-\newblock
-\newblock
-\shownote{(Accessed on 02/12/2019).}
-
-
-\bibitem[\protect\citeauthoryear{TEAM}{TEAM}{2018}]%
-        {comprehensiveOverview}
-\bibfield{author}{\bibinfo{person}{CP~Processor TEAM}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{Comprehensive overview of STABLECOINS}.
-\newblock \bibinfo{howpublished}{\url{
-  https://medium.com/cp-processor/comprehensive-overview-of-stablecoins-819d183f6ac7}}.
-\newblock
-\newblock
-\shownote{Accessed: 2018-01-15.}
 
 
 \bibitem[\protect\citeauthoryear{Wood}{Wood}{2014}]%
