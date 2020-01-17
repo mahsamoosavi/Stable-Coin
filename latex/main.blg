@@ -6,91 +6,62 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bib/stablecoinRef.bib
 Database file #2: bib/pulp.bib
-Warning--I didn't find a database entry for "hackernoon"
-Warning--I didn't find a database entry for "comprehensiveOverview"
-Warning--I didn't find a database entry for "linkedin"
-Warning--I didn't find a database entry for "TheSearc7:online"
-Warning--I didn't find a database entry for "reportone"
-Warning--I didn't find a database entry for "reporttwo"
-Warning--I didn't find a database entry for "StateofS96:online"
-Warning--I didn't find a database entry for "okoyetoward"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--no key, author in bitmex
-Warning--no author, editor, organization, or key in bitmex
-Warning--to sort, need author or key in bitmex
-Warning--no key, author in geminido29:online
-Warning--no author, editor, organization, or key in geminido29:online
-Warning--to sort, need author or key in geminido29:online
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Warning--no key, author in bitmex
-Warning--no key, author in bitmex
-Warning--no key, author in geminido29:online
-Warning--no key, author in geminido29:online
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--no key, author in geminido29:online
-Warning--no author, editor, organization, or key in geminido29:online
-Warning--empty author in geminido29:online
-Warning--empty year in geminido29:online
-Warning--no key, author in bitmex
-Warning--no author, editor, organization, or key in bitmex
-Warning--empty author in bitmex
-Warning--no number and no volume in ametrano2016hayek
-Warning--page numbers missing in both pages and numpages fields in ametrano2016hayek
-Warning--empty publisher in carlsten2016instability
-Warning--empty address in carlsten2016instability
-Warning--no number and no volume in danezis2015centrally
-Warning--page numbers missing in both pages and numpages fields in danezis2015centrally
-Warning--no number and no volume in griffin2018bitcoin
-Warning--page numbers missing in both pages and numpages fields in griffin2018bitcoin
-Warning--empty address in harris2003trading
+Warning--empty address in Cha14
+Warning--empty publisher in MSS20
+Warning--empty address in MSS20
+Warning--page numbers missing in both pages and numpages fields in MSS20
 Warning--no journal in nakamoto2008bitcoin
 Warning--no number and no volume in nakamoto2008bitcoin
 Warning--page numbers missing in both pages and numpages fields in nakamoto2008bitcoin
 Warning--empty address in NBFMG16
-Warning--empty address in rogoff2017curse
-Warning--no number and no volume in wood2014ethereum
-Warning--page numbers missing in both pages and numpages fields in wood2014ethereum
-You've used 14 entries,
+Warning--page numbers missing in both pages and numpages fields in NaCl17
+Warning--empty publisher in PHP+19
+Warning--empty address in PHP+19
+Warning--page numbers missing in both pages and numpages fields in PHP+19
+You've used 8 entries,
             5719 wiz_defined-function locations,
-            1379 strings with 16650 characters,
-and the built_in function-call counts, 13434 in all, are:
-= -- 1728
-> -- 387
-< -- 1
-+ -- 126
-- -- 148
-* -- 871
-:= -- 1343
-add.period$ -- 75
-call.type$ -- 14
-change.case$ -- 78
-chr.to.int$ -- 14
-cite$ -- 55
-duplicate$ -- 1216
-empty$ -- 874
-format.name$ -- 168
-if$ -- 3249
+            1335 strings with 15461 characters,
+and the built_in function-call counts, 7635 in all, are:
+= -- 732
+> -- 356
+< -- 0
++ -- 118
+- -- 120
+* -- 590
+:= -- 896
+add.period$ -- 40
+call.type$ -- 8
+change.case$ -- 56
+chr.to.int$ -- 8
+cite$ -- 20
+duplicate$ -- 675
+empty$ -- 478
+format.name$ -- 144
+if$ -- 1652
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 39
-newline$ -- 165
-num.names$ -- 96
-pop$ -- 496
+missing$ -- 22
+newline$ -- 102
+num.names$ -- 64
+pop$ -- 284
 preamble$ -- 1
-purify$ -- 198
+purify$ -- 128
 quote$ -- 0
-skip$ -- 395
+skip$ -- 234
 stack$ -- 0
-substring$ -- 903
-swap$ -- 99
-text.length$ -- 1
+substring$ -- 452
+swap$ -- 45
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 277
-warning$ -- 33
-while$ -- 97
+type$ -- 182
+warning$ -- 12
+while$ -- 44
 width$ -- 0
-write$ -- 284
-(There were 41 warnings)
+write$ -- 169
+(There were 12 warnings)

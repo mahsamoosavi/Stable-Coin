@@ -1,31 +1,33 @@
-\documentclass[sigconf,anonymous]{acmart}
-%\documentclass[sigconf]{acmart}
+%\documentclass[sigconf,anonymous]{acmart}
+\documentclass[acmlarge,screen]{acmart}
 
 \input{setup/packages}
 \input{setup/macros}
+\input{setup/alg}
+
 
 \begin{document}
 
-\title{Demystifying the Stability Mechanisms of Stablecoins}
-\subtitle{Note: preprint on SSRN, link removed for anonymity}
+\title{Demystifying Stablecoins}
+\subtitle{Cryptography meets monetary policy}
 
 \author{Jeremy Clark}
+\affiliation{\institution{Concordia University}}
 \authornote{Authors listed alphabetically. D. Demirag and S. Moosavi should be considered equal first authors.}
-\author{Didem Demirag}
-\author{Seyedehmahsa Moosavi}
-\affiliation{\institution{Gina Cody School of Engineering and Computer Science}
-\institution{Concordia University}}
 
-\input{sections/abstract}
+\author{Didem Demirag}
+\affiliation{\institution{Concordia University}}
+
+\author{Seyedehmahsa Moosavi}
+\affiliation{\institution{Concordia University}}
+
+\begin{abstract} Stablecoins promise the functionality of Bitcoin without the rollercoaster ride of it's exchange rate. But can this new breed of cryptocurrencies really outsmart decades of central bank policy with algorithms and smart contracts?\end{abstract}
 
 \maketitle
 
 %==========================================%
 
 \input{sections/stablecoin}
-
-%\subsubsection*{Acknowledgements.}
-%This research is supported by (1) the Autorit\'e des March\'es Financiers (AMF) and (2) the NSERC/RCGT/Catallaxy Industrial Research Chair in Blockchain Technologies. 
 
 %==========================================%
 
@@ -34,7 +36,27 @@
 
 %==========================================%
 
-\input{sections/appendix}
+% \input{sections/appendix}
+
+\begin{Sidebar*}[h!]
+\begin{framed}
+\begin{flushleft}
+\textbf{Related Articles on ACM Queue.} \newline
+
+Bitcoin’s Academic Pedigree \\
+by Arvind Narayanan and Jeremy Clark \\
+https://queue.acm.org/detail.cfm?id=3136559 \newline
+
+Blockchain Technology: What Is It Good for? \\ 
+by Scott Ruoti, Ben Kaiser, Arkady Yerukhimovich, Jeremy Clark, and Robert Cunningham \\
+https://queue.acm.org/detail.cfm?id=3376896 \newline
+
+A Hitchhiker’s Guide to the Blockchain Universe\\
+by Jim Waldo \\
+https://queue.acm.org/detail.cfm?id=3305265
+\end{flushleft}
+\end{framed}
+\end{Sidebar*}
 
 %==========================================%
 

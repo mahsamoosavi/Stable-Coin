@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{14}
+\begin{thebibliography}{8}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,84 +37,35 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
-\bibitem[\protect\citeauthoryear{??}{gem}{[n. d.]}]%
-        {geminido29:online}
- \bibinfo{year}{[n. d.]}\natexlab{}.
-\newblock \bibinfo{title}{gemini-dollar-trailofbits-audit.pdf}.
-\newblock
-  \bibinfo{howpublished}{\url{https://gemini.com/wp-content/themes/gemini/assets/img/dollar/gemini-dollar-trailofbits-audit.pdf}}.
-\newblock
-\newblock
-\shownote{(Accessed on 02/23/2019).}
-
-
-\bibitem[\protect\citeauthoryear{??}{bit}{2019}]%
-        {bitmex}
- \bibinfo{year}{2019}\natexlab{}.
-\newblock \bibinfo{title}{{A brief history of Stablecoins (Part 1)
-  {\textendash} BitMEX Blog}}.
-\newblock
-\newblock
-\urldef\tempurl%
-\url{https://blog.bitmex.com/a-brief-history-of-stablecoins-part-1}
-\showURL{%
-\tempurl}
-\newblock
-\shownote{[Online; accessed 21. Aug. 2019].}
-
-
-\bibitem[\protect\citeauthoryear{Ametrano}{Ametrano}{2016}]%
-        {ametrano2016hayek}
-\bibfield{author}{\bibinfo{person}{Ferdinando~M Ametrano}.}
-  \bibinfo{year}{2016}\natexlab{}.
-\newblock \showarticletitle{Hayek money: The cryptocurrency price stability
-  solution}.
-\newblock \bibinfo{journal}{\emph{Available at SSRN 2425270}}
-  (\bibinfo{year}{2016}).
+\bibitem[\protect\citeauthoryear{Champagne}{Champagne}{2014}]%
+        {Cha14}
+\bibfield{author}{\bibinfo{person}{Phil Champagne}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The book of Satoshi: The Collected Writings
+  of Bitcoin Creator Satoshi Nakamoto}}.
+\newblock \bibinfo{publisher}{e53}.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Carlsten, Kalodner, Weinberg, and
-  Narayanan}{Carlsten et~al\mbox{.}}{2016}]%
-        {carlsten2016instability}
-\bibfield{author}{\bibinfo{person}{Miles Carlsten}, \bibinfo{person}{Harry
-  Kalodner}, \bibinfo{person}{S~Matthew Weinberg}, {and}
-  \bibinfo{person}{Arvind Narayanan}.} \bibinfo{year}{2016}\natexlab{}.
-\newblock \showarticletitle{On the instability of bitcoin without the block
-  reward}. In \bibinfo{booktitle}{\emph{Proceedings of the 2016 ACM SIGSAC
-  Conference on Computer and Communications Security}}. ACM,
-  \bibinfo{pages}{154--167}.
+\bibitem[\protect\citeauthoryear{Clark, Demirag, and Moosavi}{Clark
+  et~al\mbox{.}}{2019}]%
+        {CDM19}
+\bibfield{author}{\bibinfo{person}{Jeremy Clark}, \bibinfo{person}{Didem
+  Demirag}, {and} \bibinfo{person}{Seyedehmahsa Moosavi}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{SoK: Demystifying Stablecoins}.
+\newblock \bibinfo{howpublished}{SSRN 3466371}.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Danezis and Meiklejohn}{Danezis and
-  Meiklejohn}{2015}]%
-        {danezis2015centrally}
-\bibfield{author}{\bibinfo{person}{George Danezis} {and} \bibinfo{person}{Sarah
-  Meiklejohn}.} \bibinfo{year}{2015}\natexlab{}.
-\newblock \showarticletitle{Centrally banked cryptocurrencies}.
-\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1505.06895}}
-  (\bibinfo{year}{2015}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Griffin and Shams}{Griffin and Shams}{2018}]%
-        {griffin2018bitcoin}
-\bibfield{author}{\bibinfo{person}{John~M Griffin} {and} \bibinfo{person}{Amin
-  Shams}.} \bibinfo{year}{2018}\natexlab{}.
-\newblock \showarticletitle{Is bitcoin really un-tethered?}
-\newblock \bibinfo{journal}{\emph{Available at SSRN 3195066}}
-  (\bibinfo{year}{2018}).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Harris}{Harris}{2003}]%
-        {harris2003trading}
-\bibfield{author}{\bibinfo{person}{Larry Harris}.}
-  \bibinfo{year}{2003}\natexlab{}.
-\newblock \bibinfo{booktitle}{\emph{Trading and exchanges: Market
-  microstructure for practitioners}}.
-\newblock \bibinfo{publisher}{Oxford University Press, USA}. 410--419 pages.
+\bibitem[\protect\citeauthoryear{Moin, Sekniqi, and Sirer}{Moin
+  et~al\mbox{.}}{2020}]%
+        {MSS20}
+\bibfield{author}{\bibinfo{person}{Amani Moin}, \bibinfo{person}{Kevin
+  Sekniqi}, {and} \bibinfo{person}{Emin~Gun Sirer}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{SoK: A Classification Framework for Stablecoin
+  Designs}. In \bibinfo{booktitle}{\emph{Financial Cryptography}}.
 \newblock
 
 
@@ -142,59 +93,35 @@
 \bibitem[\protect\citeauthoryear{Narayanan and Clark}{Narayanan and
   Clark}{2017}]%
         {NaCl17}
-\bibfield{author}{\bibinfo{person}{Arvind Narayanan} {and}
-  \bibinfo{person}{Jeremy Clark}.} \bibinfo{year}{2017}\natexlab{}.
-\newblock \showarticletitle{Bitcoin's Academic Pedigree}.
+\bibfield{author}{\bibinfo{person}{A Narayanan} {and} \bibinfo{person}{J
+  Clark}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Bitcoin's academic pedigree}.
 \newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{60},
-  \bibinfo{number}{12} (\bibinfo{date}{Nov.} \bibinfo{year}{2017}),
-  \bibinfo{pages}{36--45}.
-\newblock
-\showISSN{0001-0782}
-\urldef\tempurl%
-\url{https://doi.org/10.1145/3132259}
-\showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{O'Higgins}{O'Higgins}{2018}]%
-        {cryptoinsider}
-\bibfield{author}{\bibinfo{person}{Conor O'Higgins}.}
-  \bibinfo{year}{2018}\natexlab{}.
-\newblock \bibinfo{title}{Stablecoins - everything you need to know}.
-\newblock
-  \bibinfo{howpublished}{\url{https://cryptoinsider.21mil.com/stablecoins-everything-need-know/}}.
-\newblock
-\newblock
-\shownote{Accessed: 2018-07-09.}
-
-
-\bibitem[\protect\citeauthoryear{Rogoff}{Rogoff}{2017}]%
-        {rogoff2017curse}
-\bibfield{author}{\bibinfo{person}{Kenneth~S Rogoff}.}
-  \bibinfo{year}{2017}\natexlab{}.
-\newblock \bibinfo{booktitle}{\emph{The Curse of Cash: How Large-Denomination
-  Bills Aid Crime and Tax Evasion and Constrain Monetary Policy}}.
-\newblock \bibinfo{publisher}{Princeton University Press}.
+  \bibinfo{number}{12} (\bibinfo{year}{2017}).
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Sams}{Sams}{2015}]%
-        {sams2015note}
-\bibfield{author}{\bibinfo{person}{Robert Sams}.}
-  \bibinfo{year}{2015}\natexlab{}.
-\newblock \showarticletitle{A Note on Cryptocurrency Stabilisation: Seigniorage
-  Shares}.
-\newblock \bibinfo{journal}{\emph{BraveNewCoin. com. Retrieved on April}}
-  \bibinfo{volume}{28} (\bibinfo{year}{2015}), \bibinfo{pages}{2015}.
+\bibitem[\protect\citeauthoryear{Pernice, Henningsen, Proskalovich, Florian,
+  and Elendner}{Pernice et~al\mbox{.}}{2019}]%
+        {PHP+19}
+\bibfield{author}{\bibinfo{person}{Ingolf G~A Pernice},
+  \bibinfo{person}{Sebastian Henningsen}, \bibinfo{person}{Roman Proskalovich},
+  \bibinfo{person}{Martin Florian}, {and} \bibinfo{person}{Hermann Elendner}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Monetary Stabilization in Cryptocurrencies: Design
+  Approaches and Open Questions}. In \bibinfo{booktitle}{\emph{CVCBT}}.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Wood}{Wood}{2014}]%
-        {wood2014ethereum}
-\bibfield{author}{\bibinfo{person}{Gavin Wood}.}
-  \bibinfo{year}{2014}\natexlab{}.
-\newblock \showarticletitle{Ethereum yellow paper}.
-\newblock \bibinfo{journal}{\emph{Internet: https://github.
-  com/ethereum/yellowpaper,[Oct. 30, 2018]}} (\bibinfo{year}{2014}).
+\bibitem[\protect\citeauthoryear{Pimentel, Boulianne, Eskandari, and
+  Clark}{Pimentel et~al\mbox{.}}{2019}]%
+        {PBEC19}
+\bibfield{author}{\bibinfo{person}{Erica Pimentel}, \bibinfo{person}{Emilio
+  Boulianne}, \bibinfo{person}{Shayan Eskandari}, {and} \bibinfo{person}{Jeremy
+  Clark}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Systemizing the Challenges of Auditing
+  Blockchain-Based Assets}.
+\newblock \bibinfo{howpublished}{SSRN}.
 \newblock
 
 
