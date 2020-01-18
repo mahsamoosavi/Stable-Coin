@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 JAN 2020 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  18 JAN 2020 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1673,19 +1673,22 @@ Class acmart Warning: A possible image without description on input line 15.
 
 [1.1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 29.
+(Font)              scaled to size 10.0pt on input line 32.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 55.
+(Font)              scaled to size 10.0pt on input line 65.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 55.
+(Font)              scaled to size 7.3pt on input line 65.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 55.
+(Font)              scaled to size 7.3pt on input line 65.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 56.
+(Font)              scaled to size 7.0pt on input line 66.
 [2.2 <./figures/allCurrencies.pdf>] (./tables/table1.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 68.
@@ -1693,37 +1696,33 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 68.
 ) (./tables/table2.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 6.
+(Font)              scaled to size 8.0pt on input line 8.
 
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 3--17
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 5--19
  [][] 
  []
 
-) (./tables/eval.tex) [3.3]
+) (./tables/eval.tex)
+Underfull \vbox (badness 1275) has occurred while \output is active []
 
-Package natbib Warning: Citation `griffin2018bitcoin' on page 4 undefined on in
-put line 90.
-
-[4.4] [5.5] [6.6] Processing 'acks' comment.
+ [3.3]
+[4.4] [5.5] [6.6] [7.7] Processing 'acks' comment.
 \openout3 = `comment.cut'.
 
 
 Comment 'acks' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut)) (./main.bbl)
-
-Package natbib Warning: There were undefined citations.
-
+(./comment.cut)) (./main.bbl [8.8])
 
 Class acmart Warning: Some images may lack descriptions.
 
-[7.7]
+[9.9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2DBB94D9710209EE3582CD1DC83F180D;2192.
+(rerunfilecheck)             Checksum: 56FFF8EE6E882669A70ED05A17E94F6F;2192.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1731,13 +1730,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 33507 strings out of 492616
- 599320 string characters out of 6129482
+ 33533 strings out of 492616
+ 600020 string characters out of 6129482
  743962 words of memory out of 5000000
- 36219 multiletter control sequences out of 15000+600000
- 173460 words of font info for 324 fonts, out of 8000000 for 9000
+ 36229 multiletter control sequences out of 15000+600000
+ 175033 words of font info for 335 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,94p,1599b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,94p,1249b,556s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
 }{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{
@@ -1752,10 +1751,10 @@ rtineT.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/Lin
 LibertineTB.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertin
 e/LinLibertineTI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/new
 tx/txsys.pfb>
-Output written on main.pdf (7 pages, 472262 bytes).
+Output written on main.pdf (9 pages, 481405 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
+ 226 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  52366 words of extra memory for PDF output out of 61914 (max. 10000000)
 
