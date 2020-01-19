@@ -124,17 +124,6 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Narayanan and Clark}{Narayanan and
-  Clark}{2017}]%
-        {NaCl17}
-\bibfield{author}{\bibinfo{person}{A Narayanan} {and} \bibinfo{person}{J
-  Clark}.} \bibinfo{year}{2017}\natexlab{}.
-\newblock \showarticletitle{Bitcoin's academic pedigree}.
-\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{60},
-  \bibinfo{number}{12} (\bibinfo{year}{2017}).
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Pernice, Henningsen, Proskalovich, Florian,
   and Elendner}{Pernice et~al\mbox{.}}{2019}]%
         {PHP+19}
@@ -156,6 +145,16 @@
 \newblock \bibinfo{title}{Systemizing the Challenges of Auditing
   Blockchain-Based Assets}.
 \newblock \bibinfo{howpublished}{SSRN}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Rogoff}{Rogoff}{2017}]%
+        {rogoff2017curse}
+\bibfield{author}{\bibinfo{person}{Kenneth~S Rogoff}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The Curse of Cash: How Large-Denomination
+  Bills Aid Crime and Tax Evasion and Constrain Monetary Policy}}.
+\newblock \bibinfo{publisher}{Princeton University Press}.
 \newblock
 
 

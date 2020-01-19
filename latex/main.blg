@@ -25,49 +25,49 @@ Warning--no journal in nakamoto2008bitcoin
 Warning--no number and no volume in nakamoto2008bitcoin
 Warning--page numbers missing in both pages and numpages fields in nakamoto2008bitcoin
 Warning--empty address in NBFMG16
-Warning--page numbers missing in both pages and numpages fields in NaCl17
 Warning--empty publisher in PHP+19
 Warning--empty address in PHP+19
 Warning--page numbers missing in both pages and numpages fields in PHP+19
+Warning--empty address in rogoff2017curse
 You've used 11 entries,
             5719 wiz_defined-function locations,
-            1351 strings with 15948 characters,
-and the built_in function-call counts, 11117 in all, are:
-= -- 1213
-> -- 484
+            1349 strings with 16043 characters,
+and the built_in function-call counts, 10920 in all, are:
+= -- 1180
+> -- 466
 < -- 0
-+ -- 161
-- -- 168
-* -- 826
-:= -- 1244
-add.period$ -- 55
++ -- 155
+- -- 160
+* -- 800
+:= -- 1226
+add.period$ -- 56
 call.type$ -- 11
-change.case$ -- 76
+change.case$ -- 75
 chr.to.int$ -- 11
 cite$ -- 29
-duplicate$ -- 970
-empty$ -- 687
-format.name$ -- 204
-if$ -- 2524
+duplicate$ -- 963
+empty$ -- 680
+format.name$ -- 192
+if$ -- 2472
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 35
+missing$ -- 33
 newline$ -- 125
 num.names$ -- 88
-pop$ -- 406
+pop$ -- 402
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 174
 quote$ -- 0
 skip$ -- 333
 stack$ -- 0
-substring$ -- 672
-swap$ -- 69
+substring$ -- 667
+swap$ -- 71
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 244
+type$ -- 243
 warning$ -- 18
 while$ -- 67
 width$ -- 0
-write$ -- 218
+write$ -- 219
 (There were 18 warnings)
