@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  18 JAN 2020 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  18 JAN 2020 20:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1660,7 +1660,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 4.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 8.
-<figures/allCurrencies.pdf, id=69, 640.3925pt x 378.41376pt>
+<figures/allCurrencies.pdf, id=65, 640.3925pt x 378.41376pt>
 File: figures/allCurrencies.pdf Graphic file (type pdf)
 <use figures/allCurrencies.pdf>
 Package pdftex.def Info: figures/allCurrencies.pdf  used on input line 13.
@@ -1706,12 +1706,22 @@ Overfull \hbox (10.79999pt too wide) in paragraph at lines 5--19
 Underfull \vbox (badness 1275) has occurred while \output is active []
 
  [3.3]
-[4.4] [5.5] [6.6] [7.7] Processing 'acks' comment.
+[4.4] [5.5] [6.6] [7.7]
+
+Package natbib Warning: Citation `geminido29:online' on page 8 undefined on inp
+ut line 177.
+
+Processing 'acks' comment.
 \openout3 = `comment.cut'.
 
+ Comment 'acks' writing to comment.cut.
+Straight input of comment.cut. (./comment.cut)) (./main.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Comment 'acks' writing to comment.cut. Straight input of comment.cut.
-(./comment.cut)) (./main.bbl [8.8])
+ [8.8])
+
+Package natbib Warning: There were undefined citations.
+
 
 Class acmart Warning: Some images may lack descriptions.
 
@@ -1721,40 +1731,49 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 56FFF8EE6E882669A70ED05A17E94F6F;2192.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 1049D738215584BC1947298823B4870E;2161
+(rerunfilecheck)             After:  FFF7D1F6BC7D5D8272FCBDAF368EEFAC;2161.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 33533 strings out of 492616
- 600020 string characters out of 6129482
+ 33530 strings out of 492616
+ 600031 string characters out of 6129482
  743962 words of memory out of 5000000
- 36229 multiletter control sequences out of 15000+600000
- 175033 words of font info for 335 fonts, out of 8000000 for 9000
+ 36228 multiletter control sequences out of 15000+600000
+ 175404 words of font info for 337 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,94p,1249b,556s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{
-/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/
-usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/u
-sr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}</us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinum
-TI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinLibe
-rtineT.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/Lin
-LibertineTB.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertin
-e/LinLibertineTI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/new
-tx/txsys.pfb>
-Output written on main.pdf (9 pages, 481405 bytes).
+ 60i,13n,94p,1249b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.13} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{
+/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/
+usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/u
+sr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/us
+r/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr
+/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}</usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb
+></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI
+.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinLibert
+ineT.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinLi
+bertineTB.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/
+LinLibertineTI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newtx
+/txsys.pfb>
+Output written on main.pdf (9 pages, 482115 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 52366 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 52358 words of extra memory for PDF output out of 61914 (max. 10000000)
 
