@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  20 JAN 2020 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  21 JAN 2020 09:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1729,14 +1729,17 @@ Comment 'acks' writing to comment.cut. Straight input of comment.cut.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Class acmart Warning: Some images may lack descriptions.
 
 [9.9] [10.10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FFF7D1F6BC7D5D8272FCBDAF368EEFAC;2161.
 
@@ -1769,7 +1772,7 @@ ibertineTB.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine
 /LinLibertineTI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/txfo
 nts/rtxmi.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newtx/txsy
 s.pfb>
-Output written on main.pdf (10 pages, 552139 bytes).
+Output written on main.pdf (10 pages, 553719 bytes).
 PDF statistics:
  294 PDF objects out of 1000 (max. 8388607)
  233 compressed objects within 3 object streams
