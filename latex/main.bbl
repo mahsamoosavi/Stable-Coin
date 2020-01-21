@@ -44,8 +44,7 @@
   Kalodner}, \bibinfo{person}{S~Matthew Weinberg}, {and}
   \bibinfo{person}{Arvind Narayanan}.} \bibinfo{year}{2016}\natexlab{}.
 \newblock \showarticletitle{On the instability of bitcoin without the block
-  reward}. In \bibinfo{booktitle}{\emph{Proceedings of the 2016 ACM SIGSAC
-  Conference on Computer and Communications Security}}. ACM,
+  reward}. In \bibinfo{booktitle}{\emph{ACM CCS}}. ACM,
   \bibinfo{pages}{154--167}.
 \newblock
 
@@ -72,13 +71,12 @@
 
 
 \bibitem[\protect\citeauthoryear{Danezis and Meiklejohn}{Danezis and
-  Meiklejohn}{2015}]%
+  Meiklejohn}{2016}]%
         {danezis2015centrally}
 \bibfield{author}{\bibinfo{person}{George Danezis} {and} \bibinfo{person}{Sarah
-  Meiklejohn}.} \bibinfo{year}{2015}\natexlab{}.
-\newblock \showarticletitle{Centrally banked cryptocurrencies}.
-\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1505.06895}}
-  (\bibinfo{year}{2015}).
+  Meiklejohn}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Centrally banked cryptocurrencies}. In
+  \bibinfo{booktitle}{\emph{NDSS}}.
 \newblock
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  19 JAN 2020 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  20 JAN 2020 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1706,8 +1706,11 @@ Overfull \hbox (10.79999pt too wide) in paragraph at lines 5--19
 Underfull \vbox (badness 1275) has occurred while \output is active []
 
  [3.3]
-[4.4] [5.5] [6.6] [7.7]
-<figures/newGraph.pdf, id=146, 702.625pt x 366.36874pt>
+[4.4] [5.5] [6.6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7.7]
+<figures/newGraph.pdf, id=148, 702.625pt x 366.36874pt>
 File: figures/newGraph.pdf Graphic file (type pdf)
 <use figures/newGraph.pdf>
 Package pdftex.def Info: figures/newGraph.pdf  used on input line 174.
@@ -1743,31 +1746,33 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 33543 strings out of 492616
- 600406 string characters out of 6129482
+ 33547 strings out of 492616
+ 600409 string characters out of 6129482
  743962 words of memory out of 5000000
  36231 multiletter control sequences out of 15000+600000
- 176323 words of font info for 343 fonts, out of 8000000 for 9000
+ 178912 words of font info for 348 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,13n,94p,1249b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
-}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{
-/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/
-usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/u
-sr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}</us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.p
-fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinum
-TI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinLibe
-rtineT.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/Lin
-LibertineTB.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertin
-e/LinLibertineTI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/new
-tx/txsys.pfb>
-Output written on main.pdf (10 pages, 550112 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc
+}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{
+/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/
+usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/u
+sr/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/us
+r/local/texlive/2019/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}</usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
+I.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinLiber
+tineT.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinL
+ibertineTB.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/libertine
+/LinLibertineTI.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/txfo
+nts/rtxmi.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newtx/txsy
+s.pfb>
+Output written on main.pdf (10 pages, 552139 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 294 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
  45 named destinations out of 1000 (max. 500000)
- 52363 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 54411 words of extra memory for PDF output out of 61914 (max. 10000000)
 

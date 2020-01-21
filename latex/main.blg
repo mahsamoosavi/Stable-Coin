@@ -14,7 +14,8 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty publisher in carlsten2016instability
 Warning--empty address in carlsten2016instability
 Warning--empty address in Cha14
-Warning--no number and no volume in danezis2015centrally
+Warning--empty publisher in danezis2015centrally
+Warning--empty address in danezis2015centrally
 Warning--page numbers missing in both pages and numpages fields in danezis2015centrally
 Warning--no number and no volume in griffin2018bitcoin
 Warning--page numbers missing in both pages and numpages fields in griffin2018bitcoin
@@ -31,43 +32,43 @@ Warning--page numbers missing in both pages and numpages fields in PHP+19
 Warning--empty address in rogoff2017curse
 You've used 11 entries,
             5719 wiz_defined-function locations,
-            1349 strings with 16043 characters,
-and the built_in function-call counts, 10920 in all, are:
-= -- 1180
+            1348 strings with 15934 characters,
+and the built_in function-call counts, 10880 in all, are:
+= -- 1108
 > -- 466
 < -- 0
 + -- 155
 - -- 160
-* -- 800
-:= -- 1226
-add.period$ -- 56
+* -- 799
+:= -- 1227
+add.period$ -- 55
 call.type$ -- 11
 change.case$ -- 75
 chr.to.int$ -- 11
-cite$ -- 29
-duplicate$ -- 963
-empty$ -- 680
+cite$ -- 30
+duplicate$ -- 984
+empty$ -- 692
 format.name$ -- 192
-if$ -- 2472
+if$ -- 2428
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 33
-newline$ -- 125
+missing$ -- 34
+newline$ -- 124
 num.names$ -- 88
-pop$ -- 402
+pop$ -- 419
 preamble$ -- 1
 purify$ -- 174
 quote$ -- 0
-skip$ -- 333
+skip$ -- 345
 stack$ -- 0
-substring$ -- 667
-swap$ -- 71
+substring$ -- 666
+swap$ -- 72
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 243
-warning$ -- 18
+type$ -- 257
+warning$ -- 19
 while$ -- 67
 width$ -- 0
-write$ -- 219
-(There were 18 warnings)
+write$ -- 218
+(There were 19 warnings)
