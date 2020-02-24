@@ -14,11 +14,14 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty publisher in carlsten2016instability
 Warning--empty address in carlsten2016instability
 Warning--empty address in Cha14
+Warning--no number and no volume in CDM20
+Warning--page numbers missing in both pages and numpages fields in CDM20
 Warning--empty publisher in danezis2015centrally
 Warning--empty address in danezis2015centrally
 Warning--page numbers missing in both pages and numpages fields in danezis2015centrally
 Warning--no number and no volume in griffin2018bitcoin
 Warning--page numbers missing in both pages and numpages fields in griffin2018bitcoin
+Warning--empty address in harris2003trading
 Warning--empty publisher in MSS20
 Warning--empty address in MSS20
 Warning--page numbers missing in both pages and numpages fields in MSS20
@@ -26,49 +29,53 @@ Warning--no journal in nakamoto2008bitcoin
 Warning--no number and no volume in nakamoto2008bitcoin
 Warning--page numbers missing in both pages and numpages fields in nakamoto2008bitcoin
 Warning--empty address in NBFMG16
+Warning--empty publisher in okoye2018toward
+Warning--empty address in okoye2018toward
 Warning--empty publisher in PHP+19
 Warning--empty address in PHP+19
 Warning--page numbers missing in both pages and numpages fields in PHP+19
 Warning--empty address in rogoff2017curse
-You've used 11 entries,
+Warning--no number and no volume in wood2014ethereum
+Warning--page numbers missing in both pages and numpages fields in wood2014ethereum
+You've used 14 entries,
             5719 wiz_defined-function locations,
-            1348 strings with 15934 characters,
-and the built_in function-call counts, 10880 in all, are:
-= -- 1108
-> -- 466
-< -- 0
-+ -- 155
-- -- 160
-* -- 799
-:= -- 1227
-add.period$ -- 55
-call.type$ -- 11
-change.case$ -- 75
-chr.to.int$ -- 11
-cite$ -- 30
-duplicate$ -- 984
-empty$ -- 692
-format.name$ -- 192
-if$ -- 2428
+            1363 strings with 16332 characters,
+and the built_in function-call counts, 14037 in all, are:
+= -- 1503
+> -- 544
+< -- 1
++ -- 178
+- -- 192
+* -- 997
+:= -- 1540
+add.period$ -- 72
+call.type$ -- 14
+change.case$ -- 91
+chr.to.int$ -- 14
+cite$ -- 40
+duplicate$ -- 1293
+empty$ -- 912
+format.name$ -- 228
+if$ -- 3197
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 34
-newline$ -- 124
-num.names$ -- 88
-pop$ -- 419
+missing$ -- 49
+newline$ -- 147
+num.names$ -- 112
+pop$ -- 543
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 217
 quote$ -- 0
-skip$ -- 345
+skip$ -- 438
 stack$ -- 0
-substring$ -- 666
-swap$ -- 72
-text.length$ -- 0
+substring$ -- 917
+swap$ -- 99
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 257
-warning$ -- 19
-while$ -- 67
+type$ -- 304
+warning$ -- 26
+while$ -- 96
 width$ -- 0
-write$ -- 218
-(There were 19 warnings)
+write$ -- 268
+(There were 26 warnings)

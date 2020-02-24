@@ -3,17 +3,20 @@
 \clearpage
 \appendix
 
-\section{Expanded Background}
+\section{Expanded background}
 
 \subsection{Prices}
 
-If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are several subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and its actual price, (3) the concept that prices are really an exchange of one type of valuable good for another, and (4) the distinction between something's price and its value. The quoted price means that two (hopefully different\footnote{A trade between the same person is called a wash trade and is illegal in most regulated markets.}) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Further, this valuation on the previous trade does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
+If 1 BTC is worth \$3598.76 USD, as Google says it is at the time of writing, what does that actually mean? There are several subtleties here: (1) what that price actually represents, (2) the relationship between a quoted price and its actual price, (3) the concept that prices are really an exchange of one type of valuable good for another, and (4) the distinction between something's price and its value. 
+
+The quoted price means that two (hopefully different\footnote{A trade between the same person is called a wash trade and is illegal in most regulated markets.}) people recently exchanged BTC and USD at a valuation of 1 BTC for \$3598.76 USD. First, note that it does not necessarily mean that exactly 1 BTC was exchanged --- it could have been 1 mBTC for \$3.60 or 1000 BTC for \$36M USD. Further, this valuation on the previous trade does not mean you will necessarily be able to exchange 1 BTC for \$3598.76 USD. Last sale price is an indicator of current price that becomes stale as time between subsequent exchanges increase (for example, for a house that last sold 30 years ago, last sale price on a house is not a good indicator of current price).
 
 Instead, we will use the idea of that a cryptocurrency (or any asset) has two prices: (1) the most someone is willing to pay and (2) the least someone is willing to sell for. These are referred to as the best bid price and best ask (or offer) price respectively. Note that the best bid price should logically be less than the best ask price, otherwise an exchange would happen (such prices might occasionally `cross' but this should be temporal and quickly resolved with an exchange). The spread between these prices is called the bid-ask spread.
 
 To understand why this is relevant to stablecoins, consider an example. Say a stablecoin is designed to ensure one unit is always priced at \$1 USD. To argue stability, one must show both that (1) the bid price should never exceed \$1 dollar and (2) the offer price should never dip below \$1 USD. Note, conversely, that bids can dip below \$1 USD (everyone prefers to pay less than something is worth) and asks can exceed \$1 USD (everyone prefers to receive more than something is worth).
 
-\subsection{Exchange Rates}
+\subsection{Exchange rates}
+\label{app:xchange}
 
 Consider that several hours after writing the previous section, 1 BTC is now priced at \$3566.56 USD. In one sense, the price of BTC decreased by \$32.20. However it is exactly equivalent to say the price of \$1 USD increased by 0.002 mBTC. This raises a natural question: did BTC decrease in price or did USD increase in price? With an exchange rate, it is impossible to tell. We only know that the price of BTC and USD became closer in price over this short period of time.
 
@@ -55,25 +58,23 @@ Recall that in the previous section, 1 BTC was priced at \$3566.56 USD. This mea
 
 But does this mean that BTC is fundamentally worth \$3566.56 USD. This is unlikely because by the time you read this paper, the price of BTC in USD is probably quite different from this quoted value (perhaps humorously so). So what constitutes fundamental value? And why do prices change over time?
 
-Stocks, which represent ownership in a firm, and thus a stake in the firm's equity. Therefore shares (called equities) have a fundamental value called its book value: simplified, it is the firm's capital or equity (the value of its assets minus the value of its liabilities, as reported on its annual audited financial statement) divided by the number of outstanding shares. Working in reverse, the price of a single share multiplied by the number of shares represents the market capitalization of the firm. In theory, these numbers should be the same but often are not. When the market capitalization exceeds the reported capital, the market believes the firm's capital will increase over time. If the market capitalization is less than the reported capital, it demonstrates a lack of confidence in the soundness of the firm's financial statements. Floating currencies like the USD, EUR, GBP, and CAD do not have the equivalent of a book value.
+Stocks represent ownership in a firm, and thus a stake in the firm's equity. Therefore shares (called equities) have a fundamental value called its book value: simplified, it is the firm's capital or equity (the value of its assets minus the value of its liabilities, as reported on its annual audited financial statement) divided by the number of outstanding shares. Working in reverse, the price of a single share multiplied by the number of shares represents the market capitalization of the firm. In theory, these numbers should be the same but often are not. When the market capitalization exceeds the reported capital, the market believes the firm's capital will increase over time. If the market capitalization is less than the reported capital, it demonstrates a lack of confidence in the soundness of the firm's financial statements. Floating currencies like the USD, EUR, GBP, and CAD do not have the equivalent of a book value.
 
 To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory has emerged that attributes Bitcoin's value to the hydro consumed by blockchain mining. While imprecise, the theory suggests that if a valuable resource $x$ is consumed to produce $y$, the value of $x$ is imparted into $y$. Setting aside the nuance that the hydro contributed to the Bitcoin system only indirectly produces new coins (it produces blocks, and blocks produce coins only for now), there is no economic principle underlying this transfer of value.
 
 
 
-\subsection{Stability and Volatility}
+\subsection{Stability and volatility}
 
 When the price of a currency changes over time, it is due to one of two reasons: new information about the currency's fundamental value (even if we cannot concretely say what it is) or transitory volatility due to the trading activites of uninformed traders~\cite{harris2003trading}. For a government issued currencies, information like national inflation rates, macro-economic policies, changes in trade flows, and changes in capital flows seem predictive of changes in the value of the country's currency~\cite{harris2003trading}. Note that a cryptocurrency, like Bitcoin, has none of these indicators. While volatility can be measured mathematically (using variances or deviations), most stablecoins do not offer a concrete, positive definition of what stability means. They tend to be defined by a negative sentiment of what they do not want (the volatility of Bitcoin) rather than a positive sentiment of what they do want.
 
-\subsection{Functions of Money}
+\subsection{Functions of money}
 
 There is controversy over whether Bitcoin, and other cryptocurrencies, can even be classified as currencies. The original intent from Bitcoin's creator was for it to be a currency, however it has been assigned many different classifications: from a digitally scarce commodity, to a speculative instrument, to an entirely new asset class.
 
 Most introductory finance textbooks classify currencies according to a set of three core properties they should fulfill for their users. it should operate as a medium of exchange, which roughly means that Alice will accept the currency from Bob because she is confident Carol will later accept it from her. Given the existence of exchange services, Bitcoin is generally considered an acceptable medium of exchange (albeit with some friction). Next, a currency is useful when it serves as the unit of account for pricing other assets. Bitcoin is almost never used as a unit of account and if goods are sold for Bitcoin, it is often priced in, say, USD with a short-lived (\eg 2 minute) spot conversion of the price to BTC for Bitcoin purchases. Finally, currencies should represent a stable store of value. Alice will not accept a currency that depreciates quickly in value from Bob because even though Carol might accept it, what she can obtain from Carol in exchange will be worth less. Less intuitively, currencies that appreciate quickly in value are equally problematic. Alice might gladly accept it from Bob but Bob is unlikely to part with it, and so currencies like this tend to be hoarded. They also hamper lending (see next section).
 
-The goal of a stablecoin is to add the store of value feature to cryptocurrencies, which are already a somewhat adequate medium of exchange. Further, if the currency is stable, it may become a more prominent to use it as a unit of account. Thus stablecoins are intended to make cryptocurrencies more currency-like.~\cite{rogoff2017curse}
-
- %Cite Curse of Cash: Is its cited in the right place? (above parag)
+The goal of a stablecoin is to add the store of value feature to cryptocurrencies, which are already a somewhat adequate medium of exchange. Further, if the currency is stable, it may become a more prominent to use it as a unit of account. Thus stablecoins are intended to make cryptocurrencies more currency-like.
 
 \subsection{Lending}
 
@@ -81,46 +82,84 @@ Lending a volatile currency poses a risk for both the cash provider and cash tak
 
 \begin{quote}
 
-``It is difficult to overstate the role of lending in a modern economy. Take, as an illustrative example, the role of a central bank; one of the main national institutes (along with the treasury) that cryptocurrencies aim to displace. First and foremost, a central bank is an actual bank, providing accounts for its member banks to deposit money and earn interest. Member banks provide interest-earning accounts to the public. Interest is paid to the public because banks use the deposited money to form loans. Because central bank interest rates are low, banks prefer to lend to other banks any excess cash they hold at day's end instead of depositing them (other banks borrow to meet liquidity requirements). These loans earn interest, and central banks target this specific lending rate when they intervene in the economy. The most common intervention is the buying (circulating new money) or selling (removing circulating money) of government bonds, which are interest-earning loans from investors to the government. Central banks will also provide loans (of `last resort') to banks unable to secure loans from other banks, typically during some sort of liquidity crisis. An economy without loans would have no interest rates, no bonds, and essentially nothing for a modern central bank to do.~\cite{okoyetoward}''
+``It is difficult to overstate the role of lending in a modern economy. Take, as an illustrative example, the role of a central bank; one of the main national institutes (along with the treasury) that cryptocurrencies aim to displace. First and foremost, a central bank is an actual bank, providing accounts for its member banks to deposit money and earn interest. Member banks provide interest-earning accounts to the public. Interest is paid to the public because banks use the deposited money to form loans. Because central bank interest rates are low, banks prefer to lend to other banks any excess cash they hold at day's end instead of depositing them (other banks borrow to meet liquidity requirements). These loans earn interest, and central banks target this specific lending rate when they intervene in the economy. The most common intervention is the buying (circulating new money) or selling (removing circulating money) of government bonds, which are interest-earning loans from investors to the government. Central banks will also provide loans (of `last resort') to banks unable to secure loans from other banks, typically during some sort of liquidity crisis. An economy without loans would have no interest rates, no bonds, and essentially nothing for a modern central bank to do.~\cite{okoye2018toward}''
 
 \end{quote}
 
+%    - [ ] Futures, options, derivatives dominate forex spot market. Crypto only has spot
+
+
 %========================%
 
-\subsection{Bitcoin's Exchange Rate}
+\subsection{Foundations of Bitcoin's exchange rate}
 
-%Without government oversight, the exchange rate of Bitcoin is dependent on: (a) the supply and demand for exchanging Bitcoin and other things of value, namely fiat currencies such as the USD; (b) it's internal algorithm for releasing new BTC (Bitcoin's currency) on a fixed schedule; and (c) the market for participating in transaction validation which is integral into how new BTC comes into circulation.
+Without government oversight, the exchange rate of Bitcoin is dependent on: (a) the supply and demand for exchanging Bitcoin and other things of value, namely fiat currencies such as the USD; (b) it's internal algorithm for releasing new BTC (Bitcoin's currency) on a fixed schedule; and (c) the market for participating in transaction validation which is integral into how new BTC comes into circulation.
 
 % = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
 
-\section{Discussion Points}
-
-Up to this point, we walked though our proposed taxonomy for stabilization techniques and described each mechanism in detail. In this section, we bring up some several important discussions on the stablecoin topic as we believe they make contributions to research on stablecoins. First, we provide an evaluation of stabilization mechanisms based on their trust assumptions and core idea. In the following we discuss oracles, used by some above techniques to obtain the exchange rate. Next, we elaborate on what stability means by visualizing it using a set of graphs. Finally, we explore and discuss the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
-
-% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = %
-
-\subsection{Evaluation of Stabilization Mechanisms}
-
-We have considered various issues with different mechanisms of designing a stablecoin (discussed in Sections~\ref{sec:t1} and~\ref{sec:t2}). We provide a summary of these results in Table~\ref{tab:evframework} that evaluates each mechanism's core ideas and trust model. The columns and rows of the table are the evaluation criteria and mechanisms respectively. This framework provides a summary of the advantages and disadvantages of the different mechanisms for creating stablecoins.
-
-%========================%
+\section{Discussion points}
 
 %\subsection{Why so many?}
 
-%Emphasis on other things, like setting up contracts, governmence, audits, etc.
+%Emphasis on other things, like setting up contracts, governence, audits, etc.
 % Which blockchain
 
 %========================%
 
-\subsection{Oracles Everywhere}
+\subsection{Which stability mechanism is best?}
+\label{app:target}
 
-A number of stablecoin proposals feature oracles which feed information about the stablecoin's exchange rate onto the blockchain. This is essential for indirectly-backed stablecoins, and incidental to intervention-based coins. This raises an important design question. A stablecoin exists so that a digital (or material) good or service can be effectively priced in, say, USD instead of in ETH. To be clear, it is priced in the stablecoin, which maintains a stable exchange rate with USD. To accomplish this, an oracle provides a reliable exchange rate and somewhat elaborates contracts issue stablecoins with an unusual risk profile (\eg full redemption might not be possible under certain market conditions) that could be difficult for non-experts to understand.
+Recall the evaluation in Figure~\ref{tab:evframework}. The main takeaway of this table is that no stability mechanism is strictly better than any other. Each mechanism represents a unique configuration of trust and financial features.
 
-Let us take a step back and think about the larger picture. If we have trustworthy oracles providing reliable exchange rates, is it not a simpler design to just have transacting parties use the oracle directly? Anyone wanting to do business in a stable currency can determine at transaction time how much their good or service, priced in USD, is in ETH and charge the correct amount in ETH (which can then be immediately liquidated for USD, if desired). In summary, the oracle assumption that underlies many stablecoins is itself sufficient to side-step the need for stablecoins. This is applicable to lending as well: loans, interest rates, and repayment amounts can be denominated in USD but paid in ETH using a spot conversion via an oracle (\eg as proposed in~\cite{okoyetoward}).
+\paragraph{Valuation.} A directly backed and redeemable mechanism provides the strongest method to correct under- and overvaluation (\eg a USD-backed coin trading for less or more than 1 USD). If redemption is not allowed, arbitrary traders have no method to profit from undervalued coins (however the  issuer could purchase and redeem them if active in the market). Indirectly backed coins allow redemption except when the currency backing the coin loses enough value against the pegged coin.
+
+Intervention-based approaches argue that they correct under- and overvaluation, however there is no mechanism reasonably guarantees that the trader's corrective actions will yield them profit. We refer to the proposed stability mechanisms as \textit{heuristics} because their validity can only be shown within models that may or may not actually model human (and trader) behaviour. In fact, this is the best case scenario. Most of these heuristics do not even have models or simulations showing the conditions under which they work, however there is interesting future work to be done here. 
+
+\paragraph{Trust.} All stability mechanisms requires at least one trusted party. For directly backed coins, this entity issues and redeems digital coins, while maintaining the reserve of backing coins. This is a heavy reliance on a trusted third party.
+
+Indirectly backed coins require an oracle for price target information, but otherwise could be operated autonomously. While a corrupt oracle could damage the coin to a great extent, the reduction in trust is still significant because the role of an oracle is much smaller than operating a fully backed coin. Because the barrier to entry is lower for an oracle, reputable firms may be more willing to participate in this role. In practice, information from oracles is taken through the consensus of a set of individual oracles to improve trustworthiness.
+
+The degree to which an indirectly backed coin operates autonomously can differ between theory and practice. For example, the prominent example, dai/sai, includes a complex infrastructure of additional stability mechanisms beyond the core mechanism in Table~\ref{tab:mech}. At the time of writing, this includes constant adjustment of certain frees and rates that makes the whole system resemble the operations of a central bank. While adjustments are made by a shareholder's vote and thus decentralized, guidance is provided by the foundation overseeing the coin through a conference call. This is illustrates that there are pragmatic challenges to operating a truly `decentralized' and `autonomous' stablecoin.
+ 
+Intervention-based stablecoins provide the most promise for a minimal trust base. Bitcoin, Ethereum, and other cryptocurrencies already operate a fully autonomous, albeit not stable, mechanism for creating value. In theory, achieving this with less volatility seems possible. Such coins might rely on a trusted oracle if the price target is external to the blockchain (we illustrated the coins as targeting USD which requires an oracle). Alternatively, intervention-based stablecoins might fully embrace a trusted third party to offer intervention based on human expert discretion.
+ 
+\paragraph{Stability targets.} 
+
+Depending on its design, a stablecoin potentially involves up to two additional components: the reserve asset and the target. For example, a directly backed stablecoin with a USD reserve is intended to match the price of USD. We say its reserve asset is USD and its price target is also the USD. Directly backed stablecoins always have the same reserve and target. Because the reserve has to be an asset that can be held in custody, the target has to also be an asset that can be held. This includes (but it not limited to) currencies, commodities, securities, and baskets of assets.
+
+An indirectly backed asset uses a reserve asset that is different from the price target. For example, ETH might be held in reserve for a stablecoin that targets the USD. On redemption, the holder of the stablecoin receives a variable amount on ETH according to its price in USD. Because no actual USD is involved in the deployment of the coin, the target is only a number; one that scales up or down the amount of the reserve asset that is redeemed. Thus price targets for indirectly backed stablecoins are more versatile than directly backed: targets not only include assets that can be held, but any synthetic price, even if the price does not represent a real asset. For example, an indirectly-backed stablecoin could target a currency index which measures the value of a currency relative to a basket of other currencies, or the purchasing power of the currency, or the issuing country's GDP. If it uses an asset as the price target, like any derivative, the value of all issued indirectly-backed stablecoins can exceed the total value of  the asset being targeted (however it cannot exceed the total value of the asset held in reserve).
+
+For intervention-based stablecoins, there is no reserve asset. While we always illustrated the price target as the price of the stablecoin in USD, the target can be anything that can be determined, whether it is a number or an event. Thus these coins offer the most flexibility. For example, intervention could be decided on the level of inflation or a particular interest rate. The importance of this that these coins can be truly independent of any other currency. Backed (directly and indirectly) stablecoins require the reserve asset and cannot continue to function if the reserve asset disappears or becomes worthless. Hypothetically, if an intervention-based stablecoin could target on-blockchain events (thus not requiring an oracle) and demonstrate reliable price corrections to under and overvalued coins, it would represent the best possible stablecoin along all the properties we use in our evaluation. 
+
 
 %========================%
 
-\subsection{Visualizing Stability}\label{sec:stability}
+\subsection{Why aren't stablecoins perfectly stable?}\label{sec:stability}
+
+%- [ ] Why price more at all?
+%    - [ ] (0) Frictions (ETF example)
+%    - [ ] (1) Catastrophe
+%    - [ ] (2) Prioritze time over price
+%        - [ ] Quickly move in/out
+%        - [ ] If not (1), then this is because of other side of exchange
+%        - [ ] Direct exchange USD (no because stability is same)
+%        - [ ] Direct exchange: other Fiat (maybe)
+%        - [ ] Direct exchange: other crypto (yes, BitcoiN!)
+%        - [ ] INDIRECT exchange: gold or something (unlikely)
+
+%    - [ ] Dai as a stock instead, therefore not a coin per se more a security. Trading dai for gai is dumb, collapse into CFD
+
+
+% The idea of tokenizing assets and re-selling them in a useful format (\eg as a portfolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
+
+% A coin that has no redemption, direct or indirect, will not clearly be traded for a particular amount. An informal argument in favour of it being stable is that minting the coin is costly---it requires obtaining USD to hold in reserve. This feature serves an important function, albeit a different one. This bounds the firm from over-issuing tokens, which would cause the coin to lose value, however it does not ensure asks do not drop below \$1 USD.
+
+% The difference between the market value of a newly minted coin and the cost to produce it is called seignorage. A backed stablecoin has no seignorage: it sells for \$1 USD and requires holding \$1 USD to `produce' it. There appears to be a folk theorem that if minting asset X requires consuming asset Y, asset X will take on the value of asset Y (otherwise, who would produce X?). In reality, resources can be consumed to produce something of no value---that value is simply lost. A canvas that has been applied with acrylic paint might cost \$100 USD in raw materials; its value could none-the-less be much less than \$100 USD\ldots or much more.
+
+% If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
+
+
+
 
 \begin{figure}[t!]
 	\centering
@@ -151,7 +190,37 @@ Next we plot a number of stablecoins in Figure~\ref{fig:all}. The top two plots 
 
 %========================%
 
-\subsection {Ethereum's gas: a stable `coin'?}\label{sec:GasInvs}
+
+\subsection{Oracles everywhere}
+
+% Unit of account vs store of value
+
+A number of stablecoin proposals feature oracles which feed information about the stablecoin's exchange rate onto the blockchain. This is essential for indirectly-backed stablecoins, and incidental to intervention-based coins. This raises an important design question. A stablecoin exists so that a digital (or material) good or service can be effectively priced in, say, USD instead of in ETH. To be clear, it is priced in the stablecoin, which maintains a stable exchange rate with USD. To accomplish this, an oracle provides a reliable exchange rate and somewhat elaborates contracts issue stablecoins with an unusual risk profile (\eg full redemption might not be possible under certain market conditions) that could be difficult for non-experts to understand.
+
+Let us take a step back and think about the larger picture. If we have trustworthy oracles providing reliable exchange rates, is it not a simpler design to just have transacting parties use the oracle directly? Anyone wanting to do business in a stable currency can determine at transaction time how much their good or service, priced in USD, is in ETH and charge the correct amount in ETH (which can then be immediately liquidated for USD, if desired). In summary, the oracle assumption that underlies many stablecoins is itself sufficient to side-step the need for stablecoins. This is applicable to lending as well: loans, interest rates, and repayment amounts can be denominated in USD but paid in ETH using a spot conversion via an oracle.
+
+%========================%
+
+\subsection {Indirectly backed derivatives}
+
+% This stability mechanism might enable a third-party to trigger a redemption (\eg for a fee) if they notice a deposit is close to losing more value than the face value of the coins (before the coin holder does). Note that while allowing third parties to trigger a redemption seems like a sensible service, if the coin holders are not monitoring the situation, they will end up holding ETH, instead of an AliceCoin, which is still losing value. Thus this mechanism does not protect holders of the stablecoin at all --- it is really only about maintaining the reputation of the stablecoin. The stablecoin can claim it has never broken its peg to the dollar but it is an illusion, because as soon as it is about to lose value, it turns back into its collateral and then loses values under the name of the collateral instead of the stablecoin. If the holder isn't paying attention, they actually lose more by having it triggered than they would breaking the buck.
+
+%========================%
+
+\subsection {What about a currency board?}
+
+%Consequence: Currency board = directly backed
+
+
+%========================%
+
+\subsection {What about a CBDC?}
+
+% Centrallly banked digital currency
+
+%========================%
+
+\subsection {Is Ethereum's gas a stable `coin'?}\label{sec:GasInvs}
 
 \begin{figure}[t]
 	\centering
@@ -184,11 +253,3 @@ As users' mental model of gas improves over time, the volatility of gas has the 
 
 
 %========================%
-
-\section{Conclusion}
-
-In this paper, we provide a survey of active stablecoin projects. Unlike previous research studies performed on this topic, we selectively use the concepts from finance while eliminating the jargons. In addition, rather than focusing on the details of how particular `brands' of stablecoins work, we thoroughly describe the fundamental mechanics and concepts to achieve price stability. Respectively, we show the taxonomy we use to classify stablecoins which represents the techniques to build a stablecoin. Additionally, we evaluate different price stability achieving mechanics based on their fundamental design decisions and trust models. The comparative evaluation framework highlights the advantages and disadvantages of each techniques more precisely. Eventually, we explore the potential stable index-cryptocurrencies (namely Ethereum gas) in the context of stablecoins.
-
-``That would have required a trusted party to determine the value, because I don’t know a way for software to know thereal world value of things. If there was some clever way, or if we wanted to trust someone to actively manage the money supply to peg it to something, the rules could have been programmed for that.
-
-Champagne, Phil. The Book Of Satoshi: The Collected Writings of Bitcoin Creator Satoshi Nakamoto . e53 Publishing, LLC. Kindle Edition.''

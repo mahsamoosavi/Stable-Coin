@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{11}
+\begin{thebibliography}{14}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -60,13 +60,13 @@
 
 
 \bibitem[\protect\citeauthoryear{Clark, Demirag, and Moosavi}{Clark
-  et~al\mbox{.}}{2019}]%
-        {CDM19}
+  et~al\mbox{.}}{2020}]%
+        {CDM20}
 \bibfield{author}{\bibinfo{person}{Jeremy Clark}, \bibinfo{person}{Didem
   Demirag}, {and} \bibinfo{person}{Seyedehmahsa Moosavi}.}
-  \bibinfo{year}{2019}\natexlab{}.
-\newblock \bibinfo{title}{SoK: Demystifying Stablecoins}.
-\newblock \bibinfo{howpublished}{SSRN 3466371}.
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Demystifying Stablecoins}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} (\bibinfo{year}{2020}).
 \newblock
 
 
@@ -87,6 +87,16 @@
 \newblock \showarticletitle{Is bitcoin really un-tethered?}
 \newblock \bibinfo{journal}{\emph{Available at SSRN 3195066}}
   (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Harris}{Harris}{2003}]%
+        {harris2003trading}
+\bibfield{author}{\bibinfo{person}{Larry Harris}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Trading and exchanges: Market
+  microstructure for practitioners}}.
+\newblock \bibinfo{publisher}{Oxford University Press, USA}. 410--419 pages.
 \newblock
 
 
@@ -122,6 +132,16 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Okoye and Clark}{Okoye and Clark}{2018}]%
+        {okoye2018toward}
+\bibfield{author}{\bibinfo{person}{Mildred~Chidinma Okoye} {and}
+  \bibinfo{person}{Jeremy Clark}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Toward Cryptocurrency Lending}. In
+  \bibinfo{booktitle}{\emph{International Conference on Financial Cryptography
+  and Data Security}}. Springer, \bibinfo{pages}{367--380}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Pernice, Henningsen, Proskalovich, Florian,
   and Elendner}{Pernice et~al\mbox{.}}{2019}]%
         {PHP+19}
@@ -153,6 +173,16 @@
 \newblock \bibinfo{booktitle}{\emph{The Curse of Cash: How Large-Denomination
   Bills Aid Crime and Tax Evasion and Constrain Monetary Policy}}.
 \newblock \bibinfo{publisher}{Princeton University Press}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Wood}{Wood}{2014}]%
+        {wood2014ethereum}
+\bibfield{author}{\bibinfo{person}{Gavin Wood}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Ethereum yellow paper}.
+\newblock \bibinfo{journal}{\emph{Internet: https://github.
+  com/ethereum/yellowpaper,[Oct. 30, 2018]}} (\bibinfo{year}{2014}).
 \newblock
 
 
