@@ -48,7 +48,7 @@ To determine which currency is moving, one might consider a third or forth curre
 In order to apply this same logic in a visual way, we have created a number of charts like the one provided in Figure~\ref{fig:brexit}. Unlike most exchange rate graphs, these do not use a time axis. Instead each axis is a reference currency. In this case, the price of GBP (plotted value) in USD (x-axis) and EUR (y-axis) form a coordinate. For the last day of each month, a new coordinate is added and joined with a line from the previous value. This is inspired by similar charts on the website FiveThiryEight for things like kicking distance in football\footnote{``The 52 Best---And Weirdest---Charts We Made In 2016,'' \textit{FiveThirtyEight}, 30 Dec 2016.} and they have been called connected scatter plots.
 
 Lines in a connected scatter plot can move in any direction. Figure~\ref{fig:legend} shows how we number the directions from 1 (upward or due north) clockwise to 8 (north-west). For each direction, we describe the simplest interpretation of what that price direction means. By simplest, we mean specifically that we keep an explanation that involves a single currency moving rather than an explanation that involves a pair of currencies moving in tandem. For example, in Figure~\ref{fig:brexit}, GBP shows a drastic movement along direction 6 starting at the time period marked Brexit. This means that GBP is losing value against both EUR and USD. The simplest explanation is that the movements are originating from GBP which is consistent with it losing value after Brexit. Later, GBP shows a lot of horizontal movements along the 7/3 line. The simplest explanation for this segment is volatility in USD rather than GBP.
-A copy of the datasets and codes of all the charts can be found on our GitHub repository.\footnote{https://github.com/ Removed for anonymity.}
+A copy of the datasets and codes of all the charts can be found on our GitHub repository.\footnote{\url{https://github.com/mahsamoosavi/Stablecoins}}
 
 We will return to these charts later in Section~\ref{sec:stability} where we will use a government currency as one reference (USD on the x-axis) and a cryptocurrency as the other reference (BTC on the y-axis). A stablecoin should exhibit mostly vertical movements along the 1/5 direction.
 
@@ -69,6 +69,7 @@ To explain Bitcoin's exchange rate with fiat currencies, an oft-repeated theory 
 When the price of a currency changes over time, it is due to one of two reasons: new information about the currency's fundamental value (even if we cannot concretely say what it is) or transitory volatility due to the trading activites of uninformed traders~\cite{harris2003trading}. For a government issued currencies, information like national inflation rates, macro-economic policies, changes in trade flows, and changes in capital flows seem predictive of changes in the value of the country's currency~\cite{harris2003trading}. Note that a cryptocurrency, like Bitcoin, has none of these indicators. While volatility can be measured mathematically (using variances or deviations), most stablecoins do not offer a concrete, positive definition of what stability means. They tend to be defined by a negative sentiment of what they do not want (the volatility of Bitcoin) rather than a positive sentiment of what they do want.
 
 \subsection{Functions of money}
+\label{sec:fofm}
 
 There is controversy over whether Bitcoin, and other cryptocurrencies, can even be classified as currencies. The original intent from Bitcoin's creator was for it to be a currency, however it has been assigned many different classifications: from a digitally scarce commodity, to a speculative instrument, to an entirely new asset class.
 
@@ -99,13 +100,6 @@ Without government oversight, the exchange rate of Bitcoin is dependent on: (a) 
 
 \section{Discussion points}
 
-%\subsection{Why so many?}
-
-%Emphasis on other things, like setting up contracts, governence, audits, etc.
-% Which blockchain
-
-%========================%
-
 \subsection{Which stability mechanism is best?}
 \label{app:target}
 
@@ -131,34 +125,29 @@ An indirectly backed asset uses a reserve asset that is different from the price
 
 For intervention-based stablecoins, there is no reserve asset. While we always illustrated the price target as the price of the stablecoin in USD, the target can be anything that can be determined, whether it is a number or an event. Thus these coins offer the most flexibility. For example, intervention could be decided on the level of inflation or a particular interest rate. The importance of this that these coins can be truly independent of any other currency. Backed (directly and indirectly) stablecoins require the reserve asset and cannot continue to function if the reserve asset disappears or becomes worthless. Hypothetically, if an intervention-based stablecoin could target on-blockchain events (thus not requiring an oracle) and demonstrate reliable price corrections to under and overvalued coins, it would represent the best possible stablecoin along all the properties we use in our evaluation. 
 
+%========================%
+
+\subsection{Why are there so many?}
+
+Stablecoins can choose from a variety of price targets, reserve assets, and blockchain platforms to deploy on. This by itself results in a large number of projects. Additionally, how contracts are set-up, what the governance over the system looks like, to what extent the system can change, how compliant the coin aims to be with regulations, and other design decisions differentiate the projects. 
 
 %========================%
 
 \subsection{Why aren't stablecoins perfectly stable?}\label{sec:stability}
 
-%- [ ] Why price more at all?
-%    - [ ] (0) Frictions (ETF example)
-%    - [ ] (1) Catastrophe
-%    - [ ] (2) Prioritze time over price
-%        - [ ] Quickly move in/out
-%        - [ ] If not (1), then this is because of other side of exchange
-%        - [ ] Direct exchange USD (no because stability is same)
-%        - [ ] Direct exchange: other Fiat (maybe)
-%        - [ ] Direct exchange: other crypto (yes, BitcoiN!)
-%        - [ ] INDIRECT exchange: gold or something (unlikely)
+A stablecoin that the USD will still experience some volatility. If it trades above or below 1 USD, there are three basic explanations to consider. First, is there a mechanism to correct the under/overvaluation? If not, there is no guarantee of stability. If there is, how much friction is there in using the mechanism? For example, if offers are below 1 USD, can the coins be purchased and redeemed at all, and if so, what are the fees and time delays associated with redemption? The more friction there is, the higher the volatility. 
 
-%    - [ ] Dai as a stock instead, therefore not a coin per se more a security. Trading dai for gai is dumb, collapse into CFD
+This is seen in other financial instruments as well. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like a directly backed and redeemable stablecoin. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
 
+A second explanation for volatility in a stablecoin is some catastrophic failure in the coin; for example, around its security. If coins or their direct/indirect reserves are stolen or the coin issuing process is hijacked, a collapse in price could occur. Technically this is a special case of the first explanation---a hack of the coin makes redemption (the primary undervalue correction mechanism) impossible.
 
-% The idea of tokenizing assets and re-selling them in a useful format (\eg as a portfolio or in a way that is digitally compliant with standard trading software and automated accounting systems) is commonplace for standard financial assets, however most tokenizations of this type have some direct or indirect redeemable value. Consider two contrasting examples: a typical ETF and a typical trust fund. An electronically traded fund (ETF) will typically sell shares of a portfolio of assets, be redeemable for the assets on-demand, and will be priced closely ($\pm 1\%$) to the value of its underlying assets---it is most like the stablecoins in Section~\ref{sec:redeem}. A simplification of a (close-ended) trust fund is as follows: a firm will set up a special corporation to hold the assets, the tokens are not directly redeemable, however the tokens are ownership shares in the special corporation---by owning the corporation, you effectively own its assets. Such a fund will trade with greater deviation from the value of its assets ($\pm 5\%$).
+The final explanation is also seen in all financial markets. Generally, traders of financial instruments must choose between executing trades at a good price and executing trades fast. Depending on the circumstances for why they are trading, they might prioritize price over time, or time over price.
 
-% A coin that has no redemption, direct or indirect, will not clearly be traded for a particular amount. An informal argument in favour of it being stable is that minting the coin is costly---it requires obtaining USD to hold in reserve. This feature serves an important function, albeit a different one. This bounds the firm from over-issuing tokens, which would cause the coin to lose value, however it does not ensure asks do not drop below \$1 USD.
+Consider a USD-backed and redeemable stablecoin where coins can be issued and redeemed with minimal friction. A good price for such a coin is 1 USD (with some variance, perhaps similar to the $\pm 1\%$ band of an ETF). However if traders want to quickly buy or sell the stablecoin, they might forgo obtaining a good price for fast execution of their trades. One of the quickest to execute trades that are possible with a stablecoin is an exchange for another cryptocurrency, such as Bitcoin (and vice versa). If traders want to buy/sell BTC quickly and prices are not ideal (\ie close to 1 USD), the time-sensitive traders may prioritize time over price and execute the trade anyways. Meanwhile, price-sensitive traders will avoid the poorly priced stablecoin and trade BTC and actual USD, even though this involves more risk and time to actually withdrawal the USD. The result is greater volatility in the stablecoin's exchange rate with the USD, at least temporarily. Once the time-sensitive trading subsides, price-sensitive traders drive the price back to stability. 
 
-% The difference between the market value of a newly minted coin and the cost to produce it is called seignorage. A backed stablecoin has no seignorage: it sells for \$1 USD and requires holding \$1 USD to `produce' it. There appears to be a folk theorem that if minting asset X requires consuming asset Y, asset X will take on the value of asset Y (otherwise, who would produce X?). In reality, resources can be consumed to produce something of no value---that value is simply lost. A canvas that has been applied with acrylic paint might cost \$100 USD in raw materials; its value could none-the-less be much less than \$100 USD\ldots or much more.
+%========================%
 
-% If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
-
-
+\subsection{How do stablecoins compare to governmental currencies?}\label{sec:stability}
 
 
 \begin{figure}[t!]
@@ -195,28 +184,11 @@ Next we plot a number of stablecoins in Figure~\ref{fig:all}. The top two plots 
 
 % Unit of account vs store of value
 
-A number of stablecoin proposals feature oracles which feed information about the stablecoin's exchange rate onto the blockchain. This is essential for indirectly-backed stablecoins, and incidental to intervention-based coins. This raises an important design question. A stablecoin exists so that a digital (or material) good or service can be effectively priced in, say, USD instead of in ETH. To be clear, it is priced in the stablecoin, which maintains a stable exchange rate with USD. To accomplish this, an oracle provides a reliable exchange rate and somewhat elaborates contracts issue stablecoins with an unusual risk profile (\eg full redemption might not be possible under certain market conditions) that could be difficult for non-experts to understand.
+A number of stablecoin proposals feature oracles which feed information about the stablecoin's exchange rate onto the blockchain. This is essential for indirectly-backed stablecoins, and incidental to intervention-based coins. This raises an important design question. One use of a stablecoin is as a unit of account (recall the function of money in Section~\ref{sec:fofm})---so that a digital (or material) good or service can be effectively priced in, say, USD instead of in ETH. To be clear, it is priced in the stablecoin, which maintains a stable exchange rate with USD. To accomplish this, an oracle provides a reliable exchange rate and somewhat elaborates contracts issue stablecoins with an unusual risk profile (\eg full redemption might not be possible under certain market conditions) that could be difficult for non-experts to understand.
 
 Let us take a step back and think about the larger picture. If we have trustworthy oracles providing reliable exchange rates, is it not a simpler design to just have transacting parties use the oracle directly? Anyone wanting to do business in a stable currency can determine at transaction time how much their good or service, priced in USD, is in ETH and charge the correct amount in ETH (which can then be immediately liquidated for USD, if desired). In summary, the oracle assumption that underlies many stablecoins is itself sufficient to side-step the need for stablecoins. This is applicable to lending as well: loans, interest rates, and repayment amounts can be denominated in USD but paid in ETH using a spot conversion via an oracle.
 
-%========================%
-
-\subsection {Indirectly backed derivatives}
-
-% This stability mechanism might enable a third-party to trigger a redemption (\eg for a fee) if they notice a deposit is close to losing more value than the face value of the coins (before the coin holder does). Note that while allowing third parties to trigger a redemption seems like a sensible service, if the coin holders are not monitoring the situation, they will end up holding ETH, instead of an AliceCoin, which is still losing value. Thus this mechanism does not protect holders of the stablecoin at all --- it is really only about maintaining the reputation of the stablecoin. The stablecoin can claim it has never broken its peg to the dollar but it is an illusion, because as soon as it is about to lose value, it turns back into its collateral and then loses values under the name of the collateral instead of the stablecoin. If the holder isn't paying attention, they actually lose more by having it triggered than they would breaking the buck.
-
-%========================%
-
-\subsection {What about a currency board?}
-
-%Consequence: Currency board = directly backed
-
-
-%========================%
-
-\subsection {What about a CBDC?}
-
-% Centrallly banked digital currency
+The one remaining issue is that oracle-denominated transaction do not offer a stable store of value. So if Alice is paid in ETH at a rate set in USD, an oracle is sufficient. However if the value of ETH relative to USD changes before she does something with her ETH, she gains/loses. Alternatively if she was paid in a USD-targeting stablecoin, she can leave her pay untouched indefinetely without it gaining/losing value relative to the USD. Thus oracles alone provide a unit of account, while stablecoins provide both a unit of account and a store of value. 
 
 %========================%
 
@@ -241,7 +213,25 @@ As users' mental model of gas improves over time, the volatility of gas has the 
 
 %========================%
 
-%\subsection{Consequences for Central Banking}
+% \subsection {Indirectly backed derivatives}
+
+% This stability mechanism might enable a third-party to trigger a redemption (\eg for a fee) if they notice a deposit is close to losing more value than the face value of the coins (before the coin holder does). Note that while allowing third parties to trigger a redemption seems like a sensible service, if the coin holders are not monitoring the situation, they will end up holding ETH, instead of an AliceCoin, which is still losing value. Thus this mechanism does not protect holders of the stablecoin at all --- it is really only about maintaining the reputation of the stablecoin. The stablecoin can claim it has never broken its peg to the dollar but it is an illusion, because as soon as it is about to lose value, it turns back into its collateral and then loses values under the name of the collateral instead of the stablecoin. If the holder isn't paying attention, they actually lose more by having it triggered than they would breaking the buck.
+
+%    - [ ] Dai as a stock instead, therefore not a coin per se more a security. Trading dai for gai is dumb, collapse into CFD
+
+%========================%
+
+% \subsection {What about a currency board?}
+
+%Consequence: Currency board = directly backed
+
+%========================%
+
+% \subsection {What about a CBDC?}
+
+% Centrallly banked digital currency
+
+%\subsection{Consequences for central banking}
 
 %Interest rates: borrower pays her loan + interest
 %Negative interest rate: borrower is paid the interest + she uses the loan
@@ -250,6 +240,5 @@ As users' mental model of gas improves over time, the volatility of gas has the 
 %========================%
 
 %\subsection{Liquidity Crisis and others}
-
 
 %========================%

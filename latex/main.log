@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  23 FEB 2020 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 FEB 2020 11:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1368,14 +1368,17 @@ Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 9.
 \c@theorem=\count191
 
 Include comment 'screenonly' Excluding comment 'printonly'
-Include comment 'anonsuppress' (./main.aux)
+Include comment 'anonsuppress' (./main.aux
+
+LaTeX Warning: Label `sec:stability' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 9.
 LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 9.
 
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 9.
@@ -1662,7 +1665,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 4.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.0pt on input line 8.
-<figures/allCurrencies.pdf, id=130, 640.3925pt x 378.41376pt>
+<figures/allCurrencies.pdf, id=126, 640.3925pt x 378.41376pt>
 File: figures/allCurrencies.pdf Graphic file (type pdf)
 <use figures/allCurrencies.pdf>
 Package pdftex.def Info: figures/allCurrencies.pdf  used on input line 13.
@@ -1712,7 +1715,7 @@ Underfull \vbox (badness 1275) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7.7]
-<figures/newGraph.pdf, id=217, 702.625pt x 366.36874pt>
+<figures/newGraph.pdf, id=213, 702.625pt x 366.36874pt>
 File: figures/newGraph.pdf Graphic file (type pdf)
 <use figures/newGraph.pdf>
 Package pdftex.def Info: figures/newGraph.pdf  used on input line 174.
@@ -1733,14 +1736,14 @@ Comment 'acks' writing to comment.cut. Straight input of comment.cut.
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gbpBrexit.pdf): PD
 F inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/gbpBrexit.pdf, id=299, 803.0pt x 515.9275pt>
+<figures/gbpBrexit.pdf, id=295, 803.0pt x 515.9275pt>
 File: figures/gbpBrexit.pdf Graphic file (type pdf)
 <use figures/gbpBrexit.pdf>
 Package pdftex.def Info: figures/gbpBrexit.pdf  used on input line 28.
 (pdftex.def)             Requested size: 293.98898pt x 188.8906pt.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 28.
-<figures/compass.pdf, id=300, 1027.84pt x 770.88pt>
+<figures/compass.pdf, id=296, 1027.84pt x 770.88pt>
 File: figures/compass.pdf Graphic file (type pdf)
 <use figures/compass.pdf>
 Package pdftex.def Info: figures/compass.pdf  used on input line 30.
@@ -1751,71 +1754,67 @@ Class acmart Warning: A possible image without description on input line 45.
 [10.10
 
 ] [11.11 <./figures/gbpBrexit.pdf> <./figures/compass.pdf>] [12.12]
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
- [13.13]
-[14.14]
-<figures/eth.pdf, id=392, 401.5pt x 265.99374pt>
+[13.13] [14.14]
+<figures/eth.pdf, id=389, 401.5pt x 265.99374pt>
 File: figures/eth.pdf Graphic file (type pdf)
 <use figures/eth.pdf>
-Package pdftex.def Info: figures/eth.pdf  used on input line 186.
+Package pdftex.def Info: figures/eth.pdf  used on input line 155.
 (pdftex.def)             Requested size: 203.53136pt x 134.84326pt.
-<figures/xrp.pdf, id=393, 401.5pt x 256.96pt>
+<figures/xrp.pdf, id=390, 401.5pt x 256.96pt>
 File: figures/xrp.pdf Graphic file (type pdf)
 <use figures/xrp.pdf>
-Package pdftex.def Info: figures/xrp.pdf  used on input line 188.
+Package pdftex.def Info: figures/xrp.pdf  used on input line 157.
 (pdftex.def)             Requested size: 221.62703pt x 141.84598pt.
 
 
-Class acmart Warning: A possible image without description on input line 191.
+Class acmart Warning: A possible image without description on input line 160.
 
-<figures/cad.pdf, id=396, 401.5pt x 256.96pt>
+[15.15]
+<figures/cad.pdf, id=398, 401.5pt x 256.96pt>
 File: figures/cad.pdf Graphic file (type pdf)
 <use figures/cad.pdf>
-Package pdftex.def Info: figures/cad.pdf  used on input line 198.
+Package pdftex.def Info: figures/cad.pdf  used on input line 167.
 (pdftex.def)             Requested size: 203.53136pt x 130.26369pt.
-<figures/eur.pdf, id=397, 401.5pt x 256.96pt>
+<figures/eur.pdf, id=399, 401.5pt x 256.96pt>
 File: figures/eur.pdf Graphic file (type pdf)
 <use figures/eur.pdf>
-Package pdftex.def Info: figures/eur.pdf  used on input line 200.
+Package pdftex.def Info: figures/eur.pdf  used on input line 169.
 (pdftex.def)             Requested size: 203.53136pt x 130.26369pt.
-<figures/tether.pdf, id=398, 401.5pt x 256.96pt>
+<figures/tether.pdf, id=400, 401.5pt x 256.96pt>
 File: figures/tether.pdf Graphic file (type pdf)
 <use figures/tether.pdf>
-Package pdftex.def Info: figures/tether.pdf  used on input line 202.
+Package pdftex.def Info: figures/tether.pdf  used on input line 171.
 (pdftex.def)             Requested size: 203.53136pt x 130.26369pt.
-<figures/bitusd.pdf, id=399, 401.5pt x 256.96pt>
+<figures/bitusd.pdf, id=401, 401.5pt x 256.96pt>
 File: figures/bitusd.pdf Graphic file (type pdf)
 <use figures/bitusd.pdf>
-Package pdftex.def Info: figures/bitusd.pdf  used on input line 204.
+Package pdftex.def Info: figures/bitusd.pdf  used on input line 173.
 (pdftex.def)             Requested size: 203.53136pt x 130.26369pt.
 
-Class acmart Warning: A possible image without description on input line 207.
 
-[15.15 <./figures/eth.pdf> <./figures/xrp.pdf
+Class acmart Warning: A possible image without description on input line 176.
+
+[16.16 <./figures/eth.pdf> <./figures/xrp.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/xrp.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >]
-<figures/gasetherusd.pdf, id=451, 361.35pt x 227.85126pt>
+<figures/gasetherusd.pdf, id=453, 361.35pt x 227.85126pt>
 File: figures/gasetherusd.pdf Graphic file (type pdf)
 <use figures/gasetherusd.pdf>
-Package pdftex.def Info: figures/gasetherusd.pdf  used on input line 245.
+Package pdftex.def Info: figures/gasetherusd.pdf  used on input line 199.
 (pdftex.def)             Requested size: 221.62703pt x 139.74698pt.
-<figures/gaselectricityether.pdf, id=452, 401.5pt x 245.91875pt>
+<figures/gaselectricityether.pdf, id=454, 401.5pt x 245.91875pt>
 File: figures/gaselectricityether.pdf Graphic file (type pdf)
 <use figures/gaselectricityether.pdf>
-Package pdftex.def Info: figures/gaselectricityether.pdf  used on input line 24
-7.
+Package pdftex.def Info: figures/gaselectricityether.pdf  used on input line 20
+1.
 (pdftex.def)             Requested size: 221.62703pt x 135.75104pt.
 
 
-Class acmart Warning: A possible image without description on input line 250.
+Class acmart Warning: A possible image without description on input line 204.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16.16 <./figures/cad.pdf> <./figures/eur.pdf
+[17.17 <./figures/cad.pdf> <./figures/eur.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/eur.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
@@ -1827,15 +1826,15 @@ nclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/bitusd.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [17.17 <./figures/gasetherusd.pdf> <./figures/gaselectricityether.pdf
+>] [18.18 <./figures/gasetherusd.pdf> <./figures/gaselectricityether.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gaselectricityethe
 r.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) [18.18]
+>]) [19.19]
 
 Class acmart Warning: Some images may lack descriptions.
 
-[19.19
+[20.20
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
@@ -1844,19 +1843,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 08D836042EA9E15C6E812215CB913523;5292.
+(rerunfilecheck)             Checksum: 48D8C5A36D87C1B608D5E2FE07346271;5218.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 33736 strings out of 492616
- 604022 string characters out of 6129482
+ 33751 strings out of 492616
+ 604390 string characters out of 6129482
  746962 words of memory out of 5000000
  36327 multiletter control sequences out of 15000+600000
- 182936 words of font info for 370 fonts, out of 8000000 for 9000
+ 184595 words of font info for 380 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,13n,94p,1734b,597s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/
@@ -1877,10 +1879,10 @@ r/local/texlive/2019/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr
 /local/texlive/2019/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/t
 exlive/2019/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on main.pdf (19 pages, 1044332 bytes).
+Output written on main.pdf (20 pages, 1048732 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 569 compressed objects within 6 object streams
+ 733 PDF objects out of 1000 (max. 8388607)
+ 570 compressed objects within 6 object streams
  98 named destinations out of 1000 (max. 500000)
- 54077 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 54069 words of extra memory for PDF output out of 61914 (max. 10000000)
 
