@@ -213,11 +213,30 @@ As users' mental model of gas improves over time, the volatility of gas has the 
 
 %========================%
 
-% \subsection {Indirectly backed derivatives}
+\subsection{Indirectly-backed securities}
+
+The indirectly-backed stability mechanism can be adapted to creating blockchain-based tokens of any asset. For example, instead of locking up $1.5\times$ the value of 1 USD, the DApp could lock up $1.5\times$ the value of a share of Apple (AAPL) in ETH. Someone buying the first position in line would be buying a token with the same price as AAPL (this is a blockchain version of what is called a synthetic asset). This is not exactly equivalent to owning a real share of AAPL: a real shareholder can attend shareholder meetings and vote, APPL share are limited in quantity (whereas synthetic assets can be created in any quantity), and APPL shares earn dividends (however this is possible to add to the DApp). However it represents the same investment position (or financial exposure) as owning a share of APPL which is useful for investors and speculators not interested in actual ownership. APPL and shares are just an example; the same mechanism can be used for anything with a price (\eg commodities, futures, derivatives, real-estate, price indexes, \etc).
+
+Assuming indirectly-backed stablecoins (targeting USD) and indirectly-backed synthetic assets (targeting APPL) are widely held, decentralized exchanges could enable trading them. Since these assets are ultimately backed by ETH, the end result is close to a simpler model where DApps would allow traders to take financial positions and settle price changes in ETH. However in the indirectly-backed model, after settlement, the traders will hold an asset that has the same store of value as USD or APPL or whichever asset is being price targeted. 
 
 % This stability mechanism might enable a third-party to trigger a redemption (\eg for a fee) if they notice a deposit is close to losing more value than the face value of the coins (before the coin holder does). Note that while allowing third parties to trigger a redemption seems like a sensible service, if the coin holders are not monitoring the situation, they will end up holding ETH, instead of an AliceCoin, which is still losing value. Thus this mechanism does not protect holders of the stablecoin at all --- it is really only about maintaining the reputation of the stablecoin. The stablecoin can claim it has never broken its peg to the dollar but it is an illusion, because as soon as it is about to lose value, it turns back into its collateral and then loses values under the name of the collateral instead of the stablecoin. If the holder isn't paying attention, they actually lose more by having it triggered than they would breaking the buck.
 
 %    - [ ] Dai as a stock instead, therefore not a coin per se more a security. Trading dai for gai is dumb, collapse into CFD
+
+%========================%
+
+\subsection{Seignorage theory of value}
+
+
+ A coin that has no redemption, direct or indirect, will not clearly be traded for a particular amount. An informal argument in favour of it being stable is that minting the coin is costly---it requires obtaining USD to hold in reserve. This feature serves an important function, albeit a different one. This bounds the firm from over-issuing tokens, which would cause the coin to lose value, however it does not ensure asks do not drop below \$1 USD.
+
+The difference between the market value of a newly minted coin and the cost to produce it is called seignorage. A backed stablecoin has no seignorage: it sells for \$1 USD and requires holding \$1 USD to `produce' it. There appears to be a folk theorem that if minting asset X requires consuming asset Y, asset X will take on the value of asset Y (otherwise, who would produce X?). We call this hypothesis the `seignorage theory of value' however we do not believe it is true. 
+
+For one, resources can be consumed to produce something of no value---that value is simply lost. A canvas that has been applied with acrylic paint might cost \$100 USD in raw materials; its value could none-the-less be much less than \$100 USD\ldots or much more.
+
+Second, returning to a directly-backed stablecoin that is not redeemable. Such a project might demonstrate using trustworhty bank records and financial audits that they issued exactly X tokens on Ethereum's blockchain and they hold X USD in a bank. However imagine there was another blockchain whose followers do not interact at all with Ethereum and the project issued a second stablecoin on that blockchain backed by the same funds. A little more realistically, the company might use the funds as collateral against a private loan where the lender does not know the funds are meant to back the stablecoin, and the general public does not know about the loan. The challenge for such projects is proving the cost of producing the stablecoin cannot be double-spent for other purposes.
+
+% If Alice goes to Peter Luger's in Brooklyn, consumes a \$100 ribeye, and mints a literal shitcoin out of the result --- is that coin worth \$100 because it is ``backed'' by \$100 worth of steak?
 
 %========================%
 
